@@ -617,5 +617,61 @@
     "skipToContent": "Zum Hauptinhalt springen",
     "openMenu": "Menü öffnen",
     "closeMenu": "Menü schließen"
+  },
+  "calculator": {
+    "title": "Kostenrechner",
+    "subtitle": "Erhalten Sie eine sofortige Schätzung für Ihr Projekt",
+    "inputs": {
+      "buildingType": {
+        "label": "Gebäudetyp",
+        "options": {
+          "singleFamily": "Einfamilienhaus",
+          "multiUnit": "Mehrfamilienhaus",
+          "commercial": "Gewerbe",
+          "superstructure": "Aufstockung"
+        }
+      },
+      "area": {
+        "label": "Grundfläche"
+      },
+      "storeys": {
+        "label": "Anzahl der Stockwerke"
+      },
+      "insulation": {
+        "label": "Dämmungsniveau",
+        "options": {
+          "standard": "Standard",
+          "premium": "Premium",
+          "eco": "Öko"
+        }
+      },
+      "selfBuild": {
+        "label": "Selbstbau?",
+        "yes": "Ja, DIY",
+        "no": "Professionell"
+      },
+      "finishing": {
+        "label": "Ausbaustufe",
+        "options": {
+          "shell": "Rohbau",
+          "developer": "Bauträger",
+          "turnkey": "Schlüsselfertig"
+        }
+      }
+    },
+    "results": {
+      "estimate": "Ihre Schätzung",
+      "vsTraditional": "vs Traditionell",
+      "cheaper": "günstiger",
+      "traditional": "Traditionell",
+      "youSave": "Sie sparen",
+      "buildTime": "Bauzeit",
+      "weeks": "Wochen",
+      "months": "Monate",
+      "co2Saved": "CO₂ eingespart",
+      "emissions": "vermiedene Emissionen"
+    },
+    "cta": "Detailliertes Angebot anfordern",
+    "disclaimer": "Schätzung basierend auf typischen Projektspezifikationen. Endpreis kann variieren."
   }
 }

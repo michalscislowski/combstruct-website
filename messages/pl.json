@@ -617,5 +617,61 @@
     "skipToContent": "Przejdź do głównej treści",
     "openMenu": "Otwórz menu",
     "closeMenu": "Zamknij menu"
+  },
+  "calculator": {
+    "title": "Kalkulator kosztów",
+    "subtitle": "Otrzymaj natychmiastową wycenę projektu",
+    "inputs": {
+      "buildingType": {
+        "label": "Typ budynku",
+        "options": {
+          "singleFamily": "Dom jednorodzinny",
+          "multiUnit": "Wielorodzinny",
+          "commercial": "Komercyjny",
+          "superstructure": "Nadbudowa"
+        }
+      },
+      "area": {
+        "label": "Powierzchnia"
+      },
+      "storeys": {
+        "label": "Liczba pięter"
+      },
+      "insulation": {
+        "label": "Poziom izolacji",
+        "options": {
+          "standard": "Standard",
+          "premium": "Premium",
+          "eco": "Eko"
+        }
+      },
+      "selfBuild": {
+        "label": "Samodzielna budowa?",
+        "yes": "Tak, DIY",
+        "no": "Profesjonalna"
+      },
+      "finishing": {
+        "label": "Poziom wykończenia",
+        "options": {
+          "shell": "Stan surowy",
+          "developer": "Deweloperski",
+          "turnkey": "Pod klucz"
+        }
+      }
+    },
+    "results": {
+      "estimate": "Twoja wycena",
+      "vsTraditional": "vs Tradycyjna",
+      "cheaper": "taniej",
+      "traditional": "Tradycyjna",
+      "youSave": "Oszczędzasz",
+      "buildTime": "Czas budowy",
+      "weeks": "tygodni",
+      "months": "miesięcy",
+      "co2Saved": "Zaoszczędzone CO₂",
+      "emissions": "unikniętych emisji"
+    },
+    "cta": "Uzyskaj szczegółową wycenę",
+    "disclaimer": "Wycena oparta na typowych specyfikacjach projektu. Ostateczna cena może się różnić."
   }
 }

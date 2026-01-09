@@ -617,5 +617,61 @@
     "skipToContent": "Skip to main content",
     "openMenu": "Open menu",
     "closeMenu": "Close menu"
+  },
+  "calculator": {
+    "title": "Cost Calculator",
+    "subtitle": "Get an instant estimate for your project",
+    "inputs": {
+      "buildingType": {
+        "label": "Building Type",
+        "options": {
+          "singleFamily": "Single-family",
+          "multiUnit": "Multi-unit",
+          "commercial": "Commercial",
+          "superstructure": "Superstructure"
+        }
+      },
+      "area": {
+        "label": "Floor Area"
+      },
+      "storeys": {
+        "label": "Number of Storeys"
+      },
+      "insulation": {
+        "label": "Insulation Level",
+        "options": {
+          "standard": "Standard",
+          "premium": "Premium",
+          "eco": "Eco"
+        }
+      },
+      "selfBuild": {
+        "label": "Self-build?",
+        "yes": "Yes, DIY",
+        "no": "Professional"
+      },
+      "finishing": {
+        "label": "Finishing Level",
+        "options": {
+          "shell": "Shell only",
+          "developer": "Developer",
+          "turnkey": "Turnkey"
+        }
+      }
+    },
+    "results": {
+      "estimate": "Your Estimate",
+      "vsTraditional": "vs Traditional",
+      "cheaper": "cheaper",
+      "traditional": "Traditional",
+      "youSave": "You save",
+      "buildTime": "Build time",
+      "weeks": "weeks",
+      "months": "months",
+      "co2Saved": "CO₂ Saved",
+      "emissions": "emissions avoided"
+    },
+    "cta": "Get Detailed Quote",
+    "disclaimer": "Estimate based on typical project specifications. Final pricing may vary."
   }
 }

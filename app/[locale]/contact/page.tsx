@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import Section from "@/components/ui/Section";
+import CostCalculator from "@/components/ui/CostCalculator";
 import { Mail, Phone, MapPin, Clock, ArrowRight } from "lucide-react";
 import { useState } from "react";
 
@@ -73,6 +74,17 @@ export default function ContactPage() {
           </motion.div>
         </div>
       </section>
+
+      {/* Cost Calculator Section */}
+      <Section className="bg-slate-50">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+        >
+          <CostCalculator />
+        </motion.div>
+      </Section>
 
       {/* Contact Form & Info */}
       <Section>
