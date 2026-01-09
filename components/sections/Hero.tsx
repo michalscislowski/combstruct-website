@@ -4,7 +4,7 @@ import { motion, useReducedMotion } from "framer-motion";
 import { Link } from "@/i18n/navigation";
 import { useTranslations } from "next-intl";
 import { ArrowRight, Play, Pause } from "lucide-react";
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, useCallback } from "react";
 
 const audienceCardKeys = [
   "selfBuilders",
@@ -22,9 +22,15 @@ const audienceCardHrefs = {
 
 export default function Hero() {
   const [isPlaying, setIsPlaying] = useState(true);
+  const [isVideoLoaded, setIsVideoLoaded] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
   const prefersReducedMotion = useReducedMotion();
   const t = useTranslations("hero");
+
+  // Handle video loaded
+  const handleVideoLoaded = useCallback(() => {
+    setIsVideoLoaded(true);
+  }, []);
 
   // Respect reduced motion preference
   useEffect(() => {
@@ -60,19 +66,19 @@ export default function Hero() {
       aria-labelledby="hero-heading"
     >
       {/* Video Background */}
-      <div className="absolute inset-0 overflow-hidden" aria-hidden="true">
+      <div className="absolute inset-0 overflow-hidden bg-white" aria-hidden="true">
         <video
           ref={videoRef}
           autoPlay={!prefersReducedMotion}
           muted
           loop
           playsInline
-          className="absolute inset-0 w-full h-full object-contain bg-white"
-          poster="/images/slider1a.webp"
+          onCanPlay={handleVideoLoaded}
+          className={`absolute inset-0 w-full h-full object-contain bg-white transition-opacity duration-500 ${
+            isVideoLoaded ? "opacity-100" : "opacity-0"
+          }`}
         >
           <source src="/images/hero-video.mp4" type="video/mp4" />
-          {/* Fallback text for browsers that don't support video */}
-          Your browser does not support the video tag.
         </video>
         {/* Refined overlay - lighter and asymmetric for better video visibility */}
         <div className="absolute inset-0 bg-gradient-to-r from-white/60 via-white/30 to-transparent" />
