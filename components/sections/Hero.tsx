@@ -67,7 +67,7 @@ export default function Hero() {
           muted
           loop
           playsInline
-          className="absolute inset-0 w-full h-full object-cover"
+          className="absolute inset-0 w-full h-full object-contain bg-white"
           poster="/images/slider1a.webp"
         >
           <source src="/images/hero-video.mp4" type="video/mp4" />
