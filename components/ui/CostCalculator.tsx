@@ -36,13 +36,12 @@ const FINISHING_MODIFIERS: Record<string, number> = {
   turnkey: 0.40,
 };
 
-const PLN_TO_USD = 0.25; // approximate conversion
+const PLN_TO_USD = 0.25;
 
 export default function CostCalculator() {
   const t = useTranslations("calculator");
   const locale = useLocale();
 
-  // Use USD for English, PLN for Polish/German
   const currency = locale === "en" ? "USD" : "PLN";
   const currencySymbol = currency === "USD" ? "$" : "zł";
   const conversionRate = currency === "USD" ? PLN_TO_USD : 1;
@@ -57,14 +56,13 @@ export default function CostCalculator() {
   const calculations = useMemo(() => {
     let costPerM2 = BASE_COST_PER_M2;
 
-    // Apply modifiers
     costPerM2 *= (1 + BUILDING_TYPE_MODIFIERS[buildingType]);
-    costPerM2 *= (1 + (storeys - 1) * 0.05); // 5% per additional storey
+    costPerM2 *= (1 + (storeys - 1) * 0.05);
     costPerM2 *= (1 + INSULATION_MODIFIERS[insulation]);
     costPerM2 *= (1 + FINISHING_MODIFIERS[finishing]);
 
     if (selfBuild) {
-      costPerM2 *= 0.85; // 15% savings for self-build
+      costPerM2 *= 0.85;
     }
 
     const totalCost = costPerM2 * area;
@@ -72,11 +70,9 @@ export default function CostCalculator() {
     const savings = traditionalCost - totalCost;
     const savingsPercent = Math.round((savings / traditionalCost) * 100);
 
-    // Build time (weeks)
     const buildWeeks = Math.ceil(area / 50) + (storeys - 1);
     const traditionalMonths = Math.ceil(area / 20) + (storeys * 2);
 
-    // CO2 savings
     const co2Saved = (CO2_TRADITIONAL - CO2_COMBSTRUCT) * area;
 
     return {
@@ -96,19 +92,19 @@ export default function CostCalculator() {
   };
 
   return (
-    <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 rounded-3xl overflow-hidden shadow-2xl">
+    <div className="border border-border bg-white">
       {/* Header */}
-      <div className="px-8 py-6 border-b border-white/10">
-        <h3 className="text-2xl font-bold text-white">{t("title")}</h3>
-        <p className="text-slate-400 mt-1">{t("subtitle")}</p>
+      <div className="px-8 py-6 border-b border-border">
+        <h3 className="text-2xl font-semibold text-foreground tracking-tight">{t("title")}</h3>
+        <p className="text-muted mt-1">{t("subtitle")}</p>
       </div>
 
-      <div className="grid lg:grid-cols-2 gap-0">
+      <div className="grid lg:grid-cols-2">
         {/* Inputs Section */}
-        <div className="p-8 space-y-6 border-r border-white/10">
+        <div className="p-8 space-y-8 border-r border-border">
           {/* Building Type */}
           <div>
-            <label className="block text-sm font-medium text-slate-300 mb-3">
+            <label className="block text-[13px] font-medium text-muted uppercase tracking-wider mb-4">
               {t("inputs.buildingType.label")}
             </label>
             <div className="grid grid-cols-2 gap-2">
@@ -116,10 +112,10 @@ export default function CostCalculator() {
                 <button
                   key={type}
                   onClick={() => setBuildingType(type)}
-                  className={`px-4 py-3 rounded-xl text-sm font-medium transition-all ${
+                  className={`px-4 py-3 text-[15px] font-medium transition-all border ${
                     buildingType === type
-                      ? "bg-emerald-500 text-white shadow-lg shadow-emerald-500/30"
-                      : "bg-white/5 text-slate-300 hover:bg-white/10"
+                      ? "bg-foreground text-white border-foreground"
+                      : "bg-white text-foreground border-border hover:border-foreground"
                   }`}
                 >
                   {t(`inputs.buildingType.options.${type}`)}
@@ -130,37 +126,37 @@ export default function CostCalculator() {
 
           {/* Floor Area */}
           <div>
-            <label className="block text-sm font-medium text-slate-300 mb-3">
+            <label className="block text-[13px] font-medium text-muted uppercase tracking-wider mb-4">
               {t("inputs.area.label")}
             </label>
-            <div className="space-y-3">
-              <input
-                type="range"
-                min="50"
-                max="500"
-                value={area}
-                onChange={(e) => setArea(Number(e.target.value))}
-                className="w-full h-2 bg-white/10 rounded-full appearance-none cursor-pointer
-                  [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-6 [&::-webkit-slider-thumb]:h-6
-                  [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-emerald-500
-                  [&::-webkit-slider-thumb]:shadow-lg [&::-webkit-slider-thumb]:shadow-emerald-500/50
-                  [&::-webkit-slider-thumb]:cursor-pointer [&::-webkit-slider-thumb]:transition-transform
-                  [&::-webkit-slider-thumb]:hover:scale-110"
-              />
+            <div className="space-y-4">
+              <div className="relative">
+                <input
+                  type="range"
+                  min="50"
+                  max="500"
+                  value={area}
+                  onChange={(e) => setArea(Number(e.target.value))}
+                  className="w-full h-1 bg-border rounded-none appearance-none cursor-pointer
+                    [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-5 [&::-webkit-slider-thumb]:h-5
+                    [&::-webkit-slider-thumb]:bg-foreground [&::-webkit-slider-thumb]:cursor-pointer
+                    [&::-webkit-slider-thumb]:transition-transform [&::-webkit-slider-thumb]:hover:scale-110"
+                />
+              </div>
               <div className="flex items-center justify-between">
-                <span className="text-slate-500 text-sm">50 m²</span>
-                <div className="bg-white/10 px-4 py-2 rounded-xl">
-                  <span className="text-2xl font-bold text-white">{area}</span>
-                  <span className="text-slate-400 ml-1">m²</span>
+                <span className="text-muted text-sm">50 m²</span>
+                <div className="border border-border px-5 py-2">
+                  <span className="text-2xl font-semibold text-foreground">{area}</span>
+                  <span className="text-muted ml-1">m²</span>
                 </div>
-                <span className="text-slate-500 text-sm">500 m²</span>
+                <span className="text-muted text-sm">500 m²</span>
               </div>
             </div>
           </div>
 
           {/* Storeys */}
           <div>
-            <label className="block text-sm font-medium text-slate-300 mb-3">
+            <label className="block text-[13px] font-medium text-muted uppercase tracking-wider mb-4">
               {t("inputs.storeys.label")}
             </label>
             <div className="flex gap-2">
@@ -168,10 +164,10 @@ export default function CostCalculator() {
                 <button
                   key={s}
                   onClick={() => setStoreys(s)}
-                  className={`flex-1 py-3 rounded-xl text-lg font-bold transition-all ${
+                  className={`flex-1 py-3 text-lg font-semibold transition-all border ${
                     storeys === s
-                      ? "bg-emerald-500 text-white shadow-lg shadow-emerald-500/30"
-                      : "bg-white/5 text-slate-300 hover:bg-white/10"
+                      ? "bg-foreground text-white border-foreground"
+                      : "bg-white text-foreground border-border hover:border-foreground"
                   }`}
                 >
                   {s}
@@ -182,7 +178,7 @@ export default function CostCalculator() {
 
           {/* Insulation */}
           <div>
-            <label className="block text-sm font-medium text-slate-300 mb-3">
+            <label className="block text-[13px] font-medium text-muted uppercase tracking-wider mb-4">
               {t("inputs.insulation.label")}
             </label>
             <div className="grid grid-cols-3 gap-2">
@@ -190,10 +186,10 @@ export default function CostCalculator() {
                 <button
                   key={type}
                   onClick={() => setInsulation(type)}
-                  className={`px-3 py-3 rounded-xl text-sm font-medium transition-all ${
+                  className={`px-3 py-3 text-[15px] font-medium transition-all border ${
                     insulation === type
-                      ? "bg-emerald-500 text-white shadow-lg shadow-emerald-500/30"
-                      : "bg-white/5 text-slate-300 hover:bg-white/10"
+                      ? "bg-foreground text-white border-foreground"
+                      : "bg-white text-foreground border-border hover:border-foreground"
                   }`}
                 >
                   {t(`inputs.insulation.options.${type}`)}
@@ -204,26 +200,26 @@ export default function CostCalculator() {
 
           {/* Self-build Toggle */}
           <div>
-            <label className="block text-sm font-medium text-slate-300 mb-3">
+            <label className="block text-[13px] font-medium text-muted uppercase tracking-wider mb-4">
               {t("inputs.selfBuild.label")}
             </label>
             <div className="flex gap-2">
               <button
                 onClick={() => setSelfBuild(true)}
-                className={`flex-1 py-3 rounded-xl text-sm font-medium transition-all ${
+                className={`flex-1 py-3 text-[15px] font-medium transition-all border ${
                   selfBuild
-                    ? "bg-emerald-500 text-white shadow-lg shadow-emerald-500/30"
-                    : "bg-white/5 text-slate-300 hover:bg-white/10"
+                    ? "bg-foreground text-white border-foreground"
+                    : "bg-white text-foreground border-border hover:border-foreground"
                 }`}
               >
                 {t("inputs.selfBuild.yes")}
               </button>
               <button
                 onClick={() => setSelfBuild(false)}
-                className={`flex-1 py-3 rounded-xl text-sm font-medium transition-all ${
+                className={`flex-1 py-3 text-[15px] font-medium transition-all border ${
                   !selfBuild
-                    ? "bg-emerald-500 text-white shadow-lg shadow-emerald-500/30"
-                    : "bg-white/5 text-slate-300 hover:bg-white/10"
+                    ? "bg-foreground text-white border-foreground"
+                    : "bg-white text-foreground border-border hover:border-foreground"
                 }`}
               >
                 {t("inputs.selfBuild.no")}
@@ -233,7 +229,7 @@ export default function CostCalculator() {
 
           {/* Finishing Level */}
           <div>
-            <label className="block text-sm font-medium text-slate-300 mb-3">
+            <label className="block text-[13px] font-medium text-muted uppercase tracking-wider mb-4">
               {t("inputs.finishing.label")}
             </label>
             <div className="grid grid-cols-3 gap-2">
@@ -241,10 +237,10 @@ export default function CostCalculator() {
                 <button
                   key={level}
                   onClick={() => setFinishing(level)}
-                  className={`px-3 py-3 rounded-xl text-sm font-medium transition-all ${
+                  className={`px-3 py-3 text-[15px] font-medium transition-all border ${
                     finishing === level
-                      ? "bg-emerald-500 text-white shadow-lg shadow-emerald-500/30"
-                      : "bg-white/5 text-slate-300 hover:bg-white/10"
+                      ? "bg-foreground text-white border-foreground"
+                      : "bg-white text-foreground border-border hover:border-foreground"
                   }`}
                 >
                   {t(`inputs.finishing.options.${level}`)}
@@ -255,22 +251,22 @@ export default function CostCalculator() {
         </div>
 
         {/* Results Section */}
-        <div className="p-8 bg-gradient-to-br from-emerald-900/20 to-transparent">
-          <div className="space-y-6">
+        <div className="p-8 bg-secondary">
+          <div className="space-y-8">
             {/* Main Estimate */}
-            <div className="text-center py-6">
-              <p className="text-slate-400 text-sm uppercase tracking-wider mb-2">
+            <div className="text-center py-8">
+              <p className="text-[13px] font-medium text-muted uppercase tracking-wider mb-3">
                 {t("results.estimate")}
               </p>
               <motion.div
                 key={calculations.totalCost}
-                initial={{ scale: 0.9, opacity: 0 }}
+                initial={{ scale: 0.95, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
-                className="text-5xl lg:text-6xl font-bold text-white"
+                className="text-[clamp(2.5rem,6vw,4rem)] font-semibold text-foreground tracking-tight"
               >
                 {currencySymbol}{formatNumber(calculations.totalCost)}
               </motion.div>
-              <p className="text-slate-400 mt-2">
+              <p className="text-muted mt-2">
                 {currencySymbol}{formatNumber(calculations.costPerM2)} / m²
               </p>
             </div>
@@ -278,36 +274,36 @@ export default function CostCalculator() {
             {/* Comparison Bar */}
             <div className="space-y-3">
               <div className="flex justify-between text-sm">
-                <span className="text-emerald-400 font-medium">Combstruct</span>
-                <span className="text-slate-400">{t("results.vsTraditional")}</span>
+                <span className="text-foreground font-medium">Combstruct</span>
+                <span className="text-muted">{t("results.vsTraditional")}</span>
               </div>
-              <div className="relative h-8 bg-white/10 rounded-full overflow-hidden">
+              <div className="relative h-3 bg-border overflow-hidden">
                 <motion.div
                   initial={{ width: 0 }}
                   animate={{ width: `${100 - calculations.savingsPercent}%` }}
                   transition={{ duration: 0.5, ease: "easeOut" }}
-                  className="absolute inset-y-0 left-0 bg-gradient-to-r from-emerald-500 to-emerald-400 rounded-full"
+                  className="absolute inset-y-0 left-0 bg-foreground"
                 />
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <span className="text-white text-sm font-medium">
-                    {calculations.savingsPercent}% {t("results.cheaper")}
-                  </span>
-                </div>
               </div>
-              <p className="text-right text-slate-500 text-sm">
-                {t("results.traditional")}: {currencySymbol}{formatNumber(calculations.traditionalCost)}
-              </p>
+              <div className="flex justify-between text-sm">
+                <span className="text-foreground font-semibold">
+                  {calculations.savingsPercent}% {t("results.cheaper")}
+                </span>
+                <span className="text-muted">
+                  {t("results.traditional")}: {currencySymbol}{formatNumber(calculations.traditionalCost)}
+                </span>
+              </div>
             </div>
 
             {/* Savings Highlight */}
-            <div className="bg-emerald-500/20 border border-emerald-500/30 rounded-2xl p-5">
-              <div className="flex items-center gap-3">
-                <div className="w-12 h-12 rounded-xl bg-emerald-500/30 flex items-center justify-center">
-                  <TrendingDown className="w-6 h-6 text-emerald-400" />
+            <div className="border-2 border-foreground p-6">
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 bg-foreground flex items-center justify-center flex-shrink-0">
+                  <TrendingDown className="w-6 h-6 text-white" />
                 </div>
                 <div>
-                  <p className="text-emerald-400 text-sm font-medium">{t("results.youSave")}</p>
-                  <p className="text-2xl font-bold text-white">
+                  <p className="text-[13px] font-medium text-muted uppercase tracking-wider">{t("results.youSave")}</p>
+                  <p className="text-2xl font-semibold text-foreground">
                     {currencySymbol}{formatNumber(calculations.savings)}
                   </p>
                 </div>
@@ -316,40 +312,40 @@ export default function CostCalculator() {
 
             {/* Additional Stats */}
             <div className="grid grid-cols-2 gap-4">
-              <div className="bg-white/5 rounded-xl p-4">
-                <div className="flex items-center gap-2 text-slate-400 text-sm mb-1">
+              <div className="border border-border bg-white p-5">
+                <div className="flex items-center gap-2 text-muted text-sm mb-2">
                   <Clock className="w-4 h-4" />
                   {t("results.buildTime")}
                 </div>
-                <p className="text-white font-semibold">
+                <p className="text-foreground font-semibold text-lg">
                   {calculations.buildWeeks} {t("results.weeks")}
                 </p>
-                <p className="text-slate-500 text-xs">
+                <p className="text-muted text-sm">
                   vs {calculations.traditionalMonths} {t("results.months")}
                 </p>
               </div>
-              <div className="bg-white/5 rounded-xl p-4">
-                <div className="flex items-center gap-2 text-slate-400 text-sm mb-1">
+              <div className="border border-border bg-white p-5">
+                <div className="flex items-center gap-2 text-muted text-sm mb-2">
                   <Leaf className="w-4 h-4" />
                   {t("results.co2Saved")}
                 </div>
-                <p className="text-white font-semibold">
+                <p className="text-foreground font-semibold text-lg">
                   {formatNumber(calculations.co2Saved)} kg
                 </p>
-                <p className="text-slate-500 text-xs">CO₂ {t("results.emissions")}</p>
+                <p className="text-muted text-sm">CO₂ {t("results.emissions")}</p>
               </div>
             </div>
 
             {/* CTA */}
             <Link
               href="/contact"
-              className="flex items-center justify-center gap-2 w-full py-4 bg-emerald-500 hover:bg-emerald-400 text-white font-semibold rounded-xl transition-colors"
+              className="flex items-center justify-center gap-3 w-full py-4 bg-foreground text-white font-semibold hover:bg-dark-lighter transition-colors"
             >
               {t("cta")}
               <ArrowRight className="w-5 h-5" />
             </Link>
 
-            <p className="text-center text-slate-500 text-xs">
+            <p className="text-center text-muted text-sm">
               {t("disclaimer")}
             </p>
           </div>

@@ -76,7 +76,7 @@ export default function ContactPage() {
       </section>
 
       {/* Cost Calculator Section */}
-      <Section className="bg-slate-50">
+      <Section>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
