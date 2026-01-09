@@ -1,0 +1,621 @@
+{
+  "metadata": {
+    "title": "Combstruct | Opatentowana Technologia Budowlana",
+    "description": "Opatentowana technologia belki grzebieniowej. Buduj domy 45% taniej, 5x szybciej, z wydajnością domu pasywnego (U=0,09) i 4x niższym śladem węglowym."
+  },
+  "navigation": {
+    "about": "O nas",
+    "products": "Produkty",
+    "projects": "Projekty",
+    "process": "Proces",
+    "faq": "FAQ",
+    "blog": "Blog",
+    "contact": "Kontakt",
+    "startProject": "Rozpocznij projekt"
+  },
+  "languageSwitcher": {
+    "label": "Język",
+    "en": "English",
+    "pl": "Polski",
+    "de": "Deutsch"
+  },
+  "hero": {
+    "headline": "Zrównoważone budownictwo,",
+    "headlineBreak": "na nowo zdefiniowane.",
+    "subheadline": "Opatentowana technologia belki grzebieniowej. 45% niższy koszt. 5x szybsza budowa. Wydajność domu pasywnego. 4x niższy ślad węglowy.",
+    "ctaPrimary": "Rozpocznij projekt",
+    "ctaSecondary": "Poznaj system",
+    "pauseVideo": "Zatrzymaj wideo w tle",
+    "playVideo": "Odtwórz wideo w tle",
+    "videoPlaying": "Wideo w tle jest odtwarzane",
+    "videoPaused": "Wideo w tle jest zatrzymane",
+    "audienceCards": {
+      "selfBuilders": {
+        "title": "Dla samobudujących",
+        "description": "Zbuduj własny dom z naszym systemem DIY"
+      },
+      "architects": {
+        "title": "Dla architektów",
+        "description": "Zintegruj nasz system ze swoimi projektami"
+      },
+      "developers": {
+        "title": "Dla deweloperów",
+        "description": "Skaluj projekty zrównoważonego budownictwa"
+      },
+      "suppliers": {
+        "title": "Dla dostawców",
+        "description": "Dołącz do naszej sieci produkcyjnej"
+      }
+    }
+  },
+  "valueProps": {
+    "sectionTitle": "Dlaczego wiodący architekci wybierają",
+    "sectionTitleBreak": "Combstruct.",
+    "sectionDescription": "Opatentowana technologia, która przewyższa każdą alternatywę pod względem kosztu, szybkości, wydajności cieplnej i wpływu na środowisko — poparta rzeczywistymi danymi.",
+    "features": {
+      "buildFast": {
+        "title": "45% niższy koszt, 5x szybciej",
+        "description": "Całkowity koszt 2 600 PLN/m² vs 4 300-4 800 PLN/m² dla alternatyw. Budowa stanu surowego w 1-4 tygodnie vs 6-12 miesięcy. Tylko 4-6 roboczogodzin na m² — dwie osoby z podstawowymi narzędziami mogą zbudować cały dom.",
+        "linkText": "Zobacz porównanie"
+      },
+      "sustainable": {
+        "title": "4x niższy ślad węglowy",
+        "description": "≤150 kg CO₂eq/m² vs 600-750 kg dla tradycyjnych metod. 97% materiałów nadających się do recyklingu. Bez betonu i stali. Pełna zgodność z celami dekarbonizacji UE 2026-2030 i wymogami taksonomii.",
+        "linkText": "Zobacz dane o zrównoważoności"
+      },
+      "precision": {
+        "title": "Standard domu pasywnego",
+        "description": "Wartość U 0,09 W/m²K — o 40-47% lepsza wydajność cieplna niż u konkurencji. Szczelność n₅₀ < 0,2 h⁻¹. Komponenty produkowane CNC zapewniają zero mostków termicznych i żywotność 100+ lat.",
+        "linkText": "Zobacz specyfikacje techniczne"
+      }
+    }
+  },
+  "howItWorks": {
+    "sectionTitle": "Od wizji do rzeczywistości,",
+    "sectionTitleBreak": "w prosty sposób.",
+    "steps": {
+      "design": {
+        "number": "01",
+        "title": "Projektowanie",
+        "description": "Pracuj z naszym zespołem, aby stworzyć idealny plan piętra, dostosowany do Twoich potrzeb i lokalnych przepisów."
+      },
+      "manufacture": {
+        "number": "02",
+        "title": "Produkcja",
+        "description": "Twoje komponenty są precyzyjnie cięte w naszym zakładzie, zapewniając idealne dopasowanie i minimalne odpady."
+      },
+      "deliver": {
+        "number": "03",
+        "title": "Dostawa",
+        "description": "Wszystkie komponenty docierają na Twoją działkę gotowe do montażu, z dołączonymi jasnymi instrukcjami."
+      },
+      "build": {
+        "number": "04",
+        "title": "Budowa",
+        "description": "Złóż swój dom w dni, nie miesiące. Nasz system został zaprojektowany z myślą o szybkości i prostocie."
+      }
+    },
+    "ctaText": "Zobacz pełny proces"
+  },
+  "applications": {
+    "sectionTitle": "Buduj cokolwiek,",
+    "sectionTitleBreak": "gdziekolwiek.",
+    "sectionDescription": "Nasz modułowy system dostosowuje się do każdego typu projektu. Od przytulnych domów rodzinnych po inwestycje komercyjne.",
+    "types": {
+      "singleFamily": {
+        "title": "Domy jednorodzinne",
+        "description": "Komfortowe, energooszczędne domy budowane w 30 dni"
+      },
+      "multiUnit": {
+        "title": "Budownictwo wielorodzinne",
+        "description": "Skalowalne rozwiązania dla mieszkań i szeregowców"
+      },
+      "commercial": {
+        "title": "Obiekty komercyjne",
+        "description": "Biura, lokale handlowe i budynki przemysłowe lekkie"
+      },
+      "tenementSuperstructures": {
+        "title": "Nadbudowy bloków",
+        "description": "Rozbudowy dachowe i dobudowy budynków"
+      }
+    }
+  },
+  "partners": {
+    "trustStatement": "Zaufali nam liderzy branży"
+  },
+  "cta": {
+    "headline": "Gotowy zbudować",
+    "headlineBreak": "swój wymarzony dom?",
+    "description": "Dołącz do setek właścicieli domów, którzy odkryli lepszy sposób na budowanie. Rozpocznij od bezpłatnej konsultacji już dziś.",
+    "primaryLink": "Rozpocznij projekt",
+    "secondaryLink": "Przeczytaj FAQ"
+  },
+  "footer": {
+    "brandDescription": "Opatentowana technologia belki grzebieniowej. 45% niższy koszt. 5x szybciej. Wydajność domu pasywnego. 4x niższy ślad węglowy.",
+    "sections": {
+      "product": "Produkt",
+      "company": "Firma",
+      "resources": "Zasoby",
+      "social": "Social Media"
+    },
+    "links": {
+      "products": "Produkty",
+      "process": "Proces",
+      "projects": "Projekty",
+      "faq": "FAQ",
+      "about": "O nas",
+      "blog": "Blog",
+      "contact": "Kontakt",
+      "careers": "Kariera",
+      "documentation": "Dokumentacja",
+      "technicalSpecs": "Specyfikacje techniczne",
+      "downloads": "Pobierz"
+    },
+    "legal": {
+      "privacy": "Polityka prywatności",
+      "terms": "Regulamin",
+      "copyright": "© {year} Combstruct. Wszelkie prawa zastrzeżone."
+    }
+  },
+  "about": {
+    "hero": {
+      "badge": "O nas",
+      "title": "Budownictwo od nowa",
+      "titleBreak": "zaprojektowane od podstaw.",
+      "description": "Stworzyliśmy opatentowaną technologię, która sprawia, że domy są o 45% tańsze, 5x szybsze w budowie i 4x bardziej zrównoważone. Oto dlaczego wierzymy, że timing jest idealny."
+    },
+    "story": {
+      "title": "Problem, który rozwiązujemy",
+      "paragraph1": "Europa stoi w obliczu kryzysu mieszkaniowego: rocznie potrzeba ponad 1 miliona domów, a tradycyjne budownictwo jest zbyt wolne (6-12 miesięcy), zbyt drogie (koszty rosną 8% rocznie) i zbyt emisyjne (40% globalnych emisji). Tymczasem siła robocza w budownictwie kurczy się — 25% pracowników przejdzie na emeryturę do 2030 roku.",
+      "paragraph2": "Nasz opatentowany system belki grzebieniowej fundamentalnie zmienia ekonomię. Używając wzajemnie zazębiających się płyt drewnopochodnych zamiast drewna konstrukcyjnego, wyeliminowaliśmy wąskie gardła łańcucha dostaw i wymogi wykwalifikowanej siły roboczej, które nękają branżę. Dwie osoby z podstawowymi narzędziami mogą teraz zbudować to, co wcześniej wymagało 10-osobowej ekipy.",
+      "paragraph3": "Liczby to potwierdzają: 45% niższy całkowity koszt, budowa stanu surowego w 1-4 tygodnie, wartość U 0,09 W/m²K (przewyższająca dom pasywny) i ślad węglowy 4-5x niższy niż alternatywy. To nie są przyrostowe ulepszenia — to przewagi definiujące kategorię, chronione patentem.",
+      "imageAlt": "Ukończona konstrukcja budynku Combstruct prezentująca nasz modułowy system budowlany"
+    },
+    "values": {
+      "mission": {
+        "title": "Dlaczego teraz",
+        "description": "Mandaty dekarbonizacji UE 2026-2030 wymuszają zmianę w branży. Wymogi ESG sprawiają, że tradycyjne budownictwo staje się ekonomicznie nieopłacalne. Jesteśmy pozycjonowani dokładnie w momencie, gdy rynek musi przyjąć rozwiązania takie jak nasze."
+      },
+      "vision": {
+        "title": "Nasza przewaga technologiczna",
+        "description": "Nasz opatentowany system zazębiających się belek grzebieniowych jest unikalny: wykorzystuje standardowe płyty drewnopochodne do tworzenia belek o nieograniczonej długości, uniwersalnych rdzeni ścian/stropów/dachów i nie wymaga drewna konstrukcyjnego — co czyni nas odpornymi na wahania rynku tarcicy."
+      },
+      "values": {
+        "title": "Gotowość do zgodności",
+        "description": "Pełna zgodność z wymogami taksonomii UE i programami dekarbonizacji 2026-2030. Nasz ślad węglowy ≤150 kg CO₂eq/m² jest 4-5x lepszy niż wymagane progi."
+      }
+    },
+    "cta": {
+      "title": "Zainteresowany naszą technologią?",
+      "description": "Niezależnie czy jesteś budowniczym, inwestorem czy potencjalnym partnerem — porozmawiajmy o tym, jak Combstruct pasuje do Twoich potrzeb.",
+      "button": "Skontaktuj się"
+    }
+  },
+  "products": {
+    "hero": {
+      "badge": "Opatentowana technologia",
+      "title": "System budowlany",
+      "titleBreak": "Belki Grzebieniowej",
+      "description": "Jedyny system budowlany, który zapewnia 45% niższy koszt, 5x szybszy czas budowy i wydajność cieplną domu pasywnego — wszystko chronione patentem.",
+      "getQuote": "Uzyskaj wycenę",
+      "seeProcess": "Zobacz proces",
+      "imageAlt": "Element konstrukcyjny belki grzebieniowej Combstruct - rdzeń naszego modułowego systemu budowlanego"
+    },
+    "features": {
+      "title": "Przewagi konkurencyjne",
+      "items": {
+        "cost": "45% niższy całkowity koszt (2 600 PLN/m²)",
+        "thermal": "Wartość U: 0,09 W/m²K (najlepsza w klasie)",
+        "speed": "Stan surowy w 1-4 tygodnie",
+        "carbon": "4x niższy ślad węglowy",
+        "labor": "Tylko 4-6 roboczogodzin na m²",
+        "recyclable": "97% materiałów do recyklingu",
+        "noConcrete": "Bez betonu, stali i drewna konstrukcyjnego",
+        "diyFriendly": "2 osoby z podstawowymi narzędziami"
+      }
+    },
+    "specs": {
+      "title": "Specyfikacje techniczne",
+      "description": "Niezależnie zweryfikowane parametry wydajności, które przekraczają wszystkie standardy branżowe.",
+      "imageAlt": "Ilustracja techniczna modułowego systemu budowlanego Combstruct",
+      "items": {
+        "thermal": {
+          "label": "Wydajność cieplna",
+          "value": "U 0,09 W/m²K"
+        },
+        "airtightness": {
+          "label": "Szczelność",
+          "value": "n₅₀ < 0,2 h⁻¹"
+        },
+        "carbon": {
+          "label": "Ślad węglowy",
+          "value": "≤150 kg CO₂eq/m²"
+        },
+        "fireResistance": {
+          "label": "Odporność ogniowa",
+          "value": "REI 60"
+        },
+        "soundInsulation": {
+          "label": "Izolacja akustyczna",
+          "value": "Rw 45 dB"
+        },
+        "loadCapacity": {
+          "label": "Nośność",
+          "value": "2,5 kN/m²"
+        },
+        "wallThickness": {
+          "label": "Grubość ściany",
+          "value": "250mm"
+        },
+        "lifespan": {
+          "label": "Żywotność",
+          "value": "100+ lat"
+        }
+      }
+    },
+    "applications": {
+      "title": "Zastosowania",
+      "description": "Nasz system dostosowuje się do każdego typu budynku",
+      "types": {
+        "homes": "Domy jednorodzinne",
+        "apartments": "Mieszkania wielorodzinne",
+        "commercial": "Obiekty komercyjne",
+        "workshops": "Nadbudowy bloków"
+      }
+    },
+    "cta": {
+      "title": "Gotowy do budowy?",
+      "description": "Skontaktuj się z naszym zespołem po szczegółową wycenę i konsultację projektową.",
+      "button": "Uzyskaj wycenę"
+    }
+  },
+  "projects": {
+    "hero": {
+      "badge": "Nasze realizacje",
+      "title": "Projekty, które mówią",
+      "titleBreak": "same za siebie.",
+      "description": "Poznaj nasze portfolio zrealizowanych projektów. Od przytulnych domów rodzinnych po budynki komercyjne - zobacz, co jest możliwe z Combstruct."
+    },
+    "items": {
+      "modernVilla": {
+        "title": "Nowoczesna willa rodzinna",
+        "location": "Poznań, Polska",
+        "size": "180 m²",
+        "duration": "28 dni",
+        "category": "Mieszkalny"
+      },
+      "ecoApartments": {
+        "title": "Ekologiczny kompleks apartamentów",
+        "location": "Warszawa, Polska",
+        "size": "1200 m²",
+        "duration": "45 dni",
+        "category": "Wielorodzinny"
+      },
+      "countrysideRetreat": {
+        "title": "Wiejska rezydencja",
+        "location": "Kraków, Polska",
+        "size": "120 m²",
+        "duration": "25 dni",
+        "category": "Mieszkalny"
+      },
+      "officeBuilding": {
+        "title": "Budynek biurowy",
+        "location": "Gdańsk, Polska",
+        "size": "450 m²",
+        "duration": "35 dni",
+        "category": "Komercyjny"
+      },
+      "weekendCabin": {
+        "title": "Domek weekendowy",
+        "location": "Zakopane, Polska",
+        "size": "65 m²",
+        "duration": "18 dni",
+        "category": "Mieszkalny"
+      },
+      "workshopGarage": {
+        "title": "Warsztat i garaż",
+        "location": "Wrocław, Polska",
+        "size": "90 m²",
+        "duration": "14 dni",
+        "category": "Warsztat"
+      }
+    },
+    "stats": {
+      "projectsCompleted": {
+        "value": "50+",
+        "label": "Zrealizowanych projektów"
+      },
+      "squareMeters": {
+        "value": "15 000+",
+        "label": "Metrów kwadratowych"
+      },
+      "clientSatisfaction": {
+        "value": "100%",
+        "label": "Zadowolenia klientów"
+      },
+      "avgDays": {
+        "value": "30",
+        "label": "Średnio dni realizacji"
+      }
+    }
+  },
+  "process": {
+    "hero": {
+      "badge": "Nasz proces",
+      "title": "Od wizji do kluczy,",
+      "titleBreak": "w zaledwie 30 dni.",
+      "description": "Nasz usprawniony proces usuwa złożoność z budownictwa. Oto jak zamieniamy Twoje marzenie w rzeczywistość."
+    },
+    "phases": {
+      "design": {
+        "phase": "Faza 1",
+        "title": "Konsultacja i projektowanie",
+        "duration": "1-2 tygodnie",
+        "description": "Zaczynamy od zrozumienia Twojej wizji. Nasz zespół pracuje z Tobą, aby zaprojektować plan piętra, który spełni Twoje potrzeby, preferencje i lokalne przepisy budowlane.",
+        "details": {
+          "1": "Wstępna konsultacja i ocena działki",
+          "2": "Projektowanie indywidualnego planu piętra",
+          "3": "Wybór materiałów",
+          "4": "Szacowanie kosztów i planowanie harmonogramu",
+          "5": "Przygotowanie pozwolenia na budowę"
+        }
+      },
+      "manufacturing": {
+        "phase": "Faza 2",
+        "title": "Produkcja",
+        "duration": "2-3 tygodnie",
+        "description": "Twoje komponenty budowlane są precyzyjnie produkowane w naszym zakładzie. Każdy element jest wykonany według dokładnych specyfikacji, zapewniając idealne dopasowanie i minimalne odpady.",
+        "details": {
+          "1": "Komponenty konstrukcyjne cięte CNC",
+          "2": "Kontrola jakości na każdym etapie",
+          "3": "Testy przed montażem",
+          "4": "Pakowanie do transportu",
+          "5": "Koordynacja logistyki dostaw"
+        }
+      },
+      "delivery": {
+        "phase": "Faza 3",
+        "title": "Dostawa i przygotowanie",
+        "duration": "1-2 dni",
+        "description": "Wszystkie komponenty są dostarczane na Twoją działkę w jednej dostawie. Podczas gdy przygotowujesz fundament, my upewniamy się, że wszystko jest gotowe do montażu.",
+        "details": {
+          "1": "Pełna dostawa komponentów",
+          "2": "Inspekcja fundamentu",
+          "3": "Wskazówki dotyczące przygotowania działki",
+          "4": "Narzędzia i materiały montażowe",
+          "5": "Koordynacja zespołu instalacyjnego"
+        }
+      },
+      "assembly": {
+        "phase": "Faza 4",
+        "title": "Montaż i ukończenie",
+        "duration": "2-4 tygodnie",
+        "description": "Obserwuj, jak Twój wymarzony dom powstaje w dni, nie miesiące. Nasz system belki grzebieniowej umożliwia szybki, precyzyjny montaż z profesjonalnymi budowniczymi lub bez nich.",
+        "details": {
+          "1": "Montaż ramy konstrukcyjnej",
+          "2": "Ukończenie izolacji i powłoki",
+          "3": "Instalacja okien i drzwi",
+          "4": "Podłączenia mediów",
+          "5": "Końcowa inspekcja i przekazanie"
+        }
+      }
+    },
+    "cta": {
+      "title": "Gotowy do rozpoczęcia?",
+      "description": "Skontaktuj się po bezpłatną konsultację i omówmy Twój projekt.",
+      "button": "Rozpocznij projekt"
+    }
+  },
+  "faq": {
+    "hero": {
+      "badge": "FAQ",
+      "title": "Często zadawane",
+      "titleBreak": "pytania",
+      "description": "Wszystko, co musisz wiedzieć o naszej opatentowanej technologii belki grzebieniowej i jak wypada w porównaniu z tradycyjnymi metodami budowy."
+    },
+    "categories": {
+      "general": {
+        "title": "Ogólne",
+        "questions": {
+          "1": {
+            "q": "Czym jest system belki grzebieniowej Combstruct?",
+            "a": "Combstruct wykorzystuje opatentowaną technologię belki grzebieniowej — zazębiające się płyty drewnopochodne (MFP lub OSB-3), które tworzą uniwersalny rdzeń nośny dla ścian, stropów i dachów. W przeciwieństwie do tradycyjnego szkieletu drewnianego, nasz system nie wymaga drewna konstrukcyjnego, betonu ani stali. Konstrukcja zazębiająca pozwala tworzyć belki o teoretycznie nieograniczonej długości i eliminuje potrzebę nadproży, gzymsów czy wzmocnień."
+          },
+          "2": {
+            "q": "Jak długo faktycznie trwa budowa?",
+            "a": "Budowa stanu surowego z pełną izolacją termiczną i szczelnością zajmuje 1-4 tygodnie — to 3-10x szybciej niż alternatywy. Tradycyjna budowa murowana trwa 28-44 tygodnie, szkielet drewniany 12-20 tygodni, a prefabrykaty 6-12 tygodni. Nasz system wymaga tylko 4-6 roboczogodzin na m², w porównaniu do 12-25 godzin w innych metodach."
+          },
+          "3": {
+            "q": "Jakie typy budynków można zbudować?",
+            "a": "System dostosowuje się do każdego typu budynku: domy jednorodzinne, apartamenty wielorodzinne, obiekty komercyjne, biura, nadbudowy bloków (rozbudowy dachowe) i budynki gospodarcze. Jednolity przekrój konstrukcyjny działa identycznie dla ścian, stropów i dachów — bez zmian geometrii między elementami budynku."
+          }
+        }
+      },
+      "technical": {
+        "title": "Techniczne",
+        "questions": {
+          "1": {
+            "q": "Jakich materiałów używa system?",
+            "a": "Rdzeń wykorzystuje znormalizowane płyty drewnopochodne (MFP lub OSB-3) — bez drewna konstrukcyjnego. Dzięki temu jesteśmy odporni na wahania cen tarcicy. Opcje izolacji obejmują wełnę mineralną, EPS, XPS, PUR, hempcrete lub słomę prasowaną. W przeciwieństwie do konstrukcji szkieletowej, nasze płyty drewnopochodne obsługują zarówno izolatory dyfuzyjnie otwarte, jak i zamknięte."
+          },
+          "2": {
+            "q": "Jaką wydajność cieplną osiąga system?",
+            "a": "Nasze budynki osiągają wartość U 0,09 W/m²K — o 40-47% lepszą niż szkielet drewniany (0,16), prefabrykaty (0,17) czy tradycyjna cegła (0,15). Szczelność osiąga n₅₀ < 0,2 h⁻¹ przy 50 Pa z powłoką natryskową. To przekracza standardy domu pasywnego jako domyślne, nie jako opcja."
+          },
+          "3": {
+            "q": "Jakie opcje elewacji i wykończeń są dostępne?",
+            "a": "Rdzeń kasetowy nie narzuca żadnych ograniczeń. Elewacje: systemy ETICS, elewacje wentylowane (włóknocement, HPL, blacha, płytki, zielone ściany). Pokrycia dachowe: papa, PVC, TPO, EPDM, blacha na rąbek, blachodachówka, gonty, dachy zielone, dachówki betonowe/ceramiczne. Wnętrza: standardowe systemy suchej zabudowy z 45mm warstwą instalacyjną dla hydrauliki, elektryki i systemów smart home."
+          },
+          "4": {
+            "q": "Jaka jest żywotność budynku?",
+            "a": "100+ lat przy odpowiedniej konserwacji. System ma zero mostków termicznych, brak deformacji higroskopijnych i stabilne właściwości w czasie. Jednolity przekrój od fundamentu do dachu eliminuje słabe punkty występujące w hybrydowych systemach budowlanych."
+          }
+        }
+      },
+      "process": {
+        "title": "Proces",
+        "questions": {
+          "1": {
+            "q": "Czy dwie osoby naprawdę mogą zbudować dom?",
+            "a": "Tak. System wymaga tylko 4-6 roboczogodzin na m² i może być zmontowany przez dwie osoby z podstawowymi elektronarzędziami — bez specjalistycznych kwalifikacji. Tradycyjna budowa wymaga 18-25 godzin/m² i specjalistycznych fachowców. Nasze szczegółowe instrukcje montażu i komponenty precyzyjnie cięte CNC zapewniają idealne dopasowanie za każdym razem."
+          },
+          "2": {
+            "q": "Co z pozwoleniami na budowę i przepisami?",
+            "a": "Nasze projekty spełniają wszystkie przepisy budowlane UE i normy energetyczne. Zapewniamy kompletną dokumentację do wniosków o pozwolenia. System jest w pełni zgodny z wymogami dekarbonizacji UE 2026-2030 i standardami taksonomii — coraz ważniejszymi w miarę zaostrzania przepisów."
+          },
+          "3": {
+            "q": "Jak wygląda dostawa?",
+            "a": "Wszystkie materiały na kompletny dom mieszczą się w dwóch standardowych naczepach TIR. Dostarczamy w całej Europie z komponentami precyzyjnie ciętymi i gotowymi do montażu. Bez cięcia czy dopasowywania na miejscu — eliminuje to odpady i zależność od pogody."
+          }
+        }
+      },
+      "pricing": {
+        "title": "Koszty i zrównoważoność",
+        "questions": {
+          "1": {
+            "q": "Jak koszty wypadają w porównaniu z innymi metodami?",
+            "a": "Całkowity koszt: 2 600 PLN/m² włącznie ze strukturą, izolacją i membranami. Konkurencja: szkielet drewniany 4 300 PLN/m², prefabrykaty 4 400 PLN/m², tradycyjna cegła 4 800 PLN/m². To 45% oszczędności — osiągnięte przez eliminację drewna konstrukcyjnego, betonu, stali i redukcję pracy o 3-5x."
+          },
+          "2": {
+            "q": "Co zawiera cena bazowa?",
+            "a": "Wszystkie komponenty konstrukcyjne (panele belki grzebieniowej), izolację termiczną, systemy membranowe i poszycie zewnętrzne. Okna, drzwi, wykończenie elewacji, wykończenie wnętrz, media i fundament są wyceniane osobno lub uwzględniane w pakietach pełnej obsługi. Skontaktuj się z nami po szczegółowy kosztorys."
+          },
+          "3": {
+            "q": "Co z wpływem na środowisko?",
+            "a": "Ślad węglowy: ≤150 kg CO₂eq/m² — to 4-5x mniej niż tradycyjna budowa (600-750 kg). Recyklowalność: 97% komponentów można poddać recyklingowi lub ponownie wykorzystać po zakończeniu cyklu życia. Brak betonu i stali oznacza, że budynek można całkowicie zdemontować i odzyskać materiały, w przeciwieństwie do konwencjonalnego budownictwa."
+          }
+        }
+      }
+    },
+    "cta": {
+      "title": "Nadal masz pytania?",
+      "description": "Nasz zespół jest gotowy omówić szczegółowe wymagania Twojego projektu i dostarczyć szczegółowe specyfikacje techniczne.",
+      "button": "Skontaktuj się"
+    }
+  },
+  "blog": {
+    "hero": {
+      "badge": "Blog",
+      "title": "Aktualności i inspiracje",
+      "description": "Historie, poradniki i wiadomości ze świata budownictwa modułowego. Dowiedz się więcej o zrównoważonym budownictwie i bądź na bieżąco z naszymi najnowszymi projektami."
+    },
+    "readMore": "Czytaj więcej",
+    "placeholderImage": "Obraz zastępczy",
+    "posts": {
+      "sustainableFuture": {
+        "slug": "przyszlosc-zrownowazonego-budownictwa",
+        "title": "Przyszłość zrównoważonego budownictwa",
+        "excerpt": "Jak modułowe systemy budowlane rewolucjonizują nasze podejście do zrównoważonego budownictwa mieszkaniowego i zmniejszają wpływ budownictwa na środowisko.",
+        "category": "Zrównoważoność",
+        "readTime": "5 min czytania"
+      },
+      "buildIn30Days": {
+        "slug": "budowa-domu-w-30-dni",
+        "title": "Budowa domu w 30 dni: Kompletny przewodnik",
+        "excerpt": "Wszystko, co musisz wiedzieć o naszym procesie szybkiej budowy i jak dostarczamy kompletne domy w zaledwie miesiąc.",
+        "category": "Proces",
+        "readTime": "8 min czytania"
+      },
+      "energyEfficiency": {
+        "slug": "efektywnosc-energetyczna-wyjasnienie",
+        "title": "Efektywność energetyczna: Zrozumienie wartości U",
+        "excerpt": "Głębokie zanurzenie w metryki wydajności cieplnej i dlaczego nasza wartość U 0,11 W/m²K ma znaczenie dla Twoich rachunków za energię i komfortu.",
+        "category": "Techniczne",
+        "readTime": "6 min czytania"
+      },
+      "diyVsProfessional": {
+        "slug": "diy-vs-profesjonalna-instalacja",
+        "title": "DIY vs profesjonalna instalacja: Co jest dla Ciebie?",
+        "excerpt": "Rozważanie zalet i wad samodzielnego budowania w porównaniu z zatrudnieniem profesjonalistów do Twojego projektu Combstruct.",
+        "category": "Poradnik",
+        "readTime": "7 min czytania"
+      },
+      "combBeamTech": {
+        "slug": "technologia-belki-grzebieniowej",
+        "title": "Wewnątrz belki grzebieniowej: Nasza rewolucyjna technologia",
+        "excerpt": "Dogłębne spojrzenie na inżynierię stojącą za naszym opatentowanym systemem belki grzebieniowej i co czyni go wyjątkowym.",
+        "category": "Techniczne",
+        "readTime": "10 min czytania"
+      },
+      "customerStory": {
+        "slug": "historia-klienta-willa-poznan",
+        "title": "Historia klienta: Projekt willi w Poznaniu",
+        "excerpt": "Jak jedna rodzina zbudowała swój wymarzony dom w zaledwie 28 dni i czego się nauczyła po drodze.",
+        "category": "Studium przypadku",
+        "readTime": "5 min czytania"
+      }
+    }
+  },
+  "contact": {
+    "hero": {
+      "badge": "Kontakt",
+      "title": "Zbudujmy coś",
+      "titleBreak": "razem.",
+      "description": "Gotowy do rozpoczęcia projektu? Masz pytania o nasz system? Skontaktuj się, a pomożemy Ci zrobić pierwszy krok."
+    },
+    "info": {
+      "title": "Skontaktuj się",
+      "imageAlt": "Lokalizacja budynku Combstruct w Poznaniu, Polska",
+      "items": {
+        "email": {
+          "label": "Email",
+          "value": "contact@combstruct.com"
+        },
+        "phone": {
+          "label": "Telefon",
+          "value": "+48 123 456 789"
+        },
+        "location": {
+          "label": "Lokalizacja",
+          "value": "Poznań, Polska"
+        },
+        "hours": {
+          "label": "Godziny pracy",
+          "value": "Pon-Pt 9:00-17:00"
+        }
+      }
+    },
+    "form": {
+      "title": "Wyślij nam wiadomość",
+      "required": "wymagane",
+      "optional": "opcjonalne",
+      "successMessage": "Dziękujemy za wiadomość! Wkrótce się skontaktujemy.",
+      "fields": {
+        "name": {
+          "label": "Imię i nazwisko",
+          "placeholder": "Twoje imię i nazwisko"
+        },
+        "email": {
+          "label": "Email",
+          "placeholder": "twoj@email.com"
+        },
+        "phone": {
+          "label": "Telefon",
+          "placeholder": "+48 123 456 789"
+        },
+        "inquiryType": {
+          "label": "Rodzaj zapytania",
+          "placeholder": "Wybierz rodzaj",
+          "options": {
+            "general": "Ogólne zapytanie",
+            "quote": "Wycena projektu",
+            "technical": "Pytanie techniczne",
+            "partnership": "Współpraca",
+            "media": "Media/Prasa",
+            "other": "Inne"
+          }
+        },
+        "message": {
+          "label": "Wiadomość",
+          "placeholder": "Opowiedz nam o swoim projekcie..."
+        }
+      },
+      "submit": "Wyślij wiadomość"
+    }
+  },
+  "accessibility": {
+    "skipToContent": "Przejdź do głównej treści",
+    "openMenu": "Otwórz menu",
+    "closeMenu": "Zamknij menu"
+  }
+}

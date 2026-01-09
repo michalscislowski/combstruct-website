@@ -1,0 +1,621 @@
+{
+  "metadata": {
+    "title": "Combstruct | Patentierte Bautechnologie",
+    "description": "Patentierte Kammbalken-Technologie. Bauen Sie Häuser 45% günstiger, 5x schneller, mit Passivhaus-Leistung (U=0,09) und 4x geringerem CO2-Fußabdruck."
+  },
+  "navigation": {
+    "about": "Über uns",
+    "products": "Produkte",
+    "projects": "Projekte",
+    "process": "Prozess",
+    "faq": "FAQ",
+    "blog": "Blog",
+    "contact": "Kontakt",
+    "startProject": "Projekt starten"
+  },
+  "languageSwitcher": {
+    "label": "Sprache",
+    "en": "English",
+    "pl": "Polski",
+    "de": "Deutsch"
+  },
+  "hero": {
+    "headline": "Nachhaltiges Bauen,",
+    "headlineBreak": "neu erfunden.",
+    "subheadline": "Patentierte Kammbalken-Technologie. 45% niedrigere Kosten. 5x schnellere Bauzeit. Passivhaus-Leistung. 4x geringerer CO2-Fußabdruck.",
+    "ctaPrimary": "Projekt starten",
+    "ctaSecondary": "System erkunden",
+    "pauseVideo": "Hintergrundvideo pausieren",
+    "playVideo": "Hintergrundvideo abspielen",
+    "videoPlaying": "Hintergrundvideo wird abgespielt",
+    "videoPaused": "Hintergrundvideo ist pausiert",
+    "audienceCards": {
+      "selfBuilders": {
+        "title": "Für Selbstbauer",
+        "description": "Bauen Sie Ihr eigenes Haus mit unserem DIY-freundlichen System"
+      },
+      "architects": {
+        "title": "Für Architekten",
+        "description": "Integrieren Sie unser System in Ihre Entwürfe"
+      },
+      "developers": {
+        "title": "Für Entwickler",
+        "description": "Skalieren Sie nachhaltige Wohnprojekte"
+      },
+      "suppliers": {
+        "title": "Für Lieferanten",
+        "description": "Werden Sie Teil unseres Fertigungsnetzwerks"
+      }
+    }
+  },
+  "valueProps": {
+    "sectionTitle": "Warum führende Architekten",
+    "sectionTitleBreak": "Combstruct wählen.",
+    "sectionDescription": "Patentierte Technologie, die jede Alternative bei Kosten, Geschwindigkeit, Wärmeleistung und Umweltauswirkung übertrifft — belegt durch echte Daten.",
+    "features": {
+      "buildFast": {
+        "title": "45% niedrigere Kosten, 5x schneller",
+        "description": "Gesamtkosten von 2.600 PLN/m² vs. 4.300-4.800 PLN/m² für Alternativen. Rohbau in 1-4 Wochen vs. 6-12 Monate. Nur 4-6 Arbeitsstunden pro m² — zwei Personen mit Grundwerkzeugen können ein ganzes Haus bauen.",
+        "linkText": "Vergleich ansehen"
+      },
+      "sustainable": {
+        "title": "4x geringerer CO2-Fußabdruck",
+        "description": "≤150 kg CO₂eq/m² vs. 600-750 kg bei traditionellen Methoden. 97% recycelbare Materialien. Kein Beton oder Stahl erforderlich. Vollständig konform mit EU-Dekarbonisierungszielen 2026-2030 und Taxonomie-Anforderungen.",
+        "linkText": "Nachhaltigkeitsdaten ansehen"
+      },
+      "precision": {
+        "title": "Passivhaus-Standard",
+        "description": "U-Wert von 0,09 W/m²K — 40-47% bessere Wärmeleistung als jeder Wettbewerber. Luftdichtheit von n₅₀ < 0,2 h⁻¹. CNC-gefertigte Komponenten gewährleisten keine Wärmebrücken und 100+ Jahre Lebensdauer.",
+        "linkText": "Technische Daten ansehen"
+      }
+    }
+  },
+  "howItWorks": {
+    "sectionTitle": "Von der Vision zur Realität,",
+    "sectionTitleBreak": "vereinfacht.",
+    "steps": {
+      "design": {
+        "number": "01",
+        "title": "Entwurf",
+        "description": "Arbeiten Sie mit unserem Team, um Ihren perfekten Grundriss zu erstellen, angepasst an Ihre Bedürfnisse und lokale Vorschriften."
+      },
+      "manufacture": {
+        "number": "02",
+        "title": "Fertigung",
+        "description": "Ihre Komponenten werden in unserer Anlage präzisionsgeschnitten, was perfekte Passform und minimalen Abfall gewährleistet."
+      },
+      "deliver": {
+        "number": "03",
+        "title": "Lieferung",
+        "description": "Alle Komponenten kommen montagefertig an Ihrem Standort an, mit klaren Anleitungen inklusive."
+      },
+      "build": {
+        "number": "04",
+        "title": "Bau",
+        "description": "Bauen Sie Ihr Haus in Tagen, nicht Monaten zusammen. Unser System ist für Geschwindigkeit und Einfachheit konzipiert."
+      }
+    },
+    "ctaText": "Vollständigen Prozess sehen"
+  },
+  "applications": {
+    "sectionTitle": "Bauen Sie alles,",
+    "sectionTitleBreak": "überall.",
+    "sectionDescription": "Unser modulares System passt sich jedem Projekttyp an. Von gemütlichen Einfamilienhäusern bis zu gewerblichen Entwicklungen.",
+    "types": {
+      "singleFamily": {
+        "title": "Einfamilienhäuser",
+        "description": "Komfortable, energieeffiziente Häuser in 30 Tagen gebaut"
+      },
+      "multiUnit": {
+        "title": "Mehrfamilienhäuser",
+        "description": "Skalierbare Lösungen für Wohnungen und Reihenhäuser"
+      },
+      "commercial": {
+        "title": "Gewerberäume",
+        "description": "Büros, Einzelhandelsflächen und Leichtindustriegebäude"
+      },
+      "tenementSuperstructures": {
+        "title": "Dachaufstockungen",
+        "description": "Dachausbauten und Gebäudeerweiterungen"
+      }
+    }
+  },
+  "partners": {
+    "trustStatement": "Von Branchenführern vertraut"
+  },
+  "cta": {
+    "headline": "Bereit, Ihr",
+    "headlineBreak": "Traumhaus zu bauen?",
+    "description": "Schließen Sie sich Hunderten von Hausbesitzern an, die einen besseren Weg zum Bauen entdeckt haben. Starten Sie noch heute mit einer kostenlosen Beratung.",
+    "primaryLink": "Projekt starten",
+    "secondaryLink": "FAQ lesen"
+  },
+  "footer": {
+    "brandDescription": "Patentierte Kammbalken-Technologie. 45% niedrigere Kosten. 5x schneller. Passivhaus-Leistung. 4x geringerer CO2-Fußabdruck.",
+    "sections": {
+      "product": "Produkt",
+      "company": "Unternehmen",
+      "resources": "Ressourcen",
+      "social": "Soziale Medien"
+    },
+    "links": {
+      "products": "Produkte",
+      "process": "Prozess",
+      "projects": "Projekte",
+      "faq": "FAQ",
+      "about": "Über uns",
+      "blog": "Blog",
+      "contact": "Kontakt",
+      "careers": "Karriere",
+      "documentation": "Dokumentation",
+      "technicalSpecs": "Technische Daten",
+      "downloads": "Downloads"
+    },
+    "legal": {
+      "privacy": "Datenschutzrichtlinie",
+      "terms": "Nutzungsbedingungen",
+      "copyright": "© {year} Combstruct. Alle Rechte vorbehalten."
+    }
+  },
+  "about": {
+    "hero": {
+      "badge": "Über uns",
+      "title": "Bauen neu gedacht",
+      "titleBreak": "von Grund auf.",
+      "description": "Wir haben eine patentierte Technologie entwickelt, die Häuser 45% günstiger, 5x schneller zu bauen und 4x nachhaltiger macht. Hier ist, warum wir glauben, dass das Timing perfekt ist."
+    },
+    "story": {
+      "title": "Das Problem, das wir lösen",
+      "paragraph1": "Europa steht vor einer Wohnungskrise: Jährlich werden über 1 Million Häuser benötigt, doch traditionelles Bauen ist zu langsam (6-12 Monate), zu teuer (jährlich 8% steigende Kosten) und zu CO2-intensiv (40% der globalen Emissionen). Gleichzeitig schrumpft die Bauarbeitskraft — 25% der Arbeiter gehen bis 2030 in Rente.",
+      "paragraph2": "Unser patentiertes Kammbalken-System verändert die Wirtschaftlichkeit grundlegend. Durch die Verwendung von ineinandergreifenden Holzwerkstoffplatten anstelle von Konstruktionsholz haben wir die Lieferkettenengpässe und Fachkräfteanforderungen eliminiert, die die Branche plagen. Zwei Personen mit Grundwerkzeugen können jetzt bauen, was zuvor ein 10-köpfiges Team erforderte.",
+      "paragraph3": "Die Zahlen beweisen es: 45% niedrigere Gesamtkosten, Rohbau in 1-4 Wochen, U-Wert von 0,09 W/m²K (Passivhaus übertreffend) und CO2-Fußabdruck 4-5x niedriger als Alternativen. Das sind keine inkrementellen Verbesserungen — das sind kategoriedefinierende Vorteile, geschützt durch Patent.",
+      "imageAlt": "Fertige Combstruct-Gebäudestruktur, die unser modulares Bausystem präsentiert"
+    },
+    "values": {
+      "mission": {
+        "title": "Warum jetzt",
+        "description": "EU-Dekarbonisierungsmandate 2026-2030 zwingen die Branche zur Veränderung. ESG-Anforderungen machen traditionelles Bauen wirtschaftlich unrentabel. Wir sind genau in dem Moment positioniert, in dem der Markt Lösungen wie unsere annehmen muss."
+      },
+      "vision": {
+        "title": "Unser Technologie-Vorsprung",
+        "description": "Unser patentiertes Kammbalken-Ineinandergreif-System ist einzigartig: Es nutzt Standard-Holzwerkstoffplatten zur Erstellung von Balken unbegrenzter Länge, universellen Wand-/Decken-/Dachkernen und benötigt kein Konstruktionsholz — was uns immun gegen Holzmarktvolatilität macht."
+      },
+      "values": {
+        "title": "Compliance-bereit",
+        "description": "Vollständige Konformität mit EU-Taxonomie-Anforderungen und Dekarbonisierungsprogrammen 2026-2030. Unser CO2-Fußabdruck von ≤150 kg CO₂eq/m² ist 4-5x besser als erforderliche Schwellenwerte."
+      }
+    },
+    "cta": {
+      "title": "Interessiert an unserer Technologie?",
+      "description": "Ob Sie Bauherr, Investor oder potenzieller Partner sind — lassen Sie uns darüber sprechen, wie Combstruct zu Ihren Bedürfnissen passt.",
+      "button": "Kontakt aufnehmen"
+    }
+  },
+  "products": {
+    "hero": {
+      "badge": "Patentierte Technologie",
+      "title": "Das Kammbalken-",
+      "titleBreak": "Bausystem",
+      "description": "Das einzige Bausystem, das 45% niedrigere Kosten, 5x schnellere Bauzeit und Passivhaus-Wärmeleistung bietet — alles patentgeschützt.",
+      "getQuote": "Angebot anfordern",
+      "seeProcess": "Prozess ansehen",
+      "imageAlt": "Combstruct Kammbalken-Strukturelement - der Kern unseres modularen Bausystems"
+    },
+    "features": {
+      "title": "Wettbewerbsvorteile",
+      "items": {
+        "cost": "45% niedrigere Gesamtkosten (2.600 PLN/m²)",
+        "thermal": "U-Wert: 0,09 W/m²K (Klassenbester)",
+        "speed": "Rohbau in 1-4 Wochen",
+        "carbon": "4x geringerer CO2-Fußabdruck",
+        "labor": "Nur 4-6 Arbeitsstunden pro m²",
+        "recyclable": "97% recycelbare Materialien",
+        "noConcrete": "Kein Beton, Stahl oder Konstruktionsholz",
+        "diyFriendly": "2 Personen mit Grundwerkzeugen"
+      }
+    },
+    "specs": {
+      "title": "Technische Spezifikationen",
+      "description": "Unabhängig verifizierte Leistungskennzahlen, die alle Industriestandards übertreffen.",
+      "imageAlt": "Technische Illustration des modularen Bausystems von Combstruct",
+      "items": {
+        "thermal": {
+          "label": "Wärmeleistung",
+          "value": "U 0,09 W/m²K"
+        },
+        "airtightness": {
+          "label": "Luftdichtheit",
+          "value": "n₅₀ < 0,2 h⁻¹"
+        },
+        "carbon": {
+          "label": "CO2-Fußabdruck",
+          "value": "≤150 kg CO₂eq/m²"
+        },
+        "fireResistance": {
+          "label": "Feuerwiderstand",
+          "value": "REI 60"
+        },
+        "soundInsulation": {
+          "label": "Schalldämmung",
+          "value": "Rw 45 dB"
+        },
+        "loadCapacity": {
+          "label": "Tragfähigkeit",
+          "value": "2,5 kN/m²"
+        },
+        "wallThickness": {
+          "label": "Wandstärke",
+          "value": "250mm"
+        },
+        "lifespan": {
+          "label": "Lebensdauer",
+          "value": "100+ Jahre"
+        }
+      }
+    },
+    "applications": {
+      "title": "Anwendungen",
+      "description": "Unser System passt sich jedem Gebäudetyp an",
+      "types": {
+        "homes": "Einfamilienhäuser",
+        "apartments": "Mehrfamilienwohnungen",
+        "commercial": "Gewerberäume",
+        "workshops": "Dachaufstockungen"
+      }
+    },
+    "cta": {
+      "title": "Bereit mit dem Bauen zu beginnen?",
+      "description": "Kontaktieren Sie unser Team für ein detailliertes Angebot und Projektberatung.",
+      "button": "Angebot anfordern"
+    }
+  },
+  "projects": {
+    "hero": {
+      "badge": "Unsere Arbeit",
+      "title": "Projekte, die für sich",
+      "titleBreak": "selbst sprechen.",
+      "description": "Erkunden Sie unser Portfolio abgeschlossener Projekte. Von gemütlichen Einfamilienhäusern bis zu Gewerbegebäuden - sehen Sie, was mit Combstruct möglich ist."
+    },
+    "items": {
+      "modernVilla": {
+        "title": "Moderne Familienvilla",
+        "location": "Posen, Polen",
+        "size": "180 m²",
+        "duration": "28 Tage",
+        "category": "Wohngebäude"
+      },
+      "ecoApartments": {
+        "title": "Öko-Apartmentkomplex",
+        "location": "Warschau, Polen",
+        "size": "1.200 m²",
+        "duration": "45 Tage",
+        "category": "Mehrfamilienhaus"
+      },
+      "countrysideRetreat": {
+        "title": "Landhausrückzug",
+        "location": "Krakau, Polen",
+        "size": "120 m²",
+        "duration": "25 Tage",
+        "category": "Wohngebäude"
+      },
+      "officeBuilding": {
+        "title": "Bürogebäude",
+        "location": "Danzig, Polen",
+        "size": "450 m²",
+        "duration": "35 Tage",
+        "category": "Gewerbe"
+      },
+      "weekendCabin": {
+        "title": "Wochenendhütte",
+        "location": "Zakopane, Polen",
+        "size": "65 m²",
+        "duration": "18 Tage",
+        "category": "Wohngebäude"
+      },
+      "workshopGarage": {
+        "title": "Werkstatt & Garage",
+        "location": "Breslau, Polen",
+        "size": "90 m²",
+        "duration": "14 Tage",
+        "category": "Werkstatt"
+      }
+    },
+    "stats": {
+      "projectsCompleted": {
+        "value": "50+",
+        "label": "Abgeschlossene Projekte"
+      },
+      "squareMeters": {
+        "value": "15.000+",
+        "label": "Quadratmeter gebaut"
+      },
+      "clientSatisfaction": {
+        "value": "100%",
+        "label": "Kundenzufriedenheit"
+      },
+      "avgDays": {
+        "value": "30",
+        "label": "Durchschn. Tage bis Fertigstellung"
+      }
+    }
+  },
+  "process": {
+    "hero": {
+      "badge": "Unser Prozess",
+      "title": "Von der Vision zum Schlüssel,",
+      "titleBreak": "in nur 30 Tagen.",
+      "description": "Unser optimierter Prozess nimmt die Komplexität aus dem Bauen. So verwandeln wir Ihren Traum in Wirklichkeit."
+    },
+    "phases": {
+      "design": {
+        "phase": "Phase 1",
+        "title": "Beratung & Entwurf",
+        "duration": "1-2 Wochen",
+        "description": "Wir beginnen damit, Ihre Vision zu verstehen. Unser Team arbeitet mit Ihnen zusammen, um einen Grundriss zu entwerfen, der Ihren Bedürfnissen, Vorlieben und lokalen Bauvorschriften entspricht.",
+        "details": {
+          "1": "Erstberatung und Standortbewertung",
+          "2": "Individueller Grundrissentwurf",
+          "3": "Materialauswahl",
+          "4": "Kostenvoranschlag und Zeitplanung",
+          "5": "Vorbereitung der Baugenehmigung"
+        }
+      },
+      "manufacturing": {
+        "phase": "Phase 2",
+        "title": "Fertigung",
+        "duration": "2-3 Wochen",
+        "description": "Ihre Baukomponenten werden in unserer Anlage präzisionsgefertigt. Jedes Teil wird nach exakten Spezifikationen hergestellt, was perfekte Passform und minimalen Abfall gewährleistet.",
+        "details": {
+          "1": "CNC-geschnittene Strukturkomponenten",
+          "2": "Qualitätskontrolle bei jedem Schritt",
+          "3": "Vormontage-Tests",
+          "4": "Verpackung für den Transport",
+          "5": "Koordination der Lieferlogistik"
+        }
+      },
+      "delivery": {
+        "phase": "Phase 3",
+        "title": "Lieferung & Vorbereitung",
+        "duration": "1-2 Tage",
+        "description": "Alle Komponenten werden in einer einzigen Lieferung an Ihren Standort geliefert. Während Sie das Fundament vorbereiten, stellen wir sicher, dass alles für die Montage bereit ist.",
+        "details": {
+          "1": "Vollständige Komponentenlieferung",
+          "2": "Fundamentinspektion",
+          "3": "Anleitung zur Standortvorbereitung",
+          "4": "Montagewerkzeuge und -materialien",
+          "5": "Koordination des Installationsteams"
+        }
+      },
+      "assembly": {
+        "phase": "Phase 4",
+        "title": "Montage & Fertigstellung",
+        "duration": "2-4 Wochen",
+        "description": "Beobachten Sie, wie Ihr Traumhaus in Tagen, nicht Monaten, entsteht. Unser Kammbalken-System ermöglicht schnelle, präzise Montage mit oder ohne professionelle Bauarbeiter.",
+        "details": {
+          "1": "Strukturrahmenmontage",
+          "2": "Dämmung und Hüllenfertigstellung",
+          "3": "Fenster- und Türinstallation",
+          "4": "Versorgungsanschlüsse",
+          "5": "Endinspektion und Übergabe"
+        }
+      }
+    },
+    "cta": {
+      "title": "Bereit zu starten?",
+      "description": "Kontaktieren Sie uns für eine kostenlose Beratung und lassen Sie uns Ihr Projekt besprechen.",
+      "button": "Projekt starten"
+    }
+  },
+  "faq": {
+    "hero": {
+      "badge": "FAQ",
+      "title": "Häufig gestellte",
+      "titleBreak": "Fragen",
+      "description": "Alles, was Sie über unsere patentierte Kammbalken-Technologie wissen müssen und wie sie im Vergleich zu traditionellen Baumethoden abschneidet."
+    },
+    "categories": {
+      "general": {
+        "title": "Allgemein",
+        "questions": {
+          "1": {
+            "q": "Was ist das Combstruct Kammbalken-System?",
+            "a": "Combstruct verwendet patentierte Kammbalken-Technologie — ineinandergreifende Holzwerkstoffplatten (MFP oder OSB-3), die einen universellen tragenden Kern für Wände, Decken und Dächer bilden. Im Gegensatz zum traditionellen Holzrahmenbau benötigt unser System kein Konstruktionsholz, keinen Beton und keinen Stahl. Das Ineinandergreif-Design ermöglicht Balken von theoretisch unbegrenzter Länge und eliminiert den Bedarf an Stürzen, Gesimsen oder Verstärkungen."
+          },
+          "2": {
+            "q": "Wie lange dauert der Bau tatsächlich?",
+            "a": "Der Rohbau mit vollständiger Wärmedämmung und Luftdichtheit dauert 1-4 Wochen — das ist 3-10x schneller als Alternativen. Traditioneller Mauerwerksbau dauert 28-44 Wochen, Holzrahmenbau 12-20 Wochen und Fertigbau 6-12 Wochen. Unser System benötigt nur 4-6 Arbeitsstunden pro m², verglichen mit 12-25 Stunden bei anderen Methoden."
+          },
+          "3": {
+            "q": "Welche Gebäudetypen können gebaut werden?",
+            "a": "Das System passt sich jedem Gebäudetyp an: Einfamilienhäuser, Mehrfamilienwohnungen, Gewerberäume, Büros, Dachaufstockungen und Nebengebäude. Der einheitliche Strukturquerschnitt funktioniert identisch für Wände, Decken und Dächer — keine Geometrieänderungen zwischen Bauelementen."
+          }
+        }
+      },
+      "technical": {
+        "title": "Technisch",
+        "questions": {
+          "1": {
+            "q": "Welche Materialien verwendet das System?",
+            "a": "Der Kern verwendet standardisierte Holzwerkstoffplatten (MFP oder OSB-3) — kein Konstruktionsholz erforderlich. Das macht uns immun gegen Holzmarkt-Preisschwankungen. Dämmoptionen umfassen Mineralwolle, EPS, XPS, PUR, Hanfbeton oder Pressstroh. Im Gegensatz zum Holzrahmenbau unterstützen unsere Holzwerkstoffplatten sowohl diffusionsoffene als auch diffusionsgeschlossene Dämmstoffe."
+          },
+          "2": {
+            "q": "Welche Wärmeleistung erreicht das System?",
+            "a": "Unsere Gebäude erreichen einen U-Wert von 0,09 W/m²K — 40-47% besser als Holzrahmen (0,16), Fertigbau (0,17) oder traditionelles Mauerwerk (0,15). Die Luftdichtheit erreicht n₅₀ < 0,2 h⁻¹ bei 50 Pa mit Sprühmembranbeschichtung. Das übertrifft Passivhausstandards als Standard, nicht als Upgrade."
+          },
+          "3": {
+            "q": "Welche Fassaden- und Ausführungsoptionen sind verfügbar?",
+            "a": "Der Kassettenkern erlegt keine Einschränkungen auf. Fassaden: WDVS-Systeme, hinterlüftete Fassaden (Faserzement, HPL, Blech, Fliesen, Grünfassaden). Dacheindeckungen: Bitumenbahnen, PVC, TPO, EPDM, Stehfalzblech, Metalldachziegel, Schindeln, Gründächer, Beton-/Keramikziegel. Innenräume: Standard-Trockenbausysteme mit 45mm Installationsebene für Sanitär-, Elektro- und Smart-Home-Systeme."
+          },
+          "4": {
+            "q": "Was ist die Gebäudelebensdauer?",
+            "a": "100+ Jahre bei ordnungsgemäßer Wartung. Das System hat keine Wärmebrücken, keine hygroskopische Verformung und stabile Eigenschaften über die Zeit. Der einheitliche Querschnitt vom Fundament bis zum Dach eliminiert Schwachstellen, die in hybriden Bausystemen auftreten."
+          }
+        }
+      },
+      "process": {
+        "title": "Prozess",
+        "questions": {
+          "1": {
+            "q": "Können zwei Personen wirklich ein Haus bauen?",
+            "a": "Ja. Das System benötigt nur 4-6 Arbeitsstunden pro m² und kann von zwei Personen mit einfachen Elektrowerkzeugen montiert werden — keine Fachqualifikationen erforderlich. Traditioneller Bau erfordert 18-25 Stunden/m² und spezialisierte Handwerker. Unsere detaillierten Montageanleitungen und CNC-präzisionsgefertigten Komponenten gewährleisten jedes Mal perfekte Passform."
+          },
+          "2": {
+            "q": "Was ist mit Baugenehmigungen und Vorschriften?",
+            "a": "Unsere Entwürfe erfüllen alle EU-Bauvorschriften und Energievorschriften. Wir stellen vollständige Dokumentation für Genehmigungsanträge bereit. Das System ist vollständig konform mit den EU-Dekarbonisierungsanforderungen 2026-2030 und Taxonomiestandards — zunehmend wichtig bei verschärften Vorschriften."
+          },
+          "3": {
+            "q": "Wie wird die Lieferung abgewickelt?",
+            "a": "Alle Materialien für ein komplettes Haus passen in zwei Standard-TIR-Sattelauflieger. Wir liefern europaweit mit präzisionsgeschnittenen, montagefertigen Komponenten. Kein Schneiden oder Anpassen vor Ort erforderlich — das eliminiert Abfall und Wetterabhängigkeiten."
+          }
+        }
+      },
+      "pricing": {
+        "title": "Kosten & Nachhaltigkeit",
+        "questions": {
+          "1": {
+            "q": "Wie vergleichen sich die Kosten mit anderen Methoden?",
+            "a": "Gesamtkosten: 2.600 PLN/m² inklusive Struktur, Dämmung und Membranen. Wettbewerber: Holzrahmen 4.300 PLN/m², Fertigbau 4.400 PLN/m², traditionelles Mauerwerk 4.800 PLN/m². Das sind 45% Ersparnis — erreicht durch Eliminierung von Konstruktionsholz, Beton, Stahl und Reduzierung der Arbeit um das 3-5-fache."
+          },
+          "2": {
+            "q": "Was ist im Grundpreis enthalten?",
+            "a": "Alle Strukturkomponenten (Kammbalken-Paneele), Wärmedämmung, Membransysteme und Außenbeplankung. Fenster, Türen, Fassadenausführung, Innenausbau, Versorgungsanschlüsse und Fundament werden separat bepreist oder in Full-Service-Paketen inkludiert. Kontaktieren Sie uns für eine detaillierte Aufschlüsselung."
+          },
+          "3": {
+            "q": "Was ist mit Umweltauswirkungen?",
+            "a": "CO2-Fußabdruck: ≤150 kg CO₂eq/m² — das ist 4-5x niedriger als traditioneller Bau (600-750 kg). Recyclingfähigkeit: 97% der Komponenten können am Ende der Lebensdauer recycelt oder wiederverwendet werden. Kein Beton oder Stahl bedeutet, dass das Gebäude vollständig demontiert und Materialien zurückgewonnen werden können, im Gegensatz zum konventionellen Bau."
+          }
+        }
+      }
+    },
+    "cta": {
+      "title": "Noch Fragen?",
+      "description": "Unser Team ist bereit, Ihre spezifischen Projektanforderungen zu besprechen und detaillierte technische Spezifikationen zu liefern.",
+      "button": "Kontaktieren Sie uns"
+    }
+  },
+  "blog": {
+    "hero": {
+      "badge": "Blog",
+      "title": "Einblicke & Updates",
+      "description": "Geschichten, Anleitungen und Neuigkeiten aus der Welt des modularen Bauens. Erfahren Sie mehr über nachhaltiges Bauen und bleiben Sie über unsere neuesten Projekte informiert."
+    },
+    "readMore": "Weiterlesen",
+    "placeholderImage": "Platzhalterbild",
+    "posts": {
+      "sustainableFuture": {
+        "slug": "zukunft-des-nachhaltigen-bauens",
+        "title": "Die Zukunft des nachhaltigen Bauens",
+        "excerpt": "Wie modulare Bausysteme die Art und Weise revolutionieren, wie wir über nachhaltiges Wohnen denken und die Umweltbelastung des Bauwesens reduzieren.",
+        "category": "Nachhaltigkeit",
+        "readTime": "5 Min. Lesezeit"
+      },
+      "buildIn30Days": {
+        "slug": "haus-in-30-tagen-bauen",
+        "title": "Ein Haus in 30 Tagen bauen: Ein vollständiger Leitfaden",
+        "excerpt": "Alles, was Sie über unseren schnellen Bauprozess wissen müssen und wie wir komplette Häuser in nur einem Monat liefern.",
+        "category": "Prozess",
+        "readTime": "8 Min. Lesezeit"
+      },
+      "energyEfficiency": {
+        "slug": "energieeffizienz-erklaert",
+        "title": "Energieeffizienz erklärt: U-Werte verstehen",
+        "excerpt": "Ein tiefer Einblick in Wärmeleistungsmetriken und warum unser U-Wert von 0,11 W/m²K für Ihre Energiekosten und Ihren Komfort wichtig ist.",
+        "category": "Technisch",
+        "readTime": "6 Min. Lesezeit"
+      },
+      "diyVsProfessional": {
+        "slug": "diy-vs-professionelle-installation",
+        "title": "DIY vs. professionelle Installation: Was ist richtig für Sie?",
+        "excerpt": "Vor- und Nachteile des Selbstbauens im Vergleich zur Beauftragung von Profis für Ihr Combstruct-Projekt.",
+        "category": "Leitfaden",
+        "readTime": "7 Min. Lesezeit"
+      },
+      "combBeamTech": {
+        "slug": "kammbalken-technologie",
+        "title": "Der Kammbalken von innen: Unsere revolutionäre Technologie",
+        "excerpt": "Ein detaillierter Blick auf die Technik hinter unserem patentierten Kammbalken-System und was es einzigartig macht.",
+        "category": "Technisch",
+        "readTime": "10 Min. Lesezeit"
+      },
+      "customerStory": {
+        "slug": "kundengeschichte-posen-villa",
+        "title": "Kundengeschichte: Das Posen Villa Projekt",
+        "excerpt": "Wie eine Familie ihr Traumhaus in nur 28 Tagen gebaut hat und was sie dabei gelernt haben.",
+        "category": "Fallstudie",
+        "readTime": "5 Min. Lesezeit"
+      }
+    }
+  },
+  "contact": {
+    "hero": {
+      "badge": "Kontakt",
+      "title": "Lassen Sie uns gemeinsam",
+      "titleBreak": "etwas bauen.",
+      "description": "Bereit, Ihr Projekt zu starten? Haben Sie Fragen zu unserem System? Kontaktieren Sie uns und wir helfen Ihnen beim ersten Schritt."
+    },
+    "info": {
+      "title": "Kontaktieren Sie uns",
+      "imageAlt": "Combstruct Gebäudestandort in Posen, Polen",
+      "items": {
+        "email": {
+          "label": "E-Mail",
+          "value": "contact@combstruct.com"
+        },
+        "phone": {
+          "label": "Telefon",
+          "value": "+48 123 456 789"
+        },
+        "location": {
+          "label": "Standort",
+          "value": "Posen, Polen"
+        },
+        "hours": {
+          "label": "Öffnungszeiten",
+          "value": "Mo-Fr 9:00-17:00"
+        }
+      }
+    },
+    "form": {
+      "title": "Senden Sie uns eine Nachricht",
+      "required": "erforderlich",
+      "optional": "optional",
+      "successMessage": "Vielen Dank für Ihre Nachricht! Wir melden uns bald.",
+      "fields": {
+        "name": {
+          "label": "Name",
+          "placeholder": "Ihr Name"
+        },
+        "email": {
+          "label": "E-Mail",
+          "placeholder": "ihre@email.com"
+        },
+        "phone": {
+          "label": "Telefon",
+          "placeholder": "+48 123 456 789"
+        },
+        "inquiryType": {
+          "label": "Anfrageart",
+          "placeholder": "Art auswählen",
+          "options": {
+            "general": "Allgemeine Anfrage",
+            "quote": "Projektangebot",
+            "technical": "Technische Frage",
+            "partnership": "Partnerschaft",
+            "media": "Medien/Presse",
+            "other": "Sonstiges"
+          }
+        },
+        "message": {
+          "label": "Nachricht",
+          "placeholder": "Erzählen Sie uns von Ihrem Projekt..."
+        }
+      },
+      "submit": "Nachricht senden"
+    }
+  },
+  "accessibility": {
+    "skipToContent": "Zum Hauptinhalt springen",
+    "openMenu": "Menü öffnen",
+    "closeMenu": "Menü schließen"
+  }
+}

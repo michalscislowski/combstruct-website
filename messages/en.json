@@ -1,0 +1,621 @@
+{
+  "metadata": {
+    "title": "Combstruct | Patented Construction Technology",
+    "description": "Patented comb-beam technology. Build homes 45% cheaper, 5x faster, with passive-house performance (U=0.09) and 4x lower carbon footprint."
+  },
+  "navigation": {
+    "about": "About",
+    "products": "Products",
+    "projects": "Projects",
+    "process": "Process",
+    "faq": "FAQ",
+    "blog": "Blog",
+    "contact": "Contact",
+    "startProject": "Start Your Project"
+  },
+  "languageSwitcher": {
+    "label": "Language",
+    "en": "English",
+    "pl": "Polski",
+    "de": "Deutsch"
+  },
+  "hero": {
+    "headline": "Sustainable building,",
+    "headlineBreak": "reinvented.",
+    "subheadline": "Patented comb-beam technology. 45% lower cost. 5x faster build time. Passive-house performance. 4x lower carbon footprint.",
+    "ctaPrimary": "Start Your Project",
+    "ctaSecondary": "Explore System",
+    "pauseVideo": "Pause background video",
+    "playVideo": "Play background video",
+    "videoPlaying": "Background video is playing",
+    "videoPaused": "Background video is paused",
+    "audienceCards": {
+      "selfBuilders": {
+        "title": "For self-builders",
+        "description": "Build your own home with our DIY-friendly system"
+      },
+      "architects": {
+        "title": "For architects",
+        "description": "Integrate our system into your designs"
+      },
+      "developers": {
+        "title": "For developers",
+        "description": "Scale sustainable housing projects"
+      },
+      "suppliers": {
+        "title": "For suppliers",
+        "description": "Join our manufacturing network"
+      }
+    }
+  },
+  "valueProps": {
+    "sectionTitle": "Why leading architects choose",
+    "sectionTitleBreak": "Combstruct.",
+    "sectionDescription": "Patented technology that outperforms every alternative on cost, speed, thermal efficiency, and environmental impact—backed by real data.",
+    "features": {
+      "buildFast": {
+        "title": "45% lower cost, 5x faster",
+        "description": "Total cost of 2,600 PLN/m² vs 4,300-4,800 PLN/m² for alternatives. Shell construction in 1-4 weeks vs 6-12 months. Only 4-6 labor hours per m²—two people with basic tools can build an entire home.",
+        "linkText": "See the comparison"
+      },
+      "sustainable": {
+        "title": "4x lower carbon footprint",
+        "description": "≤150 kg CO₂eq/m² vs 600-750 kg for traditional methods. 97% recyclable materials. No concrete or steel required. Fully compliant with EU 2026-2030 decarbonisation targets and taxonomy requirements.",
+        "linkText": "View sustainability data"
+      },
+      "precision": {
+        "title": "Passive-house standard",
+        "description": "U-value of 0.09 W/m²K—40-47% better thermal performance than any competitor. Airtightness of n₅₀ < 0.2 h⁻¹. CNC-manufactured components ensure zero thermal bridges and 100+ year lifespan.",
+        "linkText": "View technical specs"
+      }
+    }
+  },
+  "howItWorks": {
+    "sectionTitle": "From vision to reality,",
+    "sectionTitleBreak": "simplified.",
+    "steps": {
+      "design": {
+        "number": "01",
+        "title": "Design",
+        "description": "Work with our team to create your perfect floor plan, tailored to your needs and local regulations."
+      },
+      "manufacture": {
+        "number": "02",
+        "title": "Manufacture",
+        "description": "Your components are precision-cut in our facility, ensuring perfect fit and minimal waste."
+      },
+      "deliver": {
+        "number": "03",
+        "title": "Deliver",
+        "description": "All components arrive at your site ready for assembly, with clear instructions included."
+      },
+      "build": {
+        "number": "04",
+        "title": "Build",
+        "description": "Assemble your home in days, not months. Our system is designed for speed and simplicity."
+      }
+    },
+    "ctaText": "See full process"
+  },
+  "applications": {
+    "sectionTitle": "Build anything,",
+    "sectionTitleBreak": "anywhere.",
+    "sectionDescription": "Our modular system adapts to any project type. From cozy family homes to commercial developments.",
+    "types": {
+      "singleFamily": {
+        "title": "Single-Family Homes",
+        "description": "Comfortable, energy-efficient homes built in 30 days"
+      },
+      "multiUnit": {
+        "title": "Multi-Unit Housing",
+        "description": "Scalable solutions for apartments and townhouses"
+      },
+      "commercial": {
+        "title": "Commercial Spaces",
+        "description": "Offices, retail spaces, and light industrial buildings"
+      },
+      "tenementSuperstructures": {
+        "title": "Tenement Superstructures",
+        "description": "Rooftop extensions and building additions"
+      }
+    }
+  },
+  "partners": {
+    "trustStatement": "Trusted by industry leaders"
+  },
+  "cta": {
+    "headline": "Ready to build",
+    "headlineBreak": "your future home?",
+    "description": "Join hundreds of homeowners who have discovered a better way to build. Get started with a free consultation today.",
+    "primaryLink": "Start your project",
+    "secondaryLink": "Read the FAQ"
+  },
+  "footer": {
+    "brandDescription": "Patented comb-beam technology. 45% lower cost. 5x faster. Passive-house performance. 4x lower carbon footprint.",
+    "sections": {
+      "product": "Product",
+      "company": "Company",
+      "resources": "Resources",
+      "social": "Social"
+    },
+    "links": {
+      "products": "Products",
+      "process": "Process",
+      "projects": "Projects",
+      "faq": "FAQ",
+      "about": "About",
+      "blog": "Blog",
+      "contact": "Contact",
+      "careers": "Careers",
+      "documentation": "Documentation",
+      "technicalSpecs": "Technical Specs",
+      "downloads": "Downloads"
+    },
+    "legal": {
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service",
+      "copyright": "© {year} Combstruct. All rights reserved."
+    }
+  },
+  "about": {
+    "hero": {
+      "badge": "About Us",
+      "title": "Reinventing construction",
+      "titleBreak": "from first principles.",
+      "description": "We built a patented technology that makes homes 45% cheaper, 5x faster to build, and 4x more sustainable. Here's why we believe the timing is perfect."
+    },
+    "story": {
+      "title": "The Problem We're Solving",
+      "paragraph1": "Europe faces a housing crisis: 1 million+ homes needed annually, yet traditional construction is too slow (6-12 months), too expensive (rising 8% yearly), and too carbon-intensive (40% of global emissions). Meanwhile, construction labor is shrinking—25% of workers will retire by 2030.",
+      "paragraph2": "Our patented comb-beam system fundamentally changes the economics. By using interlocking wood-based panels instead of structural timber, we've eliminated the supply chain bottlenecks and skilled labor requirements that plague the industry. Two people with basic tools can now build what previously required a 10-person crew.",
+      "paragraph3": "The numbers prove it: 45% lower total cost, 1-4 week shell construction, U-value of 0.09 W/m²K (exceeding passive house), and carbon footprint 4-5x lower than alternatives. These aren't incremental improvements—they're category-defining advantages protected by patent.",
+      "imageAlt": "Completed Combstruct building structure showcasing our modular construction system"
+    },
+    "values": {
+      "mission": {
+        "title": "Why Now",
+        "description": "EU 2026-2030 decarbonisation mandates are forcing the industry to change. ESG requirements are making traditional construction economically unviable. We're positioned at the exact moment when the market must adopt solutions like ours."
+      },
+      "vision": {
+        "title": "Our Technology Moat",
+        "description": "Our patented comb-beam interlocking system is unique: it uses standard wood-based panels to create infinite-length beams, universal wall/ceiling/roof cores, and requires no structural timber—making us immune to lumber market volatility."
+      },
+      "values": {
+        "title": "Compliance Ready",
+        "description": "Full compliance with EU taxonomy requirements and 2026-2030 decarbonisation programmes. Our ≤150 kg CO₂eq/m² footprint is 4-5x better than required thresholds."
+      }
+    },
+    "cta": {
+      "title": "Interested in our technology?",
+      "description": "Whether you're a builder, investor, or potential partner—let's talk about how Combstruct fits your needs.",
+      "button": "Get in Touch"
+    }
+  },
+  "products": {
+    "hero": {
+      "badge": "Patented Technology",
+      "title": "The Comb-Beam",
+      "titleBreak": "Building System",
+      "description": "The only construction system that delivers 45% lower cost, 5x faster build time, and passive-house thermal performance—all protected by patent.",
+      "getQuote": "Get a quote",
+      "seeProcess": "See process",
+      "imageAlt": "Combstruct comb-beam structural element - the core of our modular building system"
+    },
+    "features": {
+      "title": "Competitive Advantages",
+      "items": {
+        "cost": "45% lower total cost (2,600 PLN/m²)",
+        "thermal": "U-Value: 0.09 W/m²K (best in class)",
+        "speed": "Shell complete in 1-4 weeks",
+        "carbon": "4x lower carbon footprint",
+        "labor": "Only 4-6 labor hours per m²",
+        "recyclable": "97% recyclable materials",
+        "noConcrete": "No concrete, steel, or structural timber",
+        "diyFriendly": "2 people with basic tools"
+      }
+    },
+    "specs": {
+      "title": "Technical Specifications",
+      "description": "Independently verified performance metrics that exceed every industry standard.",
+      "imageAlt": "Technical illustration of the Combstruct modular construction system",
+      "items": {
+        "thermal": {
+          "label": "Thermal Performance",
+          "value": "U 0.09 W/m²K"
+        },
+        "airtightness": {
+          "label": "Airtightness",
+          "value": "n₅₀ < 0.2 h⁻¹"
+        },
+        "carbon": {
+          "label": "Carbon Footprint",
+          "value": "≤150 kg CO₂eq/m²"
+        },
+        "fireResistance": {
+          "label": "Fire Resistance",
+          "value": "REI 60"
+        },
+        "soundInsulation": {
+          "label": "Sound Insulation",
+          "value": "Rw 45 dB"
+        },
+        "loadCapacity": {
+          "label": "Load Capacity",
+          "value": "2.5 kN/m²"
+        },
+        "wallThickness": {
+          "label": "Wall Thickness",
+          "value": "250mm"
+        },
+        "lifespan": {
+          "label": "Lifespan",
+          "value": "100+ years"
+        }
+      }
+    },
+    "applications": {
+      "title": "Applications",
+      "description": "Our system adapts to any building type",
+      "types": {
+        "homes": "Single-Family Homes",
+        "apartments": "Multi-Unit Apartments",
+        "commercial": "Commercial Spaces",
+        "workshops": "Tenement Superstructures"
+      }
+    },
+    "cta": {
+      "title": "Ready to start building?",
+      "description": "Contact our team for a detailed quote and project consultation.",
+      "button": "Get your quote"
+    }
+  },
+  "projects": {
+    "hero": {
+      "badge": "Our Work",
+      "title": "Projects that speak",
+      "titleBreak": "for themselves.",
+      "description": "Explore our portfolio of completed projects. From cozy family homes to commercial buildings, see what's possible with Combstruct."
+    },
+    "items": {
+      "modernVilla": {
+        "title": "Modern Family Villa",
+        "location": "Poznan, Poland",
+        "size": "180 m²",
+        "duration": "28 days",
+        "category": "Residential"
+      },
+      "ecoApartments": {
+        "title": "Eco Apartment Complex",
+        "location": "Warsaw, Poland",
+        "size": "1,200 m²",
+        "duration": "45 days",
+        "category": "Multi-Unit"
+      },
+      "countrysideRetreat": {
+        "title": "Countryside Retreat",
+        "location": "Krakow, Poland",
+        "size": "120 m²",
+        "duration": "25 days",
+        "category": "Residential"
+      },
+      "officeBuilding": {
+        "title": "Office Building",
+        "location": "Gdansk, Poland",
+        "size": "450 m²",
+        "duration": "35 days",
+        "category": "Commercial"
+      },
+      "weekendCabin": {
+        "title": "Weekend Cabin",
+        "location": "Zakopane, Poland",
+        "size": "65 m²",
+        "duration": "18 days",
+        "category": "Residential"
+      },
+      "workshopGarage": {
+        "title": "Workshop & Garage",
+        "location": "Wroclaw, Poland",
+        "size": "90 m²",
+        "duration": "14 days",
+        "category": "Workshop"
+      }
+    },
+    "stats": {
+      "projectsCompleted": {
+        "value": "50+",
+        "label": "Projects Completed"
+      },
+      "squareMeters": {
+        "value": "15,000+",
+        "label": "Square Meters Built"
+      },
+      "clientSatisfaction": {
+        "value": "100%",
+        "label": "Client Satisfaction"
+      },
+      "avgDays": {
+        "value": "30",
+        "label": "Avg. Days to Complete"
+      }
+    }
+  },
+  "process": {
+    "hero": {
+      "badge": "Our Process",
+      "title": "From vision to keys,",
+      "titleBreak": "in just 30 days.",
+      "description": "Our streamlined process takes the complexity out of construction. Here's how we turn your dream into reality."
+    },
+    "phases": {
+      "design": {
+        "phase": "Phase 1",
+        "title": "Consultation & Design",
+        "duration": "1-2 weeks",
+        "description": "We start with understanding your vision. Our team works with you to design a floor plan that meets your needs, preferences, and local building regulations.",
+        "details": {
+          "1": "Initial consultation and site assessment",
+          "2": "Custom floor plan design",
+          "3": "Material selection",
+          "4": "Cost estimation and timeline planning",
+          "5": "Building permit preparation"
+        }
+      },
+      "manufacturing": {
+        "phase": "Phase 2",
+        "title": "Manufacturing",
+        "duration": "2-3 weeks",
+        "description": "Your building components are precision-manufactured in our facility. Every piece is made to exact specifications, ensuring perfect fit and minimal waste.",
+        "details": {
+          "1": "CNC-cut structural components",
+          "2": "Quality control at every step",
+          "3": "Pre-assembly testing",
+          "4": "Packaging for transport",
+          "5": "Coordination with delivery logistics"
+        }
+      },
+      "delivery": {
+        "phase": "Phase 3",
+        "title": "Delivery & Preparation",
+        "duration": "1-2 days",
+        "description": "All components are delivered to your site in a single shipment. While you prepare the foundation, we ensure everything is ready for assembly.",
+        "details": {
+          "1": "Complete component delivery",
+          "2": "Foundation inspection",
+          "3": "Site preparation guidance",
+          "4": "Assembly tools and materials",
+          "5": "Installation team coordination"
+        }
+      },
+      "assembly": {
+        "phase": "Phase 4",
+        "title": "Assembly & Completion",
+        "duration": "2-4 weeks",
+        "description": "Watch your dream home come together in days, not months. Our comb-beam system allows for rapid, precise assembly with or without professional builders.",
+        "details": {
+          "1": "Structural frame assembly",
+          "2": "Insulation and envelope completion",
+          "3": "Window and door installation",
+          "4": "Utility connections",
+          "5": "Final inspection and handover"
+        }
+      }
+    },
+    "cta": {
+      "title": "Ready to start?",
+      "description": "Get in touch for a free consultation and let's discuss your project.",
+      "button": "Start Your Project"
+    }
+  },
+  "faq": {
+    "hero": {
+      "badge": "FAQ",
+      "title": "Frequently Asked",
+      "titleBreak": "Questions",
+      "description": "Everything you need to know about our patented comb-beam technology and how it compares to traditional construction methods."
+    },
+    "categories": {
+      "general": {
+        "title": "General",
+        "questions": {
+          "1": {
+            "q": "What is the Combstruct comb-beam system?",
+            "a": "Combstruct uses patented comb-beam technology—interlocking wood-based panels (MFP or OSB-3) that form a universal load-bearing core for walls, ceilings, and roofs. Unlike traditional timber framing, our system requires no structural timber, concrete, or steel. The interlocking design creates beams of theoretically unlimited length and eliminates the need for lintels, cornices, or reinforcements."
+          },
+          "2": {
+            "q": "How long does construction actually take?",
+            "a": "Shell construction with full thermal insulation and airtightness takes 1-4 weeks—that's 3-10x faster than alternatives. Traditional brick construction takes 28-44 weeks, timber frame takes 12-20 weeks, and prefab takes 6-12 weeks. Our system requires only 4-6 labor hours per m², compared to 12-25 hours for other methods."
+          },
+          "3": {
+            "q": "What types of buildings can be constructed?",
+            "a": "The system adapts to any building type: single-family homes, multi-unit apartments, commercial spaces, offices, tenement superstructures (rooftop additions), and outbuildings. The uniform structural cross-section works identically for walls, ceilings, and roofs—no geometry changes between building elements."
+          }
+        }
+      },
+      "technical": {
+        "title": "Technical",
+        "questions": {
+          "1": {
+            "q": "What materials does the system use?",
+            "a": "The core uses standardized wood-based panels (MFP or OSB-3)—no structural timber required. This makes us immune to lumber market price volatility. Insulation options include mineral wool, EPS, XPS, PUR, hempcrete, or pressed straw. Unlike timber frame construction, our wood-based panels support both open-diffusion and closed-diffusion insulators."
+          },
+          "2": {
+            "q": "What thermal performance does the system achieve?",
+            "a": "Our buildings achieve a U-value of 0.09 W/m²K—40-47% better than timber frame (0.16), prefab (0.17), or traditional brick (0.15). Airtightness reaches n₅₀ < 0.2 h⁻¹ at 50 Pa with spray membrane coating. This exceeds passive house standards as a default, not an upgrade."
+          },
+          "3": {
+            "q": "What facade and finishing options are available?",
+            "a": "The coffered core imposes no restrictions. Facades: ETICS systems, ventilated facades (fiber cement, HPL, sheet metal, tiles, green walls). Roofing: felt, PVC, TPO, EPDM, standing seam, metal tiles, shingles, green roofs, concrete/ceramic tiles. Interiors: standard drywall systems with a 45mm installation layer for plumbing, electrical, and smart home systems."
+          },
+          "4": {
+            "q": "What is the building lifespan?",
+            "a": "100+ years with proper maintenance. The system has zero thermal bridges, no hygroscopic deformation, and stable properties over time. The uniform cross-section from foundation to roof eliminates weak points found in hybrid construction systems."
+          }
+        }
+      },
+      "process": {
+        "title": "Process",
+        "questions": {
+          "1": {
+            "q": "Can two people really build a house?",
+            "a": "Yes. The system requires only 4-6 labor hours per m² and can be assembled by two people with basic power tools—no specialist qualifications needed. Traditional construction requires 18-25 hours/m² and specialized trades. Our detailed assembly guides and CNC-precision components ensure perfect fit every time."
+          },
+          "2": {
+            "q": "What about building permits and regulations?",
+            "a": "Our designs meet all EU building codes and energy regulations. We provide complete documentation for permit applications. The system is fully compliant with EU 2026-2030 decarbonisation requirements and taxonomy standards—increasingly important as regulations tighten."
+          },
+          "3": {
+            "q": "How is delivery handled?",
+            "a": "All materials for a complete house fit in two standard TIR semi-trailers. We deliver throughout Europe with components precision-cut and ready for assembly. No on-site cutting or fitting required—this eliminates waste and weather dependencies."
+          }
+        }
+      },
+      "pricing": {
+        "title": "Cost & Sustainability",
+        "questions": {
+          "1": {
+            "q": "How does the cost compare to other methods?",
+            "a": "Total cost: 2,600 PLN/m² including structure, insulation, and membranes. Competitors: timber frame 4,300 PLN/m², prefab 4,400 PLN/m², traditional brick 4,800 PLN/m². That's 45% savings—achieved by eliminating structural timber, concrete, steel, and reducing labor by 3-5x."
+          },
+          "2": {
+            "q": "What's included in the base price?",
+            "a": "All structural components (comb-beam panels), thermal insulation, membrane systems, and exterior sheathing. Windows, doors, facade finishing, interior finishing, utilities, and foundation are priced separately or included in full-service packages. Contact us for a detailed breakdown."
+          },
+          "3": {
+            "q": "What about environmental impact?",
+            "a": "Carbon footprint: ≤150 kg CO₂eq/m²—that's 4-5x lower than traditional construction (600-750 kg). Recyclability: 97% of components can be recycled or reused at end of life. No concrete or steel means the building can be fully dismantled and materials recovered, unlike conventional construction."
+          }
+        }
+      }
+    },
+    "cta": {
+      "title": "Still have questions?",
+      "description": "Our team is ready to discuss your specific project requirements and provide detailed technical specifications.",
+      "button": "Contact Us"
+    }
+  },
+  "blog": {
+    "hero": {
+      "badge": "Blog",
+      "title": "Insights & Updates",
+      "description": "Stories, guides, and news from the world of modular construction. Learn about sustainable building and stay updated on our latest projects."
+    },
+    "readMore": "Read more",
+    "placeholderImage": "Placeholder Image",
+    "posts": {
+      "sustainableFuture": {
+        "slug": "future-of-sustainable-construction",
+        "title": "The Future of Sustainable Construction",
+        "excerpt": "How modular building systems are revolutionizing the way we think about sustainable housing and reducing construction's environmental impact.",
+        "category": "Sustainability",
+        "readTime": "5 min read"
+      },
+      "buildIn30Days": {
+        "slug": "building-home-in-30-days",
+        "title": "Building a Home in 30 Days: A Complete Guide",
+        "excerpt": "Everything you need to know about our rapid construction process and how we deliver complete homes in just one month.",
+        "category": "Process",
+        "readTime": "8 min read"
+      },
+      "energyEfficiency": {
+        "slug": "energy-efficiency-explained",
+        "title": "Energy Efficiency Explained: Understanding U-Values",
+        "excerpt": "A deep dive into thermal performance metrics and why our 0.09 W/m²K U-value—40% better than competitors—matters for your energy bills and comfort.",
+        "category": "Technical",
+        "readTime": "6 min read"
+      },
+      "diyVsProfessional": {
+        "slug": "diy-vs-professional-installation",
+        "title": "DIY vs Professional Installation: What's Right for You?",
+        "excerpt": "Weighing the pros and cons of self-building versus hiring professionals for your Combstruct project.",
+        "category": "Guide",
+        "readTime": "7 min read"
+      },
+      "combBeamTech": {
+        "slug": "comb-beam-technology",
+        "title": "Inside the Comb-Beam: Our Revolutionary Technology",
+        "excerpt": "An in-depth look at the engineering behind our patented comb-beam system and what makes it unique.",
+        "category": "Technical",
+        "readTime": "10 min read"
+      },
+      "customerStory": {
+        "slug": "customer-story-poznan-villa",
+        "title": "Customer Story: The Poznan Villa Project",
+        "excerpt": "How one family built their dream home in just 28 days and what they learned along the way.",
+        "category": "Case Study",
+        "readTime": "5 min read"
+      }
+    }
+  },
+  "contact": {
+    "hero": {
+      "badge": "Contact",
+      "title": "Let's build",
+      "titleBreak": "something together.",
+      "description": "Ready to start your project? Have questions about our system? Get in touch and we'll help you take the first step."
+    },
+    "info": {
+      "title": "Get in touch",
+      "imageAlt": "Combstruct building location in Poznan, Poland",
+      "items": {
+        "email": {
+          "label": "Email",
+          "value": "contact@combstruct.com"
+        },
+        "phone": {
+          "label": "Phone",
+          "value": "+48 123 456 789"
+        },
+        "location": {
+          "label": "Location",
+          "value": "Poznan, Poland"
+        },
+        "hours": {
+          "label": "Hours",
+          "value": "Mon-Fri 9:00-17:00"
+        }
+      }
+    },
+    "form": {
+      "title": "Send us a message",
+      "required": "required",
+      "optional": "optional",
+      "successMessage": "Thank you for your message! We'll be in touch soon.",
+      "fields": {
+        "name": {
+          "label": "Name",
+          "placeholder": "Your name"
+        },
+        "email": {
+          "label": "Email",
+          "placeholder": "your@email.com"
+        },
+        "phone": {
+          "label": "Phone",
+          "placeholder": "+48 123 456 789"
+        },
+        "inquiryType": {
+          "label": "Inquiry Type",
+          "placeholder": "Select type",
+          "options": {
+            "general": "General Inquiry",
+            "quote": "Project Quote",
+            "technical": "Technical Question",
+            "partnership": "Partnership",
+            "media": "Media/Press",
+            "other": "Other"
+          }
+        },
+        "message": {
+          "label": "Message",
+          "placeholder": "Tell us about your project..."
+        }
+      },
+      "submit": "Send Message"
+    }
+  },
+  "accessibility": {
+    "skipToContent": "Skip to main content",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
+  }
+}
