@@ -7,14 +7,14 @@ import { useTranslations } from "next-intl";
 import { ArrowRight, Check } from "lucide-react";
 
 const featureKeys = [
-  "timeline",
+  "cost",
   "thermal",
+  "speed",
+  "carbon",
+  "labor",
   "recyclable",
   "noConcrete",
   "diyFriendly",
-  "customizable",
-  "energyEfficient",
-  "minimalSite",
 ] as const;
 
 const specKeys = [
