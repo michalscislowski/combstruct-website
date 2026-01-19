@@ -960,6 +960,34 @@
             background: var(--accent);
         }
 
+        /* ========== SLIDE 10 LAYOUT ========== */
+        .slide-10-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            overflow-y: auto;
+        }
+
+        .fin-layout {
+            display: flex;
+            gap: 64px;
+            align-items: flex-start;
+            margin-top: 16px;
+        }
+
+        .why-this-works {
+            max-width: 320px;
+        }
+
+        .why-this-works h4 {
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: rgba(255,255,255,0.5);
+            margin-bottom: 16px;
+        }
+
         /* ========== RESPONSIVE ========== */
         @media (max-width: 1024px) {
             .slide-content {
@@ -1247,52 +1275,77 @@
 
             /* Slide 10 special layout */
             .slide[data-slide="10"] {
-                padding-top: 60px !important;
+                padding: 20px 20px 90px !important;
             }
 
-            .slide[data-slide="10"] .slide-number {
-                margin-top: 0;
+            .slide-10-content {
+                padding-top: 40px;
             }
 
             .slide[data-slide="10"] h2 {
                 font-size: 20px;
-                margin-bottom: 8px;
+                margin-bottom: 6px;
             }
 
             .slide[data-slide="10"] .lead {
-                font-size: 13px;
-                margin-bottom: 16px;
+                font-size: 12px;
+                margin-bottom: 12px;
             }
 
-            .slide[data-slide="10"] > div[style] {
-                flex-direction: column !important;
-                gap: 20px !important;
+            .fin-layout {
+                flex-direction: column;
+                gap: 16px;
                 margin-top: 8px;
-            }
-
-            .slide[data-slide="10"] > div[style] > div:last-child {
-                max-width: 100% !important;
             }
 
             .slide[data-slide="10"] .fin-chart {
-                height: 140px;
+                height: 120px;
                 margin-top: 0;
+                padding-bottom: 20px;
             }
 
             .slide[data-slide="10"] .fin-bar-wrapper {
-                height: 110px;
+                height: 90px;
+                max-width: 40px;
+            }
+
+            .slide[data-slide="10"] .fin-value {
+                font-size: 9px;
+                top: -14px;
+            }
+
+            .slide[data-slide="10"] .fin-label {
+                font-size: 10px;
             }
 
             .slide[data-slide="10"] .fin-stats {
-                margin-top: 16px;
+                margin-top: 12px;
+                gap: 12px;
             }
 
-            .slide[data-slide="10"] .key-points {
-                margin-top: 8px;
+            .slide[data-slide="10"] .fin-stat-value {
+                font-size: 18px;
             }
 
-            .slide[data-slide="10"] .key-point {
-                font-size: 12px;
+            .slide[data-slide="10"] .fin-stat-label {
+                font-size: 8px;
+            }
+
+            .why-this-works {
+                max-width: 100%;
+            }
+
+            .why-this-works h4 {
+                font-size: 9px;
+                margin-bottom: 8px;
+            }
+
+            .why-this-works .key-point {
+                font-size: 11px;
+            }
+
+            .why-this-works .key-points {
+                gap: 6px;
             }
 
             /* Funds grid */
@@ -1791,10 +1844,11 @@
         <!-- Slide 10: Financials -->
         <section class="slide slide-dark slide-full" data-slide="10">
             <span class="logo">COMBSTRUCT</span>
-            <span class="slide-number">10 — Financial Projections</span>
-            <h2>Path to $96M Revenue</h2>
-            <p class="lead muted">Self-financing from month 3. Zero external debt required. 74% CAGR.</p>
-            <div style="display: flex; gap: 64px; align-items: flex-start;">
+            <div class="slide-10-content">
+                <span class="slide-number">10 — Financial Projections</span>
+                <h2>Path to $96M Revenue</h2>
+                <p class="lead muted">Self-financing from month 3. Zero external debt required. 74% CAGR.</p>
+                <div class="fin-layout">
                 <div>
                     <div class="fin-chart">
                         <div class="fin-bar-group">
@@ -1857,13 +1911,14 @@
                         </div>
                     </div>
                 </div>
-                <div style="max-width: 320px;">
-                    <h4 style="font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: rgba(255,255,255,0.5); margin-bottom: 16px;">Why This Works</h4>
-                    <div class="key-points">
-                        <div class="key-point" style="transition-delay: 0.5s">45-day cash cycle = 8x capital turns/year</div>
-                        <div class="key-point" style="transition-delay: 0.55s">Minimal CAPEX: $79K to start production</div>
-                        <div class="key-point" style="transition-delay: 0.6s">+1 CNC machine ($25K) = +100 homes/year</div>
-                        <div class="key-point" style="transition-delay: 0.65s">No structural timber dependency</div>
+                    <div class="why-this-works">
+                        <h4>Why This Works</h4>
+                        <div class="key-points">
+                            <div class="key-point" style="transition-delay: 0.5s">45-day cash cycle = 8x capital turns/year</div>
+                            <div class="key-point" style="transition-delay: 0.55s">Minimal CAPEX: $79K to start production</div>
+                            <div class="key-point" style="transition-delay: 0.6s">+1 CNC machine ($25K) = +100 homes/year</div>
+                            <div class="key-point" style="transition-delay: 0.65s">No structural timber dependency</div>
+                        </div>
                     </div>
                 </div>
             </div>
