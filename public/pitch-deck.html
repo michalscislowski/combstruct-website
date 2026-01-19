@@ -93,6 +93,14 @@
             object-fit: cover;
         }
 
+        .slide-visual.video-contain {
+            background: var(--foreground);
+        }
+
+        .slide-visual.video-contain video {
+            object-fit: contain;
+        }
+
         .slide-visual::after {
             content: '';
             position: absolute;
@@ -1116,7 +1124,7 @@
                     </div>
                 </div>
             </div>
-            <div class="slide-visual">
+            <div class="slide-visual video-contain">
                 <video autoplay muted loop playsinline>
                     <source src="./images/hero-video.mp4" type="video/mp4">
                 </video>
