@@ -10,6 +10,7 @@
     "process": "Proces",
     "faq": "FAQ",
     "blog": "Blog",
+    "pitchDeck": "Pitch Deck",
     "contact": "Kontakt",
     "startProject": "Rozpocznij projekt"
   },
@@ -673,5 +674,11 @@
     },
     "cta": "Uzyskaj szczegółową wycenę",
     "disclaimer": "Wycena oparta na typowych specyfikacjach projektu. Ostateczna cena może się różnić."
+  },
+  "pitchDeck": {
+    "title": "Prezentacja dla Inwestorów",
+    "backToSite": "Powrót do strony",
+    "enterFullscreen": "Pełny ekran",
+    "exitFullscreen": "Zamknij pełny ekran"
   }
 }

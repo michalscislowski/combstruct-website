@@ -1,0 +1,1669 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combstruct — Investor Pitch Deck</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --background: #ffffff;
+            --foreground: #0a0a0a;
+            --primary: #000000;
+            --primary-foreground: #ffffff;
+            --secondary: #f5f5f5;
+            --muted: #525252;
+            --muted-light: #737373;
+            --border: #e5e5e5;
+            --accent: #16a34a;
+            --accent-light: #22c55e;
+            --danger: #dc2626;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            height: 100%;
+            overflow: hidden;
+            font-family: 'Inter', system-ui, sans-serif;
+            background: var(--background);
+            color: var(--foreground);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* ========== SLIDE CONTAINER ========== */
+        .deck {
+            width: 100vw;
+            height: 100vh;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateX(40px);
+            transition: opacity 0.5s ease, transform 0.5s ease, visibility 0s 0.5s;
+        }
+
+        .slide.active {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(0);
+            transition: opacity 0.5s ease, transform 0.5s ease, visibility 0s 0s;
+        }
+
+        .slide.prev {
+            transform: translateX(-40px);
+        }
+
+        /* ========== LAYOUT PATTERNS ========== */
+        .slide-content {
+            flex: 1;
+            padding: 60px 80px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .slide-visual {
+            width: 45%;
+            min-width: 45%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .slide-visual video,
+        .slide-visual img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .slide-visual::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, rgba(255,255,255,0.1) 0%, transparent 20%);
+            pointer-events: none;
+        }
+
+        /* Full width slide */
+        .slide-full {
+            flex-direction: column;
+            padding: 60px 80px;
+        }
+
+        /* Dark slide */
+        .slide-dark {
+            background: var(--foreground);
+            color: var(--background);
+        }
+
+        .slide-dark .slide-number,
+        .slide-dark h3 {
+            color: rgba(255,255,255,0.6);
+        }
+
+        .slide-dark .muted {
+            color: rgba(255,255,255,0.7);
+        }
+
+        /* ========== TYPOGRAPHY ========== */
+        .slide-number {
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            color: var(--muted-light);
+            text-transform: uppercase;
+            margin-bottom: 24px;
+        }
+
+        .logo {
+            position: absolute;
+            top: 40px;
+            right: 40px;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            color: var(--foreground);
+            z-index: 10;
+        }
+
+        .slide-dark .logo {
+            color: var(--background);
+        }
+
+        h1 {
+            font-size: clamp(42px, 5vw, 64px);
+            font-weight: 800;
+            line-height: 1.05;
+            letter-spacing: -0.03em;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: clamp(32px, 3.5vw, 48px);
+            font-weight: 700;
+            line-height: 1.1;
+            letter-spacing: -0.02em;
+            margin-bottom: 16px;
+        }
+
+        h3 {
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--muted);
+            margin-bottom: 8px;
+        }
+
+        .lead {
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 1.6;
+            color: var(--muted);
+            max-width: 560px;
+        }
+
+        .muted {
+            color: var(--muted);
+        }
+
+        /* ========== COVER SLIDE ========== */
+        .cover {
+            position: relative;
+        }
+
+        .cover-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+
+        .cover-bg video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.15;
+        }
+
+        .cover .slide-content {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+        }
+
+        .cover h1 {
+            font-size: clamp(56px, 7vw, 88px);
+            max-width: 800px;
+        }
+
+        .cover .tagline {
+            font-size: 20px;
+            color: var(--muted);
+            margin-bottom: 48px;
+            max-width: 600px;
+        }
+
+        .metrics-row {
+            display: flex;
+            gap: 48px;
+            flex-wrap: wrap;
+        }
+
+        .metric {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .metric-value {
+            font-size: 48px;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            line-height: 1;
+        }
+
+        .metric-value .accent {
+            color: var(--accent);
+        }
+
+        .metric-label {
+            font-size: 12px;
+            font-weight: 500;
+            color: var(--muted);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-top: 4px;
+        }
+
+        /* ========== PROBLEM SLIDE ========== */
+        .problem-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-top: 32px;
+        }
+
+        .problem-card {
+            background: var(--secondary);
+            padding: 24px;
+            opacity: 0;
+            transform: translateY(16px);
+        }
+
+        .slide.active .problem-card {
+            opacity: 1;
+            transform: translateY(0);
+            transition: opacity 0.4s ease, transform 0.4s ease;
+        }
+
+        .slide.active .problem-card:nth-child(1) { transition-delay: 0.1s; }
+        .slide.active .problem-card:nth-child(2) { transition-delay: 0.15s; }
+        .slide.active .problem-card:nth-child(3) { transition-delay: 0.2s; }
+        .slide.active .problem-card:nth-child(4) { transition-delay: 0.25s; }
+
+        .problem-card h4 {
+            font-size: 15px;
+            font-weight: 700;
+            margin-bottom: 6px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .problem-card h4::before {
+            content: '';
+            width: 6px;
+            height: 6px;
+            background: var(--danger);
+            flex-shrink: 0;
+        }
+
+        .problem-card p {
+            font-size: 14px;
+            color: var(--muted);
+            line-height: 1.5;
+        }
+
+        /* ========== DATA TABLE ========== */
+        .data-table {
+            margin-top: 32px;
+            width: 100%;
+            max-width: 700px;
+        }
+
+        .data-row {
+            display: grid;
+            grid-template-columns: 140px 1fr 1fr;
+            border-bottom: 1px solid var(--border);
+            opacity: 0;
+            transform: translateX(-12px);
+        }
+
+        .data-row.header {
+            font-weight: 600;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--muted);
+            border-bottom: 2px solid var(--foreground);
+        }
+
+        .slide-dark .data-row {
+            border-color: rgba(255,255,255,0.2);
+        }
+
+        .slide-dark .data-row.header {
+            border-color: rgba(255,255,255,0.6);
+        }
+
+        .slide.active .data-row {
+            opacity: 1;
+            transform: translateX(0);
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+
+        .slide.active .data-row:nth-child(1) { transition-delay: 0.1s; }
+        .slide.active .data-row:nth-child(2) { transition-delay: 0.15s; }
+        .slide.active .data-row:nth-child(3) { transition-delay: 0.2s; }
+        .slide.active .data-row:nth-child(4) { transition-delay: 0.25s; }
+        .slide.active .data-row:nth-child(5) { transition-delay: 0.3s; }
+        .slide.active .data-row:nth-child(6) { transition-delay: 0.35s; }
+
+        .data-cell {
+            padding: 14px 0;
+            font-size: 15px;
+        }
+
+        .data-cell.highlight {
+            font-weight: 700;
+            color: var(--accent);
+        }
+
+        .data-cell.dim {
+            color: var(--muted);
+        }
+
+        /* ========== PROCESS TIMELINE ========== */
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+            margin-top: 40px;
+        }
+
+        .process-step {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .slide.active .process-step {
+            opacity: 1;
+            transform: translateY(0);
+            transition: opacity 0.4s ease, transform 0.4s ease;
+        }
+
+        .slide.active .process-step:nth-child(1) { transition-delay: 0.1s; }
+        .slide.active .process-step:nth-child(2) { transition-delay: 0.2s; }
+        .slide.active .process-step:nth-child(3) { transition-delay: 0.3s; }
+        .slide.active .process-step:nth-child(4) { transition-delay: 0.4s; }
+
+        .step-number {
+            width: 40px;
+            height: 40px;
+            background: var(--primary);
+            color: var(--primary-foreground);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .slide-dark .step-number {
+            background: var(--background);
+            color: var(--foreground);
+        }
+
+        .step-title {
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        .step-duration {
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--accent);
+            margin-bottom: 8px;
+        }
+
+        .step-desc {
+            font-size: 13px;
+            color: var(--muted);
+            line-height: 1.5;
+        }
+
+        .slide-dark .step-desc {
+            color: rgba(255,255,255,0.6);
+        }
+
+        /* ========== BAR CHART ========== */
+        .bar-chart {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            margin-top: 32px;
+            max-width: 600px;
+        }
+
+        .bar-row {
+            display: grid;
+            grid-template-columns: 60px 1fr 80px;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .bar-label {
+            font-size: 14px;
+            font-weight: 600;
+            text-align: right;
+        }
+
+        .bar-track {
+            height: 36px;
+            background: var(--secondary);
+            position: relative;
+        }
+
+        .slide-dark .bar-track {
+            background: rgba(255,255,255,0.1);
+        }
+
+        .bar-fill {
+            height: 100%;
+            background: var(--foreground);
+            width: 0;
+            transition: width 0.8s ease;
+        }
+
+        .bar-fill.accent {
+            background: var(--accent);
+        }
+
+        .slide-dark .bar-fill {
+            background: var(--background);
+        }
+
+        .slide.active .bar-fill {
+            width: var(--width);
+        }
+
+        .bar-value {
+            font-size: 15px;
+            font-weight: 700;
+        }
+
+        .bar-value.accent {
+            color: var(--accent);
+        }
+
+        /* ========== COMPETITIVE MATRIX ========== */
+        .matrix {
+            margin-top: 24px;
+            width: 100%;
+            max-width: 900px;
+            border-collapse: collapse;
+        }
+
+        .matrix th,
+        .matrix td {
+            padding: 12px 14px;
+            text-align: left;
+            font-size: 14px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .matrix th {
+            font-weight: 600;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--muted);
+            background: var(--secondary);
+        }
+
+        .matrix th:first-child {
+            background: transparent;
+        }
+
+        .matrix td:first-child {
+            font-weight: 600;
+        }
+
+        .matrix .winner {
+            background: rgba(22, 163, 74, 0.06);
+        }
+
+        .matrix .winner td {
+            color: var(--accent);
+            font-weight: 700;
+        }
+
+        .matrix .winner td:first-child {
+            color: var(--foreground);
+        }
+
+        /* ========== TRACTION GRID ========== */
+        .traction-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+            margin-top: 32px;
+        }
+
+        .traction-col h4 {
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--muted);
+            margin-bottom: 16px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid var(--foreground);
+        }
+
+        .traction-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            margin-bottom: 12px;
+            opacity: 0;
+            transform: translateX(-8px);
+        }
+
+        .slide.active .traction-item {
+            opacity: 1;
+            transform: translateX(0);
+            transition: opacity 0.25s ease, transform 0.25s ease;
+        }
+
+        .check-icon {
+            width: 18px;
+            height: 18px;
+            background: var(--accent);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 10px;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .traction-item.future .check-icon {
+            background: var(--secondary);
+            color: var(--muted);
+            font-size: 9px;
+            font-weight: 700;
+        }
+
+        .traction-item span {
+            font-size: 14px;
+            line-height: 1.4;
+        }
+
+        /* ========== FINANCIAL CHART ========== */
+        .fin-chart {
+            display: flex;
+            align-items: flex-end;
+            gap: 20px;
+            height: 220px;
+            margin-top: 32px;
+            padding-bottom: 32px;
+            border-bottom: 2px solid var(--foreground);
+            max-width: 600px;
+        }
+
+        .slide-dark .fin-chart {
+            border-color: rgba(255,255,255,0.4);
+        }
+
+        .fin-bar-group {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .fin-bar-wrapper {
+            width: 100%;
+            max-width: 70px;
+            height: 180px;
+            display: flex;
+            align-items: flex-end;
+            position: relative;
+        }
+
+        .fin-bar {
+            width: 100%;
+            background: var(--foreground);
+            height: 0;
+            transition: height 0.8s ease;
+        }
+
+        .fin-bar.accent {
+            background: var(--accent);
+        }
+
+        .slide-dark .fin-bar {
+            background: rgba(255,255,255,0.8);
+        }
+
+        .slide-dark .fin-bar.accent {
+            background: var(--accent);
+        }
+
+        .slide.active .fin-bar {
+            height: var(--height);
+        }
+
+        .fin-value {
+            position: absolute;
+            top: -22px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 12px;
+            font-weight: 700;
+            white-space: nowrap;
+        }
+
+        .fin-label {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--muted);
+        }
+
+        .slide-dark .fin-label {
+            color: rgba(255,255,255,0.6);
+        }
+
+        .fin-stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+            margin-top: 32px;
+            max-width: 600px;
+        }
+
+        .fin-stat {
+            opacity: 0;
+            transform: translateY(8px);
+        }
+
+        .slide.active .fin-stat {
+            opacity: 1;
+            transform: translateY(0);
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+
+        .fin-stat-value {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--accent);
+        }
+
+        .fin-stat-label {
+            font-size: 11px;
+            font-weight: 500;
+            color: var(--muted);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .slide-dark .fin-stat-label {
+            color: rgba(255,255,255,0.5);
+        }
+
+        /* ========== USE OF FUNDS ========== */
+        .funds-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin-top: 32px;
+        }
+
+        .fund-card {
+            background: var(--secondary);
+            padding: 20px;
+            opacity: 0;
+            transform: translateY(16px);
+        }
+
+        .slide.active .fund-card {
+            opacity: 1;
+            transform: translateY(0);
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+
+        .fund-amount {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 2px;
+        }
+
+        .fund-pct {
+            font-size: 12px;
+            color: var(--accent);
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .fund-category {
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .fund-desc {
+            font-size: 12px;
+            color: var(--muted);
+        }
+
+        /* ========== VISION BLOCKS ========== */
+        .vision-row {
+            display: flex;
+            gap: 64px;
+            margin-top: 40px;
+        }
+
+        .vision-block {
+            opacity: 0;
+            transform: translateY(16px);
+        }
+
+        .slide.active .vision-block {
+            opacity: 1;
+            transform: translateY(0);
+            transition: opacity 0.4s ease, transform 0.4s ease;
+        }
+
+        .vision-year {
+            font-size: 42px;
+            font-weight: 800;
+            margin-bottom: 12px;
+        }
+
+        .vision-list {
+            list-style: none;
+        }
+
+        .vision-list li {
+            font-size: 14px;
+            color: var(--muted);
+            margin-bottom: 6px;
+            padding-left: 14px;
+            position: relative;
+        }
+
+        .slide-dark .vision-list li {
+            color: rgba(255,255,255,0.7);
+        }
+
+        .vision-list li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 7px;
+            width: 5px;
+            height: 5px;
+            background: var(--accent);
+        }
+
+        /* ========== CLOSING SLIDE ========== */
+        .closing {
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .closing .slide-content {
+            align-items: center;
+            text-align: center;
+        }
+
+        .closing h1 {
+            max-width: 800px;
+        }
+
+        .closing .lead {
+            max-width: 600px;
+            text-align: center;
+        }
+
+        .cta-btn {
+            margin-top: 40px;
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 16px 32px;
+            background: var(--accent);
+            color: white;
+            font-size: 15px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: background 0.2s ease, transform 0.2s ease;
+        }
+
+        .cta-btn:hover {
+            background: #15803d;
+            transform: translateY(-2px);
+        }
+
+        .contact-info {
+            margin-top: 24px;
+            font-size: 14px;
+            color: var(--muted);
+        }
+
+        .contact-info a {
+            color: var(--foreground);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        /* ========== NAVIGATION ========== */
+        .nav {
+            position: fixed;
+            bottom: 32px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            z-index: 100;
+            background: rgba(255,255,255,0.95);
+            padding: 8px 12px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+        }
+
+        .nav-btn {
+            width: 40px;
+            height: 40px;
+            border: 1px solid var(--border);
+            background: var(--background);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .nav-btn:hover {
+            background: var(--foreground);
+            color: var(--primary-foreground);
+            border-color: var(--foreground);
+        }
+
+        .nav-btn:disabled {
+            opacity: 0.3;
+            cursor: not-allowed;
+        }
+
+        .nav-btn:disabled:hover {
+            background: var(--background);
+            color: var(--foreground);
+            border-color: var(--border);
+        }
+
+        .nav-progress {
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--muted);
+            min-width: 50px;
+            text-align: center;
+        }
+
+        .progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 3px;
+            background: var(--accent);
+            transition: width 0.3s ease;
+            z-index: 100;
+        }
+
+        /* ========== KEY POINTS ========== */
+        .key-points {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-top: 24px;
+        }
+
+        .key-point {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 15px;
+            opacity: 0;
+            transform: translateX(-8px);
+        }
+
+        .slide.active .key-point {
+            opacity: 1;
+            transform: translateX(0);
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+
+        .key-point::before {
+            content: '';
+            width: 6px;
+            height: 6px;
+            background: var(--accent);
+            flex-shrink: 0;
+        }
+
+        .slide-dark .key-point::before {
+            background: var(--accent);
+        }
+
+        /* ========== RESPONSIVE ========== */
+        @media (max-width: 1024px) {
+            .slide-content {
+                padding: 40px;
+            }
+
+            .slide-visual {
+                width: 40%;
+                min-width: 40%;
+            }
+
+            .process-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .funds-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .vision-row {
+                flex-direction: column;
+                gap: 32px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .slide {
+                flex-direction: column;
+            }
+
+            .slide-visual {
+                width: 100%;
+                height: 30vh;
+            }
+
+            .metrics-row {
+                gap: 24px;
+            }
+
+            .metric-value {
+                font-size: 36px;
+            }
+
+            .problem-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .traction-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .fin-stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .funds-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="progress-bar" id="progressBar"></div>
+
+    <div class="deck">
+        <!-- Slide 1: Cover -->
+        <section class="slide cover active" data-slide="1">
+            <div class="cover-bg">
+                <video autoplay muted loop playsinline>
+                    <source src="./images/hero-video.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="slide-content">
+                <span class="logo">COMBSTRUCT</span>
+                <h3>Patented Prefabrication Technology</h3>
+                <h1>Sustainable Building, Reinvented</h1>
+                <p class="tagline">The only construction system that simultaneously delivers radical improvements in cost, speed, and sustainability.</p>
+                <div class="metrics-row">
+                    <div class="metric">
+                        <span class="metric-value">45<span class="accent">%</span></span>
+                        <span class="metric-label">Lower Cost</span>
+                    </div>
+                    <div class="metric">
+                        <span class="metric-value">5<span class="accent">x</span></span>
+                        <span class="metric-label">Faster Build</span>
+                    </div>
+                    <div class="metric">
+                        <span class="metric-value">4<span class="accent">x</span></span>
+                        <span class="metric-label">Less Carbon</span>
+                    </div>
+                    <div class="metric">
+                        <span class="metric-value">57<span class="accent">%</span></span>
+                        <span class="metric-label">Gross Margin</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 2: Problem -->
+        <section class="slide" data-slide="2">
+            <div class="slide-content">
+                <span class="logo">COMBSTRUCT</span>
+                <span class="slide-number">02 — The Problem</span>
+                <h2>Construction is Broken</h2>
+                <p class="lead">A $2.8 trillion global industry that hasn't fundamentally innovated in 100 years.</p>
+                <div class="problem-grid">
+                    <div class="problem-card">
+                        <h4>Cost Crisis</h4>
+                        <p>Construction costs up 47% since 2020. Average home now $1,200/m² in Central Europe.</p>
+                    </div>
+                    <div class="problem-card">
+                        <h4>Speed Crisis</h4>
+                        <p>6-12 months to build a single home. Capital trapped, opportunity cost compounding.</p>
+                    </div>
+                    <div class="problem-card">
+                        <h4>Labor Crisis</h4>
+                        <p>25% of skilled workers retiring by 2030. No replacement pipeline exists.</p>
+                    </div>
+                    <div class="problem-card">
+                        <h4>Climate Crisis</h4>
+                        <p>Construction = 39% of global CO₂. EU mandates near-zero buildings by 2030.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="slide-visual">
+                <img src="./images/Dom_Warstwy.jpeg" alt="Construction layers">
+            </div>
+        </section>
+
+        <!-- Slide 3: Solution -->
+        <section class="slide" data-slide="3">
+            <div class="slide-content">
+                <span class="logo">COMBSTRUCT</span>
+                <span class="slide-number">03 — The Solution</span>
+                <h2>The Comb-Beam System</h2>
+                <p class="lead">Patented interlocking wood-panel technology. One innovation that solves four problems.</p>
+                <div class="data-table">
+                    <div class="data-row header">
+                        <div class="data-cell">Metric</div>
+                        <div class="data-cell">Combstruct</div>
+                        <div class="data-cell">Traditional</div>
+                    </div>
+                    <div class="data-row">
+                        <div class="data-cell">Cost/m²</div>
+                        <div class="data-cell highlight">$650</div>
+                        <div class="data-cell dim">$1,200</div>
+                    </div>
+                    <div class="data-row">
+                        <div class="data-cell">Build Time</div>
+                        <div class="data-cell highlight">1-4 weeks</div>
+                        <div class="data-cell dim">6-12 months</div>
+                    </div>
+                    <div class="data-row">
+                        <div class="data-cell">CO₂/m²</div>
+                        <div class="data-cell highlight">150 kg</div>
+                        <div class="data-cell dim">675 kg</div>
+                    </div>
+                    <div class="data-row">
+                        <div class="data-cell">Labor Hours</div>
+                        <div class="data-cell highlight">4-6 hrs/m²</div>
+                        <div class="data-cell dim">18-25 hrs/m²</div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide-visual">
+                <video autoplay muted loop playsinline>
+                    <source src="./images/CNC_NASZE.mp4" type="video/mp4">
+                </video>
+            </div>
+        </section>
+
+        <!-- Slide 4: How It Works -->
+        <section class="slide slide-dark slide-full" data-slide="4">
+            <span class="logo">COMBSTRUCT</span>
+            <span class="slide-number">04 — How It Works</span>
+            <h2>From Design to Move-In in Weeks</h2>
+            <p class="lead muted">Precision manufacturing meets simple assembly. No heavy equipment. No specialized labor.</p>
+            <div class="process-grid">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <div class="step-title">Design</div>
+                    <div class="step-duration">1-2 weeks</div>
+                    <div class="step-desc">Customized design from our component library. BIM-ready, permit-optimized.</div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <div class="step-title">Manufacture</div>
+                    <div class="step-duration">2-3 weeks</div>
+                    <div class="step-desc">CNC-cut panels with comb-beam joints. Factory-integrated insulation. Zero waste.</div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <div class="step-title">Deliver</div>
+                    <div class="step-duration">1-2 days</div>
+                    <div class="step-desc">Flat-packed components. Single truck delivers entire home to any site.</div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <div class="step-title">Build</div>
+                    <div class="step-duration">1-4 weeks</div>
+                    <div class="step-desc">Snap-together assembly. Two people with basic power tools. No cranes.</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 5: Product -->
+        <section class="slide" data-slide="5">
+            <div class="slide-content">
+                <span class="logo">COMBSTRUCT</span>
+                <span class="slide-number">05 — Product</span>
+                <h2>Passive-House Standard, Not Premium</h2>
+                <p class="lead">Every Combstruct building achieves passive-house performance as default—not as an expensive upgrade.</p>
+                <div class="key-points">
+                    <div class="key-point" style="transition-delay: 0.1s">U-value of 0.09 W/m²K (40% better than competition)</div>
+                    <div class="key-point" style="transition-delay: 0.15s">Zero thermal bridges—uniform insulation throughout</div>
+                    <div class="key-point" style="transition-delay: 0.2s">Airtightness: n₅₀ < 0.2 h⁻¹ at 50 Pa pressure</div>
+                    <div class="key-point" style="transition-delay: 0.25s">97% recyclable components at end-of-life</div>
+                    <div class="key-point" style="transition-delay: 0.3s">EU Taxonomy compliant for 2026-2030 regulations</div>
+                </div>
+            </div>
+            <div class="slide-visual">
+                <img src="./images/Dom_Jednorodzinny.png" alt="Single family home">
+            </div>
+        </section>
+
+        <!-- Slide 6: Market -->
+        <section class="slide" data-slide="6">
+            <div class="slide-content">
+                <span class="logo">COMBSTRUCT</span>
+                <span class="slide-number">06 — Market Opportunity</span>
+                <h2>$3B+ Market with Massive Tailwinds</h2>
+                <p class="lead">Poland timber housing growing 15%+ annually. CEE region: 50,000+ units/year addressable.</p>
+                <div class="bar-chart">
+                    <div class="bar-row">
+                        <div class="bar-label">2025</div>
+                        <div class="bar-track"><div class="bar-fill" style="--width: 50%; transition-delay: 0.1s"></div></div>
+                        <div class="bar-value">6,500</div>
+                    </div>
+                    <div class="bar-row">
+                        <div class="bar-label">2026</div>
+                        <div class="bar-track"><div class="bar-fill" style="--width: 56%; transition-delay: 0.2s"></div></div>
+                        <div class="bar-value">7,200</div>
+                    </div>
+                    <div class="bar-row">
+                        <div class="bar-label">2028</div>
+                        <div class="bar-track"><div class="bar-fill" style="--width: 69%; transition-delay: 0.3s"></div></div>
+                        <div class="bar-value">8,800</div>
+                    </div>
+                    <div class="bar-row">
+                        <div class="bar-label">2030</div>
+                        <div class="bar-track"><div class="bar-fill accent" style="--width: 100%; transition-delay: 0.4s"></div></div>
+                        <div class="bar-value accent">12,800</div>
+                    </div>
+                </div>
+                <p style="margin-top: 20px; font-size: 13px; color: var(--muted);">Timber houses built per year in Poland. Source: GUS + industry estimates</p>
+            </div>
+            <div class="slide-visual">
+                <img src="./images/Zabudowa%20Wielorodzinna.png" alt="Multi-family housing">
+            </div>
+        </section>
+
+        <!-- Slide 7: Business Model -->
+        <section class="slide" data-slide="7">
+            <div class="slide-content">
+                <span class="logo">COMBSTRUCT</span>
+                <span class="slide-number">07 — Business Model</span>
+                <h2>57% Gross Margin</h2>
+                <p class="lead">Highest profitability in the entire timber prefabrication segment. Capital-light, highly scalable.</p>
+                <div class="data-table" style="max-width: 500px;">
+                    <div class="data-row">
+                        <div class="data-cell">Sale Price</div>
+                        <div class="data-cell">$1,500/m²</div>
+                    </div>
+                    <div class="data-row">
+                        <div class="data-cell">Material Cost</div>
+                        <div class="data-cell dim">$375-525/m²</div>
+                    </div>
+                    <div class="data-row">
+                        <div class="data-cell">Labor Cost</div>
+                        <div class="data-cell dim">$150-250/m²</div>
+                    </div>
+                    <div class="data-row">
+                        <div class="data-cell" style="font-weight: 700;">Total Cost</div>
+                        <div class="data-cell" style="font-weight: 700;">$650/m²</div>
+                    </div>
+                    <div class="data-row">
+                        <div class="data-cell" style="font-weight: 700;">Gross Margin</div>
+                        <div class="data-cell highlight" style="font-size: 20px;">57%</div>
+                    </div>
+                    <div class="data-row">
+                        <div class="data-cell">Profit per 100m² Home</div>
+                        <div class="data-cell highlight">$85,000</div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide-visual">
+                <video autoplay muted loop playsinline>
+                    <source src="./images/cnc-cutting.mp4" type="video/mp4">
+                </video>
+            </div>
+        </section>
+
+        <!-- Slide 8: Competition -->
+        <section class="slide slide-full" data-slide="8">
+            <span class="logo">COMBSTRUCT</span>
+            <span class="slide-number">08 — Competitive Advantage</span>
+            <h2>Winner on Every Dimension</h2>
+            <p class="lead">The only technology that beats alternatives across cost, speed, thermal performance, carbon, AND margins.</p>
+            <table class="matrix">
+                <thead>
+                    <tr>
+                        <th>Metric</th>
+                        <th>Combstruct</th>
+                        <th>Brick/Mortar</th>
+                        <th>Frame</th>
+                        <th>Prefab/SIP</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="winner">
+                        <td>Cost/m²</td>
+                        <td>$650</td>
+                        <td>$1,200</td>
+                        <td>$1,075</td>
+                        <td>$1,100</td>
+                    </tr>
+                    <tr class="winner">
+                        <td>Build Time</td>
+                        <td>1-4 wks</td>
+                        <td>28-44 wks</td>
+                        <td>12-20 wks</td>
+                        <td>6-12 wks</td>
+                    </tr>
+                    <tr class="winner">
+                        <td>U-Value</td>
+                        <td>0.09</td>
+                        <td>0.15</td>
+                        <td>0.16</td>
+                        <td>0.17</td>
+                    </tr>
+                    <tr class="winner">
+                        <td>CO₂/m²</td>
+                        <td>150 kg</td>
+                        <td>675 kg</td>
+                        <td>550 kg</td>
+                        <td>575 kg</td>
+                    </tr>
+                    <tr class="winner">
+                        <td>Gross Margin</td>
+                        <td>57%</td>
+                        <td>22%</td>
+                        <td>34%</td>
+                        <td>38%</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Slide 9: Traction -->
+        <section class="slide" data-slide="9">
+            <div class="slide-content">
+                <span class="logo">COMBSTRUCT</span>
+                <span class="slide-number">09 — Traction</span>
+                <h2>From Patent to Production</h2>
+                <div class="traction-grid">
+                    <div class="traction-col">
+                        <h4>Achieved</h4>
+                        <div class="traction-item" style="transition-delay: 0.1s">
+                            <span class="check-icon">✓</span>
+                            <span>Patent granted for comb-beam system</span>
+                        </div>
+                        <div class="traction-item" style="transition-delay: 0.15s">
+                            <span class="check-icon">✓</span>
+                            <span>Technical certification complete</span>
+                        </div>
+                        <div class="traction-item" style="transition-delay: 0.2s">
+                            <span class="check-icon">✓</span>
+                            <span>Prototype homes built and validated</span>
+                        </div>
+                        <div class="traction-item" style="transition-delay: 0.25s">
+                            <span class="check-icon">✓</span>
+                            <span>Passive-house performance confirmed</span>
+                        </div>
+                        <div class="traction-item" style="transition-delay: 0.3s">
+                            <span class="check-icon">✓</span>
+                            <span>Sales infrastructure operational</span>
+                        </div>
+                    </div>
+                    <div class="traction-col">
+                        <h4>Next 12 Months</h4>
+                        <div class="traction-item future" style="transition-delay: 0.35s">
+                            <span class="check-icon">Q1</span>
+                            <span>Production facility operational</span>
+                        </div>
+                        <div class="traction-item future" style="transition-delay: 0.4s">
+                            <span class="check-icon">Q2</span>
+                            <span>First 18 homes delivered</span>
+                        </div>
+                        <div class="traction-item future" style="transition-delay: 0.45s">
+                            <span class="check-icon">Q3</span>
+                            <span>Break-even achieved</span>
+                        </div>
+                        <div class="traction-item future" style="transition-delay: 0.5s">
+                            <span class="check-icon">Q4</span>
+                            <span>72 homes, $10.8M revenue</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide-visual">
+                <video autoplay muted loop playsinline>
+                    <source src="./images/featured-project.mp4" type="video/mp4">
+                </video>
+            </div>
+        </section>
+
+        <!-- Slide 10: Financials -->
+        <section class="slide slide-dark slide-full" data-slide="10">
+            <span class="logo">COMBSTRUCT</span>
+            <span class="slide-number">10 — Financial Projections</span>
+            <h2>Path to $96M Revenue</h2>
+            <p class="lead muted">Self-financing from month 3. Zero external debt required. 74% CAGR.</p>
+            <div style="display: flex; gap: 64px; align-items: flex-start;">
+                <div>
+                    <div class="fin-chart">
+                        <div class="fin-bar-group">
+                            <div class="fin-bar-wrapper">
+                                <div class="fin-bar" style="--height: 20%; transition-delay: 0.1s">
+                                    <span class="fin-value">$10.8M</span>
+                                </div>
+                            </div>
+                            <span class="fin-label">2026</span>
+                        </div>
+                        <div class="fin-bar-group">
+                            <div class="fin-bar-wrapper">
+                                <div class="fin-bar" style="--height: 38%; transition-delay: 0.2s">
+                                    <span class="fin-value">$23.1M</span>
+                                </div>
+                            </div>
+                            <span class="fin-label">2027</span>
+                        </div>
+                        <div class="fin-bar-group">
+                            <div class="fin-bar-wrapper">
+                                <div class="fin-bar" style="--height: 55%; transition-delay: 0.3s">
+                                    <span class="fin-value">$39.6M</span>
+                                </div>
+                            </div>
+                            <span class="fin-label">2028</span>
+                        </div>
+                        <div class="fin-bar-group">
+                            <div class="fin-bar-wrapper">
+                                <div class="fin-bar" style="--height: 75%; transition-delay: 0.4s">
+                                    <span class="fin-value">$61.8M</span>
+                                </div>
+                            </div>
+                            <span class="fin-label">2029</span>
+                        </div>
+                        <div class="fin-bar-group">
+                            <div class="fin-bar-wrapper">
+                                <div class="fin-bar accent" style="--height: 100%; transition-delay: 0.5s">
+                                    <span class="fin-value">$96M</span>
+                                </div>
+                            </div>
+                            <span class="fin-label">2030</span>
+                        </div>
+                    </div>
+                    <div class="fin-stats">
+                        <div class="fin-stat" style="transition-delay: 0.6s">
+                            <div class="fin-stat-value">$231M</div>
+                            <div class="fin-stat-label">5-Yr Revenue</div>
+                        </div>
+                        <div class="fin-stat" style="transition-delay: 0.7s">
+                            <div class="fin-stat-value">74%</div>
+                            <div class="fin-stat-label">CAGR</div>
+                        </div>
+                        <div class="fin-stat" style="transition-delay: 0.8s">
+                            <div class="fin-stat-value">55%</div>
+                            <div class="fin-stat-label">Op. Margin</div>
+                        </div>
+                        <div class="fin-stat" style="transition-delay: 0.9s">
+                            <div class="fin-stat-value">Mo. 2</div>
+                            <div class="fin-stat-label">Break-Even</div>
+                        </div>
+                    </div>
+                </div>
+                <div style="max-width: 320px;">
+                    <h4 style="font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: rgba(255,255,255,0.5); margin-bottom: 16px;">Why This Works</h4>
+                    <div class="key-points">
+                        <div class="key-point" style="transition-delay: 0.5s">45-day cash cycle = 8x capital turns/year</div>
+                        <div class="key-point" style="transition-delay: 0.55s">Minimal CAPEX: $79K to start production</div>
+                        <div class="key-point" style="transition-delay: 0.6s">+1 CNC machine ($25K) = +100 homes/year</div>
+                        <div class="key-point" style="transition-delay: 0.65s">No structural timber dependency</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 11: The Ask -->
+        <section class="slide" data-slide="11">
+            <div class="slide-content">
+                <span class="logo">COMBSTRUCT</span>
+                <span class="slide-number">11 — The Ask</span>
+                <h2>$500K Seed Round</h2>
+                <p class="lead">Funded to profitability. Series A is about acceleration, not survival.</p>
+                <div class="funds-grid">
+                    <div class="fund-card" style="transition-delay: 0.1s">
+                        <div class="fund-amount">$200K</div>
+                        <div class="fund-pct">40%</div>
+                        <div class="fund-category">Production</div>
+                        <div class="fund-desc">CNC, equipment, facility setup</div>
+                    </div>
+                    <div class="fund-card" style="transition-delay: 0.15s">
+                        <div class="fund-amount">$200K</div>
+                        <div class="fund-pct">40%</div>
+                        <div class="fund-category">Working Capital</div>
+                        <div class="fund-desc">Inventory for first 20 homes</div>
+                    </div>
+                    <div class="fund-card" style="transition-delay: 0.2s">
+                        <div class="fund-amount">$75K</div>
+                        <div class="fund-pct">15%</div>
+                        <div class="fund-category">Sales & Marketing</div>
+                        <div class="fund-desc">Brand, leads, partnerships</div>
+                    </div>
+                    <div class="fund-card" style="transition-delay: 0.25s">
+                        <div class="fund-amount">$25K</div>
+                        <div class="fund-pct">5%</div>
+                        <div class="fund-category">Operations</div>
+                        <div class="fund-desc">Legal, admin, contingency</div>
+                    </div>
+                </div>
+                <div style="margin-top: 32px;">
+                    <h4 style="font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: var(--muted); margin-bottom: 12px;">Milestones This Unlocks</h4>
+                    <div class="key-points">
+                        <div class="key-point" style="transition-delay: 0.3s">72 homes delivered in Year 1</div>
+                        <div class="key-point" style="transition-delay: 0.35s">$10.8M revenue, $5.5M operating profit</div>
+                        <div class="key-point" style="transition-delay: 0.4s">Positive cash flow from Month 3</div>
+                        <div class="key-point" style="transition-delay: 0.45s">Platform for Series A at 5x valuation</div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide-visual">
+                <img src="./images/Przestrzen_Komercyjna.png" alt="Commercial space">
+            </div>
+        </section>
+
+        <!-- Slide 12: Vision & Exit -->
+        <section class="slide slide-full" data-slide="12">
+            <span class="logo">COMBSTRUCT</span>
+            <span class="slide-number">12 — Vision</span>
+            <h2>The Standard for Sustainable Construction</h2>
+            <p class="lead">Regional leader in CEE by 2030. Pan-European expansion by 2035.</p>
+            <div class="vision-row">
+                <div class="vision-block" style="transition-delay: 0.1s">
+                    <div class="vision-year">2030</div>
+                    <ul class="vision-list">
+                        <li>640 homes/year in Poland</li>
+                        <li>Expansion to 4 CEE countries</li>
+                        <li>$96M annual revenue</li>
+                        <li>$54M EBITDA</li>
+                    </ul>
+                </div>
+                <div class="vision-block" style="transition-delay: 0.25s">
+                    <div class="vision-year">2035</div>
+                    <ul class="vision-list">
+                        <li>2,000+ homes/year across Europe</li>
+                        <li>$300M+ annual revenue</li>
+                        <li>Category leader in sustainable prefab</li>
+                    </ul>
+                </div>
+                <div class="vision-block" style="transition-delay: 0.4s">
+                    <div class="vision-year">Exit</div>
+                    <ul class="vision-list">
+                        <li>2030 valuation: $450-550M (8-10x EBITDA)</li>
+                        <li>Strategic acquirers: homebuilders, PE firms</li>
+                        <li>IPO pathway via Warsaw Stock Exchange</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 13: Closing -->
+        <section class="slide closing slide-full" data-slide="13">
+            <span class="logo">COMBSTRUCT</span>
+            <div class="slide-content">
+                <h1>Construction, Reinvented</h1>
+                <p class="lead">45% cheaper. 5x faster. 4x less carbon. This isn't incremental improvement—it's a new category.</p>
+                <a href="mailto:daniel@combstruct.com" class="cta-btn">
+                    Let's Build Together
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </a>
+                <p class="contact-info">
+                    <a href="mailto:daniel@combstruct.com">daniel@combstruct.com</a> · +48 510 788 129
+                </p>
+            </div>
+        </section>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <button class="nav-btn" id="prevBtn" disabled aria-label="Previous slide">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M19 12H5M12 19l-7-7 7-7"/>
+            </svg>
+        </button>
+        <span class="nav-progress"><span id="currentSlide">1</span> / <span id="totalSlides">13</span></span>
+        <button class="nav-btn" id="nextBtn" aria-label="Next slide">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+        </button>
+    </nav>
+
+    <script>
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+        let currentSlide = 1;
+
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const currentSlideEl = document.getElementById('currentSlide');
+        const totalSlidesEl = document.getElementById('totalSlides');
+        const progressBar = document.getElementById('progressBar');
+
+        totalSlidesEl.textContent = totalSlides;
+
+        function updateProgress() {
+            const progress = (currentSlide / totalSlides) * 100;
+            progressBar.style.width = `${progress}%`;
+        }
+
+        function goToSlide(n) {
+            if (n < 1 || n > totalSlides) return;
+
+            const prevSlideEl = document.querySelector('.slide.active');
+            const nextSlideEl = document.querySelector(`.slide[data-slide="${n}"]`);
+
+            if (prevSlideEl) {
+                prevSlideEl.classList.remove('active');
+                if (n > currentSlide) {
+                    prevSlideEl.classList.add('prev');
+                } else {
+                    prevSlideEl.classList.remove('prev');
+                }
+            }
+
+            slides.forEach(slide => {
+                if (slide !== nextSlideEl) {
+                    slide.classList.remove('active');
+                }
+            });
+
+            nextSlideEl.classList.remove('prev');
+            nextSlideEl.classList.add('active');
+
+            currentSlide = n;
+            currentSlideEl.textContent = currentSlide;
+
+            prevBtn.disabled = currentSlide === 1;
+            nextBtn.disabled = currentSlide === totalSlides;
+
+            updateProgress();
+        }
+
+        function nextSlideFn() {
+            if (currentSlide < totalSlides) {
+                goToSlide(currentSlide + 1);
+            }
+        }
+
+        function prevSlideFn() {
+            if (currentSlide > 1) {
+                goToSlide(currentSlide - 1);
+            }
+        }
+
+        prevBtn.addEventListener('click', prevSlideFn);
+        nextBtn.addEventListener('click', nextSlideFn);
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight' || e.key === ' ' || e.key === 'Enter') {
+                e.preventDefault();
+                nextSlideFn();
+            } else if (e.key === 'ArrowLeft' || e.key === 'Backspace') {
+                e.preventDefault();
+                prevSlideFn();
+            } else if (e.key >= '1' && e.key <= '9') {
+                const slideNum = parseInt(e.key);
+                if (slideNum <= totalSlides) {
+                    goToSlide(slideNum);
+                }
+            } else if (e.key === '0') {
+                goToSlide(10);
+            }
+        });
+
+        // Touch support
+        let touchStartX = 0;
+        document.addEventListener('touchstart', (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+        });
+
+        document.addEventListener('touchend', (e) => {
+            const touchEndX = e.changedTouches[0].screenX;
+            const diff = touchStartX - touchEndX;
+            if (Math.abs(diff) > 50) {
+                diff > 0 ? nextSlideFn() : prevSlideFn();
+            }
+        });
+
+        updateProgress();
+    </script>
+</body>
+</html>

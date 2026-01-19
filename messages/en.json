@@ -10,6 +10,7 @@
     "process": "Process",
     "faq": "FAQ",
     "blog": "Blog",
+    "pitchDeck": "Pitch Deck",
     "contact": "Contact",
     "startProject": "Start Your Project"
   },
@@ -673,5 +674,11 @@
     },
     "cta": "Get Detailed Quote",
     "disclaimer": "Estimate based on typical project specifications. Final pricing may vary."
+  },
+  "pitchDeck": {
+    "title": "Investor Pitch Deck",
+    "backToSite": "Back to site",
+    "enterFullscreen": "Fullscreen",
+    "exitFullscreen": "Exit fullscreen"
   }
 }
