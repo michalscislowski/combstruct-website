@@ -9,9 +9,17 @@ import {
   BeamVariant,
   getBeamDimensions,
 } from "@/lib/CombBeam";
-import { ChevronUp, ChevronDown } from "lucide-react";
+import { ChevronUp, ChevronDown, Plus, Undo2, Download, Upload, Move3D, RotateCcw, Layers } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 
 type VariantKey = "FULL" | "HALF" | "DOUBLE" | "SINGLE";
+
+const variantLabels: Record<VariantKey, string> = {
+  FULL: "249 cm",
+  HALF: "124.5 cm",
+  DOUBLE: "83 cm",
+  SINGLE: "41.5 cm",
+};
 
 export default function CombBeamEditor() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -21,12 +29,12 @@ export default function CombBeamEditor() {
   const ghostMeshRef = useRef<THREE.Mesh | null>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
-  // Use state for UI updates
   const [position, setPosition] = useState({ x: 0, y: 0, z: 0 });
   const [rotation, setRotation] = useState({ x: 0, y: 0, z: 0 });
   const [currentVariant, setCurrentVariant] = useState<VariantKey>("FULL");
   const [beamCount, setBeamCount] = useState(0);
   const [panelCollapsed, setPanelCollapsed] = useState(false);
+  const [activeTab, setActiveTab] = useState<"variant" | "position">("variant");
 
   const placedBeamsRef = useRef<Array<{
     variant: VariantKey;
@@ -63,12 +71,17 @@ export default function CombBeamEditor() {
     geometry.translate(dims.length / 2, dims.height / 2, 0);
 
     const material = new THREE.MeshStandardMaterial({
-      color: 0x00ff00,
+      color: 0x1a1a1a,
       transparent: true,
       opacity: 0.5,
+      depthWrite: false,
+      polygonOffset: true,
+      polygonOffsetFactor: -1,
+      polygonOffsetUnits: -1,
     });
 
     const ghost = new THREE.Mesh(geometry, material);
+    ghost.renderOrder = 999;
     ghost.position.set(position.x, position.y, position.z);
     ghost.rotation.set(rotation.x, rotation.y, rotation.z);
     ghostMeshRef.current = ghost;
@@ -119,8 +132,6 @@ export default function CombBeamEditor() {
     if (!beamSystem) return;
 
     const json = beamSystem.exportToJSON();
-
-    // Create download link
     const blob = new Blob([json], { type: "application/json" });
     const url = URL.createObjectURL(blob);
     const a = document.createElement("a");
@@ -196,9 +207,8 @@ export default function CombBeamEditor() {
 
     const container = containerRef.current;
 
-    // Scene setup
     const scene = new THREE.Scene();
-    scene.background = new THREE.Color(0x1a1a2e);
+    scene.background = new THREE.Color(0xf7f7f7);
     sceneRef.current = scene;
 
     const camera = new THREE.PerspectiveCamera(
@@ -222,20 +232,25 @@ export default function CombBeamEditor() {
     controls.dampingFactor = 0.05;
     controls.target.set(100, 20, 0);
 
-    // Lighting
-    scene.add(new THREE.AmbientLight(0xffffff, 0.5));
-    const mainLight = new THREE.DirectionalLight(0xffffff, 1);
+    // Refined lighting
+    scene.add(new THREE.AmbientLight(0xffffff, 0.7));
+    const mainLight = new THREE.DirectionalLight(0xffffff, 0.8);
     mainLight.position.set(100, 200, 100);
     mainLight.castShadow = true;
     scene.add(mainLight);
-    scene.add(new THREE.DirectionalLight(0x4ecdc4, 0.3).translateX(-50).translateY(50));
+    const fillLight = new THREE.DirectionalLight(0xffffff, 0.3);
+    fillLight.position.set(-50, 50, -50);
+    scene.add(fillLight);
 
-    // Grid
-    const gridHelper = new THREE.GridHelper(600, 60, 0x444466, 0x333355);
+    // Subtle grid
+    const gridHelper = new THREE.GridHelper(600, 60, 0xe5e5e5, 0xf0f0f0);
     gridHelper.rotation.x = Math.PI / 2;
     gridHelper.position.y = -0.5;
     scene.add(gridHelper);
-    scene.add(new THREE.AxesHelper(50));
+
+    // Minimal axes
+    const axesHelper = new THREE.AxesHelper(30);
+    scene.add(axesHelper);
 
     // Beam system
     const beamSystem = new CombBeamSystem(2000);
@@ -247,15 +262,19 @@ export default function CombBeamEditor() {
     const geometry = new THREE.BoxGeometry(dims.length, dims.height, dims.thickness);
     geometry.translate(dims.length / 2, dims.height / 2, 0);
     const material = new THREE.MeshStandardMaterial({
-      color: 0x00ff00,
+      color: 0x1a1a1a,
       transparent: true,
       opacity: 0.5,
+      depthWrite: false,
+      polygonOffset: true,
+      polygonOffsetFactor: -1,
+      polygonOffsetUnits: -1,
     });
     const ghost = new THREE.Mesh(geometry, material);
+    ghost.renderOrder = 999;
     ghostMeshRef.current = ghost;
     scene.add(ghost);
 
-    // Animation loop
     let animationId: number;
     const animate = () => {
       animationId = requestAnimationFrame(animate);
@@ -264,7 +283,6 @@ export default function CombBeamEditor() {
     };
     animate();
 
-    // Resize handler
     const handleResize = () => {
       camera.aspect = container.clientWidth / container.clientHeight;
       camera.updateProjectionMatrix();
@@ -272,7 +290,6 @@ export default function CombBeamEditor() {
     };
     window.addEventListener("resize", handleResize);
 
-    // Cleanup
     return () => {
       window.removeEventListener("resize", handleResize);
       cancelAnimationFrame(animationId);
@@ -284,10 +301,9 @@ export default function CombBeamEditor() {
     };
   }, []);
 
-  // Keyboard controls - separate effect to use current state
+  // Keyboard controls
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
-      // Don't handle if typing in an input
       if (event.target instanceof HTMLInputElement || event.target instanceof HTMLTextAreaElement) {
         return;
       }
@@ -373,10 +389,9 @@ export default function CombBeamEditor() {
   }, [placeBeam, undoLastBeam]);
 
   return (
-    <div className="relative w-full h-full">
+    <div className="relative w-full h-full bg-secondary">
       <div ref={containerRef} className="w-full h-full" />
 
-      {/* Hidden file input for import */}
       <input
         ref={fileInputRef}
         type="file"
@@ -385,101 +400,219 @@ export default function CombBeamEditor() {
         className="hidden"
       />
 
-      {/* UI Panel - responsive */}
-      <div className={`absolute top-4 left-4 right-4 sm:right-auto bg-black/90 rounded-lg text-white font-mono text-xs sm:max-w-[240px] transition-all ${panelCollapsed ? 'max-h-12' : 'max-h-[80vh]'} overflow-hidden`}>
-        {/* Header with collapse toggle */}
+      {/* Main Control Panel */}
+      <motion.div
+        initial={{ opacity: 0, x: -20 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+        className={`absolute top-4 left-4 right-4 sm:right-auto sm:w-[320px] bg-white border border-border shadow-lg transition-all ${
+          panelCollapsed ? "overflow-hidden" : ""
+        }`}
+      >
+        {/* Panel Header */}
         <div
-          className="flex items-center justify-between p-3 cursor-pointer sm:cursor-default"
+          className="flex items-center justify-between px-5 py-4 border-b border-border cursor-pointer sm:cursor-default select-none"
           onClick={() => setPanelCollapsed(!panelCollapsed)}
         >
-          <h2 className="text-[#4ecdc4] font-bold text-sm">{t("title")}</h2>
-          <button className="sm:hidden text-white/60">
+          <div className="flex items-center gap-3">
+            <div className="w-8 h-8 bg-foreground flex items-center justify-center">
+              <Layers className="w-4 h-4 text-white" />
+            </div>
+            <div>
+              <h2 className="text-[15px] font-semibold text-foreground tracking-[-0.01em]">
+                {t("title")}
+              </h2>
+              <p className="text-[12px] text-muted">
+                {beamCount} {beamCount === 1 ? "beam" : "beams"}
+              </p>
+            </div>
+          </div>
+          <button className="sm:hidden w-8 h-8 flex items-center justify-center text-muted hover:text-foreground transition-colors">
             {panelCollapsed ? <ChevronDown className="w-4 h-4" /> : <ChevronUp className="w-4 h-4" />}
           </button>
         </div>
 
-        <div className={`px-3 pb-3 ${panelCollapsed ? 'hidden' : 'block'} sm:block overflow-y-auto max-h-[calc(80vh-48px)]`}>
-          {/* Variant selection */}
-          <h3 className="text-[#ffe66d] font-bold mb-2">{t("variant")}:</h3>
-          <div className="grid grid-cols-4 gap-1 mb-3">
-            {(["FULL", "HALF", "DOUBLE", "SINGLE"] as const).map((variant) => (
-              <button
-                key={variant}
-                className={`px-2 py-2 border rounded text-[10px] transition-colors ${
-                  currentVariant === variant
-                    ? "border-[#4ecdc4] bg-[#2a5a5a] text-white"
-                    : "border-gray-600 bg-gray-800 text-gray-300 hover:bg-gray-700"
-                }`}
-                onClick={() => setCurrentVariant(variant)}
-              >
-                {variant}
-              </button>
-            ))}
-          </div>
-
-          {/* Position & Rotation - 2 columns on mobile */}
-          <div className="grid grid-cols-2 gap-2 mb-3">
-            <div>
-              <h3 className="text-[#ffe66d] font-bold mb-1 text-[10px]">{t("position")} (cm):</h3>
-              <div className="bg-gray-900 p-2 rounded text-[9px] space-y-0.5">
-                <div>X: {position.x.toFixed(1)}</div>
-                <div>Y: {position.y.toFixed(1)}</div>
-                <div>Z: {position.z.toFixed(1)}</div>
+        <AnimatePresence>
+          {!panelCollapsed && (
+            <motion.div
+              initial={{ height: 0, opacity: 0 }}
+              animate={{ height: "auto", opacity: 1 }}
+              exit={{ height: 0, opacity: 0 }}
+              transition={{ duration: 0.2 }}
+              className="overflow-hidden"
+            >
+              {/* Tab Navigation */}
+              <div className="flex border-b border-border">
+                <button
+                  onClick={() => setActiveTab("variant")}
+                  className={`flex-1 px-4 py-3 text-[13px] font-medium transition-colors ${
+                    activeTab === "variant"
+                      ? "text-foreground border-b-2 border-foreground -mb-px"
+                      : "text-muted hover:text-foreground"
+                  }`}
+                >
+                  {t("variant")}
+                </button>
+                <button
+                  onClick={() => setActiveTab("position")}
+                  className={`flex-1 px-4 py-3 text-[13px] font-medium transition-colors ${
+                    activeTab === "position"
+                      ? "text-foreground border-b-2 border-foreground -mb-px"
+                      : "text-muted hover:text-foreground"
+                  }`}
+                >
+                  {t("position")}
+                </button>
               </div>
-            </div>
-            <div>
-              <h3 className="text-[#ffe66d] font-bold mb-1 text-[10px]">{t("rotation")}:</h3>
-              <div className="bg-gray-900 p-2 rounded text-[9px] space-y-0.5">
-                <div>X: {((rotation.x * 180) / Math.PI).toFixed(0)}°</div>
-                <div>Y: {((rotation.y * 180) / Math.PI).toFixed(0)}°</div>
-                <div>Z: {((rotation.z * 180) / Math.PI).toFixed(0)}°</div>
+
+              {/* Tab Content */}
+              <div className="p-4">
+                {activeTab === "variant" ? (
+                  <div className="space-y-2">
+                    {(["FULL", "HALF", "DOUBLE", "SINGLE"] as const).map((variant) => (
+                      <button
+                        key={variant}
+                        onClick={() => setCurrentVariant(variant)}
+                        className={`w-full flex items-center justify-between px-4 py-3 text-left transition-all ${
+                          currentVariant === variant
+                            ? "bg-foreground text-white"
+                            : "bg-secondary text-foreground hover:bg-border"
+                        }`}
+                      >
+                        <span className="text-[14px] font-medium">{variant}</span>
+                        <span className={`text-[13px] ${currentVariant === variant ? "text-white/70" : "text-muted"}`}>
+                          {variantLabels[variant]}
+                        </span>
+                      </button>
+                    ))}
+                  </div>
+                ) : (
+                  <div className="space-y-4">
+                    {/* Position */}
+                    <div>
+                      <div className="flex items-center gap-2 mb-2">
+                        <Move3D className="w-4 h-4 text-muted" />
+                        <span className="text-[12px] font-medium text-muted uppercase tracking-wide">
+                          {t("position")} (cm)
+                        </span>
+                      </div>
+                      <div className="grid grid-cols-3 gap-2">
+                        {(["x", "y", "z"] as const).map((axis) => (
+                          <div key={axis} className="bg-secondary px-3 py-2">
+                            <span className="text-[11px] text-muted uppercase">{axis}</span>
+                            <p className="text-[14px] font-medium text-foreground tabular-nums">
+                              {position[axis].toFixed(1)}
+                            </p>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+
+                    {/* Rotation */}
+                    <div>
+                      <div className="flex items-center gap-2 mb-2">
+                        <RotateCcw className="w-4 h-4 text-muted" />
+                        <span className="text-[12px] font-medium text-muted uppercase tracking-wide">
+                          {t("rotation")}
+                        </span>
+                      </div>
+                      <div className="grid grid-cols-3 gap-2">
+                        {(["x", "y", "z"] as const).map((axis) => (
+                          <div key={axis} className="bg-secondary px-3 py-2">
+                            <span className="text-[11px] text-muted uppercase">{axis}</span>
+                            <p className="text-[14px] font-medium text-foreground tabular-nums">
+                              {((rotation[axis] * 180) / Math.PI).toFixed(0)}°
+                            </p>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                )}
               </div>
-            </div>
-          </div>
 
-          {/* Actions */}
-          <h3 className="text-[#ffe66d] font-bold mb-2">{t("actions")}:</h3>
-          <div className="grid grid-cols-2 gap-1 mb-3">
-            <button
-              className="px-2 py-2 bg-[#4ecdc4] text-black font-bold rounded text-[11px] hover:bg-[#3dbdb4] active:scale-95 transition-transform"
-              onClick={placeBeam}
-            >
-              {t("place")}
-            </button>
-            <button
-              className="px-2 py-2 bg-[#ff6b6b] text-white font-bold rounded text-[11px] hover:bg-[#e55a5a] active:scale-95 transition-transform"
-              onClick={undoLastBeam}
-            >
-              {t("undo")}
-            </button>
-            <button
-              className="px-2 py-2 bg-[#ffe66d] text-black font-bold rounded text-[11px] hover:bg-[#ecd55c] active:scale-95 transition-transform"
-              onClick={exportConstruction}
-            >
-              {t("export")}
-            </button>
-            <button
-              className="px-2 py-2 bg-[#9b59b6] text-white font-bold rounded text-[11px] hover:bg-[#8e44ad] active:scale-95 transition-transform"
-              onClick={importConstruction}
-            >
-              {t("import")}
-            </button>
-          </div>
+              {/* Actions */}
+              <div className="px-4 pb-4 space-y-2">
+                <button
+                  onClick={placeBeam}
+                  className="w-full flex items-center justify-center gap-2 px-4 py-3 bg-foreground text-white text-[14px] font-semibold hover:bg-dark-lighter transition-colors"
+                >
+                  <Plus className="w-4 h-4" />
+                  {t("place")}
+                </button>
 
-          {/* Beam count */}
-          <div className="text-[#4ecdc4] font-bold mb-3">
-            {t("beamCount")}: {beamCount}
-          </div>
+                <div className="grid grid-cols-3 gap-2">
+                  <button
+                    onClick={undoLastBeam}
+                    className="flex items-center justify-center gap-1.5 px-3 py-2.5 border border-border text-[13px] font-medium text-foreground hover:bg-secondary transition-colors"
+                  >
+                    <Undo2 className="w-3.5 h-3.5" />
+                    {t("undo")}
+                  </button>
+                  <button
+                    onClick={exportConstruction}
+                    className="flex items-center justify-center gap-1.5 px-3 py-2.5 border border-border text-[13px] font-medium text-foreground hover:bg-secondary transition-colors"
+                  >
+                    <Download className="w-3.5 h-3.5" />
+                    {t("export")}
+                  </button>
+                  <button
+                    onClick={importConstruction}
+                    className="flex items-center justify-center gap-1.5 px-3 py-2.5 border border-border text-[13px] font-medium text-foreground hover:bg-secondary transition-colors"
+                  >
+                    <Upload className="w-3.5 h-3.5" />
+                    {t("import")}
+                  </button>
+                </div>
+              </div>
 
-          {/* Controls help - hidden on very small screens */}
-          <div className="hidden sm:block text-[8px] text-gray-400 space-y-0.5 border-t border-gray-700 pt-2">
-            <div><span className="bg-gray-700 px-1 rounded">Arrows</span> X/Y <span className="bg-gray-700 px-1 rounded">R/T</span> Z</div>
-            <div><span className="bg-gray-700 px-1 rounded">QW</span> rot.X <span className="bg-gray-700 px-1 rounded">AS</span> Y <span className="bg-gray-700 px-1 rounded">DF</span> Z</div>
-            <div><span className="bg-gray-700 px-1 rounded">Space</span> {t("place")} <span className="bg-gray-700 px-1 rounded">Z</span> {t("undo")}</div>
-            <div><span className="bg-gray-700 px-1 rounded">Shift</span> 0.1cm <span className="bg-gray-700 px-1 rounded">1-4</span> {t("variant")}</div>
-          </div>
-        </div>
-      </div>
+              {/* Keyboard Shortcuts */}
+              <div className="hidden sm:block px-4 pb-4 pt-2 border-t border-border">
+                <p className="text-[11px] text-muted mb-2 uppercase tracking-wide font-medium">Shortcuts</p>
+                <div className="grid grid-cols-2 gap-x-4 gap-y-1 text-[11px] text-muted">
+                  <div className="flex justify-between">
+                    <span>Move X/Y</span>
+                    <span className="text-foreground">Arrow keys</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span>Move Z</span>
+                    <span className="text-foreground">R / T</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span>Rotate</span>
+                    <span className="text-foreground">Q W A S D F</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span>Place beam</span>
+                    <span className="text-foreground">Space</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span>Undo</span>
+                    <span className="text-foreground">Z</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span>Fine adjust</span>
+                    <span className="text-foreground">Shift</span>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </motion.div>
+
+      {/* Beam Counter Badge - Bottom Right */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
+        className="absolute bottom-6 right-6 bg-white border border-border px-4 py-2 shadow-lg"
+      >
+        <p className="text-[11px] text-muted uppercase tracking-wide">Total</p>
+        <p className="text-[24px] font-semibold text-foreground tabular-nums leading-tight">
+          {beamCount}
+        </p>
+      </motion.div>
     </div>
   );
 }
