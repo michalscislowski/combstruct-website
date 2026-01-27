@@ -1,10 +1,11 @@
 import { NextIntlClientProvider } from "next-intl";
-import { getMessages, setRequestLocale } from "next-intl/server";
+import { getMessages, setRequestLocale, getTranslations } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { Inter } from "next/font/google";
 import { routing } from "@/i18n/routing";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import type { Metadata } from "next";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -20,25 +21,55 @@ type Props = {
   params: Promise<{ locale: string }>;
 };
 
+const localeToOgLocale: Record<string, string> = {
+  en: "en_US",
+  pl: "pl_PL",
+  de: "de_DE",
+};
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "metadata" });
+
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://combstruct.com";
+
+  return {
+    title: t("title"),
+    description: t("description"),
+    alternates: {
+      canonical: `${siteUrl}/${locale}`,
+      languages: {
+        en: `${siteUrl}/en`,
+        pl: `${siteUrl}/pl`,
+        de: `${siteUrl}/de`,
+      },
+    },
+    openGraph: {
+      title: t("title"),
+      description: t("description"),
+      locale: localeToOgLocale[locale] || "en_US",
+      alternateLocale: Object.values(localeToOgLocale).filter(
+        (l) => l !== localeToOgLocale[locale]
+      ),
+    },
+  };
+}
+
 export default async function LocaleLayout({ children, params }: Props) {
   const { locale } = await params;
 
-  // Validate that the incoming `locale` parameter is valid
   if (!routing.locales.includes(locale as typeof routing.locales[number])) {
     notFound();
   }
 
-  // Enable static rendering
   setRequestLocale(locale);
 
-  // Get messages for the current locale
   const messages = await getMessages();
 
   return (
     <html lang={locale}>
       <body className={`${inter.variable} font-sans antialiased`}>
         <NextIntlClientProvider messages={messages}>
-          {/* Skip to main content link for keyboard users */}
           <a href="#main-content" className="skip-link">
             Skip to main content
           </a>

@@ -1,25 +1,31 @@
-"use client";
+import { getTranslations } from "next-intl/server";
+import type { Metadata } from "next";
+import ConfiguratorStyles from "./ConfiguratorStyles";
 
-export default function ConfiguratorLayout({
-  children,
-}: {
+type Props = {
   children: React.ReactNode;
-}) {
+  params: Promise<{ locale: string }>;
+};
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "configurator" });
+
+  return {
+    title: t("pageTitle"),
+    description: "Interactive 3D beam configurator. Design your Combstruct building structure with our patented comb-beam technology.",
+    openGraph: {
+      title: `${t("pageTitle")} | Combstruct`,
+      description: "Interactive 3D beam configurator. Design your Combstruct building structure with our patented comb-beam technology.",
+      images: ["/images/og-image.jpg"],
+    },
+  };
+}
+
+export default function ConfiguratorLayout({ children }: Props) {
   return (
-    <>
-      {/* This layout removes header/footer padding since configurator has its own nav */}
-      <style jsx global>{`
-        header[role="banner"] {
-          display: none !important;
-        }
-        footer {
-          display: none !important;
-        }
-        main {
-          padding-top: 0 !important;
-        }
-      `}</style>
+    <ConfiguratorStyles>
       {children}
-    </>
+    </ConfiguratorStyles>
   );
 }
