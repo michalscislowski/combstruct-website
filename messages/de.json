@@ -11,6 +11,7 @@
     "faq": "FAQ",
     "blog": "Blog",
     "pitchDeck": "Pitch Deck",
+    "configurator": "Konfigurator",
     "contact": "Kontakt",
     "startProject": "Projekt starten"
   },
@@ -680,5 +681,24 @@
     "backToSite": "Zurück zur Website",
     "enterFullscreen": "Vollbild",
     "exitFullscreen": "Vollbild beenden"
+  },
+  "configurator": {
+    "pageTitle": "Balken-Konfigurator",
+    "title": "Fachwerk-Ersteller",
+    "backToSite": "Zurück zur Website",
+    "enterFullscreen": "Vollbild",
+    "exitFullscreen": "Vollbild beenden",
+    "variant": "Balkenvariante",
+    "position": "Position",
+    "rotation": "Rotation",
+    "actions": "Aktionen",
+    "place": "Platzieren",
+    "undo": "Rückgängig",
+    "export": "Exportieren",
+    "import": "Importieren",
+    "beamCount": "Balken",
+    "exportSuccess": "Konstruktion in die Zwischenablage kopiert!",
+    "exportConsole": "Prüfen Sie die Konsole (F12) für das JSON",
+    "importError": "Fehler: Ungültiges JSON-Dateiformat"
   }
 }

@@ -15,6 +15,7 @@ const navigationKeys = [
   { key: "faq", href: "/faq" },
   { key: "blog", href: "/blog" },
   { key: "pitchDeck", href: "/pitch-deck" },
+  { key: "configurator", href: "/configurator" },
 ] as const;
 
 export default function Header() {

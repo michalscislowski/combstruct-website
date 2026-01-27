@@ -11,6 +11,7 @@
     "faq": "FAQ",
     "blog": "Blog",
     "pitchDeck": "Pitch Deck",
+    "configurator": "Configurator",
     "contact": "Contact",
     "startProject": "Start Your Project"
   },
@@ -680,5 +681,24 @@
     "backToSite": "Back to site",
     "enterFullscreen": "Fullscreen",
     "exitFullscreen": "Exit fullscreen"
+  },
+  "configurator": {
+    "pageTitle": "Beam Configurator",
+    "title": "Truss Creator",
+    "backToSite": "Back to site",
+    "enterFullscreen": "Fullscreen",
+    "exitFullscreen": "Exit fullscreen",
+    "variant": "Beam variant",
+    "position": "Position",
+    "rotation": "Rotation",
+    "actions": "Actions",
+    "place": "Place",
+    "undo": "Undo",
+    "export": "Export",
+    "import": "Import",
+    "beamCount": "Beams",
+    "exportSuccess": "Construction copied to clipboard!",
+    "exportConsole": "Check the console (F12) for the JSON",
+    "importError": "Error: Invalid JSON file format"
   }
 }

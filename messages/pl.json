@@ -11,6 +11,7 @@
     "faq": "FAQ",
     "blog": "Blog",
     "pitchDeck": "Pitch Deck",
+    "configurator": "Konfigurator",
     "contact": "Kontakt",
     "startProject": "Rozpocznij projekt"
   },
@@ -680,5 +681,24 @@
     "backToSite": "Powrót do strony",
     "enterFullscreen": "Pełny ekran",
     "exitFullscreen": "Zamknij pełny ekran"
+  },
+  "configurator": {
+    "pageTitle": "Konfigurator Belek",
+    "title": "Kreator Kratownicy",
+    "backToSite": "Powrót do strony",
+    "enterFullscreen": "Pełny ekran",
+    "exitFullscreen": "Zamknij pełny ekran",
+    "variant": "Wariant belki",
+    "position": "Pozycja",
+    "rotation": "Obrót",
+    "actions": "Akcje",
+    "place": "Postaw",
+    "undo": "Cofnij",
+    "export": "Eksport",
+    "import": "Import",
+    "beamCount": "Belek",
+    "exportSuccess": "Konstrukcja skopiowana do schowka!",
+    "exportConsole": "Sprawdź konsolę (F12) - tam jest JSON",
+    "importError": "Błąd: Nieprawidłowy format pliku JSON"
   }
 }
