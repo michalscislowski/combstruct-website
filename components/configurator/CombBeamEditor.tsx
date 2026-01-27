@@ -242,10 +242,9 @@ export default function CombBeamEditor() {
     fillLight.position.set(-50, 50, -50);
     scene.add(fillLight);
 
-    // Subtle grid
+    // Subtle grid - horizontal floor plane (X-Z)
     const gridHelper = new THREE.GridHelper(600, 60, 0xe5e5e5, 0xf0f0f0);
-    gridHelper.rotation.x = Math.PI / 2;
-    gridHelper.position.y = -0.5;
+    gridHelper.position.y = 0;
     scene.add(gridHelper);
 
     // Minimal axes
