@@ -282,6 +282,42 @@ export default function CombBeamEditor() {
     };
     animate();
 
+    // Load default construction
+    fetch('/combstructure3.json')
+      .then(res => res.json())
+      .then(data => {
+        const euler = new THREE.Euler();
+        const quaternion = new THREE.Quaternion();
+
+        for (const beam of data.beams) {
+          quaternion.set(beam.rotation[0], beam.rotation[1], beam.rotation[2], beam.rotation[3]);
+          euler.setFromQuaternion(quaternion);
+
+          const variantKey = beam.variant as VariantKey;
+          const index = beamSystem.addBeam(
+            BeamVariant[variantKey],
+            beam.position[0],
+            beam.position[1],
+            beam.position[2],
+            euler.x,
+            euler.y,
+            euler.z
+          );
+
+          if (index >= 0) {
+            placedBeamsRef.current.push({
+              variant: variantKey,
+              position: { x: beam.position[0], y: beam.position[1], z: beam.position[2] },
+              rotation: { x: euler.x, y: euler.y, z: euler.z },
+              index,
+            });
+          }
+        }
+
+        setBeamCount(beamSystem.getTotalCount());
+      })
+      .catch(err => console.error('Failed to load default construction:', err));
+
     const handleResize = () => {
       camera.aspect = container.clientWidth / container.clientHeight;
       camera.updateProjectionMatrix();
