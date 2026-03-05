@@ -2,12 +2,14 @@
 
 import { useState } from "react";
 import { Link } from "@/i18n/navigation";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import { ArrowLeft, Maximize2, Minimize2 } from "lucide-react";
 
 export default function PitchDeckPage() {
   const [isFullscreen, setIsFullscreen] = useState(false);
   const t = useTranslations("pitchDeck");
+  const locale = useLocale();
+  const pitchDeckSrc = locale === "en" ? "/pitch-deck.html" : `/pitch-deck-${locale}.html`;
 
   const toggleFullscreen = () => {
     if (!document.fullscreenElement) {
@@ -59,7 +61,7 @@ export default function PitchDeckPage() {
       {/* Pitch deck iframe */}
       <div className="pt-16 h-screen">
         <iframe
-          src="/pitch-deck.html"
+          src={pitchDeckSrc}
           className="w-full h-full border-0"
           title={t("title")}
           allow="fullscreen"
