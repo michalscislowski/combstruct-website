@@ -5,15 +5,16 @@ import Image from "next/image";
 import { Link } from "@/i18n/navigation";
 import { useTranslations } from "next-intl";
 import Section from "@/components/ui/Section";
+import LazyVideo from "@/components/ui/LazyVideo";
 import { ArrowRight } from "lucide-react";
 
 const phaseKeys = ["design", "manufacturing", "delivery", "assembly"] as const;
 
 const phaseMedia: Record<string, { src: string; type: "image" | "video" }> = {
   design: { src: "/images/Dom_Warstwy.jpeg", type: "image" },
-  manufacturing: { src: "/images/CNC_NASZE.mp4", type: "video" },
-  delivery: { src: "/images/featured-project.mp4", type: "video" },
-  assembly: { src: "/images/hero-video.mp4", type: "video" },
+  manufacturing: { src: "/images/CNC_NASZE", type: "video" },
+  delivery: { src: "/images/featured-project", type: "video" },
+  assembly: { src: "/images/hero-video", type: "video" },
 };
 
 export default function ProcessPage() {
@@ -87,13 +88,9 @@ export default function ProcessPage() {
                 }`}
               >
                 {phaseMedia[key].type === "video" ? (
-                  <video
+                  <LazyVideo
                     src={phaseMedia[key].src}
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                    className="absolute inset-0 w-full h-full object-cover"
+                    label={`${t(`phases.${key}.title`)} - ${t(`phases.${key}.phase`)}`}
                   />
                 ) : (
                   <Image

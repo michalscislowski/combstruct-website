@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { Link } from "@/i18n/navigation";
 import { useTranslations } from "next-intl";
 import { ArrowRight } from "lucide-react";
@@ -53,10 +54,12 @@ export default function CTA() {
             transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
             className="relative aspect-video bg-dark-lighter rounded-sm overflow-hidden"
           >
-            <img
+            <Image
               src="/images/DOM_KWIATKI.jpeg"
               alt="Combstruct featured project - modern home with flowers"
-              className="absolute inset-0 w-full h-full object-cover"
+              fill
+              sizes="(max-width: 1024px) 100vw, 50vw"
+              className="object-cover"
             />
           </motion.div>
         </div>

@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { Link } from "@/i18n/navigation";
 import { useTranslations } from "next-intl";
 import { ArrowRight } from "lucide-react";
@@ -15,10 +16,10 @@ const applicationHrefs = {
 };
 
 const applicationImages = {
-  singleFamily: "/images/Dom_Jednorodzinny.png",
-  multiUnit: "/images/Zabudowa Wielorodzinna.png",
-  commercial: "/images/Przestrzen_Komercyjna.png",
-  tenementSuperstructures: "/images/Nadbudowy_Blokow.png",
+  singleFamily: "/images/Dom_Jednorodzinny.webp",
+  multiUnit: "/images/Zabudowa_Wielorodzinna.webp",
+  commercial: "/images/Przestrzen_Komercyjna.webp",
+  tenementSuperstructures: "/images/Nadbudowy_Blokow.webp",
 };
 
 export default function Applications() {
@@ -62,10 +63,12 @@ export default function Applications() {
               <Link href={applicationHrefs[appKey]} className="group block">
                 {/* Image */}
                 <div className="relative aspect-[16/10] bg-secondary overflow-hidden">
-                  <img
+                  <Image
                     src={applicationImages[appKey]}
                     alt={t(`types.${appKey}.title`)}
-                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    fill
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors" />
                 </div>

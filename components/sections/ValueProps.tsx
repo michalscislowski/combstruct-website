@@ -5,6 +5,7 @@ import Image from "next/image";
 import { Link } from "@/i18n/navigation";
 import { useTranslations } from "next-intl";
 import { ArrowRight } from "lucide-react";
+import LazyVideo from "@/components/ui/LazyVideo";
 
 const featureKeys = ["buildFast", "sustainable", "precision"] as const;
 
@@ -12,7 +13,7 @@ const featureConfig = {
   buildFast: {
     linkHref: "/process",
     type: "video" as const,
-    video: "/images/featured-project.mp4",
+    video: "/images/featured-project",
     videoAlt: "Combstruct modular home construction timelapse showing rapid assembly process",
   },
   sustainable: {
@@ -24,7 +25,7 @@ const featureConfig = {
   precision: {
     linkHref: "/products#specs",
     type: "video" as const,
-    video: "/images/CNC_NASZE.mp4",
+    video: "/images/CNC_NASZE",
     videoAlt: "CNC machine precision cutting plywood panels for Combstruct building system",
   },
 };
@@ -92,16 +93,7 @@ export default function ValueProps() {
                   }`}
                 >
                   {config.type === "video" ? (
-                    <video
-                      autoPlay
-                      muted
-                      loop
-                      playsInline
-                      className="absolute inset-0 w-full h-full object-cover"
-                      aria-label={config.videoAlt}
-                    >
-                      <source src={config.video} type="video/mp4" />
-                    </video>
+                    <LazyVideo src={config.video} label={config.videoAlt} />
                   ) : (
                     <Image
                       src={config.image!}

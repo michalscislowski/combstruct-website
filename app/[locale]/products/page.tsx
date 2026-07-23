@@ -29,10 +29,10 @@ const specKeys = [
 const applicationKeys = ["homes", "apartments", "commercial", "workshops"] as const;
 
 const applicationImages: Record<string, string> = {
-  homes: "/images/Dom_Jednorodzinny.png",
-  apartments: "/images/Zabudowa Wielorodzinna.png",
-  commercial: "/images/Przestrzen_Komercyjna.png",
-  workshops: "/images/Nadbudowy_Blokow.png",
+  homes: "/images/Dom_Jednorodzinny.webp",
+  apartments: "/images/Zabudowa_Wielorodzinna.webp",
+  commercial: "/images/Przestrzen_Komercyjna.webp",
+  workshops: "/images/Nadbudowy_Blokow.webp",
 };
 
 export default function ProductsPage() {

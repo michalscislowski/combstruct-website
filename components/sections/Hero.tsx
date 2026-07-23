@@ -73,6 +73,8 @@ export default function Hero() {
           muted
           loop
           playsInline
+          preload="none"
+          poster="/images/hero-video-poster.jpg"
           onCanPlay={handleVideoLoaded}
           className={`absolute inset-0 w-full h-full object-contain bg-white transition-opacity duration-500 ${
             isVideoLoaded ? "opacity-100" : "opacity-0"
