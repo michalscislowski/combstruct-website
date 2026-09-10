@@ -1,6 +1,7 @@
 import {cp, mkdir, readFile, readdir, rm, stat, writeFile} from 'node:fs/promises';
 import {fileURLToPath} from 'node:url';
 import path from 'node:path';
+import {updateShareMetadata} from './share-metadata.mjs';
 
 const root = fileURLToPath(new URL('../', import.meta.url));
 const source = path.join(root, 'site');
@@ -20,6 +21,7 @@ async function walk(dir) {
   }
   return result;
 }
+await updateShareMetadata(source);
 // Inquiry prices come from the same offers shown on each project page.
 const offers = [];
 for (const id of ['30','90','125']) {

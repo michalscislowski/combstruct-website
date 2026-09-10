@@ -33,3 +33,11 @@ The practical-benefits section includes the original 42-second `site/assets/feat
 The lightweight film is `site/assets/combstruct-spot-web.mp4`. It retains its original audio/video bytes. The models and native beam profiles are copied unchanged. Public display libraries retain their bundled licence notices.
 
 The initial migration was prepared from the approved `outputs/combstruct-website` artefact in the local Combstruct workspace. The packaging helper stays in that workspace; it is not required to build this repository.
+
+## Link previews and icons
+
+`scripts/share-metadata.mjs` writes complete Open Graph and large-image card metadata into every HTML head during the build. It takes the title and description from each page, assigns the matching house image and reads dimensions from the actual JPEG. These tags are available without JavaScript. Optimized previews in `site/assets/share/` preserve the approved images and framing; they are 125–199 KB instead of 2.8–3.0 MB. Original page visuals remain unchanged. Keep preview JPEGs under 300 KB.
+
+The original Combstruct favicon and Apple/Android icons are restored at public root paths and linked in the HTML. `site.webmanifest` describes browser shortcuts; it does not install a service worker. The local server includes MIME types for ICO and webmanifest files.
+
+Metadata reference: https://ogp.me/. Favicon discovery: https://developers.google.com/search/docs/appearance/favicon-in-search. Live checks verify static HTML, images, icon responses and representative crawler user agents; they do not claim to clear caches inside messaging applications.
