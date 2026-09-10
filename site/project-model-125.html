@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Combstruct 125 — konstrukcja</title>
+<style>
+:root{color-scheme:light;--background:#f6f7f4;--foreground:#203528;--orange:#c9a36b;--yellow:#e8ddbd;--font-size-base:14px;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;background:var(--background);color:var(--foreground)}
+*{box-sizing:border-box}body{margin:0}
+#comb-125-model{height:100vh;display:flex;flex-direction:column}
+#comb-125-model>.viz-row{display:none}
+#comb-125-model>.model-stage{position:relative;flex:1;min-height:0;height:auto;width:100%;margin:0;touch-action:none}
+#comb-125-model .model-stage canvas{display:block;width:100%;height:100%}
+#comb-125-model .model-loading{position:absolute;inset:0;display:grid;place-items:center;color:var(--foreground);background:var(--background)}
+#comb-125-model .model-loading[hidden]{display:none}
+#comb-125-model>.viz-controls{padding:12px 20px 16px}
+.form-label{display:flex;align-items:center;gap:12px;font-size:14px}
+.form-select{font:inherit;color:inherit;background:#fff;border:1px solid #ccd3cc;border-radius:6px;padding:10px 12px;max-width:100%;flex:1;min-width:0}
+.form-select:focus-visible{outline:2px solid #426b4e;outline-offset:3px}
+.text-small{font-size:13px}
+@media(max-width:480px){#comb-125-model>.viz-controls{padding:10px 12px 14px}.form-select{font-size:16px}}
+</style>
+</head>
+<body>
+<div id="comb-125-model">
+  <div class="model-stage" aria-label="Model konstrukcji domu Combstruct 125">
+    <div class="model-loading text-small" role="status">Przygotowuję model…</div>
+  </div>
+  <div class="viz-controls">
+    <label class="form-label">Widok
+      <select class="form-select" data-view>
+        <option value="structure">Cała konstrukcja</option>
+        <option value="interior">Wnętrze</option>
+        <option value="floor">Płyta podłogowa i taras</option>
+        <option value="roof">Stropodach</option>
+        <option value="insulation">Z izolacją</option>
+      </select>
+    </label>
+  </div>
+</div>
+<script src="assets/combstruct-125-model.js"></script>
+</body>
+</html>

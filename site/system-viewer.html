@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Combstruct — model systemu</title>
+  <style>
+    :root{color-scheme:dark;--orange:#b9966c;--foreground:#ddd6c9;--background:#ebe8e0;--yellow:#dbccac;--muted:#b4ada1;--muted-foreground:#7d847c;--green:#486047;--blue:#8ca6b2}
+    *{box-sizing:border-box}html,body,#system-viewer{width:100%;height:100%;margin:0;overflow:hidden;background:#181b18}
+    canvas{display:block;width:100%;height:100%;touch-action:none;outline:none;cursor:grab}canvas:active{cursor:grabbing}
+    canvas:focus-visible{outline:2px solid #cbb695;outline-offset:-4px}
+    #viewer-error{position:absolute;inset:0;place-content:center;padding:32px;color:#d6cbbb;font:14px/1.6 system-ui;text-align:center;background:#181b18}
+    #viewer-error[hidden]{display:none}
+  </style>
+  <script>
+    window.__combstructPendingStage=0;
+    addEventListener('message',function(event){
+      if(event.source!==parent)return;
+      if(location.protocol!=='file:'&&location.origin!=='null'&&event.origin!==location.origin)return;
+      if(event.data?.type==='combstruct:stage'){
+        var stage=Number(event.data.stage);
+        if(Number.isInteger(stage)&&stage>=0&&stage<=4)window.__combstructPendingStage=stage;
+      }
+    });
+    addEventListener('error',function(){
+      var error=document.getElementById('viewer-error');
+      if(error)error.hidden=false;
+      parent.postMessage({type:'combstruct:error',message:'Nie udało się uruchomić podglądu 3D.'},location.protocol==='file:'||location.origin==='null'?'*':location.origin);
+    });
+  </script>
+  <script src="./system-viewer.js" defer></script>
+</head>
+<body>
+  <main id="system-viewer"></main>
+  <p id="viewer-error" role="status" hidden>Nie udało się uruchomić podglądu 3D. Odśwież stronę lub otwórz ją w przeglądarce obsługującej WebGL.</p>
+</body>
+</html>

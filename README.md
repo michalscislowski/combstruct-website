@@ -1,36 +1,31 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Combstruct website
 
-## Getting Started
+The current customer website lives in `site/`: the approved Polish landing page, Combstruct 30/90/125 catalogue, material and assembly prices including VAT, three interactive structural models, and one web video.
 
-First, run the development server:
+## Run locally
 
-```bash
+Node.js is sufficient; the current static website has no install step.
+
+```sh
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://127.0.0.1:4173. `npm run build` verifies local asset references and creates `dist/` from `site/`. `npm start` serves an existing build, including video byte ranges and the configured legacy redirects.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Vercel
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+The existing GitHub/Vercel integration is retained. `vercel.json` overrides the previous framework preset, skips dependency installation, builds with `node scripts/build-site.mjs`, and publishes only `dist/`. No local parent folders, reports, source measurements, or business documents are included in the deployed directory.
 
-## Learn More
+The previous Next.js source remains in the repository for reference and is excluded from the static build. The previous production revision is `b300607de6ce90f30e1e33ee88a673fae56bded8`. Git history and earlier Vercel deployments allow restoring it.
 
-To learn more about Next.js, take a look at the following resources:
+The new site is Polish. Old `/en`, `/pl`, and `/de` entry points redirect to it; old contact/project/system/FAQ URLs redirect to their current equivalents. No English or German translation of the new copy is claimed.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Contact links open `kontakt.html`, which uses the existing published `contact@combstruct.com` mail address. No mail delivery integration is configured, and there is no simulated form submission. The previous source contained a placeholder phone number and a form that only logged data and displayed an alert; these are not exposed in the new deployment.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Updating content
 
-## Deploy on Vercel
+Edit `site/index.html`, `site/projekty.html`, and the associated CSS/JS. Prices are pre-rendered with their material and assembly alternatives; each project retains an independent switch. Copy, quantities, VAT labels, and the 1–2 week assembly estimate match the approved local version.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+The lightweight film is `site/assets/combstruct-spot-web.mp4`. It retains its original audio/video bytes. The models and native beam profiles are copied unchanged. Public display libraries retain their bundled licence notices.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+The initial migration was prepared from the approved `outputs/combstruct-website` artefact in the local Combstruct workspace. The packaging helper stays in that workspace; it is not required to build this repository.
