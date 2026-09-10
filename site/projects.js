@@ -2,6 +2,19 @@
   'use strict';
   const localFile = location.protocol === 'file:' || location.origin === 'null';
   const frameOrigin = localFile ? '*' : location.origin;
+  function openLegacyProject() {
+    const legacyProject = /^#combstruct-(30|90|125)$/.exec(location.hash);
+    if (document.body.classList.contains('project-catalogue') && legacyProject) {
+      location.replace(`combstruct-${legacyProject[1]}.html`);
+      return true;
+    }
+    return false;
+  }
+  if (openLegacyProject()) return;
+  addEventListener('hashchange', openLegacyProject);
+  document.querySelector('[data-project-switch]')?.addEventListener('change', event => {
+    location.assign(event.target.value);
+  });
 
   function connectTabs(tabList, onChange = () => {}) {
     const tabs = [...tabList.querySelectorAll('[role="tab"]')];
@@ -18,6 +31,7 @@
       });
       onChange(tabs[index]);
       if (moveFocus) tabs[index].focus({ preventScroll: true });
+      tabs[index].scrollIntoView({block:'nearest', inline:'nearest', behavior:'instant'});
     }
 
     tabs.forEach((tab, index) => tab.addEventListener('click', () => showView(index)));
@@ -31,6 +45,7 @@
       event.preventDefault();
       showView(next, true);
     });
+    return {show: showView, tabs};
   }
 
   function connectParts(panel) {
@@ -57,19 +72,35 @@
   }
 
   document.querySelectorAll('.house-project').forEach(project => {
+    const heading = project.querySelector('.project-heading');
+    new ResizeObserver(() => {
+      document.documentElement.style.setProperty('--project-nav-height', `${Math.ceil(heading.getBoundingClientRect().height)}px`);
+    }).observe(heading);
     const modelStage = project.querySelector('.project-model-stage');
     const loading = modelStage.querySelector('.project-model-loading');
     let modelFrame = null;
     let modelVisible = false;
     const showParts = connectParts(project.querySelector('.project-parts'));
     const priceMode = project.querySelector('.project-price-mode');
-    priceMode?.addEventListener('change', () => {
+    const requestedMode = new URLSearchParams(location.search).get('mode');
+    if (requestedMode === 'materials' || requestedMode === 'assembly') {
+      priceMode.querySelector(`input[value="${requestedMode}"]`).checked = true;
+    }
+    const updatePrices = () => {
       const mode = priceMode.querySelector('input:checked').value;
       const format = new Intl.NumberFormat('pl-PL', { maximumFractionDigits: 0 });
       project.querySelectorAll('[data-price-amount]').forEach(amount => {
         amount.textContent = format.format(Number(amount.dataset[mode]));
       });
-    });
+      project.querySelectorAll('[data-order-material]').forEach(link => {
+        const url = new URL(link.getAttribute('href'), location.href);
+        url.searchParams.set('mode', mode);
+        link.href = url.href;
+        link.setAttribute('aria-label', `Zamów ${project.querySelector('h1').textContent}, ${link.dataset.orderMaterial === 'osb3' ? 'OSB3' : 'sklejka'}, ${mode === 'assembly' ? 'z montażem' : 'materiały bez montażu'}`);
+      });
+    };
+    priceMode?.addEventListener('change', updatePrices);
+    updatePrices();
 
     function informModel() {
       modelFrame?.contentWindow?.postMessage({
@@ -91,12 +122,21 @@
       modelStage.append(modelFrame);
     }
 
-    connectTabs(project.querySelector('.project-tabs'), tab => {
+    const projectTabs = connectTabs(project.querySelector('.project-tabs'), tab => {
       modelVisible = tab.dataset.projectView === 'model';
       if (modelVisible) loadModel();
       if (tab.dataset.projectView === 'parts') showParts();
       informModel();
+      if (project.getBoundingClientRect().top < -24) {
+        project.scrollIntoView({block:'start', behavior:'instant'});
+      }
     });
+    const viewHashes = {wizualizacja:'visual', rzut:'plan', konstrukcja:'model', materialy:'parts'};
+    const requestedView = viewHashes[location.hash.slice(1)];
+    if (requestedView) {
+      const index = projectTabs.tabs.findIndex(tab => tab.dataset.projectView === requestedView);
+      if (index >= 0) projectTabs.show(index);
+    }
     project.querySelectorAll('.project-plan-tabs').forEach(tabList => connectTabs(tabList));
     document.addEventListener('visibilitychange', informModel);
   });

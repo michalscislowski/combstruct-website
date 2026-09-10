@@ -1,4 +1,4 @@
-import {cp, mkdir, readFile, readdir, rm, stat} from 'node:fs/promises';
+import {cp, mkdir, readFile, readdir, rm, stat, writeFile} from 'node:fs/promises';
 import {fileURLToPath} from 'node:url';
 import path from 'node:path';
 
@@ -20,6 +20,17 @@ async function walk(dir) {
   }
   return result;
 }
+// Inquiry prices come from the same offers shown on each project page.
+const offers = [];
+for (const id of ['30','90','125']) {
+  const html = await readFile(path.join(source, `combstruct-${id}.html`), 'utf8');
+  const variants = [...html.matchAll(/data-price-material="([^"]+)"><dt>([^<]+)<\/dt><dd><strong data-price-amount data-materials="(\d+)" data-assembly="(\d+)"/g)]
+    .map(([,material,label,materials,assembly]) => ({material,label,materials:Number(materials),assembly:Number(assembly)}));
+  if (variants.length !== 2) throw new Error(`Missing price variants in Combstruct ${id}`);
+  offers.push({id,name:`Combstruct ${id}`,page:`combstruct-${id}.html`,
+    image:html.match(/<img class="project-visual" src="([^"]+)"/)[1],variants});
+}
+await writeFile(path.join(source, 'assets/project-offers.js'), `window.COMBSTRUCT_OFFERS = ${JSON.stringify(offers,null,2)};\n`);
 const files = await walk(source);
 for (const file of files) {
   if (!/\.(html|css)$/.test(file)) continue;

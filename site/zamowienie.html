@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#254331">
+<meta name="robots" content="noindex,follow">
+<title>Zapytanie o zamówienie — Combstruct</title>
+<link rel="icon" type="image/png" href="assets/icon.png">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="zamowienie.css">
+<script defer src="assets/project-offers.js"></script>
+<script defer src="zamowienie.js"></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Przejdź do treści</a>
+<header class="site-header"><a class="wordmark" href="index.html" aria-label="Combstruct — strona główna">Combstruct<span class="brand-dot" aria-hidden="true"></span></a><a class="button button-green" href="projekty.html">Projekty i ceny</a></header>
+<main id="main" class="section-wrap inquiry-main">
+  <div id="inquiry-empty"><h1>Wybierz projekt i wariant.</h1><p>Przy cenie wybranego domu kliknij „Zamów ten wariant”. Tutaj zobaczysz podsumowanie swojego wyboru.</p><a class="button button-green" href="projekty.html">Zobacz projekty</a></div>
+  <div id="inquiry-content" hidden>
+    <a class="inquiry-back" id="inquiry-back" href="projekty.html">‹ Wróć do projektu</a>
+    <div class="inquiry-heading"><h1>Zapytaj o zamówienie.</h1><p>Potwierdzimy zakres, dostępność i termin realizacji.</p></div>
+    <div class="inquiry-layout">
+      <aside class="inquiry-summary" aria-labelledby="inquiry-project"><img id="inquiry-image" alt="" width="1500" height="1000"><div class="inquiry-summary-copy"><h2 id="inquiry-project"></h2><p>Konstrukcja z izolacją</p><dl><div><dt>Materiał</dt><dd id="inquiry-material"></dd></div><div><dt>Zakres</dt><dd id="inquiry-mode"></dd></div><div class="inquiry-total"><dt>Cena wybranego wariantu</dt><dd><strong id="inquiry-price"></strong> <span>zł brutto</span></dd></div></dl><a class="inquiry-change" id="inquiry-change" href="projekty.html">Zmień wariant</a></div></aside>
+      <form id="inquiry-form" class="inquiry-form">
+        <h2>Gdzie i kiedy chcesz budować?</h2><p>Możesz uzupełnić szczegóły lub od razu przejść do wiadomości.</p>
+        <div class="inquiry-fields"><label>Imię <span>(opcjonalnie)</span><input name="name" autocomplete="given-name" maxlength="100"></label><label>Lokalizacja budowy <span>(opcjonalnie)</span><input name="location" autocomplete="address-level2" placeholder="Miejscowość lub kod pocztowy" maxlength="200"></label></div>
+        <label>Planowany termin<select name="timing"><option>Do ustalenia</option><option>Najbliższy dostępny termin</option><option>W ciągu 3 miesięcy</option><option>Za 3–6 miesięcy</option><option>Później</option></select></label>
+        <label>Co jeszcze powinniśmy wiedzieć? <span>(opcjonalnie)</span><textarea name="message" rows="4" maxlength="2000" placeholder="Np. zmiany w projekcie lub pytania o montaż."></textarea></label>
+        <div class="inquiry-send"><a class="button button-green" id="inquiry-email" href="mailto:contact@combstruct.com">Otwórz e-mail z zapytaniem</a><p>Wyślesz wiadomość ze swojej poczty na <a href="mailto:contact@combstruct.com">contact@combstruct.com</a>. Podsumowanie wybranego wariantu będzie już w treści.</p><button type="button" id="inquiry-copy">Skopiuj treść zapytania</button><p class="inquiry-copy-status" id="inquiry-copy-status" role="status" aria-live="polite"></p><label id="inquiry-manual-copy" hidden>Treść zapytania<textarea readonly rows="10"></textarea></label></div>
+      </form>
+    </div>
+  </div>
+  <noscript><p>Możesz również napisać bezpośrednio na <a href="mailto:contact@combstruct.com">contact@combstruct.com</a>, podając wybrany dom i wariant.</p></noscript>
+</main>
+<footer class="site-footer section-wrap"><a class="wordmark" href="index.html">Combstruct<span class="brand-dot" aria-hidden="true"></span></a><span>System konstrukcyjny z płyt drewnopochodnych.</span><nav aria-label="Stopka"><a href="index.html#system">Poznaj system</a><a href="projekty.html">Projekty i ceny</a><a href="kontakt.html">Kontakt</a></nav><small>© 2026 Combstruct</small></footer>
+</body>
+</html>

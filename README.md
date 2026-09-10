@@ -24,7 +24,9 @@ Contact links open `kontakt.html`, which uses the existing published `contact@co
 
 ## Updating content
 
-Edit `site/index.html`, `site/projekty.html`, and the associated CSS/JS. Prices are pre-rendered with their material and assembly alternatives; each project retains an independent switch. Copy, quantities, VAT labels, and the 1–2 week assembly estimate match the approved local version.
+Edit `site/index.html`, the catalogue `site/projekty.html`, and the individual `site/combstruct-30.html`, `site/combstruct-90.html`, `site/combstruct-125.html` pages with their associated CSS/JS. Each house has its own sticky view navigation, project switch and return link. Legacy catalogue hashes redirect to the corresponding house. Prices are pre-rendered on the detail pages with their material and assembly alternatives; the build derives `site/assets/project-offers.js` from those same prices for the inquiry summary. Copy, quantities, VAT labels, and the 1–2 week assembly estimate match the approved local version.
+
+`Zamów ten wariant` opens `site/zamowienie.html` with an allowlisted project, material and assembly mode. The page shows the selected scope and price including VAT, accepts optional contact context, and prepares an email to `contact@combstruct.com`. The visitor sends it in their own mail application; copying the message is also available, with a selectable-text fallback. No payment, server submission or simulated success is implemented. Prices passed in the URL are ignored. Inquiry pages are noindex and do not store personal data.
 
 The lightweight film is `site/assets/combstruct-spot-web.mp4`. It retains its original audio/video bytes. The models and native beam profiles are copied unchanged. Public display libraries retain their bundled licence notices.
 
