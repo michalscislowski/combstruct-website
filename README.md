@@ -1,6 +1,6 @@
 # Combstruct website
 
-The current customer website lives in `site/`: the approved Polish landing page, Combstruct 30/90/125 catalogue, material and assembly prices including VAT, three interactive structural models, and one web video.
+The current customer website lives in `site/`: the approved Polish landing page, Combstruct 30/90/125 catalogue, material and assembly prices including VAT, three interactive structural models, the web spot and construction footage.
 
 ## Run locally
 
@@ -27,6 +27,8 @@ Contact links open `kontakt.html`, which uses the existing published `contact@co
 Edit `site/index.html`, the catalogue `site/projekty.html`, and the individual `site/combstruct-30.html`, `site/combstruct-90.html`, `site/combstruct-125.html` pages with their associated CSS/JS. Each house has its own sticky view navigation, project switch and return link. Legacy catalogue hashes redirect to the corresponding house. Prices are pre-rendered on the detail pages with their material and assembly alternatives; the build derives `site/assets/project-offers.js` from those same prices for the inquiry summary. Copy, quantities, VAT labels, and the 1–2 week assembly estimate match the approved local version.
 
 `Zamów ten wariant` opens `site/zamowienie.html` with an allowlisted project, material and assembly mode. The page shows the selected scope and price including VAT, accepts optional contact context, and prepares an email to `contact@combstruct.com`. The visitor sends it in their own mail application; copying the message is also available, with a selectable-text fallback. No payment, server submission or simulated success is implemented. Prices passed in the URL are ignored. Inquiry pages are noindex and do not store personal data.
+
+The practical-benefits section includes the original 42-second `site/assets/featured-project.mp4` construction footage from the former website, with its original poster. It uses native playback/fullscreen controls and `preload="none"`; video bytes are not requested during initial page loading. The source and its audio/video streams were preserved unchanged.
 
 The lightweight film is `site/assets/combstruct-spot-web.mp4`. It retains its original audio/video bytes. The models and native beam profiles are copied unchanged. Public display libraries retain their bundled licence notices.
 

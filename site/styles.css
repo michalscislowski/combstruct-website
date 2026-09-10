@@ -7,3 +7,6 @@
 @media(prefers-reduced-motion:reduce){:root{scroll-behavior:auto}*,*:before,*:after{animation:none!important;transition:none!important}}
 
 @media(min-width:761px) and (max-width:980px){.site-header .header-cta{display:none}}
+
+.comfort-section{row-gap:40px}.build-film{grid-column:1/-1;margin:0;min-width:0}.build-film video{display:block;width:100%;height:auto;aspect-ratio:1280/728;background:#181b18;border-radius:20px}.build-film figcaption{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding-top:17px;font-size:15px;line-height:1.5;color:var(--green)}.build-film figcaption>span:last-child{font-size:13px;color:var(--muted);white-space:nowrap}
+@media(max-width:760px){.comfort-section{row-gap:35px}.build-film video{border-radius:15px}.build-film figcaption{align-items:flex-start;flex-direction:column;gap:4px;padding-top:13px}}
