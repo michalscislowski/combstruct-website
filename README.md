@@ -16,7 +16,7 @@ Open http://127.0.0.1:4173. `npm run build` verifies local asset references and 
 
 The existing GitHub/Vercel integration is retained. `vercel.json` overrides the previous framework preset, skips dependency installation, builds with `node scripts/build-site.mjs`, and publishes only `dist/`. No local parent folders, reports, source measurements, or business documents are included in the deployed directory.
 
-The previous Next.js source remains in the repository for reference and is excluded from the static build. The previous production revision is `b300607de6ce90f30e1e33ee88a673fae56bded8`. Git history and earlier Vercel deployments allow restoring it.
+The previous Next.js source remains in the repository for reference and is excluded from the static build. Its root locale middleware has been removed because Vercel auto-discovers it even with the framework set to Other; locale redirects now live only in `vercel.json`. The build checks for leftover middleware. The previous production revision is `b300607de6ce90f30e1e33ee88a673fae56bded8`. Git history and earlier Vercel deployments allow restoring it.
 
 The new site is Polish. Old `/en`, `/pl`, and `/de` entry points redirect to it; old contact/project/system/FAQ URLs redirect to their current equivalents. No English or German translation of the new copy is claimed.
 

@@ -5,6 +5,13 @@ import path from 'node:path';
 const root = fileURLToPath(new URL('../', import.meta.url));
 const source = path.join(root, 'site');
 const output = path.join(root, 'dist');
+// Vercel can auto-discover root middleware even with the framework set to Other.
+// Locale redirects are handled by vercel.json in this static deployment.
+for (const name of ['middleware.ts', 'middleware.js', 'proxy.ts', 'proxy.js', 'src/middleware.ts', 'src/middleware.js']) {
+  if (await stat(path.join(root, name)).catch(() => null)) {
+    throw new Error(`Remove legacy request middleware before publishing the static site: ${name}`);
+  }
+}
 async function walk(dir) {
   const result = [];
   for (const entry of await readdir(dir, {withFileTypes: true})) {
