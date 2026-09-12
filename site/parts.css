@@ -1,0 +1,41 @@
+/* Shared by Flow production and the project bills of parts. */
+.parts-catalogue{min-width:0;color:var(--ink)}
+.parts-catalogue-heading{display:flex;align-items:baseline;justify-content:space-between;gap:16px;border-top:1px solid var(--line);margin-top:26px;padding-top:24px}
+.parts-catalogue-heading h4{font-size:21px;font-weight:500;letter-spacing:-.025em}
+.parts-catalogue-total{font-size:20px;color:var(--green);white-space:nowrap;font-variant-numeric:tabular-nums}
+.parts-catalogue-lead{font-size:13px;line-height:1.6;margin:10px 0 20px;color:var(--muted)}
+.parts-family-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.parts-family,.parts-variant{display:flex;justify-content:space-between;align-items:center;gap:12px;min-width:0;text-align:left;border:1px solid var(--line);border-radius:7px;background:#fff;color:var(--ink);font:inherit;cursor:pointer}
+.parts-family{padding:13px 14px;min-height:72px}
+.parts-family-name{font-size:12px;line-height:1.4}
+.parts-family-count{flex-shrink:0;text-align:right;white-space:nowrap}
+.parts-family-count strong{display:block;font-size:16px;font-weight:500;font-variant-numeric:tabular-nums}
+.parts-family-count small{display:block;color:var(--muted);font-size:10px;margin-top:3px}
+.parts-family[aria-pressed=true],.parts-variant[aria-pressed=true]{border-color:var(--green);background:#f2f5f1;color:var(--green);box-shadow:inset 0 0 0 .5px var(--green)}
+.parts-family:hover,.parts-variant:hover{border-color:var(--green)}
+.parts-family:focus-visible,.parts-variant:focus-visible{outline:2px solid var(--green);outline-offset:3px}
+.parts-variant-heading{display:flex;align-items:baseline;justify-content:space-between;gap:12px}
+.parts-variant-heading h5{font-size:15px;font-weight:500;line-height:1.5}
+.parts-variant-heading>span{font-size:11px;white-space:nowrap;color:var(--muted)}
+.parts-variant-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-top:12px}
+.parts-variant{min-height:47px;padding:11px 13px;font-size:13px}
+.parts-variant strong{font-weight:500;white-space:nowrap;font-variant-numeric:tabular-nums}
+.parts-fitted{grid-column:1/-1}
+.parts-variant-note{font-size:12px;line-height:1.6;color:var(--muted);margin-top:12px}
+.parts-explorer{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:32px;align-items:start}
+.parts-model{min-width:0;position:sticky;top:calc(var(--project-nav-height,130px) + 24px)}
+.parts-viewport{position:relative;isolation:isolate;height:360px;background:#f2f5f1;border-radius:14px;overflow:hidden;touch-action:none}
+.parts-viewport canvas{display:block;width:100%;height:100%;outline-offset:-4px}
+.parts-annotation{position:absolute;top:18px;left:18px;right:18px;width:fit-content;max-width:calc(100% - 36px);padding:8px 12px;border-radius:6px;background:#fffffff0;color:#205b57;font-size:12px;line-height:1.5;pointer-events:none}
+.parts-hint{position:absolute;left:18px;right:18px;bottom:16px;font-size:11px;line-height:1.5;color:#526257;pointer-events:none}
+.parts-model-tools{display:flex;justify-content:flex-end;margin-top:10px}
+.parts-model-tools button{border:0;background:none;color:var(--green);padding:7px 0;font:inherit;font-size:12px}
+.parts-loading{position:absolute;inset:0;display:grid;place-content:center;z-index:2;background:#f2f5f1;padding:20px;font-size:14px;text-align:center;line-height:1.6}
+.parts-loading[hidden],.parts-variant-note[hidden]{display:none}
+#production-catalog{padding-top:24px}
+.project-parts{background:#fff}
+.project-parts .parts-heading{display:block;margin-bottom:32px}
+.project-parts .parts-heading>div{max-width:630px}
+.project-parts .parts-totals{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;border-bottom:1px solid var(--line);padding:25px 0;margin-top:4px}
+@media(max-width:1100px){.parts-explorer{grid-template-columns:1fr;gap:24px}.parts-model{position:static}.parts-viewport{height:300px}}
+@media(max-width:760px){.parts-catalogue-heading h4{font-size:19px}.parts-catalogue-total{font-size:18px}.parts-family{min-height:65px;padding:11px 12px;gap:8px}.parts-family-name{font-size:12px}.parts-family-count strong{font-size:14px}.parts-family-list{grid-template-columns:1fr}.parts-viewport{height:245px}.parts-annotation{font-size:11px;top:12px;left:12px;right:12px;max-width:calc(100% - 24px)}.parts-hint{font-size:10px;left:12px;right:12px;bottom:12px}.project-parts .parts-totals{gap:20px 12px}.project-parts .parts-totals dt{font-size:10px;min-height:30px}.project-parts .parts-totals dd{font-size:24px}.project-parts .parts-totals dd span{font-size:11px}.parts-variant-heading{align-items:start}.parts-variant-heading>span{padding-top:4px}.parts-variant{font-size:12px;padding:11px}}

@@ -49,26 +49,19 @@
   }
 
   function connectParts(panel) {
-    const cards = [...panel.querySelectorAll('.part-card')];
-    const filters = [...panel.querySelectorAll('[data-parts-filter]')];
-    let category = 'all';
-
-    function render() {
-      cards.forEach(card => {
-        card.hidden = category !== 'all' && card.dataset.partCategory !== category;
-        if (!card.hidden) {
-          const img = card.querySelector('img');
-          if (!img.hasAttribute('src')) img.src = img.dataset.src;
-        }
-      });
-    }
-
-    filters.forEach(filter => filter.addEventListener('click', () => {
-      category = filter.dataset.partsFilter;
-      filters.forEach(button => button.setAttribute('aria-pressed', String(button === filter)));
-      render();
-    }));
-    return render;
+    let started=false;
+    return () => {
+      if(started)return;
+      started=true;
+      const script=document.createElement('script');
+      script.src='assets/parts-viewer.js?v=1';
+      script.onerror=()=>{
+        started=false;
+        const message=panel.querySelector('.parts-loading');
+        message.textContent='Nie udało się wczytać części. Wróć do tej zakładki, aby spróbować ponownie.';
+      };
+      document.head.append(script);
+    };
   }
 
   document.querySelectorAll('.house-project').forEach(project => {

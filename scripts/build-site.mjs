@@ -24,8 +24,22 @@ async function walk(dir) {
 await updateShareMetadata(source);
 // Inquiry prices come from the same offers shown on each project page.
 const offers = [];
+const quantityAudit = JSON.parse(await readFile(path.join(root, 'lib/construction/qa/quantities.json'), 'utf8')).projects;
 for (const id of ['30','90','125']) {
   const html = await readFile(path.join(source, `combstruct-${id}.html`), 'utf8');
+  const parts = JSON.parse(await readFile(path.join(source, `assets/parts/${id}.json`), 'utf8'));
+  if (parts.project !== id || parts.geometrySha256 !== quantityAudit[id].geometrySha256 || parts.totalBoards !== quantityAudit[id].physicalBoards) {
+    throw new Error(`Parts catalogue does not match the quantity audit for Combstruct ${id}`);
+  }
+  for (const family of parts.families) {
+    const quantities = [...family.variants.map(v => v.count), family.fitted.count];
+    if (quantities.some(n => !Number.isInteger(n) || n < 0) || quantities.reduce((sum,n) => sum+n,0) !== family.count) {
+      throw new Error(`Invalid physical quantities in Combstruct ${id}: ${family.id}`);
+    }
+  }
+  if (parts.families.reduce((sum,f) => sum+f.count,0) !== parts.totalBoards) {
+    throw new Error(`Incomplete parts catalogue for Combstruct ${id}`);
+  }
   const variants = [...html.matchAll(/data-price-material="([^"]+)"><dt>([^<]+)<\/dt><dd><strong data-price-amount data-materials="(\d+)" data-assembly="(\d+)"/g)]
     .map(([,material,label,materials,assembly]) => ({material,label,materials:Number(materials),assembly:Number(assembly)}));
   if (variants.length !== 2) throw new Error(`Missing price variants in Combstruct ${id}`);
