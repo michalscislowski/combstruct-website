@@ -20,8 +20,6 @@
 .parts-variant-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-top:12px}
 .parts-variant{min-height:47px;padding:11px 13px;font-size:13px}
 .parts-variant strong{font-weight:500;white-space:nowrap;font-variant-numeric:tabular-nums}
-.parts-fitted{grid-column:1/-1}
-.parts-variant-note{font-size:12px;line-height:1.6;color:var(--muted);margin-top:12px}
 .parts-explorer{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:32px;align-items:start}
 .parts-model{min-width:0;position:sticky;top:calc(var(--project-nav-height,130px) + 24px)}
 .parts-viewport{position:relative;isolation:isolate;height:360px;background:#f2f5f1;border-radius:14px;overflow:hidden;touch-action:none}
@@ -31,7 +29,7 @@
 .parts-model-tools{display:flex;justify-content:flex-end;margin-top:10px}
 .parts-model-tools button{border:0;background:none;color:var(--green);padding:7px 0;font:inherit;font-size:12px}
 .parts-loading{position:absolute;inset:0;display:grid;place-content:center;z-index:2;background:#f2f5f1;padding:20px;font-size:14px;text-align:center;line-height:1.6}
-.parts-loading[hidden],.parts-variant-note[hidden]{display:none}
+.parts-loading[hidden]{display:none}
 #production-catalog{padding-top:24px}
 .project-parts{background:#fff}
 .project-parts .parts-heading{display:block;margin-bottom:32px}

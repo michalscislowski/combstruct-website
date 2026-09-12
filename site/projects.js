@@ -54,7 +54,7 @@
       if(started)return;
       started=true;
       const script=document.createElement('script');
-      script.src='assets/parts-viewer.js?v=1';
+      script.src='assets/parts-viewer.js?v=kit-1';
       script.onerror=()=>{
         started=false;
         const message=panel.querySelector('.parts-loading');

@@ -28,17 +28,20 @@ const quantityAudit = JSON.parse(await readFile(path.join(root, 'lib/constructio
 for (const id of ['30','90','125']) {
   const html = await readFile(path.join(source, `combstruct-${id}.html`), 'utf8');
   const parts = JSON.parse(await readFile(path.join(source, `assets/parts/${id}.json`), 'utf8'));
-  if (parts.project !== id || parts.geometrySha256 !== quantityAudit[id].geometrySha256 || parts.totalBoards !== quantityAudit[id].physicalBoards) {
+  if (parts.project !== id || parts.basis !== 'delivery-before-cutting' || parts.geometrySha256 !== quantityAudit[id].geometrySha256 || parts.installedPieces !== quantityAudit[id].physicalBoards) {
     throw new Error(`Parts catalogue does not match the quantity audit for Combstruct ${id}`);
   }
   for (const family of parts.families) {
-    const quantities = [...family.variants.map(v => v.count), family.fitted.count];
+    const quantities = family.variants.map(v => v.count);
     if (quantities.some(n => !Number.isInteger(n) || n < 0) || quantities.reduce((sum,n) => sum+n,0) !== family.count) {
       throw new Error(`Invalid physical quantities in Combstruct ${id}: ${family.id}`);
     }
   }
   if (parts.families.reduce((sum,f) => sum+f.count,0) !== parts.totalBoards) {
     throw new Error(`Incomplete parts catalogue for Combstruct ${id}`);
+  }
+  if(parts.totalBoards!==quantityAudit[id].deliveryBoards || parts.material.sheets!==quantityAudit[id].sheets) {
+    throw new Error(`Regenerate kit quantities and offers for Combstruct ${id}`);
   }
   const variants = [...html.matchAll(/data-price-material="([^"]+)"><dt>([^<]+)<\/dt><dd><strong data-price-amount data-materials="(\d+)" data-assembly="(\d+)"/g)]
     .map(([,material,label,materials,assembly]) => ({material,label,materials:Number(materials),assembly:Number(assembly)}));
