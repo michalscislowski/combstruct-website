@@ -1,9 +1,10 @@
-# Catalogue construction models: Combstruct 90 and 125
+# Catalogue construction models: Combstruct 30, 90 and 125
 
 These sources replace the old model generators under `outputs/combstruct-90` and
 `outputs/combstruct-125` in the shared workspace. In particular, 125 no longer
-extracts geometry from the advertising film. The film and Combstruct 30 are
-unchanged. The static site serves the committed `site/assets/*-model.js` bundles.
+extracts geometry from the advertising film. The film is unchanged.
+Combstruct 30 now shares `30/structure.js` and its connector schedule with the
+handbook and Flow; `lib/technology/structure.js` is only a re-export. The static site serves the committed `site/assets/*-model.js` bundles.
 
 ## Shared rules
 
@@ -44,9 +45,10 @@ Internal axes are snapped to the same rib grid. Plan SVGs use the revised layout
 
 ## Rebuilding
 
-Bundle `90/viewer-source.js` and `125/viewer-source.js` with esbuild, Three.js and
+Bundle `30/viewer-source.js`, `90/viewer-source.js` and `125/viewer-source.js` with esbuild, Three.js and
 its OrbitControls/BufferGeometryUtils addons: browser IIFE, ES2020, minified,
-legal comments retained. Write the respective `site/assets/*-model.js` files.
+legal comments retained. Write the respective `site/assets/*-model.js` files (30 retains the public
+`krokusy-2-model.js` asset filename).
 Then run `npm run build`, which verifies static links and writes `dist/`.
 
 In the shared workspace, the reproducible entry is
@@ -55,7 +57,7 @@ same vendored build used during geometry validation.
 
 `qa/build-plans.js` writes the three SVG plans. Bundle it for Node with Three.js
 and execute from this repository root. Other audit scripts use a
-`project-structure` alias pointing to either project's `structure.js` and take
+`project-structure` alias pointing to the project's `structure.js` and take
 `90` or `125` as their first argument. They use `three-mesh-bvh` 0.9.9.
 
 `qa/check-connections.js PROJECT` generates connector schedules only when every
@@ -96,3 +98,27 @@ Browser verification covers all thirteen existing model views, mobile layout,
 both embedded viewers, three floor plans, material counts and all eight order
 variants. Detailed scripts and screenshots are kept in the shared workspace's
 `outputs/combstruct-project-updates/qa/` folder.
+
+## Combstruct 30 catalogue synchronization
+
+The source move from the technology folder preserves every board ID and the
+geometry fingerprint `cd56316f80216d5fefa7ade6c77fd358cdf2a269904543ee0c93c4c0926868fa`.
+Flow and the catalogue now share all 1,437 boards and 117 connector boards. X is
+the shorter bearing direction in this footprint; its floor and ceiling ribs
+open upwards. The reviewed 35 degree roof and room arrangement remain.
+
+`qa/audit-30.js` checks the shared fingerprint, unique IDs, slot directions and
+material length. `qa/30-validate.json` reports zero detected intersections across
+6,021 candidate pairs (angled pairs are sampled as described above). Regenerating
+Flow verifies all 1,437 assembly prefixes and 10,732 surface contacts.
+
+The corrected material total is 2,088.932 m: 836 full-board equivalents,
+168 sheet equivalents and 1,393 insulation pieces. “Elementy do montażu” in
+Flow counts the actual short/full/ending/connector pieces; “Materiał w deskach
+2,5 m” in the catalogue identifies the material-equivalent unit. Neither is a
+count of distinct board types. The old 843 total belonged to the former model.
+
+`qa/build-plan-30.js` generates the plan directly from the same model. The
+catalogue viewer is verified in all six existing views plus the embedded page
+and phone layout. Prices use the existing owner-supplied rates; details remain
+in `qa/quantities.json`.

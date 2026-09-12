@@ -50,6 +50,28 @@
           "assembly": 192000
         }
       ]
+    },
+    "30": {
+      "geometrySha256": "cd56316f80216d5fefa7ade6c77fd358cdf2a269904543ee0c93c4c0926868fa",
+      "physicalBoards": 1437,
+      "actualLengthM": 2088.932275929059,
+      "displayFullBoards": 836,
+      "sheets": 168,
+      "insulationBlocks": 1393,
+      "variants": [
+        {
+          "material": "osb3",
+          "label": "OSB3",
+          "materials": 47000,
+          "assembly": 67000
+        },
+        {
+          "material": "plywood",
+          "label": "Sklejka",
+          "materials": 72000,
+          "assembly": 92000
+        }
+      ]
     }
   }
 }

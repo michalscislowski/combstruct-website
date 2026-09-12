@@ -1,0 +1,134 @@
+{
+  "boards": 1437,
+  "connectorBoards": 117,
+  "testedPairs": 6021,
+  "angledPairs": 2184,
+  "pointTests": 24126,
+  "resolved": [],
+  "unresolved": [],
+  "validation": {
+    "module": 0.4166666666666667,
+    "stockMaxLength": 2.5,
+    "terminalDifference": 0.24,
+    "pairWidth": 0.036,
+    "junctionsCoplanar": true,
+    "floorTerraceContinuous": true,
+    "partitionGroundY": 0,
+    "partitionShortY": 0.24,
+    "exteriorVerticalSlots": "outward",
+    "ceilingModule": 8,
+    "ceilingTop": 3.3333333333333335,
+    "roofPitchDegrees": 35,
+    "roofAxes": [
+      -3.125,
+      -2.708333333333333,
+      -2.2916666666666665,
+      -1.8749999999999998,
+      -1.458333333333333,
+      -1.0416666666666665,
+      -0.6249999999999996,
+      -0.20833333333333304,
+      0.20833333333333348,
+      0.6250000000000004,
+      1.0416666666666674,
+      1.4583333333333335,
+      1.8750000000000004,
+      2.2916666666666674,
+      2.7083333333333335,
+      3.1250000000000004
+    ],
+    "wallAxes": [
+      -2.7083333333333335,
+      -2.2916666666666665,
+      -1.875,
+      -1.4583333333333333,
+      -1.0416666666666665,
+      -0.625,
+      -0.20833333333333304,
+      0.20833333333333348,
+      0.625,
+      1.041666666666667,
+      1.458333333333334,
+      1.875,
+      2.291666666666667,
+      2.708333333333334
+    ],
+    "roofAxesAligned": true,
+    "connectorBoards": 117,
+    "connectorVariants": [
+      {
+        "position": "corner",
+        "edge": "slotted",
+        "removedMm": [
+          18,
+          102
+        ]
+      },
+      {
+        "position": "corner",
+        "edge": "plain",
+        "removedMm": [
+          18,
+          120
+        ]
+      },
+      {
+        "position": "inset",
+        "edge": "slotted",
+        "removedMm": [
+          18,
+          120
+        ],
+        "offsetMm": 120
+      },
+      {
+        "position": "inset",
+        "edge": "plain",
+        "removedMm": [
+          18,
+          120
+        ],
+        "offsetMm": 120
+      }
+    ],
+    "restoredBoundaryRibs": [
+      "terrace-floor-cross-row",
+      "divider-floor-cross-row",
+      "exterior-wall-cap-rows",
+      "interior-wall-tangent-floor-and-ceiling-ribs",
+      "wall-to-wall-uprights"
+    ],
+    "remainingJunctionAssumptions": "Interior wall top horizontal rows at ceiling height are still omitted: adding them would duplicate parallel ceiling material. This separate assembly layout has not been resolved by connector cuts.",
+    "loadValidated": false
+  },
+  "dimensions": {
+    "width": 5.416666666666667,
+    "depth": 6.25,
+    "halfWidth": 2.7083333333333335,
+    "halfDepth": 3.125,
+    "terraceDepth": 2.916666666666667,
+    "terraceRearZ": -6.041666666666667,
+    "wallDepth": 0.24,
+    "floorBottom": 0,
+    "floorTop": 0.24,
+    "wallTop": 3.3333333333333335,
+    "ceilingBottom": 3.0933333333333337,
+    "ceilingTop": 3.3333333333333335,
+    "clearHeight": 2.8533333333333335,
+    "roofAngle": 35,
+    "roofEaveY": 3.3333333333333335,
+    "roofUnderRidgeY": 5.229728749317964,
+    "roofRidgeY": 5.522714650620713,
+    "roofOverhang": 0.4166666666666667,
+    "module": 0.4166666666666667,
+    "boardDepth": 0.24,
+    "boardThickness": 0.018,
+    "referenceWidth": 5.65,
+    "referenceDepth": 6.1,
+    "roofGableOverhang": 0.4166666666666667,
+    "constructionOnly": true,
+    "usableConceptArea": 26.614966666666675,
+    "structuralFootprintArea": 33.85416666666667,
+    "terraceArea": 15.798611111111114
+  }
+}

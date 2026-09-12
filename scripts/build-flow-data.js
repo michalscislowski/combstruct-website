@@ -9,7 +9,11 @@ import assert from 'node:assert/strict';
 
 const model=getModel(),tolerance=.00005,identity=new THREE.Matrix4();
 const fingerprint=createHash('sha256');
+let materialLengthM=0;
 const entries=model.boards.map(b=>{
+ const positions=b.mesh.geometry.attributes.position,along=new THREE.Vector3(...b.along);let min=Infinity,max=-Infinity;
+ for(let i=0;i<positions.count;i++){const x=new THREE.Vector3().fromBufferAttribute(positions,i).dot(along);min=Math.min(min,x);max=Math.max(max,x);}
+ materialLengthM+=max-min;
  const geometry=b.mesh.geometry.clone().translate(...b.mesh.position.toArray());
  geometry.computeBoundingBox();geometry.boundsTree=new MeshBVH(geometry);
  fingerprint.update(b.id);fingerprint.update(new Uint8Array(geometry.attributes.position.array.buffer));
@@ -89,6 +93,7 @@ const families=definitions.map(([id,name])=>{
  return{id,name,count:boards.length,lengths,sample:sample?.id};
 }).filter(f=>f.count);
 assert.equal(families.reduce((sum,f)=>sum+f.count,0),entries.length);
-const data={model:'Combstruct 30',totalBoards:entries.length,geometrySha256:fingerprint.digest('hex'),toleranceM:tolerance,families,assembly};
+const material={lengthM:materialLengthM,fullBoardLengthM:2.5,fullBoardEquivalents:materialLengthM/2.5,fullBoards:Math.ceil(materialLengthM/2.5),sheets:Math.ceil(materialLengthM/12.5)};
+const data={model:'Combstruct 30',totalBoards:entries.length,material,geometrySha256:fingerprint.digest('hex'),toleranceM:tolerance,families,assembly};
 fs.writeFileSync('lib/technology/manufacturing-data.json',JSON.stringify(data)+'\n');
 console.log(JSON.stringify({boards:entries.length,candidates,contacts,grounded:entries.filter(e=>e.grounded).length,checkedPrefixes:audited.size,oldUnsupported,newUnsupported:0,coplanarWarnings,families},null,2));

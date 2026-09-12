@@ -1,0 +1,48 @@
+{
+  "count": 1393,
+  "method": "generated-cavity-blocks",
+  "layers": [
+    {
+      "id": "floor",
+      "label": "Podłoga i taras",
+      "count": 286,
+      "filledCells": 286
+    },
+    {
+      "id": "rear",
+      "label": "Ściany zewnętrzne",
+      "count": 120,
+      "filledCells": 105
+    },
+    {
+      "id": "left",
+      "label": "Ściany zewnętrzne",
+      "count": 135,
+      "filledCells": 135
+    },
+    {
+      "id": "front",
+      "label": "Ściany zewnętrzne",
+      "count": 128,
+      "filledCells": 115
+    },
+    {
+      "id": "right",
+      "label": "Ściany zewnętrzne",
+      "count": 136,
+      "filledCells": 119
+    },
+    {
+      "id": "roof--1",
+      "label": "Dach",
+      "count": 294,
+      "filledCells": 170
+    },
+    {
+      "id": "roof-1",
+      "label": "Dach",
+      "count": 294,
+      "filledCells": 170
+    }
+  ]
+}

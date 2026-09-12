@@ -1,0 +1,95 @@
+{
+  "project": "30",
+  "geometrySha256": "cd56316f80216d5fefa7ade6c77fd358cdf2a269904543ee0c93c4c0926868fa",
+  "physicalBoards": 1437,
+  "actualLengthM": 2088.932275929059,
+  "fullBoardEquivalents": 835.5729103716236,
+  "displayFullBoards": 836,
+  "sheets": 168,
+  "connectorBoards": 117,
+  "dimensions": {
+    "width": 5.416666666666667,
+    "depth": 6.25,
+    "halfWidth": 2.7083333333333335,
+    "halfDepth": 3.125,
+    "terraceDepth": 2.916666666666667,
+    "terraceRearZ": -6.041666666666667,
+    "wallDepth": 0.24,
+    "floorBottom": 0,
+    "floorTop": 0.24,
+    "wallTop": 3.3333333333333335,
+    "ceilingBottom": 3.0933333333333337,
+    "ceilingTop": 3.3333333333333335,
+    "clearHeight": 2.8533333333333335,
+    "roofAngle": 35,
+    "roofEaveY": 3.3333333333333335,
+    "roofUnderRidgeY": 5.229728749317964,
+    "roofRidgeY": 5.522714650620713,
+    "roofOverhang": 0.4166666666666667,
+    "module": 0.4166666666666667,
+    "boardDepth": 0.24,
+    "boardThickness": 0.018,
+    "referenceWidth": 5.65,
+    "referenceDepth": 6.1,
+    "roofGableOverhang": 0.4166666666666667,
+    "constructionOnly": true,
+    "usableConceptArea": 26.614966666666675,
+    "structuralFootprintArea": 33.85416666666667,
+    "terraceArea": 15.798611111111114
+  },
+  "rooms": [
+    {
+      "id": "bedroom",
+      "name": "Sypialnia",
+      "x0": -2.4683333333333337,
+      "x1": -0.4483333333333335,
+      "z0": -2.885,
+      "z1": -0.03166666666666651,
+      "area": 5.763733333333335
+    },
+    {
+      "id": "bathroom",
+      "name": "Łazienka",
+      "x0": -2.4683333333333337,
+      "x1": -0.4483333333333335,
+      "z0": 0.20833333333333348,
+      "z1": 2.885,
+      "area": 5.406866666666668
+    },
+    {
+      "id": "living",
+      "name": "Salon z kuchnią",
+      "x0": -0.20833333333333348,
+      "x1": 2.4683333333333337,
+      "z0": -2.885,
+      "z1": 2.885,
+      "polygon": [
+        {
+          "x": -0.20833333333333348,
+          "z": -2.885
+        },
+        {
+          "x": 2.4683333333333337,
+          "z": -2.885
+        },
+        {
+          "x": 2.4683333333333337,
+          "z": 2.885
+        },
+        {
+          "x": -0.20833333333333348,
+          "z": 2.885
+        },
+        {
+          "x": -0.20833333333333348,
+          "z": 0.20833333333333348
+        },
+        {
+          "x": -0.20833333333333348,
+          "z": 0.20833333333333348
+        }
+      ],
+      "area": 15.444366666666669
+    }
+  ]
+}
