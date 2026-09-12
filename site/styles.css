@@ -12,3 +12,6 @@
 @media(max-width:760px){.comfort-section{row-gap:35px}.build-film video{border-radius:15px}.build-film figcaption{align-items:flex-start;flex-direction:column;gap:4px;padding-top:13px}}
 
 .hero-bottom{gap:20px}.hero-project-link{max-width:220px;min-height:44px;display:flex;align-items:center;text-decoration:underline;text-underline-offset:4px;text-decoration-color:#ffffff90}.hero-project-link:hover{text-decoration-color:#fff}
+
+/* Keep the expanded navigation readable on tablets. */
+@media(min-width:761px) and (max-width:1000px){.site-header{gap:18px}.desktop-nav{gap:22px;margin-right:0}.site-header .header-cta{display:none}}

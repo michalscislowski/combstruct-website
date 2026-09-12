@@ -5,6 +5,7 @@ const origin = 'https://www.combstruct.com';
 const pages = {
   'index.html': '125',
   'projekty.html': '125',
+  'technologie.html': '30',
   'combstruct-30.html': '30',
   'combstruct-90.html': '90',
   'combstruct-125.html': '125',

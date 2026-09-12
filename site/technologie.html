@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="pl"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#254331">
+<meta name="description" content="Poznaj technologie Combstruct®: podręcznik systemu z połączeniami 3D, cyfrowy model domu Combstruct BIM i rozwój izolacji z mycelium na odpadach tekstylnych.">
+<title>Technologie Combstruct® — system, BIM i mycelium</title>
+<link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="technologie.css">
+<script defer src="assets/technologie.js"></script>
+<!-- Share metadata: generated from the page title and description. -->
+<link rel="canonical" href="https://www.combstruct.com/technologie.html">
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="icon-192x192.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<meta property="og:site_name" content="Combstruct">
+<meta property="og:locale" content="pl_PL">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Technologie Combstruct® — system, BIM i mycelium">
+<meta property="og:description" content="Poznaj technologie Combstruct®: podręcznik systemu z połączeniami 3D, cyfrowy model domu Combstruct BIM i rozwój izolacji z mycelium na odpadach tekstylnych.">
+<meta property="og:url" content="https://www.combstruct.com/technologie.html">
+<meta property="og:image" content="https://www.combstruct.com/assets/share/combstruct-30.jpg">
+<meta property="og:image:secure_url" content="https://www.combstruct.com/assets/share/combstruct-30.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="751">
+<meta property="og:image:alt" content="Combstruct 30 — wizualizacja wykończenia domu">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Technologie Combstruct® — system, BIM i mycelium">
+<meta name="twitter:description" content="Poznaj technologie Combstruct®: podręcznik systemu z połączeniami 3D, cyfrowy model domu Combstruct BIM i rozwój izolacji z mycelium na odpadach tekstylnych.">
+<meta name="twitter:image" content="https://www.combstruct.com/assets/share/combstruct-30.jpg">
+<meta name="twitter:image:alt" content="Combstruct 30 — wizualizacja wykończenia domu">
+<!-- End share metadata -->
+</head><body class="technology-page">
+<a class="skip-link" href="#main">Przejdź do treści</a>
+<header class="site-header">
+    <a class="wordmark" href="index.html" aria-label="Combstruct — strona główna">Combstruct<span class="brand-dot" aria-hidden="true"></span></a>
+    <nav class="desktop-nav" aria-label="Główna nawigacja">
+      <a href="index.html#system">Jak to działa</a><a href="projekty.html">Projekty i ceny</a><a href="index.html#pytania">Pytania</a>
+    <a href="technologie.html" aria-current="page">Technologie</a></nav>
+    <a class="button button-green header-cta" href="kontakt.html">Porozmawiajmy</a>
+    <button class="menu-toggle icon-button" aria-label="Otwórz menu" aria-expanded="false" aria-controls="mobile-menu"><span></span><span></span></button>
+    <nav id="mobile-menu" class="mobile-nav" aria-label="Nawigacja mobilna" hidden><a href="index.html#system">Jak to działa</a><a href="projekty.html">Projekty i ceny</a><a href="index.html#pytania">Pytania</a><a href="technologie.html" aria-current="page">Technologie</a></nav>
+  </header>
+<main id="main" class="section-wrap tech-main">
+  <div class="tech-intro"><h1>Poznaj technologię<br>swojego domu.</h1><p>Od jednej deski po cyfrowy model.<br>Zobacz, jak łączymy konstrukcję, narzędzia i materiały.</p></div>
+  <div class="technology-tabs" role="tablist" aria-label="Technologie systemu Combstruct">
+    <button id="tab-combstruct" role="tab" aria-selected="true" aria-controls="panel-combstruct" data-technology="combstruct"><strong>Combstruct®</strong><span>System i podręcznik 3D</span></button>
+    <button id="tab-bim" role="tab" aria-selected="false" aria-controls="panel-bim" tabindex="-1" data-technology="bim"><strong>Combstruct BIM</strong><span>Cyfrowy model Twojego domu</span></button>
+    <button id="tab-mycelium" role="tab" aria-selected="false" aria-controls="panel-mycelium" tabindex="-1" data-technology="mycelium"><strong>Mycelium</strong><span>Nowe życie odpadów tekstylnych</span></button>
+  </div>
+  <section id="panel-combstruct" role="tabpanel" aria-labelledby="tab-combstruct">
+    <div class="panel-heading"><h2>Jak układać Combstruct.</h2><p>Poznaj elementy, kierunek wpustów i sposób łączenia przegród. Obróć model i obejrzyj połączenie z każdej strony.</p></div>
+    <div class="handbook-layout">
+      <aside class="handbook-nav" aria-label="Tematy podręcznika"><div id="topic-buttons"></div></aside>
+      <div class="handbook-content">
+        <label class="mobile-topic">Temat podręcznika<select id="topic-select" aria-label="Wybierz temat podręcznika"></select></label>
+        <div class="scene-heading"><h3 id="topic-title">Podłoga i strop</h3><span class="topic-counter" id="topic-counter"></span></div>
+        <div id="manual-mount" class="viewer-mount"></div>
+        <div class="manual-tools">
+          <label id="spread-control">Rozsuń elementy<input id="spread" type="range" min="0" max="1" step=".01" value="0"></label>
+          <label id="crossing-control" hidden><input id="crossing" type="checkbox">Żebro we wpuście</label>
+          <label id="arrows-control"><input id="arrows" type="checkbox" checked>Kierunek wpustów</label>
+          <button type="button" data-reset-view>Wycentruj</button>
+        </div>
+        <div id="variant-control" hidden><label>Rodzaj deski<select id="variant-select"></select></label><p id="variant-description"></p></div>
+        <div class="topic-copy" aria-live="polite"><p class="topic-lead" id="topic-lead"></p><p id="topic-text"></p><div class="topic-rule"><span aria-hidden="true">↗</span><strong id="topic-rule"></strong></div></div>
+        <div class="topic-pagination"><button id="previous-topic" type="button">Poprzedni temat</button><button id="next-topic" type="button">Następny temat</button></div>
+      </div>
+    </div>
+  </section>
+  <section id="panel-bim" role="tabpanel" aria-labelledby="tab-bim" hidden>
+    <div class="panel-heading"><h2>Dom, który znasz<br>od środka.</h2><p>Combstruct BIM łączy konstrukcję z informacją. Każdy element ma własny identyfikator, miejsce w modelu i opis — także wtedy, gdy przykryje go wykończenie.</p></div>
+    <div class="bim-layout">
+      <div class="bim-model">
+        <div class="segmented" role="group" aria-label="Widok cyfrowego modelu"><button data-bim-view="house" aria-pressed="true">Dom 3D</button><button data-bim-view="wall" aria-pressed="false">Zajrzyj w ścianę</button></div>
+        <div id="bim-mount" class="viewer-mount"></div>
+        <div class="bim-tools"><label id="finish-control" hidden>Odsłoń konstrukcję<input id="finish" type="range" min="0" max="1" step=".01" value=".7"></label><button type="button" data-reset-view>Wycentruj</button><button id="next-element" type="button">Wybierz kolejny element</button></div>
+      </div>
+      <aside class="element-passport" aria-live="polite"><span class="selection-hint">Wybierz deskę w modelu</span><h3>Każda część<br>ma swoje miejsce.</h3><div class="element-id" id="element-id">—</div><dl><div><dt>Element</dt><dd id="element-type">—</dd></div><div><dt>Część domu</dt><dd id="element-surface">—</dd></div><div><dt>Długość w modelu</dt><dd id="element-length">—</dd></div><div><dt>Grubość płyty</dt><dd id="element-thickness">18 mm</dd></div></dl><p>Ten sam identyfikator wiąże element z jego położeniem w cyfrowym modelu.</p></aside>
+    </div>
+    <div class="bim-future"><div><span class="development-label">Rozwijamy aplikację domu</span><h3>Skieruj kamerę.<br>Zobacz, co jest pod spodem.</h3></div><div><p>Chcemy, by wystarczyło skierować telefon na ścianę, aby na obrazie z kamery zobaczyć jej rdzeń, izolację i przypisane elementy. Model Twojego domu nałożony na rzeczywistą przestrzeń.</p><p>To kierunek rozwoju widoku AR. Podgląd powyżej pozwala już wybrać element i zajrzeć pod wykończenie w modelu 3D.</p></div></div>
+    <div class="bim-uses"><article><h3>Przy montażu</h3><p>Sprawdź, gdzie znajduje się element i z czym się łączy.</p></article><article><h3>Podczas serwisu</h3><p>Odnajdź część w modelu i przekaż jej identyfikator wykonawcy.</p></article><article><h3>Przy zmianach</h3><p>Wróć do układu konstrukcji, zanim zaplanujesz remont lub rozbudowę.</p></article></div>
+  </section>
+  <section id="panel-mycelium" role="tabpanel" aria-labelledby="tab-mycelium" hidden>
+    <div class="panel-heading"><h2>Odpady tekstylne.<br>Materiał na ciepły dom.</h2><div><span class="development-label">Rozwijana technologia</span><p>Pracujemy nad wykorzystaniem grzybni do łączenia wyselekcjonowanych włókien tekstylnych w kostki izolacji dopasowane do komór Combstruct.</p></div></div>
+    <div class="mycelium-layout"><div class="mycelium-model"><div id="mycelium-mount" class="viewer-mount"></div><div class="material-stages" role="group" aria-label="Etapy powstawania materiału"><button data-material-stage="0" aria-pressed="false"><span>1</span>Włókna</button><button data-material-stage="1" aria-pressed="false"><span>2</span>Grzybnia</button><button data-material-stage="2" aria-pressed="true"><span>3</span>Kostka</button></div><p class="material-stage-copy" id="material-stage-copy">Wysuszony kompozyt przyjmuje kształt kostki, którą można dopasować do komory konstrukcji.</p></div><div class="mycelium-copy"><h3>Problem jest duży.<br>Zacznijmy od surowca.</h3><p>W 2022 roku w Unii Europejskiej powstało około <strong>6,94 mln ton odpadów tekstylnych</strong>. Materiał, który trudno zagospodarować, może dostać nowe zastosowanie.</p><a class="source-link" href="https://www.eea.europa.eu/en/analysis/publications/circularity-of-the-eu-textiles-value-chain-in-numbers" target="_blank" rel="noopener">Dane Europejskiej Agencji Środowiska · UE, 2022</a><h3>Grzybnia jako spoiwo.</h3><p>Mycelium to sieć strzępek grzybni. Przerasta przygotowany substrat i wiąże jego składniki. Interesują nas wyselekcjonowane włókna, między innymi bawełniane, oraz możliwość wykorzystania ich w izolacji budynków.</p><p>Dobieramy skład i proces do wymaganej trwałości, zachowania przy wilgoci i właściwości cieplnych. Wyniki dla gotowej kostki wymagają badań konkretnej receptury.</p></div></div>
+    <div class="material-bottom"><div><h3>Dopasowane do systemu.</h3><p>Regularne komory Combstruct pozwalają myśleć o izolacji jak o kolejnym powtarzalnym elemencie. Kostka trafia w swoje miejsce w ścianie, podłodze lub dachu.</p></div><div><h3>Wartość w tym, co już mamy.</h3><p>Celem jest ponowne wykorzystanie części odpadów tekstylnych i ograniczenie zapotrzebowania na nowe surowce. O środowiskowym wyniku zdecyduje cały proces produkcji i cykl życia materiału.</p><a class="source-link" href="https://re.public.polimi.it/handle/11311/1271403" target="_blank" rel="noopener">Badania nad mykomateriałami z odpadów tekstylnych i rolniczych</a></div></div>
+  </section>
+  <div class="technology-cta"><div><h2>Zobacz technologię<br>w swoim przyszłym domu.</h2><p>Wybierz projekt i zajrzyj do jego konstrukcji.</p></div><a class="button button-green" href="projekty.html">Sprawdź projekty DIY i z montażem</a></div>
+  <noscript><p>Włącz JavaScript, aby otworzyć podręcznik 3D i przełączać technologie.</p></noscript>
+</main>
+<footer class="site-footer section-wrap"><a class="wordmark" href="index.html">Combstruct<span class="brand-dot" aria-hidden="true"></span></a><span>System konstrukcyjny z płyt drewnopochodnych.</span><nav aria-label="Stopka"><a href="index.html#system">Poznaj system</a><a href="projekty.html">Projekty i ceny</a><a href="kontakt.html">Kontakt</a><a href="technologie.html" aria-current="page">Technologie</a></nav><small>© <span id="copyright-year">2026</span> Combstruct</small></footer>
+<div id="technology-viewport" class="technology-viewport"><div class="viewport-loading" role="status">Przygotowuję model 3D…</div><div class="viewport-hint">Przeciągnij, aby obrócić · przewiń, aby przybliżyć</div><div id="scene-annotation" class="scene-annotation"></div></div>
+</body></html>
