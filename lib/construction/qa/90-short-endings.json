@@ -1,0 +1,75 @@
+{
+  "project": "90",
+  "shortEndingsBefore": 46,
+  "shortEndingsAfter": 4,
+  "removed": {
+    "balcony": 28,
+    "hall": 14
+  },
+  "remaining": [
+    {
+      "id": "board-426",
+      "position": [
+        -2.291666666666667,
+        3.2133333333333334,
+        -0.8333333333333335
+      ],
+      "blockedBy": {
+        "left": [
+          "upper-hall-notch-north"
+        ],
+        "right": [
+          "ground-office-south"
+        ]
+      }
+    },
+    {
+      "id": "board-438",
+      "position": [
+        -1.875,
+        3.2133333333333334,
+        -0.8333333333333335
+      ],
+      "blockedBy": {
+        "left": [
+          "upper-hall-notch-north"
+        ],
+        "right": [
+          "ground-office-south"
+        ]
+      }
+    },
+    {
+      "id": "board-450",
+      "position": [
+        -1.4583333333333335,
+        3.2133333333333334,
+        -0.8333333333333335
+      ],
+      "blockedBy": {
+        "left": [
+          "upper-hall-notch-north"
+        ],
+        "right": [
+          "ground-office-south"
+        ]
+      }
+    },
+    {
+      "id": "board-726",
+      "position": [
+        -2.7083333333333335,
+        3.2133333333333334,
+        0
+      ],
+      "blockedBy": {
+        "left": [
+          "ground-service-east"
+        ],
+        "right": [
+          "upper-hall-notch-west"
+        ]
+      }
+    }
+  ]
+}

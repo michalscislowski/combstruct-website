@@ -1,9 +1,9 @@
 {
   "project": "90",
-  "boards": 3555,
-  "contacts": 27224,
+  "boards": 3532,
+  "contacts": 27125,
   "grounded": 481,
-  "connected": 3555,
+  "connected": 3532,
   "disconnected": [],
   "connectorBoards": 348,
   "cuts": 355,
@@ -17,26 +17,26 @@
   "shortBearingSlots": "up",
   "wallVerticalSlots": "outward",
   "families": {
-    "ending-3": 244,
+    "ending-3": 263,
     "ending-4": 709,
     "ending-5": 304,
     "standard-6": 505,
     "standard-5": 842,
     "ending-6": 100,
     "standard-4": 222,
-    "ending-2": 133,
+    "ending-2": 119,
     "standard-3": 88,
-    "ending-1": 46,
+    "ending-1": 4,
     "connector-6": 34,
     "connector-5": 126,
     "connector-3": 163,
     "connector-4": 25,
-    "standard-2": 14
+    "standard-2": 28
   },
-  "totalLength": 5280.2865431883265,
-  "fullBoards": 2112.1146172753306,
-  "sheets": 423,
-  "geometrySha256": "266349e6f16ff727a34eab4581fe961142287cdf3dac9f2dcd884a660ea14707",
+  "totalLength": 5289.256543194585,
+  "fullBoards": 2115.702617277834,
+  "sheets": 424,
+  "geometrySha256": "209950d06e58172aaea6186f6089254337a60544f946633685b445cfc312d0ed",
   "dimensions": {
     "width": 9.583333333333334,
     "depth": 6.666666666666667,
@@ -1284,6 +1284,10 @@
       "originalFixed": -2.411666666666667,
       "start": -0.8333333333333335,
       "end": 0.4166666666666665,
+      "horizontalEnds": {
+        "left": false,
+        "right": true
+      },
       "endJambs": [],
       "origin": {
         "x": -2.411666666666667,
@@ -1343,6 +1347,10 @@
       "originalFixed": -0.9533333333333335,
       "start": -2.291666666666667,
       "end": -1.041666666666667,
+      "horizontalEnds": {
+        "left": false,
+        "right": true
+      },
       "endJambs": [
         -2.291666666666667
       ],
@@ -1739,6 +1747,10 @@
       "originalFixed": 6.755000000000001,
       "start": -3.3333333333333335,
       "end": -2.5,
+      "horizontalEnds": {
+        "left": false,
+        "right": false
+      },
       "endJambs": [],
       "origin": {
         "x": 6.755000000000001,
@@ -1773,6 +1785,10 @@
       "originalFixed": 6.755000000000001,
       "start": 2.5000000000000004,
       "end": 3.3333333333333335,
+      "horizontalEnds": {
+        "left": false,
+        "right": false
+      },
       "endJambs": [],
       "origin": {
         "x": 6.755000000000001,
