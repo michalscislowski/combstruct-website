@@ -1,9 +1,9 @@
 {
-  "boards": 3627,
-  "connectorBoards": 332,
-  "testedPairs": 14790,
-  "angledPairs": 5155,
-  "pointTests": 59107,
+  "boards": 3689,
+  "connectorBoards": 348,
+  "testedPairs": 15238,
+  "angledPairs": 5231,
+  "pointTests": 60639,
   "resolved": [],
   "unresolved": [],
   "validation": {
@@ -71,7 +71,7 @@
     "shortBearingDirection": "Z",
     "shortBearingSlots": "up",
     "exteriorVerticalSlots": "outward",
-    "connectorBoards": 332,
+    "connectorBoards": 348,
     "roofPitchDegrees": 45,
     "ridgeInteriorAngle": 90,
     "rooflightCount": 3,

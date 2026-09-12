@@ -1,0 +1,190 @@
+{
+  "framedWallOpenings": 20,
+  "framedRooflights": 3,
+  "checkedContinuousFrameSections": 2442,
+  "openings": [
+    {
+      "wall": "ground-rear",
+      "opening": "kitchen-garden-door",
+      "width": 0.7973333333333333,
+      "height": 2.242,
+      "jambs": 2,
+      "lintel": true,
+      "sill": false
+    },
+    {
+      "wall": "ground-rear",
+      "opening": "living-rear-glazing",
+      "width": 2.464,
+      "height": 2.242,
+      "jambs": 2,
+      "lintel": true,
+      "sill": false
+    },
+    {
+      "wall": "ground-front",
+      "opening": "entrance",
+      "width": 1.214,
+      "height": 2.242,
+      "jambs": 2,
+      "lintel": true,
+      "sill": false
+    },
+    {
+      "wall": "ground-front",
+      "opening": "utility-window",
+      "width": 0.7973333333333333,
+      "height": 1.2140000000000002,
+      "jambs": 2,
+      "lintel": true,
+      "sill": true
+    },
+    {
+      "wall": "ground-left",
+      "opening": "office-window",
+      "width": 1.6306666666666667,
+      "height": 2.242,
+      "jambs": 2,
+      "lintel": true,
+      "sill": false
+    },
+    {
+      "wall": "ground-left",
+      "opening": "ground-bath-window",
+      "width": 0.7973333333333333,
+      "height": 1.2140000000000002,
+      "jambs": 2,
+      "lintel": true,
+      "sill": true
+    },
+    {
+      "wall": "ground-right",
+      "opening": "living-terrace-glazing",
+      "width": 2.880666666666667,
+      "height": 2.242,
+      "jambs": 2,
+      "lintel": true,
+      "sill": false
+    },
+    {
+      "wall": "upper-left",
+      "opening": "rear-bedroom-window",
+      "width": 1.6306666666666667,
+      "height": 2.242,
+      "jambs": 2,
+      "lintel": true,
+      "sill": false
+    },
+    {
+      "wall": "upper-left",
+      "opening": "front-bedroom-window",
+      "width": 0.7973333333333333,
+      "height": 2.242,
+      "jambs": 2,
+      "lintel": true,
+      "sill": false
+    },
+    {
+      "wall": "upper-right",
+      "opening": "master-balcony-door",
+      "width": 2.0473333333333334,
+      "height": 2.242,
+      "jambs": 2,
+      "lintel": true,
+      "sill": false
+    },
+    {
+      "wall": "ground-office-south",
+      "opening": "office-door",
+      "width": 1.214,
+      "height": 2.242,
+      "jambs": 2,
+      "lintel": true,
+      "sill": false
+    },
+    {
+      "wall": "ground-service-east",
+      "opening": "bath-door",
+      "width": 0.7973333333333333,
+      "height": 2.242,
+      "jambs": 2,
+      "lintel": true,
+      "sill": false
+    },
+    {
+      "wall": "ground-service-east",
+      "opening": "utility-door",
+      "width": 0.7973333333333333,
+      "height": 2.242,
+      "jambs": 2,
+      "lintel": true,
+      "sill": false
+    },
+    {
+      "wall": "ground-utility-north",
+      "opening": "vestibule-hall-door",
+      "width": 0.7973333333333333,
+      "height": 2.242,
+      "jambs": 2,
+      "lintel": true,
+      "sill": false
+    },
+    {
+      "wall": "upper-hall-notch-north",
+      "opening": "rear-bedroom-door",
+      "width": 0.7973333333333333,
+      "height": 2.242,
+      "jambs": 2,
+      "lintel": true,
+      "sill": false
+    },
+    {
+      "wall": "upper-bedroom-division",
+      "opening": "front-bedroom-door",
+      "width": 0.7973333333333333,
+      "height": 2.242,
+      "jambs": 2,
+      "lintel": true,
+      "sill": false
+    },
+    {
+      "wall": "upper-family-bath-south",
+      "opening": "family-bath-door",
+      "width": 0.7973333333333333,
+      "height": 2.242,
+      "jambs": 2,
+      "lintel": true,
+      "sill": false
+    },
+    {
+      "wall": "upper-suite-divider",
+      "opening": "ensuite-door",
+      "width": 0.7973333333333333,
+      "height": 2.242,
+      "jambs": 2,
+      "lintel": true,
+      "sill": false
+    },
+    {
+      "wall": "upper-suite-south",
+      "opening": "wardrobe-door",
+      "width": 0.7973333333333333,
+      "height": 2.242,
+      "jambs": 2,
+      "lintel": true,
+      "sill": false
+    },
+    {
+      "wall": "upper-master-west",
+      "opening": "master-door",
+      "width": 0.7973333333333333,
+      "height": 2.242,
+      "jambs": 2,
+      "lintel": true,
+      "sill": false
+    }
+  ],
+  "officeDoorFacesHall": true,
+  "bathroomCornerClosed": true,
+  "entry30Width": 1.2140000000000004
+}

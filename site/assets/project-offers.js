@@ -28,14 +28,14 @@ window.COMBSTRUCT_OFFERS = [
       {
         "material": "osb3",
         "label": "OSB3",
-        "materials": 115000,
-        "assembly": 173000
+        "materials": 114000,
+        "assembly": 172000
       },
       {
         "material": "plywood",
         "label": "Sklejka",
-        "materials": 188000,
-        "assembly": 246000
+        "materials": 187000,
+        "assembly": 245000
       }
     ]
   },

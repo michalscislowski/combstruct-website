@@ -20,7 +20,8 @@ for(const [id,q] of Object.entries(audit.projects)){
  }
  html=html.replace(/<dt>(?:Elementy do montażu|Deski w zestawie)<\/dt><dd>[^<]+/,`<dt>Deski w zestawie</dt><dd>${fmt(parts.totalBoards)} `)
   .replace(/<dt>Płyty 2500 × 1250 × 18 mm<\/dt><dd>[^<]+/,`<dt>Płyty 2500 × 1250 × 18 mm</dt><dd>${fmt(q.sheets)} `)
-  .replace(/(data-parts-source="assets\/parts\/\d+\.json)\?v=[^"]+/,`$1?v=kit-1`);
+  .replace(/<dt>Kostki izolacji<\/dt><dd>[^<]+/,`<dt>Kostki izolacji</dt><dd>${fmt(q.insulationBlocks)} `)
+  .replace(/(data-parts-source="assets\/parts\/\d+\.json)\?v=[^"]+/,`$1?v=${q.geometrySha256.slice(0,8)}`);
  fs.writeFileSync(file,html);
  const card=new RegExp(`(href="combstruct-${id}\\.html"[\\s\\S]*?Materiały od )[^<]+`);
  if(!card.test(catalogue))throw new Error(`Missing catalogue card ${id}`);
