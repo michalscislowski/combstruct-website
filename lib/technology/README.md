@@ -25,3 +25,11 @@ The static deployment uses the committed `site/assets/technologie.js` bundle; `n
 - No browser errors or failed local resource loads; all static local links verified during build.
 
 Local verification scripts and screenshots are in `outputs/combstruct-technology/qa/` in the shared workspace.
+
+## Interior wall reveal
+
+`interior.js` replaces the earlier translucent wall sample with a finished interior scene, viewed from the inside of the actual left wall. It reuses 77 source-board records, cropped only at the presentation boundary, and adds 80 opaque insulation cells. The slider opens a rectangular section of the interior finish; the mirror uses the same clipping boundary. Room floor, sanitary fixture, sockets and light stay in place.
+
+Water supply, drain and electrical routes are illustrative presentation geometry in a service layer in front of the structural ribs. They are not an as-built installation plan or catalogue quantity input. Visible pipes, cables, insulation cells and boards can be picked; concealed objects are occluded by the opaque finish. The passport adapts its fields to the selected type. Source board IDs are retained, while finish/insulation/service IDs belong to this fixed demo. The AR application remains described as a development direction.
+
+Direct link: `technologie.html#bim-sciana`. Starts with a fully finished wall. Local browser validation covers fully closed, partial and fully revealed states, pointer selection of water/cables/insulation, occlusion behind the finish, return to the house model, and mobile layout.
