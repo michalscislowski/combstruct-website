@@ -1,9 +1,9 @@
 {
-  "boards": 3110,
+  "boards": 2738,
   "connectorBoards": 381,
   "testedPairs": 11256,
   "angledPairs": 0,
-  "pointTests": 44800,
+  "pointTests": 44902,
   "resolved": [],
   "unresolved": [],
   "validation": {

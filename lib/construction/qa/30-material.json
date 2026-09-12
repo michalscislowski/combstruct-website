@@ -1,9 +1,9 @@
 {
   "project": "30",
-  "geometrySha256": "3a3e7fe4090482e73ca0e325d09e8d09f784469ab8aad0f6d2256976ae6ec4fa",
-  "physicalBoards": 1442,
-  "actualLengthM": 2087.7322750990643,
-  "fullBoardEquivalents": 835.0929100396257,
+  "geometrySha256": "699bbbe63351978978675522df6efe20f773fdff4d246a9649c3316534fa232a",
+  "physicalBoards": 1364,
+  "actualLengthM": 2087.7322463656164,
+  "fullBoardEquivalents": 835.0928985462466,
   "displayFullBoards": 836,
   "sheets": 168,
   "connectorBoards": 122,

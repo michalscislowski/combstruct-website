@@ -65,60 +65,61 @@ detected intersection has a supported native cut. Run it again with `validate`
 as the second argument to validate the finished geometry. `qa/audit-model.js`
 checks stock profiles, cut volumes, slot direction and ground connectivity.
 
-## Validation and quantity records
+## Stock planning and verification
 
-Committed QA reports describe the exact geometry fingerprints:
+All three models and the handbook samples use `stock-layout.js`. The planner
+chooses seams in both plies together. A junction fixes a seam only where its
+native half-lock requires one. Optional seams never coincide in the two plies.
+Boards remain one to six modules long, with at most one 240 mm shortened end.
 
-| Check | 90 | 125 |
-| --- | ---: | ---: |
-| Physical model boards | 3,627 | 3,110 |
-| Connector boards / cuts | 332 / 339 | 381 / 381 |
-| Connected to the ground contact graph | 3,627 | 3,110 |
-| Detected solid intersections after cuts | 0 | 0 |
-| Descriptive material length, m | 5,199.388 | 4,673.782 |
-| Full 2.5 m board equivalents, rounded up | 2,080 | 1,870 |
-| 2500 × 1250 × 18 mm sheet equivalents | 416 | 374 |
-| Insulation pieces | 2,835 | 2,316 |
+The planner first minimizes one-module shortened endings, then other one-module
+boards, then the total stock count. For equal counts it balances usable lengths.
+This avoids the former greedy six-module board followed by a 176.7 mm ending.
+The 46 remaining such endings in 90 lie in constrained short junction spans;
+a single doubly shortened board would be a non-native replacement.
 
-Axis-aligned intersections are checked at the cells defined by the actual
-profile edges. Angled roof intersections use representative interior samples;
-this is not an exhaustive solid-boolean proof. Contacts use triangle distance
-with a 0.05 mm tolerance. Exact removed-volume checks pass for all non-angled
-connector profiles. Connectivity and geometry checks do not establish load
-capacity, fastening requirements, manufacturing tolerances or erection safety.
+| Project | Short endings before → after | Delivered boards | Installed pieces | Sheets | Insulation pieces |
+| --- | --- | ---: | ---: | ---: | ---: |
+| 30 | 84 → 0 | 1,331 | 1,364 | 193 | 1,393 |
+| 90 | 151 → 46 | 3,433 | 3,555 | 481 | 2,685 |
+| 125 | 254 → 0 | 2,652 | 2,738 | 414 | 2,316 |
 
-Insulation counts are cavity pieces, including pieces clipped at openings and
-roof slopes. 90 uses `qa/insulation-count.js`; 125 counts the rendered insulation
-instances. The counts exclude duplicate occupied volumes. `qa/quantities.json`
-records material lengths, sheet equivalents, rates and rounded offer prices.
-Five full boards per sheet is the owner's estimating convention; this is not a
-sheet nesting or manufacturing waste estimate.
+`qa/stock-layout.json` records the before/after counts. Per-rib volume and merged
+longitudinal intervals were compared before connector cuts: all 468 / 1,256 /
+850 rib lines, openings and reserved junction bands are preserved. Connector
+schedules were then regenerated and checked for intersections. Axis-aligned
+pairs use profile-cell samples; angled pairs use representative interior samples,
+not an exhaustive solid Boolean proof. Shared diagonal end faces are contacts,
+not intersections; boundary samples within 1 micrometre are excluded.
 
-Browser verification covers all thirteen existing model views, mobile layout,
-both embedded viewers, three floor plans, material counts and all eight order
-variants. Detailed scripts and screenshots are kept in the shared workspace's
-`outputs/combstruct-project-updates/qa/` folder.
+`qa/audit-stock-layout.js` checks 2,346 schedules and compares 12 small cases with
+an independent exhaustive enumeration. `qa/audit-model.js` checks stock profiles,
+connector cut volumes, slot direction and contact connectivity. An independent
+vertex-to-surface check covers very thin angled tips when the geometry BVH's
+threshold query misses their contact. `qa/audit-vertex-contact.js` also tests
+separated and remote coplanar faces. All 3,555 / 2,738 pieces in 90 / 125 are
+connected to the ground contact graph. Regenerating Flow checks all 1,364 assembly
+prefixes of 30, requiring contact with an already placed element or the ground.
 
-## Combstruct 30 catalogue synchronization
+These geometry/contact checks do not establish load capacity, fastening details,
+manufacturing tolerances or erection safety.
 
-The source move from the technology folder preserves every board ID and the
-geometry fingerprint `cd56316f80216d5fefa7ade6c77fd358cdf2a269904543ee0c93c4c0926868fa`.
-Flow and the catalogue now share all 1,437 boards and 117 connector boards. X is
-the shorter bearing direction in this footprint; its floor and ceiling ribs
-open upwards. The reviewed 35 degree roof and room arrangement remain.
+## Catalogue and Flow quantities
 
-`qa/audit-30.js` checks the shared fingerprint, unique IDs, slot directions and
-material length. `qa/30-validate.json` reports zero detected intersections across
-6,021 candidate pairs (angled pairs are sampled as described above). Regenerating
-Flow verifies all 1,437 assembly prefixes and 10,732 surface contacts.
+`30/structure.js` is shared by the catalogue, handbook, BIM and Flow. Regenerate
+`scripts/build-flow-data.js`, `qa/audit-30.js`, and the two larger model audits
+before updating `qa/quantities.json`. `scripts/build-parts-data.js` generates
+physical delivered stock, combining descendants of the same pre-cut board.
+`scripts/audit-kit-stock.js` independently checks membership and that every fitted
+piece is contained in its delivered native profile.
 
-The corrected material total is 2,088.932 m: 836 full-board equivalents,
-168 sheet equivalents and 1,393 insulation pieces. “Elementy do montażu” in
-Flow counts the actual short/full/ending/connector pieces; “Materiał w deskach
-2,5 m” in the catalogue identifies the material-equivalent unit. Neither is a
-count of distinct board types. The old 843 total belonged to the former model.
+`scripts/sync-kit-offers.mjs` updates the customer totals and offers. Prices retain
+the owner's rates: OSB3 150 zł/sheet, plywood 300 zł/sheet, insulation 15 zł/piece,
+assembly 120 zł/sheet; offers round up to 1,000 zł. Five 2.5 m boards per sheet is
+the owner's estimating convention. It is not a manufacturing nesting result.
+Insulation quantities include cavity pieces clipped at openings and roof slopes;
+the reports describe the current cut subdivision, which can change with the stock
+layout while the filled cavities remain the same.
 
-`qa/build-plan-30.js` generates the plan directly from the same model. The
-catalogue viewer is verified in all six existing views plus the embedded page
-and phone layout. Prices use the existing owner-supplied rates; details remain
-in `qa/quantities.json`.
+Browser verification covers the model views, 17 handbook scenes, all delivered
+part variants, mobile layout, Flow assembly and project/order price consistency.

@@ -1,5 +1,5 @@
 {
-  "count": 2707,
+  "count": 2685,
   "method": "generated-cavity-blocks",
   "layers": [
     {
@@ -47,25 +47,25 @@
     {
       "id": "upper-left",
       "label": "Ściany zewnętrzne",
-      "count": 109,
+      "count": 112,
       "filledCells": 106
     },
     {
       "id": "upper-right",
       "label": "Ściany zewnętrzne",
-      "count": 125,
+      "count": 128,
       "filledCells": 111
     },
     {
       "id": "roof--1",
       "label": "Dach",
-      "count": 577,
+      "count": 560,
       "filledCells": 366
     },
     {
       "id": "roof-1",
       "label": "Dach",
-      "count": 581,
+      "count": 570,
       "filledCells": 378
     }
   ]

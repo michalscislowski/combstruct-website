@@ -1,5 +1,5 @@
 {
-  "[\"rear\",\"\",\"wall\",1,1,0,1,0,6,0,2.5]": [
+  "[\"rear\",\"\",\"wall\",1,1,0,1,0,5,0,2.0833333]": [
     {
       "end": "start",
       "edge": "slotted",
@@ -8,7 +8,7 @@
       "removedRun": 0.102
     }
   ],
-  "[\"rear\",\"\",\"wall\",1,2,0,1,0,6,0,0.8513333]": [
+  "[\"rear\",\"\",\"wall\",1,2,0,1,0,5,0,0.8513333]": [
     {
       "end": "start",
       "edge": "slotted",
@@ -17,7 +17,7 @@
       "removedRun": 0.102
     }
   ],
-  "[\"rear\",\"\",\"wall\",1,3,0,1,0,6,0,0.8513333]": [
+  "[\"rear\",\"\",\"wall\",1,3,0,1,0,5,0,0.8513333]": [
     {
       "end": "start",
       "edge": "slotted",
@@ -26,7 +26,7 @@
       "removedRun": 0.102
     }
   ],
-  "[\"rear\",\"\",\"wall\",1,4,0,1,0,6,0,0.8513333]": [
+  "[\"rear\",\"\",\"wall\",1,4,0,1,0,5,0,0.8513333]": [
     {
       "end": "start",
       "edge": "slotted",
@@ -35,7 +35,7 @@
       "removedRun": 0.102
     }
   ],
-  "[\"rear\",\"\",\"wall\",1,5,0,1,0,6,0,2.5]": [
+  "[\"rear\",\"\",\"wall\",1,5,0,1,0,5,0,2.0833333]": [
     {
       "end": "start",
       "edge": "slotted",
@@ -44,7 +44,7 @@
       "removedRun": 0.102
     }
   ],
-  "[\"rear\",\"\",\"wall\",1,6,0,1,0,6,0,2.5]": [
+  "[\"rear\",\"\",\"wall\",1,6,0,1,0,5,0,2.0833333]": [
     {
       "end": "start",
       "edge": "slotted",
@@ -53,7 +53,7 @@
       "removedRun": 0.102
     }
   ],
-  "[\"rear\",\"\",\"wall\",1,7,0,1,0,6,0,2.5]": [
+  "[\"rear\",\"\",\"wall\",1,7,0,1,0,5,0,2.0833333]": [
     {
       "end": "start",
       "edge": "slotted",
@@ -62,7 +62,7 @@
       "removedRun": 0.102
     }
   ],
-  "[\"rear\",\"\",\"wall\",1,8,0,1,0,6,0,2.5]": [
+  "[\"rear\",\"\",\"wall\",1,8,0,1,0,5,0,2.0833333]": [
     {
       "end": "start",
       "edge": "slotted",
@@ -71,7 +71,7 @@
       "removedRun": 0.102
     }
   ],
-  "[\"rear\",\"\",\"wall\",1,9,0,1,0,6,0,0.24]": [
+  "[\"rear\",\"\",\"wall\",1,9,0,1,0,5,0,0.24]": [
     {
       "end": "start",
       "edge": "slotted",
@@ -80,7 +80,7 @@
       "removedRun": 0.102
     }
   ],
-  "[\"rear\",\"\",\"wall\",1,10,0,1,0,6,0,0.24]": [
+  "[\"rear\",\"\",\"wall\",1,10,0,1,0,5,0,0.24]": [
     {
       "end": "start",
       "edge": "slotted",
@@ -89,7 +89,7 @@
       "removedRun": 0.102
     }
   ],
-  "[\"rear\",\"\",\"wall\",1,11,0,1,0,6,0,0.24]": [
+  "[\"rear\",\"\",\"wall\",1,11,0,1,0,5,0,0.24]": [
     {
       "end": "start",
       "edge": "slotted",
@@ -98,7 +98,7 @@
       "removedRun": 0.102
     }
   ],
-  "[\"rear\",\"\",\"wall\",1,12,0,1,0,6,0,2.5]": [
+  "[\"rear\",\"\",\"wall\",1,12,0,1,0,5,0,2.0833333]": [
     {
       "end": "start",
       "edge": "slotted",
@@ -116,7 +116,7 @@
       "removedRun": 0.102
     }
   ],
-  "[\"Sufit\",\"\",\"ceiling\",0,1,0,0,4.1666667,3,0,1.25]": [
+  "[\"Sufit\",\"\",\"ceiling\",0,1,0,0,3.3333333,5,0,2.0833333]": [
     {
       "end": "end",
       "edge": "slotted",
@@ -134,7 +134,7 @@
       "removedRun": 0.102
     }
   ],
-  "[\"Sufit\",\"\",\"ceiling\",0,2,0,0,4.1666667,3,0,1.25]": [
+  "[\"Sufit\",\"\",\"ceiling\",0,2,0,0,3.3333333,5,0,2.0833333]": [
     {
       "end": "end",
       "edge": "slotted",
@@ -152,7 +152,7 @@
       "removedRun": 0.102
     }
   ],
-  "[\"Sufit\",\"\",\"ceiling\",0,3,0,0,4.1666667,3,0,1.25]": [
+  "[\"Sufit\",\"\",\"ceiling\",0,3,0,0,3.3333333,5,0,2.0833333]": [
     {
       "end": "end",
       "edge": "slotted",
@@ -170,7 +170,7 @@
       "removedRun": 0.102
     }
   ],
-  "[\"Sufit\",\"\",\"ceiling\",0,4,0,0,4.1666667,3,0,1.25]": [
+  "[\"Sufit\",\"\",\"ceiling\",0,4,0,0,3.3333333,5,0,2.0833333]": [
     {
       "end": "end",
       "edge": "slotted",
@@ -188,7 +188,7 @@
       "removedRun": 0.102
     }
   ],
-  "[\"Sufit\",\"\",\"ceiling\",0,5,0,0,4.1666667,3,0,1.25]": [
+  "[\"Sufit\",\"\",\"ceiling\",0,5,0,0,3.3333333,5,0,2.0833333]": [
     {
       "end": "end",
       "edge": "slotted",
@@ -206,7 +206,7 @@
       "removedRun": 0.102
     }
   ],
-  "[\"Sufit\",\"\",\"ceiling\",0,6,0,0,4.1666667,3,0,1.25]": [
+  "[\"Sufit\",\"\",\"ceiling\",0,6,0,0,3.3333333,5,0,2.0833333]": [
     {
       "end": "end",
       "edge": "slotted",
@@ -224,7 +224,7 @@
       "removedRun": 0.102
     }
   ],
-  "[\"Sufit\",\"\",\"ceiling\",0,7,0,0,4.1666667,3,0,1.25]": [
+  "[\"Sufit\",\"\",\"ceiling\",0,7,0,0,3.3333333,5,0,2.0833333]": [
     {
       "end": "end",
       "edge": "slotted",
@@ -233,7 +233,7 @@
       "removedRun": 0.102
     }
   ],
-  "[\"Sufit\",\"\",\"ceiling\",0,8,0,0,4.1666667,3,0,1.25]": [
+  "[\"Sufit\",\"\",\"ceiling\",0,8,0,0,3.3333333,5,0,2.0833333]": [
     {
       "end": "end",
       "edge": "slotted",
@@ -251,7 +251,7 @@
       "removedRun": 0.102
     }
   ],
-  "[\"Sufit\",\"\",\"ceiling\",0,9,0,0,4.1666667,3,0,1.25]": [
+  "[\"Sufit\",\"\",\"ceiling\",0,9,0,0,3.3333333,5,0,2.0833333]": [
     {
       "end": "end",
       "edge": "slotted",
@@ -269,7 +269,7 @@
       "removedRun": 0.102
     }
   ],
-  "[\"Sufit\",\"\",\"ceiling\",0,10,0,0,4.1666667,3,0,1.25]": [
+  "[\"Sufit\",\"\",\"ceiling\",0,10,0,0,3.3333333,5,0,2.0833333]": [
     {
       "end": "end",
       "edge": "slotted",
@@ -287,7 +287,7 @@
       "removedRun": 0.102
     }
   ],
-  "[\"Sufit\",\"\",\"ceiling\",0,11,0,0,4.1666667,3,0,1.25]": [
+  "[\"Sufit\",\"\",\"ceiling\",0,11,0,0,3.3333333,5,0,2.0833333]": [
     {
       "end": "end",
       "edge": "slotted",
@@ -305,7 +305,7 @@
       "removedRun": 0.102
     }
   ],
-  "[\"Sufit\",\"\",\"ceiling\",0,12,0,0,4.1666667,3,0,1.25]": [
+  "[\"Sufit\",\"\",\"ceiling\",0,12,0,0,3.3333333,5,0,2.0833333]": [
     {
       "end": "end",
       "edge": "slotted",
@@ -323,7 +323,7 @@
       "removedRun": 0.102
     }
   ],
-  "[\"Sufit\",\"\",\"ceiling\",0,13,0,0,4.1666667,3,0,1.25]": [
+  "[\"Sufit\",\"\",\"ceiling\",0,13,0,0,3.3333333,5,0,2.0833333]": [
     {
       "end": "end",
       "edge": "slotted",
@@ -341,7 +341,7 @@
       "removedRun": 0.102
     }
   ],
-  "[\"Sufit\",\"\",\"ceiling\",0,14,0,0,4.1666667,3,0,1.25]": [
+  "[\"Sufit\",\"\",\"ceiling\",0,14,0,0,3.3333333,5,0,2.0833333]": [
     {
       "end": "end",
       "edge": "slotted",
@@ -350,7 +350,7 @@
       "removedRun": 0.102
     }
   ],
-  "[\"Sufit\",\"\",\"ceiling\",1,1,0,0,0,6,0,2.5]": [
+  "[\"Sufit\",\"\",\"ceiling\",1,1,0,0,0,5,0,2.0833333]": [
     {
       "end": "start",
       "edge": "plain",
@@ -359,7 +359,7 @@
       "removedRun": 0.12
     }
   ],
-  "[\"Sufit\",\"\",\"ceiling\",1,1,0,0,5,3,0,1.25]": [
+  "[\"Sufit\",\"\",\"ceiling\",1,1,0,0,4.1666667,5,0,2.0833333]": [
     {
       "end": "end",
       "edge": "plain",
@@ -368,7 +368,7 @@
       "removedRun": 0.12
     }
   ],
-  "[\"Sufit\",\"\",\"ceiling\",1,2,0,0,0,6,0,2.5]": [
+  "[\"Sufit\",\"\",\"ceiling\",1,2,0,0,0,5,0,2.0833333]": [
     {
       "end": "start",
       "edge": "plain",
@@ -377,7 +377,7 @@
       "removedRun": 0.12
     }
   ],
-  "[\"Sufit\",\"\",\"ceiling\",1,2,0,0,5,3,0,1.25]": [
+  "[\"Sufit\",\"\",\"ceiling\",1,2,0,0,4.1666667,5,0,2.0833333]": [
     {
       "end": "end",
       "edge": "plain",
@@ -386,7 +386,7 @@
       "removedRun": 0.12
     }
   ],
-  "[\"Sufit\",\"\",\"ceiling\",1,3,0,0,0,6,0,2.5]": [
+  "[\"Sufit\",\"\",\"ceiling\",1,3,0,0,0,5,0,2.0833333]": [
     {
       "end": "start",
       "edge": "plain",
@@ -395,7 +395,7 @@
       "removedRun": 0.12
     }
   ],
-  "[\"Sufit\",\"\",\"ceiling\",1,3,0,0,5,3,0,1.25]": [
+  "[\"Sufit\",\"\",\"ceiling\",1,3,0,0,4.1666667,5,0,2.0833333]": [
     {
       "end": "end",
       "edge": "plain",
@@ -404,7 +404,7 @@
       "removedRun": 0.12
     }
   ],
-  "[\"Sufit\",\"\",\"ceiling\",1,4,0,0,0,6,0,2.5]": [
+  "[\"Sufit\",\"\",\"ceiling\",1,4,0,0,0,5,0,2.0833333]": [
     {
       "end": "start",
       "edge": "plain",
@@ -413,7 +413,7 @@
       "removedRun": 0.12
     }
   ],
-  "[\"Sufit\",\"\",\"ceiling\",1,4,0,0,5,3,0,1.25]": [
+  "[\"Sufit\",\"\",\"ceiling\",1,4,0,0,4.1666667,5,0,2.0833333]": [
     {
       "end": "end",
       "edge": "plain",
@@ -422,7 +422,7 @@
       "removedRun": 0.12
     }
   ],
-  "[\"Sufit\",\"\",\"ceiling\",1,5,0,0,0,6,0,2.5]": [
+  "[\"Sufit\",\"\",\"ceiling\",1,5,0,0,0,5,0,2.0833333]": [
     {
       "end": "start",
       "edge": "plain",
@@ -431,7 +431,7 @@
       "removedRun": 0.12
     }
   ],
-  "[\"Sufit\",\"\",\"ceiling\",1,5,0,0,5,3,0,1.25]": [
+  "[\"Sufit\",\"\",\"ceiling\",1,5,0,0,4.1666667,5,0,2.0833333]": [
     {
       "end": "end",
       "edge": "plain",
@@ -449,7 +449,7 @@
       "removedRun": 0.12
     }
   ],
-  "[\"Sufit\",\"\",\"ceiling\",1,6,0,0,5,3,0,1.25]": [
+  "[\"Sufit\",\"\",\"ceiling\",1,6,0,0,4.5833333,4,0,1.6666667]": [
     {
       "end": "end",
       "edge": "plain",
@@ -467,7 +467,7 @@
       "removedRun": 0.12
     }
   ],
-  "[\"Sufit\",\"\",\"ceiling\",1,7,0,0,5,3,0,1.25]": [
+  "[\"Sufit\",\"\",\"ceiling\",1,7,0,0,4.5833333,4,0,1.6666667]": [
     {
       "end": "end",
       "edge": "plain",
@@ -485,7 +485,7 @@
       "removedRun": 0.12
     }
   ],
-  "[\"Sufit\",\"\",\"ceiling\",1,8,0,0,5,3,0,1.25]": [
+  "[\"Sufit\",\"\",\"ceiling\",1,8,0,0,4.5833333,4,0,1.6666667]": [
     {
       "end": "end",
       "edge": "plain",
@@ -503,7 +503,7 @@
       "removedRun": 0.12
     }
   ],
-  "[\"Sufit\",\"\",\"ceiling\",1,9,0,0,5,3,0,1.25]": [
+  "[\"Sufit\",\"\",\"ceiling\",1,9,0,0,4.5833333,4,0,1.6666667]": [
     {
       "end": "end",
       "edge": "plain",
@@ -521,7 +521,7 @@
       "removedRun": 0.12
     }
   ],
-  "[\"Sufit\",\"\",\"ceiling\",1,10,0,0,5,3,0,1.25]": [
+  "[\"Sufit\",\"\",\"ceiling\",1,10,0,0,4.5833333,4,0,1.6666667]": [
     {
       "end": "end",
       "edge": "plain",
@@ -539,7 +539,7 @@
       "removedRun": 0.12
     }
   ],
-  "[\"Sufit\",\"\",\"ceiling\",1,11,0,0,5,3,0,1.25]": [
+  "[\"Sufit\",\"\",\"ceiling\",1,11,0,0,4.5833333,4,0,1.6666667]": [
     {
       "end": "end",
       "edge": "plain",
@@ -557,7 +557,7 @@
       "removedRun": 0.12
     }
   ],
-  "[\"Sufit\",\"\",\"ceiling\",1,12,0,0,5,3,0,1.25]": [
+  "[\"Sufit\",\"\",\"ceiling\",1,12,0,0,4.5833333,4,0,1.6666667]": [
     {
       "end": "end",
       "edge": "plain",
@@ -566,7 +566,7 @@
       "removedRun": 0.12
     }
   ],
-  "[\"bedroom-right\",\"bedroom-right\",\"partition\",0,1,0,1,0,6,0,2.1013333]": [
+  "[\"bedroom-right\",\"bedroom-right\",\"partition\",0,1,0,1,0,5,0,2.0833333]": [
     {
       "end": "start",
       "edge": "slotted",
@@ -575,7 +575,7 @@
       "removedRun": 0.12
     }
   ],
-  "[\"bedroom-right\",\"bedroom-right\",\"partition\",0,1,0,1,5,3,0,1.25]": [
+  "[\"bedroom-right\",\"bedroom-right\",\"partition\",0,1,0,1,4.1666667,5,0.8153333,2.0833333]": [
     {
       "end": "end",
       "edge": "slotted",
@@ -584,7 +584,7 @@
       "removedRun": 0.12
     }
   ],
-  "[\"bedroom-right\",\"bedroom-right\",\"partition\",0,2,0,1,0,6,0,2.1013333]": [
+  "[\"bedroom-right\",\"bedroom-right\",\"partition\",0,2,0,1,0,5,0,2.0833333]": [
     {
       "end": "start",
       "edge": "slotted",
@@ -593,7 +593,7 @@
       "removedRun": 0.12
     }
   ],
-  "[\"bedroom-right\",\"bedroom-right\",\"partition\",0,2,0,1,5,3,0,1.25]": [
+  "[\"bedroom-right\",\"bedroom-right\",\"partition\",0,2,0,1,4.1666667,5,0.8153333,2.0833333]": [
     {
       "end": "end",
       "edge": "slotted",
@@ -602,7 +602,7 @@
       "removedRun": 0.12
     }
   ],
-  "[\"bedroom-right\",\"bedroom-right\",\"partition\",0,3,0,1,0,6,0,2.1013333]": [
+  "[\"bedroom-right\",\"bedroom-right\",\"partition\",0,3,0,1,0,5,0,2.0833333]": [
     {
       "end": "start",
       "edge": "slotted",
@@ -611,7 +611,7 @@
       "removedRun": 0.12
     }
   ],
-  "[\"bedroom-right\",\"bedroom-right\",\"partition\",0,3,0,1,5,3,0,1.25]": [
+  "[\"bedroom-right\",\"bedroom-right\",\"partition\",0,3,0,1,4.1666667,5,0.8153333,2.0833333]": [
     {
       "end": "end",
       "edge": "slotted",
@@ -620,7 +620,7 @@
       "removedRun": 0.12
     }
   ],
-  "[\"bedroom-right\",\"bedroom-right\",\"partition\",0,4,0,1,0,6,0,2.1013333]": [
+  "[\"bedroom-right\",\"bedroom-right\",\"partition\",0,4,0,1,0,5,0,2.0833333]": [
     {
       "end": "start",
       "edge": "slotted",
@@ -629,7 +629,7 @@
       "removedRun": 0.12
     }
   ],
-  "[\"bedroom-right\",\"bedroom-right\",\"partition\",0,4,0,1,5,3,0,1.25]": [
+  "[\"bedroom-right\",\"bedroom-right\",\"partition\",0,4,0,1,4.1666667,5,0.8153333,2.0833333]": [
     {
       "end": "end",
       "edge": "slotted",
@@ -638,7 +638,7 @@
       "removedRun": 0.12
     }
   ],
-  "[\"bedroom-right\",\"bedroom-right\",\"partition\",0,5,0,1,0,6,0,2.1013333]": [
+  "[\"bedroom-right\",\"bedroom-right\",\"partition\",0,5,0,1,0,5,0,2.0833333]": [
     {
       "end": "start",
       "edge": "slotted",
@@ -647,7 +647,7 @@
       "removedRun": 0.12
     }
   ],
-  "[\"bedroom-right\",\"bedroom-right\",\"partition\",0,5,0,1,5,3,0,1.25]": [
+  "[\"bedroom-right\",\"bedroom-right\",\"partition\",0,5,0,1,4.1666667,5,0.8153333,2.0833333]": [
     {
       "end": "end",
       "edge": "slotted",
@@ -656,7 +656,7 @@
       "removedRun": 0.12
     }
   ],
-  "[\"bedroom-right\",\"bedroom-right\",\"partition\",0,6,0,1,0,6,0,2.5]": [
+  "[\"bedroom-right\",\"bedroom-right\",\"partition\",0,6,0,1,0,5,0,2.0833333]": [
     {
       "end": "start",
       "edge": "slotted",
@@ -665,7 +665,7 @@
       "removedRun": 0.12
     }
   ],
-  "[\"bedroom-right\",\"bedroom-right\",\"partition\",0,6,0,1,5,3,0,1.25]": [
+  "[\"bedroom-right\",\"bedroom-right\",\"partition\",0,6,0,1,4.1666667,5,0,2.0833333]": [
     {
       "end": "end",
       "edge": "slotted",
@@ -674,7 +674,7 @@
       "removedRun": 0.12
     }
   ],
-  "[\"bedroom-right\",\"bedroom-right\",\"partition\",0,7,0,1,0,6,0,2.5]": [
+  "[\"bedroom-right\",\"bedroom-right\",\"partition\",0,7,0,1,0,5,0,2.0833333]": [
     {
       "end": "start",
       "edge": "slotted",
@@ -683,7 +683,7 @@
       "removedRun": 0.12
     }
   ],
-  "[\"bedroom-right\",\"bedroom-right\",\"partition\",0,7,0,1,5,3,0,1.25]": [
+  "[\"bedroom-right\",\"bedroom-right\",\"partition\",0,7,0,1,4.1666667,5,0,2.0833333]": [
     {
       "end": "end",
       "edge": "slotted",
@@ -692,7 +692,7 @@
       "removedRun": 0.12
     }
   ],
-  "[\"bedroom-right\",\"bedroom-right\",\"partition\",1,1,0,1,0,6,0,2.5]": [
+  "[\"bedroom-right\",\"bedroom-right\",\"partition\",1,1,0,1,0,5,0,2.0833333]": [
     {
       "end": "start",
       "edge": "plain",
@@ -701,7 +701,7 @@
       "removedRun": 0.12
     }
   ],
-  "[\"bedroom-right\",\"bedroom-right\",\"partition\",1,1,0,1,2.5,2,0,0.8333333]": [
+  "[\"bedroom-right\",\"bedroom-right\",\"partition\",1,1,0,1,2.0833333,3,0,1.25]": [
     {
       "end": "end",
       "edge": "plain",
@@ -710,7 +710,7 @@
       "removedRun": 0.12
     }
   ],
-  "[\"bedroom-right\",\"bedroom-right\",\"partition\",1,2,0,1,0,6,0,2.5]": [
+  "[\"bedroom-right\",\"bedroom-right\",\"partition\",1,2,0,1,0,5,0,2.0833333]": [
     {
       "end": "start",
       "edge": "plain",
@@ -719,7 +719,7 @@
       "removedRun": 0.12
     }
   ],
-  "[\"bedroom-right\",\"bedroom-right\",\"partition\",1,2,0,1,2.5,2,0,0.8333333]": [
+  "[\"bedroom-right\",\"bedroom-right\",\"partition\",1,2,0,1,2.0833333,3,0,1.25]": [
     {
       "end": "end",
       "edge": "plain",
@@ -728,7 +728,7 @@
       "removedRun": 0.12
     }
   ],
-  "[\"bedroom-right\",\"bedroom-right\",\"partition\",1,3,0,1,0,6,0,2.5]": [
+  "[\"bedroom-right\",\"bedroom-right\",\"partition\",1,3,0,1,0,5,0,2.0833333]": [
     {
       "end": "start",
       "edge": "plain",
@@ -737,7 +737,7 @@
       "removedRun": 0.12
     }
   ],
-  "[\"bedroom-right\",\"bedroom-right\",\"partition\",1,3,0,1,2.5,2,0,0.8333333]": [
+  "[\"bedroom-right\",\"bedroom-right\",\"partition\",1,3,0,1,2.0833333,3,0,1.25]": [
     {
       "end": "end",
       "edge": "plain",
@@ -746,7 +746,7 @@
       "removedRun": 0.12
     }
   ],
-  "[\"bedroom-right\",\"bedroom-right\",\"partition\",1,4,0,1,0,6,0,2.5]": [
+  "[\"bedroom-right\",\"bedroom-right\",\"partition\",1,4,0,1,0,5,0,2.0833333]": [
     {
       "end": "start",
       "edge": "plain",
@@ -755,7 +755,7 @@
       "removedRun": 0.12
     }
   ],
-  "[\"bedroom-right\",\"bedroom-right\",\"partition\",1,4,0,1,2.5,2,0,0.8333333]": [
+  "[\"bedroom-right\",\"bedroom-right\",\"partition\",1,4,0,1,2.0833333,3,0,1.25]": [
     {
       "end": "end",
       "edge": "plain",
@@ -764,7 +764,7 @@
       "removedRun": 0.12
     }
   ],
-  "[\"bedroom-right\",\"bedroom-right\",\"partition\",1,5,0,1,0,6,0,2.5]": [
+  "[\"bedroom-right\",\"bedroom-right\",\"partition\",1,5,0,1,0,5,0,2.0833333]": [
     {
       "end": "start",
       "edge": "plain",
@@ -773,7 +773,7 @@
       "removedRun": 0.12
     }
   ],
-  "[\"bedroom-right\",\"bedroom-right\",\"partition\",1,5,0,1,2.5,2,0,0.8333333]": [
+  "[\"bedroom-right\",\"bedroom-right\",\"partition\",1,5,0,1,2.0833333,3,0,1.25]": [
     {
       "end": "end",
       "edge": "plain",
@@ -782,7 +782,7 @@
       "removedRun": 0.12
     }
   ],
-  "[\"bedroom-right\",\"bedroom-right\",\"partition\",1,6,0,1,0,6,0,0.24]": [
+  "[\"bedroom-right\",\"bedroom-right\",\"partition\",1,6,0,1,0,5,0,0.24]": [
     {
       "end": "start",
       "edge": "plain",
@@ -791,7 +791,7 @@
       "removedRun": 0.12
     }
   ],
-  "[\"bedroom-right\",\"bedroom-right\",\"partition\",1,6,0,1,2.5,2,0,0.8333333]": [
+  "[\"bedroom-right\",\"bedroom-right\",\"partition\",1,6,0,1,2.0833333,3,0.3986667,1.25]": [
     {
       "end": "end",
       "edge": "plain",
@@ -800,7 +800,7 @@
       "removedRun": 0.12
     }
   ],
-  "[\"bedroom-right\",\"bedroom-right\",\"partition\",1,7,0,1,0,6,0,2.5]": [
+  "[\"bedroom-right\",\"bedroom-right\",\"partition\",1,7,0,1,0,5,0,2.0833333]": [
     {
       "end": "start",
       "edge": "plain",
@@ -809,7 +809,7 @@
       "removedRun": 0.12
     }
   ],
-  "[\"bedroom-right\",\"bedroom-right\",\"partition\",1,7,0,1,2.5,2,0,0.8333333]": [
+  "[\"bedroom-right\",\"bedroom-right\",\"partition\",1,7,0,1,2.0833333,3,0,1.25]": [
     {
       "end": "end",
       "edge": "plain",
@@ -818,7 +818,7 @@
       "removedRun": 0.12
     }
   ],
-  "[\"bedroom-right\",\"bedroom-right\",\"partition\",1,8,0,1,0,6,0,2.5]": [
+  "[\"bedroom-right\",\"bedroom-right\",\"partition\",1,8,0,1,0,5,0,2.0833333]": [
     {
       "end": "start",
       "edge": "plain",
@@ -827,7 +827,7 @@
       "removedRun": 0.12
     }
   ],
-  "[\"bedroom-right\",\"bedroom-right\",\"partition\",1,8,0,1,2.5,2,0,0.8333333]": [
+  "[\"bedroom-right\",\"bedroom-right\",\"partition\",1,8,0,1,2.0833333,3,0,1.25]": [
     {
       "end": "end",
       "edge": "plain",
@@ -836,7 +836,7 @@
       "removedRun": 0.12
     }
   ],
-  "[\"bedroom-right\",\"bedroom-right\",\"partition\",1,9,0,1,0,6,0,2.5]": [
+  "[\"bedroom-right\",\"bedroom-right\",\"partition\",1,9,0,1,0,5,0,2.0833333]": [
     {
       "end": "start",
       "edge": "plain",
@@ -845,7 +845,7 @@
       "removedRun": 0.12
     }
   ],
-  "[\"bedroom-right\",\"bedroom-right\",\"partition\",1,9,0,1,2.5,2,0,0.8333333]": [
+  "[\"bedroom-right\",\"bedroom-right\",\"partition\",1,9,0,1,2.0833333,3,0,1.25]": [
     {
       "end": "end",
       "edge": "plain",
@@ -854,7 +854,7 @@
       "removedRun": 0.12
     }
   ],
-  "[\"bedroom-right\",\"bedroom-right\",\"partition\",1,10,0,1,0,6,0,2.5]": [
+  "[\"bedroom-right\",\"bedroom-right\",\"partition\",1,10,0,1,0,5,0,2.0833333]": [
     {
       "end": "start",
       "edge": "plain",
@@ -863,7 +863,7 @@
       "removedRun": 0.12
     }
   ],
-  "[\"bedroom-right\",\"bedroom-right\",\"partition\",1,10,0,1,2.5,2,0,0.8333333]": [
+  "[\"bedroom-right\",\"bedroom-right\",\"partition\",1,10,0,1,2.0833333,3,0,1.25]": [
     {
       "end": "end",
       "edge": "plain",
@@ -872,7 +872,7 @@
       "removedRun": 0.12
     }
   ],
-  "[\"bedroom-right\",\"bedroom-right\",\"partition\",1,11,0,1,0,6,0,0.24]": [
+  "[\"bedroom-right\",\"bedroom-right\",\"partition\",1,11,0,1,0,5,0,0.24]": [
     {
       "end": "start",
       "edge": "plain",
@@ -881,7 +881,7 @@
       "removedRun": 0.12
     }
   ],
-  "[\"bedroom-right\",\"bedroom-right\",\"partition\",1,11,0,1,2.5,2,0,0.8333333]": [
+  "[\"bedroom-right\",\"bedroom-right\",\"partition\",1,11,0,1,2.0833333,3,0.3986667,1.25]": [
     {
       "end": "end",
       "edge": "plain",
@@ -890,7 +890,7 @@
       "removedRun": 0.12
     }
   ],
-  "[\"bedroom-right\",\"bedroom-right\",\"partition\",1,12,0,1,0,6,0,2.5]": [
+  "[\"bedroom-right\",\"bedroom-right\",\"partition\",1,12,0,1,0,5,0,2.0833333]": [
     {
       "end": "start",
       "edge": "plain",
@@ -899,7 +899,7 @@
       "removedRun": 0.12
     }
   ],
-  "[\"bedroom-right\",\"bedroom-right\",\"partition\",1,12,0,1,2.5,2,0,0.8333333]": [
+  "[\"bedroom-right\",\"bedroom-right\",\"partition\",1,12,0,1,2.0833333,3,0,1.25]": [
     {
       "end": "end",
       "edge": "plain",
@@ -908,7 +908,7 @@
       "removedRun": 0.12
     }
   ],
-  "[\"bedroom-right\",\"bedroom-right\",\"partition\",1,13,0,1,0,6,0,2.5]": [
+  "[\"bedroom-right\",\"bedroom-right\",\"partition\",1,13,0,1,0,5,0,2.0833333]": [
     {
       "end": "start",
       "edge": "plain",
@@ -917,7 +917,7 @@
       "removedRun": 0.12
     }
   ],
-  "[\"bedroom-right\",\"bedroom-right\",\"partition\",1,13,0,1,2.5,2,0,0.8333333]": [
+  "[\"bedroom-right\",\"bedroom-right\",\"partition\",1,13,0,1,2.0833333,3,0,1.25]": [
     {
       "end": "end",
       "edge": "plain",
@@ -926,7 +926,7 @@
       "removedRun": 0.12
     }
   ],
-  "[\"bedroom-right\",\"bedroom-right\",\"partition\",1,14,0,1,0,6,0,2.5]": [
+  "[\"bedroom-right\",\"bedroom-right\",\"partition\",1,14,0,1,0,5,0,2.0833333]": [
     {
       "end": "start",
       "edge": "plain",
@@ -935,7 +935,7 @@
       "removedRun": 0.12
     }
   ],
-  "[\"bedroom-right\",\"bedroom-right\",\"partition\",1,14,0,1,2.5,2,0,0.8333333]": [
+  "[\"bedroom-right\",\"bedroom-right\",\"partition\",1,14,0,1,2.0833333,3,0,1.25]": [
     {
       "end": "end",
       "edge": "plain",
@@ -1056,7 +1056,7 @@
       "removedRun": 0.102
     }
   ],
-  "[\"bedroom-front\",\"bedroom-front\",\"partition\",1,1,0,1,0,6,0,2.5]": [
+  "[\"bedroom-front\",\"bedroom-front\",\"partition\",1,1,0,1,0,5,0,2.0833333]": [
     {
       "end": "start",
       "edge": "plain",
@@ -1065,7 +1065,7 @@
       "removedRun": 0.12
     }
   ],
-  "[\"bedroom-front\",\"bedroom-front\",\"partition\",1,1,0,1,2.5,2,0,0.8333333]": [
+  "[\"bedroom-front\",\"bedroom-front\",\"partition\",1,1,0,1,2.0833333,3,0,1.25]": [
     {
       "end": "end",
       "edge": "plain",
@@ -1074,7 +1074,7 @@
       "removedRun": 0.12
     }
   ],
-  "[\"bedroom-front\",\"bedroom-front\",\"partition\",1,2,0,1,0,6,0,2.5]": [
+  "[\"bedroom-front\",\"bedroom-front\",\"partition\",1,2,0,1,0,5,0,2.0833333]": [
     {
       "end": "start",
       "edge": "plain",
@@ -1083,7 +1083,7 @@
       "removedRun": 0.12
     }
   ],
-  "[\"bedroom-front\",\"bedroom-front\",\"partition\",1,2,0,1,2.5,2,0,0.8333333]": [
+  "[\"bedroom-front\",\"bedroom-front\",\"partition\",1,2,0,1,2.0833333,3,0,1.25]": [
     {
       "end": "end",
       "edge": "plain",
@@ -1092,7 +1092,7 @@
       "removedRun": 0.12
     }
   ],
-  "[\"bedroom-front\",\"bedroom-front\",\"partition\",1,3,0,1,0,6,0,2.5]": [
+  "[\"bedroom-front\",\"bedroom-front\",\"partition\",1,3,0,1,0,5,0,2.0833333]": [
     {
       "end": "start",
       "edge": "plain",
@@ -1101,7 +1101,7 @@
       "removedRun": 0.12
     }
   ],
-  "[\"bedroom-front\",\"bedroom-front\",\"partition\",1,3,0,1,2.5,2,0,0.8333333]": [
+  "[\"bedroom-front\",\"bedroom-front\",\"partition\",1,3,0,1,2.0833333,3,0,1.25]": [
     {
       "end": "end",
       "edge": "plain",
@@ -1110,7 +1110,7 @@
       "removedRun": 0.12
     }
   ],
-  "[\"bedroom-front\",\"bedroom-front\",\"partition\",1,4,0,1,0,6,0,2.5]": [
+  "[\"bedroom-front\",\"bedroom-front\",\"partition\",1,4,0,1,0,5,0,2.0833333]": [
     {
       "end": "start",
       "edge": "plain",
@@ -1119,7 +1119,7 @@
       "removedRun": 0.12
     }
   ],
-  "[\"bedroom-front\",\"bedroom-front\",\"partition\",1,4,0,1,2.5,2,0,0.8333333]": [
+  "[\"bedroom-front\",\"bedroom-front\",\"partition\",1,4,0,1,2.0833333,3,0,1.25]": [
     {
       "end": "end",
       "edge": "plain",
@@ -1128,7 +1128,7 @@
       "removedRun": 0.12
     }
   ],
-  "[\"bedroom-front\",\"bedroom-front\",\"partition\",1,5,0,1,0,6,0,2.5]": [
+  "[\"bedroom-front\",\"bedroom-front\",\"partition\",1,5,0,1,0,5,0,2.0833333]": [
     {
       "end": "start",
       "edge": "plain",
@@ -1137,7 +1137,7 @@
       "removedRun": 0.12
     }
   ],
-  "[\"bedroom-front\",\"bedroom-front\",\"partition\",1,5,0,1,2.5,2,0,0.8333333]": [
+  "[\"bedroom-front\",\"bedroom-front\",\"partition\",1,5,0,1,2.0833333,3,0,1.25]": [
     {
       "end": "end",
       "edge": "plain",

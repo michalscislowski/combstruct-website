@@ -1,0 +1,71 @@
+{
+  "method": "Joint dynamic planning of native stock in both plies, respecting fixed junction bands and staggered seams.",
+  "priorities": [
+    "minimize one-module shortened endings",
+    "minimize other one-module boards",
+    "minimize stock pieces",
+    "balance remaining usable lengths"
+  ],
+  "projects": {
+    "30": {
+      "geometrySha256": "699bbbe63351978978675522df6efe20f773fdff4d246a9649c3316534fa232a",
+      "before": {
+        "pieces": 1442,
+        "delivered": 1380,
+        "shortEndings": 84,
+        "oneModule": 91
+      },
+      "after": {
+        "pieces": 1364,
+        "delivered": 1331,
+        "shortEndings": 0,
+        "oneModule": 0
+      },
+      "preservedRibLines": 468,
+      "ribVolumesAndReservedIntervalsUnchanged": true,
+      "shortEndingLocations": []
+    },
+    "90": {
+      "geometrySha256": "266349e6f16ff727a34eab4581fe961142287cdf3dac9f2dcd884a660ea14707",
+      "before": {
+        "pieces": 3689,
+        "delivered": 3519,
+        "shortEndings": 151,
+        "oneModule": 172
+      },
+      "after": {
+        "pieces": 3555,
+        "delivered": 3433,
+        "shortEndings": 46,
+        "oneModule": 46
+      },
+      "preservedRibLines": 1256,
+      "ribVolumesAndReservedIntervalsUnchanged": true,
+      "shortEndingLocations": [
+        "Strop, balkon i zadaszenia",
+        "balcony-support-front",
+        "balcony-support-rear",
+        "upper-hall-notch-north",
+        "upper-hall-notch-west"
+      ]
+    },
+    "125": {
+      "geometrySha256": "d07fa8cbb1ff7596185a51b8f0c98f92f2af7671119004475c1683a237f1625c",
+      "before": {
+        "pieces": 3110,
+        "delivered": 2970,
+        "shortEndings": 254,
+        "oneModule": 262
+      },
+      "after": {
+        "pieces": 2738,
+        "delivered": 2652,
+        "shortEndings": 0,
+        "oneModule": 0
+      },
+      "preservedRibLines": 850,
+      "ribVolumesAndReservedIntervalsUnchanged": true,
+      "shortEndingLocations": []
+    }
+  }
+}
