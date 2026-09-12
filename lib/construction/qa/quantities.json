@@ -1,0 +1,55 @@
+{
+  "rates": {
+    "osb3Sheet": 150,
+    "plywoodSheet": 300,
+    "insulationBlock": 15,
+    "assemblyPerSheet": 120,
+    "roundPriceUpTo": 1000
+  },
+  "projects": {
+    "90": {
+      "geometrySha256": "d0a4bf8188cda9fcd46e7715d5c3416b74aaf5c6f540ae48be018cd888c98446",
+      "physicalBoards": 3627,
+      "actualLengthM": 5199.387928945365,
+      "displayFullBoards": 2080,
+      "sheets": 416,
+      "insulationBlocks": 2835,
+      "variants": [
+        {
+          "material": "osb3",
+          "label": "OSB3",
+          "materials": 105000,
+          "assembly": 155000
+        },
+        {
+          "material": "plywood",
+          "label": "Sklejka",
+          "materials": 168000,
+          "assembly": 218000
+        }
+      ]
+    },
+    "125": {
+      "geometrySha256": "1d9f7e35c9132fa0629bd98508a5288b3f55184fea378423615593fbe926f977",
+      "physicalBoards": 3110,
+      "actualLengthM": 4673.781974226236,
+      "displayFullBoards": 1870,
+      "sheets": 374,
+      "insulationBlocks": 2316,
+      "variants": [
+        {
+          "material": "osb3",
+          "label": "OSB3",
+          "materials": 91000,
+          "assembly": 136000
+        },
+        {
+          "material": "plywood",
+          "label": "Sklejka",
+          "materials": 147000,
+          "assembly": 192000
+        }
+      ]
+    }
+  }
+}
