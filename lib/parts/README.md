@@ -11,8 +11,10 @@ Flow imports the same `30.json` into its existing renderer.
   `installedPieces` counts the fragments present in the assembled house model.
 - `stock.js` groups descendants of one original stock board using its location,
   axes, layer and native profile. Cutting limits do not create another board.
-- Connector cuts required by different descendants are united on their shared
-  parent board. Native ending profiles retain their 24 cm shortening.
+- All current models use ordinary and ending boards. End extensions and extra
+  shortening are part of the source identity, length and preview. Full end slots
+  add 18 mm to the plain half; the matching ending reserves 258 mm. The legacy
+  side-cut union remains only for comparison data.
 - Each delivered board belongs to one family and one length variant. Mirroring a
   flat board does not create an additional variant. There is no fitted category.
 - `qa/{id}.json` records every model piece's parent board and its native profile.

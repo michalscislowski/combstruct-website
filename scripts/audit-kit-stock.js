@@ -1,3 +1,4 @@
+import {stockBounds} from '../lib/construction/stock-profile.js';
 import * as THREE from 'three';
 import {buildStructure as build30} from '../lib/construction/30/structure.js';
 import {buildStructure as build90} from '../lib/construction/90/structure.js';
@@ -15,7 +16,10 @@ const sourceKeys=new Set(model.boards.map(b=>JSON.stringify(JSON.parse(b.connect
 assert.equal(sourceKeys.size,stocks.length);
 let vertices=0;
 for(const stock of stocks){
- const length=stock.stock.pixels*2.5/6,lo=stock.trim==='left' ? .24 : 0,hi=length-(stock.trim==='right' ? .24 : 0);
+ assert(stock.lengthM>=.24,'Sub-module ending returned: '+stock.id);
+ assert.equal(stock.connectorCuts.length,0);
+ const length=stock.stock.pixels*2.5/6,[lo,hi]=stockBounds({...stock.stock,trim:stock.trim},false);
+ assert(hi-lo<=2.5+1e-8);
  for(const boardId of stock.members){
   assert(!assigned.has(boardId));assigned.add(boardId);
   const b=byId.get(boardId),basis=new THREE.Matrix4().makeBasis(...[b.along,b.normal,b.thick].map(v=>new THREE.Vector3(...v))).invert();

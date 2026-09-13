@@ -16,7 +16,7 @@ fs.mkdirSync('site/assets/parts',{recursive:true});
 fs.mkdirSync('lib/parts/qa',{recursive:true});
 
 function preview(stock){
-  const p={pixels:stock.stock.pixels,start:0,layer:0,trim:stock.trim};
+  const p={...stock.stock,start:0,layer:0,trim:stock.trim};
   const target=new THREE.Group();target.name='stock-preview';
   // The native-profile builder receives all connector cuts required by this
   // board's descendants. No minCut/limit or roof plane reaches it.
@@ -70,7 +70,7 @@ for(const [id,build] of [['30',build30],['90',build90],['125',build125]]){
   const data={project:id,name:`Combstruct ${id}`,basis:'delivery-before-cutting',geometrySha256,totalBoards:stocks.length,installedPieces:model.boards.length,material,families};
   fs.writeFileSync(`site/assets/parts/${id}.json`,JSON.stringify(data)+'\n');
   const evidence={basis:data.basis,geometrySha256,stockBoards:stocks.length,installedPieces:model.boards.length,assignments:Object.fromEntries(membership)};
-  const records=stocks.map(({id,key,members,stock,trim,connectorCuts,family})=>({id,key,members,modules:stock.pixels,trim,connectorCuts,family}));
+  const records=stocks.map(({id,key,members,stock,trim,connectorCuts,family})=>({id,key,members,modules:stock.pixels,trim,connectorCuts,family,...stock}));
   fs.writeFileSync(`lib/parts/qa/${id}.json`,JSON.stringify(evidence,null,2).slice(0,-2)+',\n  "stocks": [\n'+records.map(r=>'    '+JSON.stringify(r)).join(',\n')+'\n  ]\n}\n');
   console.log(JSON.stringify({project:id,delivery:stocks.length,installed:model.boards.length,shared:stocks.filter(s=>s.members.length>1).length,fullOrdinary:families[0].variants.find(v=>v.modules===6)?.count,material}));
 }

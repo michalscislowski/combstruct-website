@@ -2,13 +2,20 @@
 
 `site/technologie.html` presents three tabs: a 17-topic construction handbook, an interactive BIM demonstration, and Combstruct Flow for digital design, production and assembly. Navigation links are present in the existing desktop/mobile navigation and footers. Each handbook topic and technology has a URL hash and supports browser history.
 
-`content.js` contains Polish handbook copy and the six board choices (ordinary, ending, four connector profiles). `geometry.js` builds orientation examples and selects actual records for connection details. `viewer.js` owns one shared Three.js renderer, navigation, picking, and the controls.
+`content.js` contains Polish handbook copy and four end-profile choices: ordinary,
+240 mm ending, full 36 mm end slot, and 258 mm ending. `geometry.js` uses the
+shared construction engine for these profiles and selects actual house records
+for joint details. The transverse rib is visible initially in joint scenes;
+users can hide it or spread the plies to inspect the slot.
 
-`structure.js` re-exports `lib/construction/30/structure.js`. The handbook, Flow and the public Combstruct 30 catalogue viewer now use that one reviewed model, including the four connector profiles and restored crossing ribs. The connector schedule lives only beside that shared model. IDs shown by the BIM demonstration are unique within this fixed model snapshot; persistence across project edits and an AR camera registration system are not implemented. The page explicitly presents AR as a development direction.
+`structure.js` re-exports `lib/construction/30/structure.js`. The handbook, Flow,
+BIM and public catalogue share that model. It now uses full end slots and length
+adjustments instead of lateral cuts. The slab sits above horizontal wall caps,
+including internal walls. See `lib/construction/README.md` for the geometry,
+stock limits and validation scope.
 
-The slab and roof examples have upward-opening slots in the ribs parallel to the shorter panel edge. In the wall example those ribs are vertical and their slots face the exterior. End shortening is 240 mm. Corner reliefs remove 18 × 102 mm on the slotted edge or 18 × 120 mm on the plain edge. The two inset reliefs remove 18 × 120 mm, 120 mm from the full end. Inset dimensions were fitted to actual model intersections following the user's reference photos.
-
-The snapshot retains its 2500 / 6 mm module convention. The interior-wall top horizontal rows are not duplicated over the parallel ceiling material; this remaining assembly-layout assumption is retained from the local prototype. Geometry checks are not structural load certification.
+IDs in BIM are unique within this generated snapshot. Persistent identity across
+edits, camera registration and an as-built installation model are not implemented.
 
 ## Build
 
@@ -16,7 +23,7 @@ The static deployment uses the committed `site/assets/technologie.js` bundle; `n
 
 ## Validation performed
 
-- All 17 handbook topics, all six board choices, crossing and spread controls.
+- All 17 handbook topics, all four board choices, crossing and spread controls.
 - Equality of the ordinary tutorial profile and the house profile by volume; exact removed volumes for all four connector variants; transformed slot directions in slabs, walls and roofs.
 - Unique board identifiers, selection through the next-element control, wall-layer slider, four Flow stages.
 - Browser history, direct topic links, keyboard tab navigation, mobile menu, 390 px phone layout and 820 px navigation layout across the existing pages.
@@ -36,10 +43,14 @@ Direct link: `technologie.html#bim-sciana`. Starts with a fully finished wall. L
 
 `manufacturing.js` presents the software workflow to developers, panel/element manufacturers, designers, construction partners and individual clients. The four scenes reuse one Combstruct 30 example: the actual footprint/openings, the identified structure, selectable board profiles with quantities, and a progressively revealed assembly.
 
-Production uses actual source geometry transformed to the board's own axes. Seven groups cover standard boards, endings, the four connector cuts and the combined two-cut variant present in seven source pieces. Each board is counted once, including shorter lengths and opening/roof trims within its family. The production heading says “Elementy do montażu”: 1,437 physical pieces of different lengths. The same geometry totals 2,088.932 m, or 835.573 full 2.5 m boards, displayed as 836. The former catalogue value of 843 belonged to the old model. The generated `material` field bridges the two units in Flow; catalogue material/insulation totals and offers have been refreshed from this model.
+Production uses the shared delivered-stock catalogue `site/assets/parts/30.json`.
+Its ordinary and ending families include all native length/end treatments, before
+cuts around openings or roof edges. Physical installed pieces and delivered
+boards remain separate quantities. The production view and project parts view
+use the same profiles, counts and selection controls.
 
 `manufacturing-data.json` is generated offline by `scripts/build-flow-data.js`, using the same Three.js build and `three-mesh-bvh` 0.9.9. Regenerate after changing `lib/construction/30/structure.js`, its `connectors.json` or geometry. Bundle the generator with those dependencies for Node and execute it from the repository root before rebuilding the browser viewer. The browser consumes the committed data and does not need the BVH dependency.
 
-The generator finds triangle-surface contacts with a 0.05 mm tolerance, using a spatial hash and BVHs. Each added board must touch the ground or an already installed board; wall verticals and horizontal rows advance from lower to higher levels. Every prefix is audited, disconnected models fail generation, and the output retains each board's earlier contact as a witness. The current model has 10,732 contact pairs and passes all 1,437 prefixes (the previous kind-only order introduced 15 disconnected pieces). The test proves geometric connectivity, not load-bearing stability, fastening, collision-free insertion paths or an engineered erection plan. Coplanar BVH edge warnings are counted: the algorithm uses distance only, not the unavailable contact-edge coordinates. Slider updates reveal whole source boards and work in both directions.
+The generator finds triangle-surface contacts with a 0.05 mm tolerance, using a spatial hash and BVHs. Each added board must touch the ground or an already installed board; wall verticals and horizontal rows advance from lower to higher levels. Every prefix is audited, disconnected models fail generation, and the output retains each board's earlier contact as a witness. The regenerated model passes all 1,398 assembly prefixes with an earlier contact recorded for each added piece. The test proves geometric connectivity, not load-bearing stability, fastening, collision-free insertion paths or an engineered erection plan. Coplanar BVH edge warnings are counted: the algorithm uses distance only, not the unavailable contact-edge coordinates. Slider updates reveal whole source boards and work in both directions.
 
 The page distinguishes the existing model/identification/presentation tooling from the developing automatic adaptation of arbitrary client floor plans and production-order generation. No arbitrary-plan upload/conversion service, validated CAM export, or external manufacturing-order API is implemented by this website change. The collaboration CTA uses the existing contact route. The old material tab and its scene/styles are removed; old `#mycelium` and `#manufacturing` links resolve to `#flow`.

@@ -48,7 +48,7 @@ test('prices stay in PLN, including VAT, with English thousands separators',asyn
   const pl=await get(''),en=await get('en/');
   assert.deepEqual(en.map(p=>p.variants.map(v=>[v.material,v.materials,v.assembly])),pl.map(p=>p.variants.map(v=>[v.material,v.materials,v.assembly])));
   const catalogue=await read('site/en/projects.html');
-  for(const amount of ['50,000','113,000','97,000'])assert(catalogue.includes(`${amount} PLN incl. VAT`));
+  for(const project of en){const amount=project.variants[0].materials.toLocaleString('en-GB');assert(catalogue.includes(`${amount} PLN incl. VAT`));}
   assert.match(await read('site/en/zamowienie.js'),/Intl.NumberFormat\('en-GB'/);
 });
 

@@ -1,0 +1,27 @@
+{
+  "project": "125",
+  "strategy": "full-end-slot",
+  "boards": 2806,
+  "orthogonal": 2806,
+  "connectorBoards": 0,
+  "overlength": [],
+  "collidingPairs": 0,
+  "counts": {},
+  "pairs": {},
+  "collisions": [],
+  "dimensions": {
+    "width": 12.5,
+    "depth": 10,
+    "module": 0.4166666666666667,
+    "footprint": 125,
+    "floorTop": 0.24,
+    "wallTop": 3.75,
+    "ceilingBottom": 3.768,
+    "ceilingTop": 4.008,
+    "clearHeight": 3.5279999999999996,
+    "terraceArea": 18.75,
+    "terraceWidth": 7.5,
+    "terraceDepth": 2.5,
+    "boardDepth": 0.24
+  }
+}

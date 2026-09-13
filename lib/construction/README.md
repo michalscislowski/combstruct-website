@@ -8,40 +8,63 @@ handbook and Flow; `lib/technology/structure.js` is only a re-export. The static
 
 ## Shared rules
 
-- The reviewed visual-model convention is 2500 / 6 mm per module, 240 mm board
-  depth and two 18 mm plies. Full and ending boards have one to six modules;
-  the ending difference is 240 mm. This preserves the reviewed 30 convention,
-  rather than mixing it with the editor's older 2490 mm specification.
-- Z is the shorter bearing direction in both house footprints. These horizontal
-  ribs open upwards; perpendicular ribs open downwards. Exterior uprights open
-  outwards. Roof rafters also open outwards/upwards.
-- Floor, terrace, walls, slab, balcony and roof use shared rib planes. No global
-  18 mm or 40 mm plan shift is added to solve a connection.
-- Native staggered stock reserves a ply at each crossing. A full end runs beside
-  the crossing rib and its 240 mm shorter partner bears on it. Separate native
-  pieces are used when a span meets multiple junctions.
-- Four connector cuts expose obstructed half-slots: corner cuts of 18 × 102 mm
-  on the slotted edge or 18 × 120 mm on the plain edge; inset cuts of 18 × 120 mm
-  on either edge, 120 mm from the end. JSON schedules record the actual cuts.
-- At the four-way ground-wall junction in 90, the Z wall owns the shared upright
-  pair. The X branches use native T ends and a stock seam bridged by the crossing
-  plaster. Perpendicular full uprights are not superimposed.
-- A slab supplies the crossing horizontal material at a shared wall/slab node;
-  the wall does not duplicate it. At continuous storey transitions the lower
-  upright owns the shared slab band and the upper starting pair uses endings.
+- Active models use 2500 / 6 mm modules, 240 mm board depth and two 18 mm
+  plies. Slot stations are preserved when an end is modified.
+- In 30, X is the shorter bearing direction. In 90 and 125 it is Z. These ribs
+  open upwards in floors and ceilings. Exterior wall uprights open outward;
+  roof rafters open towards the roof covering.
+- All three models default to the full-end-slot strategy. The old lateral-cut
+  schedules remain available only with `jointStrategy: 'lateral-cuts'` for
+  regression comparisons. No lateral-cut family is present in the current kits.
+- At a through junction, the plain half of the ordinary end extends by 18 mm.
+  Its original half-slot therefore becomes a full 36 mm end slot. The adjoining
+  ending is shortened by another 18 mm (258 mm instead of 240 mm). The open
+  reservation is still 240 mm wide; it moves onto the appropriate rib face.
+- Wall depth centres sit 138 mm from their station, keeping their faces beside
+  the transverse pair. This adjusts the panel depth position, not the shared
+  rib planes or slot spacing. Floors and terraces retain their grid stations.
+- A slab bottom sits on the TOP face of the horizontal wall pair: 18 mm above
+  its station. Wall caps are included, also on internal walls. Lower and upper
+  upright lengths reserve the slab band. No side cut is used to clear that cap.
+- Paired stock is planned together with staggered seams. Real delivered length,
+  including end treatment, cannot exceed 2500 mm. An extended six-module ordinary
+  board is rejected and the span is repartitioned. No delivered board is shorter
+  than the 240 mm structural depth in the three current models.
+- Four-way wall ownership is determined using wall junction stations, not the
+  shifted depth centres, so T junctions retain their opening jambs.
 
 ## Levels and architecture
 
-90 retains its 9.583 × 6.667 m footprint, terrace, balcony, three bedrooms and
-ground-floor office. Slab top is 3.333 m; clear ground height is 2.853 m. The
-45° roof starts at 4.760 m, with a 1.427 m knee wall above the upper floor.
-The attic ceiling is clipped to the roof. Three rooflights and the stair opening
-remain. Stairs have sixteen 193.33 mm rises and 275 mm treads. The checked minimum
-clearance to the structural envelope is 2.853 m.
+Combstruct 30 retains its 13 × 15 module footprint and seven-module terrace.
+The ceiling bottom is at 3.351 m, directly above the 3.333 m wall-cap station.
+The ceiling top is at 3.591 m. Both pitched roof halves move with the new ceiling.
 
-125 retains its 12.5 × 10 m footprint, three bedrooms and 7.5 × 2.5 m terrace
-continuing from the floor. Roof-slab top is 3.750 m; clear height is 3.270 m.
-Internal axes are snapped to the same rib grid. Plan SVGs use the revised layout.
+Combstruct 90 retains its 9.583 × 6.667 m footprint, terrace, balcony, three
+bedrooms and ground-floor office. The ground cap uses seven modules: the slab
+bottom is at 2.935 m and the upper floor at 3.175 m. Ground-floor clear height is
+2.695 m. The 45-degree roof and attic ceiling follow the revised level datum.
+The stair retains sixteen risers (about 183.4 mm) and 275 mm treads. Opening
+bottoms and lintels follow the new storey datum while retaining their module
+stations. This is a geometric adaptation, not a structural or code approval.
+
+Combstruct 125 retains its 12.5 × 10 m footprint and continuous terrace.
+The flat roof slab rests above the nine-module wall cap: bottom 3.768 m,
+top 4.008 m. The interior wall cap rows are present too.
+
+## Verification of the new strategy
+
+`qa/audit-length-joints.js` checks positive-volume intersections between exact
+orthogonal stock cells, including half-space clipping at gables. It rejects
+lateral cuts and overlength stock. `qa/check-connections.js PROJECT validate`
+independently checks rendered solids; angled pairs are sampled, not exhaustively
+proven. `qa/audit-model.js` checks grounded contact connectivity and slot
+orientation. `scripts/stock-profile.test.mjs` tests full end slots, stock limits,
+stagger and mirrored production variants. `scripts/audit-kit-stock.js` checks
+all delivered pieces against their uncut source stocks. Opening-frame and Flow
+assembly-prefix audits are regenerated from these same models.
+
+These are geometric checks. They do not establish load capacity, joint strength,
+fastener requirements, fabrication tolerances or stability during erection.
 
 ## Rebuilding
 

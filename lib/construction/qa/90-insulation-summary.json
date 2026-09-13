@@ -1,5 +1,5 @@
 {
-  "count": 2685,
+  "count": 2438,
   "method": "generated-cavity-blocks",
   "layers": [
     {
@@ -11,61 +11,61 @@
     {
       "id": "ground-rear",
       "label": "Ściany zewnętrzne",
-      "count": 162,
+      "count": 137,
       "filledCells": 136
     },
     {
       "id": "ground-front",
       "label": "Ściany zewnętrzne",
-      "count": 185,
+      "count": 161,
       "filledCells": 160
     },
     {
       "id": "ground-left",
       "label": "Ściany zewnętrzne",
-      "count": 98,
+      "count": 113,
       "filledCells": 98
     },
     {
       "id": "ground-right",
       "label": "Ściany zewnętrzne",
-      "count": 111,
+      "count": 100,
       "filledCells": 86
     },
     {
       "id": "upper-rear",
       "label": "Ściany zewnętrzne",
-      "count": 140,
+      "count": 116,
       "filledCells": 115
     },
     {
       "id": "upper-front",
       "label": "Ściany zewnętrzne",
-      "count": 139,
+      "count": 116,
       "filledCells": 115
     },
     {
       "id": "upper-left",
       "label": "Ściany zewnętrzne",
-      "count": 112,
-      "filledCells": 106
+      "count": 110,
+      "filledCells": 100
     },
     {
       "id": "upper-right",
       "label": "Ściany zewnętrzne",
-      "count": 128,
-      "filledCells": 111
+      "count": 116,
+      "filledCells": 106
     },
     {
       "id": "roof--1",
       "label": "Dach",
-      "count": 560,
+      "count": 492,
       "filledCells": 366
     },
     {
       "id": "roof-1",
       "label": "Dach",
-      "count": 570,
+      "count": 497,
       "filledCells": 378
     }
   ]

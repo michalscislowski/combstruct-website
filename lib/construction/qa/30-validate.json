@@ -1,9 +1,9 @@
 {
-  "boards": 1364,
-  "connectorBoards": 122,
-  "testedPairs": 6033,
-  "angledPairs": 2196,
-  "pointTests": 24243,
+  "boards": 1398,
+  "connectorBoards": 0,
+  "testedPairs": 6075,
+  "angledPairs": 2095,
+  "pointTests": 25034,
   "resolved": [],
   "unresolved": [],
   "validation": {
@@ -17,7 +17,7 @@
     "partitionShortY": 0.24,
     "exteriorVerticalSlots": "outward",
     "ceilingModule": 8,
-    "ceilingTop": 3.3333333333333335,
+    "ceilingTop": 3.591333333333333,
     "roofPitchDegrees": 35,
     "roofAxes": [
       -3.125,
@@ -54,43 +54,12 @@
       2.708333333333334
     ],
     "roofAxesAligned": true,
-    "connectorBoards": 122,
-    "connectorVariants": [
-      {
-        "position": "corner",
-        "edge": "slotted",
-        "removedMm": [
-          18,
-          102
-        ]
-      },
-      {
-        "position": "corner",
-        "edge": "plain",
-        "removedMm": [
-          18,
-          120
-        ]
-      },
-      {
-        "position": "inset",
-        "edge": "slotted",
-        "removedMm": [
-          18,
-          120
-        ],
-        "offsetMm": 120
-      },
-      {
-        "position": "inset",
-        "edge": "plain",
-        "removedMm": [
-          18,
-          120
-        ],
-        "offsetMm": 120
-      }
-    ],
+    "connectorBoards": 0,
+    "jointStrategy": "full-end-slot",
+    "fullEndSlotMm": 36,
+    "additionalEndTrimMm": 18,
+    "ceilingOnWallCap": true,
+    "connectorVariants": [],
     "restoredBoundaryRibs": [
       "terrace-floor-cross-row",
       "divider-floor-cross-row",
@@ -98,7 +67,7 @@
       "interior-wall-tangent-floor-and-ceiling-ribs",
       "wall-to-wall-uprights"
     ],
-    "remainingJunctionAssumptions": "Interior wall top horizontal rows at ceiling height are still omitted: adding them would duplicate parallel ceiling material. This separate assembly layout has not been resolved by connector cuts.",
+    "remainingJunctionAssumptions": "Geometric model only; joint strength and erection stability are not verified.",
     "loadValidated": false
   },
   "dimensions": {
@@ -112,13 +81,13 @@
     "floorBottom": 0,
     "floorTop": 0.24,
     "wallTop": 3.3333333333333335,
-    "ceilingBottom": 3.0933333333333337,
-    "ceilingTop": 3.3333333333333335,
-    "clearHeight": 2.8533333333333335,
+    "ceilingBottom": 3.3513333333333333,
+    "ceilingTop": 3.591333333333333,
+    "clearHeight": 3.1113333333333335,
     "roofAngle": 35,
-    "roofEaveY": 3.3333333333333335,
-    "roofUnderRidgeY": 5.229728749317964,
-    "roofRidgeY": 5.522714650620713,
+    "roofEaveY": 3.591333333333333,
+    "roofUnderRidgeY": 5.487728749317964,
+    "roofRidgeY": 5.780714650620713,
     "roofOverhang": 0.4166666666666667,
     "module": 0.4166666666666667,
     "boardDepth": 0.24,
@@ -127,7 +96,7 @@
     "referenceDepth": 6.1,
     "roofGableOverhang": 0.4166666666666667,
     "constructionOnly": true,
-    "usableConceptArea": 26.614966666666675,
+    "usableConceptArea": 26.248102666666668,
     "structuralFootprintArea": 33.85416666666667,
     "terraceArea": 15.798611111111114
   }
