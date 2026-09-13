@@ -80,22 +80,26 @@ have free horizontal ends, and the two recessed hall walls can start full becaus
 the crossing wall lies before their start node. Their far T ends retain the
 240 mm reservation. Extending those native boards removes another 42 short
 endings without moving a wall or opening, or introducing a new board profile.
-Four remain in the slab between offset ground-floor and attic partition nodes.
-Extending any of those four towards either neighbor intersects an upright.
-This is a constraint of the current junction layout, not a general lower bound
-for Combstruct designs.
+The last four slab endings are removed by exchanging the full and ending
+upright plies in `upper-hall-notch-west` and `upper-hall-notch-north`.
+`verticalPhase` selects the full upright ply; the supporting slab and upper
+ceiling reserve that same ply. The exchange applies throughout each upright,
+keeping staggered seams and all wall axes, rooms and openings unchanged.
 
 | Project | Short endings before → after | Delivered boards | Installed pieces | Sheets | Insulation pieces |
 | --- | --- | ---: | ---: | ---: | ---: |
 | 30 | 84 → 0 | 1,331 | 1,364 | 193 | 1,393 |
-| 90 | 151 → 4 | 3,405 | 3,532 | 482 | 2,685 |
+| 90 | 151 → 0 | 3,401 | 3,528 | 482 | 2,685 |
 | 125 | 254 → 0 | 2,652 | 2,738 | 414 | 2,316 |
 
 `qa/stock-layout.json` records the before/after counts. Per-rib volume and merged
 longitudinal intervals were compared before connector cuts: all 468 / 1,256 /
 850 rib lines and openings are preserved. In 90, the four reviewed walls gain
 material at previously shortened ends; every previous solid interval remains.
-All other raw rib volumes and limits are unchanged. Connector
+All other raw rib volumes and limits are unchanged in that terminal extension
+step. The subsequent upright-ply exchange preserves combined raw volumes and
+longitudinal intervals across all 629 paired ribs (`qa/90-ply-swap-coverage.json`);
+individual physical plies change intentionally. Connector
 schedules were then regenerated and checked for intersections. Axis-aligned
 pairs use profile-cell samples; angled pairs use representative interior samples,
 not an exhaustive solid Boolean proof. Shared diagonal end faces are contacts,
@@ -104,12 +108,13 @@ not intersections; boundary samples within 1 micrometre are excluded.
 `qa/audit-stock-layout.js` checks 2,346 schedules, 40 terminal policies and compares
 12 small cases with an independent exhaustive enumeration.
 `qa/audit-90-short-endings.js` verifies the longer balcony/hall boards and the
-uprights blocking both extension directions for each of the four remaining ends.
+absence of one-module boards, the four longer replacements, and matching
+upright/slab/ceiling ply reservations.
 `qa/audit-model.js` checks stock profiles,
 connector cut volumes, slot direction and contact connectivity. An independent
 vertex-to-surface check covers very thin angled tips when the geometry BVH's
 threshold query misses their contact. `qa/audit-vertex-contact.js` also tests
-separated and remote coplanar faces. All 3,532 / 2,738 pieces in 90 / 125 are
+separated and remote coplanar faces. All 3,528 / 2,738 pieces in 90 / 125 are
 connected to the ground contact graph. Regenerating Flow checks all 1,364 assembly
 prefixes of 30, requiring contact with an already placed element or the ground.
 

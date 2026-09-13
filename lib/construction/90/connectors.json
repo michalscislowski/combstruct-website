@@ -683,7 +683,7 @@
       "removedRun": 0.12
     }
   ],
-  "[\"Sufit poddasza\",\"\",\"ceiling\",1,7,0,0,0,5,0,2.0833333]": [
+  "[\"Sufit poddasza\",\"\",\"ceiling\",1,7,0,0,0,6,0,2.26]": [
     {
       "end": "start",
       "edge": "plain",
@@ -692,7 +692,7 @@
       "removedRun": 0.12
     }
   ],
-  "[\"Sufit poddasza\",\"\",\"ceiling\",1,8,0,0,0,5,0,2.0833333]": [
+  "[\"Sufit poddasza\",\"\",\"ceiling\",1,8,0,0,0,6,0,2.26]": [
     {
       "end": "start",
       "edge": "plain",
@@ -755,7 +755,7 @@
       "removedRun": 0.12
     }
   ],
-  "[\"Sufit poddasza\",\"\",\"ceiling\",1,7,0,0,7.0833333,6,0,2.5]": [
+  "[\"Sufit poddasza\",\"\",\"ceiling\",1,7,0,0,7.5,5,0,2.0833333]": [
     {
       "end": "end",
       "edge": "plain",
@@ -764,7 +764,7 @@
       "removedRun": 0.12
     }
   ],
-  "[\"Sufit poddasza\",\"\",\"ceiling\",1,8,0,0,7.0833333,6,0,2.5]": [
+  "[\"Sufit poddasza\",\"\",\"ceiling\",1,8,0,0,7.5,5,0,2.0833333]": [
     {
       "end": "end",
       "edge": "plain",
@@ -1974,7 +1974,7 @@
       "removedRun": 0.12
     }
   ],
-  "[\"upper-hall-notch-west\",\"upper-hall-notch-west\",\"partition-vertical\",1,1,0,1,0,5,0,2.0833333]": [
+  "[\"upper-hall-notch-west\",\"upper-hall-notch-west\",\"partition-vertical\",1,1,0,0,0,5,0,2.0833333]": [
     {
       "end": "start",
       "edge": "plain",
@@ -1983,7 +1983,7 @@
       "removedRun": 0.12
     }
   ],
-  "[\"upper-hall-notch-west\",\"upper-hall-notch-west\",\"partition-vertical\",1,1,0,1,2.0833333,3,0,1.25]": [
+  "[\"upper-hall-notch-west\",\"upper-hall-notch-west\",\"partition-vertical\",1,1,0,0,2.0833333,3,0,1.25]": [
     {
       "end": "end",
       "edge": "plain",
@@ -1992,7 +1992,7 @@
       "removedRun": 0.12
     }
   ],
-  "[\"upper-hall-notch-west\",\"upper-hall-notch-west\",\"partition-vertical\",1,2,0,1,0,5,0,2.0833333]": [
+  "[\"upper-hall-notch-west\",\"upper-hall-notch-west\",\"partition-vertical\",1,2,0,0,0,5,0,2.0833333]": [
     {
       "end": "start",
       "edge": "plain",
@@ -2001,7 +2001,7 @@
       "removedRun": 0.12
     }
   ],
-  "[\"upper-hall-notch-west\",\"upper-hall-notch-west\",\"partition-vertical\",1,2,0,1,2.0833333,3,0,1.25]": [
+  "[\"upper-hall-notch-west\",\"upper-hall-notch-west\",\"partition-vertical\",1,2,0,0,2.0833333,3,0,1.25]": [
     {
       "end": "end",
       "edge": "plain",
@@ -2010,7 +2010,7 @@
       "removedRun": 0.12
     }
   ],
-  "[\"upper-hall-notch-north\",\"upper-hall-notch-north\",\"partition-vertical\",1,0,0,1,0,5,0,2.0833333]": [
+  "[\"upper-hall-notch-north\",\"upper-hall-notch-north\",\"partition-vertical\",1,0,0,0,0,5,0,2.0833333]": [
     {
       "end": "start",
       "edge": "plain",
@@ -2019,25 +2019,7 @@
       "removedRun": 0.12
     }
   ],
-  "[\"upper-hall-notch-north\",\"upper-hall-notch-north\",\"partition-vertical\",1,0,0,1,2.0833333,3,0,1.25]": [
-    {
-      "end": "end",
-      "edge": "plain",
-      "offset": 0,
-      "width": 0.018,
-      "removedRun": 0.12
-    }
-  ],
-  "[\"upper-hall-notch-north\",\"upper-hall-notch-north\",\"partition-vertical\",1,1,0,1,0,5,0,0.24]": [
-    {
-      "end": "start",
-      "edge": "plain",
-      "offset": 0.12,
-      "width": 0.018,
-      "removedRun": 0.12
-    }
-  ],
-  "[\"upper-hall-notch-north\",\"upper-hall-notch-north\",\"partition-vertical\",1,1,0,1,2.0833333,3,0.3986667,1.25]": [
+  "[\"upper-hall-notch-north\",\"upper-hall-notch-north\",\"partition-vertical\",1,0,0,0,2.0833333,3,0,1.25]": [
     {
       "end": "end",
       "edge": "plain",
@@ -2046,7 +2028,7 @@
       "removedRun": 0.12
     }
   ],
-  "[\"upper-hall-notch-north\",\"upper-hall-notch-north\",\"partition-vertical\",1,2,0,1,0,5,0,2.0833333]": [
+  "[\"upper-hall-notch-north\",\"upper-hall-notch-north\",\"partition-vertical\",1,1,0,0,0,5,0,0.24]": [
     {
       "end": "start",
       "edge": "plain",
@@ -2055,7 +2037,25 @@
       "removedRun": 0.12
     }
   ],
-  "[\"upper-hall-notch-north\",\"upper-hall-notch-north\",\"partition-vertical\",1,2,0,1,2.0833333,3,0,1.25]": [
+  "[\"upper-hall-notch-north\",\"upper-hall-notch-north\",\"partition-vertical\",1,1,0,0,2.0833333,3,0.3986667,1.25]": [
+    {
+      "end": "end",
+      "edge": "plain",
+      "offset": 0,
+      "width": 0.018,
+      "removedRun": 0.12
+    }
+  ],
+  "[\"upper-hall-notch-north\",\"upper-hall-notch-north\",\"partition-vertical\",1,2,0,0,0,5,0,2.0833333]": [
+    {
+      "end": "start",
+      "edge": "plain",
+      "offset": 0.12,
+      "width": 0.018,
+      "removedRun": 0.12
+    }
+  ],
+  "[\"upper-hall-notch-north\",\"upper-hall-notch-north\",\"partition-vertical\",1,2,0,0,2.0833333,3,0,1.25]": [
     {
       "end": "end",
       "edge": "plain",

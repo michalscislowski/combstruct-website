@@ -33,10 +33,10 @@
       "deliveryLengthM": 2406.72
     },
     "90": {
-      "geometrySha256": "209950d06e58172aaea6186f6089254337a60544f946633685b445cfc312d0ed",
-      "physicalBoards": 3532,
-      "actualLengthM": 5289.256543194585,
-      "displayFullBoards": 2409,
+      "geometrySha256": "0c920318bbc28145fb1ca409189a9eb6c95b3e0231c6870c03e1e0ea65291d93",
+      "physicalBoards": 3528,
+      "actualLengthM": 5289.256542792254,
+      "displayFullBoards": 2410,
       "sheets": 482,
       "insulationBlocks": 2685,
       "variants": [
@@ -54,8 +54,8 @@
         }
       ],
       "materialBasis": "delivery-before-cutting",
-      "deliveryBoards": 3405,
-      "deliveryLengthM": 6021.93666667
+      "deliveryBoards": 3401,
+      "deliveryLengthM": 6024.96666667
     },
     "125": {
       "geometrySha256": "d07fa8cbb1ff7596185a51b8f0c98f92f2af7671119004475c1683a237f1625c",

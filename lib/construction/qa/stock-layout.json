@@ -26,7 +26,7 @@
       "shortEndingLocations": []
     },
     "90": {
-      "geometrySha256": "209950d06e58172aaea6186f6089254337a60544f946633685b445cfc312d0ed",
+      "geometrySha256": "0c920318bbc28145fb1ca409189a9eb6c95b3e0231c6870c03e1e0ea65291d93",
       "before": {
         "pieces": 3689,
         "delivered": 3519,
@@ -34,23 +34,26 @@
         "oneModule": 172
       },
       "after": {
-        "pieces": 3532,
-        "delivered": 3405,
-        "shortEndings": 4,
-        "oneModule": 4
+        "pieces": 3528,
+        "delivered": 3401,
+        "shortEndings": 0,
+        "oneModule": 0
       },
       "preservedRibLines": 1256,
       "ribVolumesAndReservedIntervalsUnchanged": false,
-      "shortEndingLocations": [
-        "Strop, balkon i zadaszenia"
-      ],
-      "previousMaterialPreserved": true,
+      "shortEndingLocations": [],
       "extendedHorizontalEnds": [
         "balcony-support-front",
         "balcony-support-rear",
         "upper-hall-notch-north",
         "upper-hall-notch-west"
-      ]
+      ],
+      "pairedMaterialPreserved": true,
+      "uprightPlySwapWalls": [
+        "upper-hall-notch-west",
+        "upper-hall-notch-north"
+      ],
+      "plySwapPreservedPairedRibs": 629
     },
     "125": {
       "geometrySha256": "d07fa8cbb1ff7596185a51b8f0c98f92f2af7671119004475c1683a237f1625c",

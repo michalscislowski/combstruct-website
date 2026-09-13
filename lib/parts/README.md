@@ -34,8 +34,8 @@ existing user rates. Then rebundle `lib/parts/viewer.js` and
 Bundle/run `scripts/audit-kit-stock.js` with the same Three.js. It independently
 checks provenance against the original construction schedule and tests all
 2.5 million model vertices against their delivered stock boundaries and merged
-connector cuts. Current model counts are 1364 / 3532 / 2738; delivery counts are
-1331 / 3405 / 2652. Full ordinary 2.5 m delivery quantities: 202 / 480 / 466.
+connector cuts. Current model counts are 1364 / 3528 / 2738; delivery counts are
+1331 / 3401 / 2652. Full ordinary 2.5 m delivery quantities: 202 / 471 / 466.
 
 Browser QA covers native variants, absence of fitted previews, identical Flow
 and project data, tabs, assembly, mobile widths and all 12 price/order variants.

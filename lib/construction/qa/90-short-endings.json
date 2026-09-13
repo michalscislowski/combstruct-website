@@ -1,75 +1,46 @@
 {
   "project": "90",
   "shortEndingsBefore": 46,
-  "shortEndingsAfter": 4,
+  "shortEndingsAfter": 0,
   "removed": {
     "balcony": 28,
-    "hall": 14
+    "hall": 14,
+    "slabAfterPlySwap": 4
   },
-  "remaining": [
+  "replacements": [
     {
-      "id": "board-426",
-      "position": [
-        -2.291666666666667,
-        3.2133333333333334,
-        -0.8333333333333335
-      ],
-      "blockedBy": {
-        "left": [
-          "upper-hall-notch-north"
-        ],
-        "right": [
-          "ground-office-south"
-        ]
-      }
+      "board": "board-425",
+      "modules": 4,
+      "trim": "right",
+      "lengthM": 1.4266666666666667,
+      "wall": "upper-hall-notch-north"
     },
     {
-      "id": "board-438",
-      "position": [
-        -1.875,
-        3.2133333333333334,
-        -0.8333333333333335
-      ],
-      "blockedBy": {
-        "left": [
-          "upper-hall-notch-north"
-        ],
-        "right": [
-          "ground-office-south"
-        ]
-      }
+      "board": "board-437",
+      "modules": 4,
+      "trim": "right",
+      "lengthM": 1.4266666666666667,
+      "wall": "upper-hall-notch-north"
     },
     {
-      "id": "board-450",
-      "position": [
-        -1.4583333333333335,
-        3.2133333333333334,
-        -0.8333333333333335
-      ],
-      "blockedBy": {
-        "left": [
-          "upper-hall-notch-north"
-        ],
-        "right": [
-          "ground-office-south"
-        ]
-      }
+      "board": "board-449",
+      "modules": 4,
+      "trim": "right",
+      "lengthM": 1.4266666666666667,
+      "wall": "upper-hall-notch-north"
     },
     {
-      "id": "board-726",
-      "position": [
-        -2.7083333333333335,
-        3.2133333333333334,
-        0
-      ],
-      "blockedBy": {
-        "left": [
-          "ground-service-east"
-        ],
-        "right": [
-          "upper-hall-notch-west"
-        ]
-      }
+      "board": "board-725",
+      "modules": 5,
+      "trim": null,
+      "lengthM": 2.0833333333333335,
+      "wall": "upper-hall-notch-west"
     }
-  ]
+  ],
+  "swappedUprightWalls": [
+    "upper-hall-notch-west",
+    "upper-hall-notch-north"
+  ],
+  "panelReservationsFollowUprightPhase": true,
+  "remaining": []
 }
