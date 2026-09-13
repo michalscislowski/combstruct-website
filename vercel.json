@@ -7,22 +7,100 @@
   "cleanUrls": false,
   "trailingSlash": false,
   "redirects": [
-    {"source": "/:locale(en|pl|de)", "destination": "/", "permanent": true},
-    {"source": "/:locale(en|pl|de)/contact", "destination": "/kontakt.html", "permanent": true},
-    {"source": "/contact", "destination": "/kontakt.html", "permanent": true},
-    {"source": "/kontakt", "destination": "/kontakt.html", "permanent": true},
-    {"source": "/:locale(en|pl|de)/projects", "destination": "/projekty.html", "permanent": true},
-    {"source": "/projects", "destination": "/projekty.html", "permanent": true},
-    {"source": "/projekty", "destination": "/projekty.html", "permanent": true},
-    {"source": "/:locale(en|pl|de)/faq", "destination": "/#pytania", "permanent": true},
-    {"source": "/faq", "destination": "/#pytania", "permanent": true},
-    {"source": "/:locale(en|pl|de)/:page(products|process|about|configurator)", "destination": "/#system", "permanent": true},
-    {"source": "/:page(products|process|about|configurator)", "destination": "/#system", "permanent": true}
+    {
+      "source": "/en",
+      "destination": "/en/index.html",
+      "permanent": false
+    },
+    {
+      "source": "/en/contact",
+      "destination": "/en/contact.html",
+      "permanent": true
+    },
+    {
+      "source": "/en/projects",
+      "destination": "/en/projects.html",
+      "permanent": true
+    },
+    {
+      "source": "/en/faq",
+      "destination": "/en/index.html#pytania",
+      "permanent": true
+    },
+    {
+      "source": "/en/:page(products|process|about|configurator)",
+      "destination": "/en/index.html#system",
+      "permanent": true
+    },
+    {
+      "source": "/:locale(pl|de)",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/:locale(pl|de)/contact",
+      "destination": "/kontakt.html",
+      "permanent": true
+    },
+    {
+      "source": "/contact",
+      "destination": "/kontakt.html",
+      "permanent": true
+    },
+    {
+      "source": "/kontakt",
+      "destination": "/kontakt.html",
+      "permanent": true
+    },
+    {
+      "source": "/:locale(pl|de)/projects",
+      "destination": "/projekty.html",
+      "permanent": true
+    },
+    {
+      "source": "/projects",
+      "destination": "/projekty.html",
+      "permanent": true
+    },
+    {
+      "source": "/projekty",
+      "destination": "/projekty.html",
+      "permanent": true
+    },
+    {
+      "source": "/:locale(pl|de)/faq",
+      "destination": "/#pytania",
+      "permanent": true
+    },
+    {
+      "source": "/faq",
+      "destination": "/#pytania",
+      "permanent": true
+    },
+    {
+      "source": "/:locale(pl|de)/:page(products|process|about|configurator)",
+      "destination": "/#system",
+      "permanent": true
+    },
+    {
+      "source": "/:page(products|process|about|configurator)",
+      "destination": "/#system",
+      "permanent": true
+    }
   ],
   "headers": [
-    {"source": "/(.*)", "headers": [
-      {"key": "X-Content-Type-Options", "value": "nosniff"},
-      {"key": "Referrer-Policy", "value": "strict-origin-when-cross-origin"}
-    ]}
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        }
+      ]
+    }
   ]
 }

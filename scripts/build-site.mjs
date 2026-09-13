@@ -2,6 +2,7 @@ import {cp, mkdir, readFile, readdir, rm, stat, writeFile} from 'node:fs/promise
 import {fileURLToPath} from 'node:url';
 import path from 'node:path';
 import {updateShareMetadata} from './share-metadata.mjs';
+import {buildLocales} from './build-locales.mjs';
 
 const root = fileURLToPath(new URL('../', import.meta.url));
 const source = path.join(root, 'site');
@@ -50,11 +51,12 @@ for (const id of ['30','90','125']) {
     image:html.match(/<img class="project-visual" src="([^"]+)"/)[1],variants});
 }
 await writeFile(path.join(source, 'assets/project-offers.js'), `window.COMBSTRUCT_OFFERS = ${JSON.stringify(offers,null,2)};\n`);
+await buildLocales(source);
 const files = await walk(source);
 for (const file of files) {
   if (!/\.(html|css)$/.test(file)) continue;
   const content = await readFile(file, 'utf8');
-  const refs = [...content.matchAll(/(?:src|href|poster|data-src|data-model-src)="([^"]+)"|url\(['"]?([^)'"\s]+)/g)];
+  const refs = [...content.matchAll(/(?:src|href|poster|data-src|data-model-src|data-parts-source)="([^"]+)"|url\(['"]?([^)'"\s]+)/g)];
   for (const match of refs) {
     const ref = match[1] || match[2];
     if (/^(?:[a-z]+:|\/\/|#)/i.test(ref)) continue;

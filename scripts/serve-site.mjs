@@ -8,17 +8,18 @@ const config = JSON.parse(await readFile(new URL('../vercel.json', import.meta.u
 const redirects = config.redirects.map(rule => ({...rule,
   pattern: new RegExp('^' + rule.source.replace(/:[a-z]+\(([^)]+)\)/g, '($1)') + '/?$')}));
 const types = {'.html':'text/html; charset=utf-8','.css':'text/css; charset=utf-8',
-  '.js':'text/javascript; charset=utf-8','.png':'image/png','.jpg':'image/jpeg',
+  '.js':'text/javascript; charset=utf-8','.vtt':'text/vtt; charset=utf-8','.json':'application/json; charset=utf-8','.png':'image/png','.jpg':'image/jpeg',
   '.svg':'image/svg+xml','.mp4':'video/mp4','.xml':'application/xml','.txt':'text/plain',
   '.ico':'image/x-icon','.webmanifest':'application/manifest+json'};
 const server = http.createServer(async(req,res) => {
   try {
     const url = new URL(req.url, 'http://localhost');
     const redirect = redirects.find(rule => rule.pattern.test(url.pathname));
-    if (redirect) {res.writeHead(308,{Location:redirect.destination});res.end();return;}
+    if (redirect) {const destination=new URL(redirect.destination,'http://localhost');destination.search=url.search;res.writeHead(redirect.permanent?308:307,{Location:destination.pathname+destination.search+destination.hash});res.end();return;}
     const pathname = decodeURIComponent(url.pathname);
-    const file = path.resolve(root, '.' + (pathname === '/' ? '/index.html' : pathname));
-    const info = file.startsWith(root) ? await stat(file).catch(() => null) : null;
+    let file = path.resolve(root, '.' + (pathname === '/' ? '/index.html' : pathname));
+    let info = file.startsWith(root) ? await stat(file).catch(() => null) : null;
+    if(info?.isDirectory()){file=path.join(file,'index.html');info=await stat(file).catch(()=>null);}
     if (!info?.isFile()) {res.writeHead(404);res.end('Nie znaleziono strony.');return;}
     let start=0,end=info.size-1,status=200;
     const headers={'Content-Type':types[path.extname(file)]||'application/octet-stream','Accept-Ranges':'bytes'};
