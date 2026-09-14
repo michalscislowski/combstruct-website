@@ -62,6 +62,11 @@ same locale pipeline. `#robotics` opens a lights-off production line;
 `#robotics-montaz` opens the gantry assembly example. Pause, restart, a timeline,
 stage buttons and an overview/operation close-up control are available. Automatic
 motion stops offscreen, in background tabs and under reduced-motion preferences.
+The factory close-up follows the sheet/board group's actual position every frame.
+Framing eases around milling and camera motion is damped in time; caption changes
+never reset the view. Tracking preserves manual orbit, pan and relative zoom.
+Overview mode remains stationary. Seeking/restarting explicitly repositions the
+camera, while pause/resume retains the current frame without a catch-up jump.
 
 The factory follows the requested order: feed one 2500 × 1250 × 18 mm sheet,
 cut five straight blanks, stand them on their long edges, mill from above,
@@ -95,3 +100,5 @@ Local QA: `outputs/combstruct-robotics/check.cjs` checks both processes at their
 main milestones in PL/EN, rejects renderer errors, checks motion/pause, switches
 back to BIM/Flow, and captures desktop and 390 px layouts. Existing locale tests
 also verify quantity/coordinate preservation and deterministic English builds.
+`check-camera.cjs` samples playback across all factory stage boundaries, checks
+continuous tracking, stationary overview, manual orbit/zoom, pause and restart.
