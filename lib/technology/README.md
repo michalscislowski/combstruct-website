@@ -82,9 +82,14 @@ Lengths/variants and project kits remain governed by Flow and the existing stock
 catalogue. This is a representative five-board cycle, not an entire house order.
 
 The assembly example uses the actual Combstruct 30 geometry and the existing
-1,398-piece contact-ordered sequence. It shows four consecutive pick/place cycles
-at each of four construction stages, then the completed model. Stage transitions
-skip repeated operations and say so in the UI. The selected part remains attached
+1,398-piece contact-ordered sequence. It shows four complete native boards at
+each of four construction stages, then the completed model. Selection rejects
+opening/skew fragments and verifies the actual geometry against its uncut stock
+dimensions. It does not substitute longer geometry for a short installed piece.
+The house retains its existing geometry and sequence; omitted operations are
+represented by the preceding installed prefix and identified as skips in the UI.
+Both profile axes are aligned for flat pickup on the table, then transformed
+back to the exact installed pose. The selected part remains attached
 to the gripper in transit, then joins the installed prefix at release. The gantry
 returns to its feed position before the next cycle. IDs and predecessor contacts
 are exposed in `getRoboticsState()` for QA. This demonstrates geometric sequence
@@ -102,3 +107,6 @@ back to BIM/Flow, and captures desktop and 390 px layouts. Existing locale tests
 also verify quantity/coordinate preservation and deterministic English builds.
 `check-camera.cjs` samples playback across all factory stage boundaries, checks
 continuous tracking, stationary overview, manual orbit/zoom, pause and restart.
+Bundle `scripts/robotics-assembly.test.js` with the same Three.js and run with Node
+to check native selection, rejection of the 24 cm fragments, reconstruction of
+every carried vertex in its installed position, grip contacts and predecessors.
