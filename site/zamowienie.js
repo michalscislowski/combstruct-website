@@ -35,7 +35,7 @@
     return rows.join('\n');
   }
   function update() {
-    email.href = `mailto:contact@combstruct.com?subject=${encodeURIComponent(`Zapytanie o zamówienie — ${project.name}`)}&body=${encodeURIComponent(message())}`;
+    email.href = `mailto:daniel@combstruct.com?subject=${encodeURIComponent(`Zapytanie o zamówienie — ${project.name}`)}&body=${encodeURIComponent(message())}`;
     document.querySelector('#inquiry-copy-status').textContent = '';
   }
   form.addEventListener('input', update);
@@ -44,7 +44,7 @@
   document.querySelector('#inquiry-copy').addEventListener('click', async() => {
     try {
       await navigator.clipboard.writeText(message());
-      document.querySelector('#inquiry-copy-status').textContent = 'Treść skopiowana. Wklej ją do wiadomości na contact@combstruct.com.';
+      document.querySelector('#inquiry-copy-status').textContent = 'Treść skopiowana. Wklej ją do wiadomości na daniel@combstruct.com.';
     } catch {
       const manual = document.querySelector('#inquiry-manual-copy');
       manual.hidden = false;
