@@ -2,11 +2,11 @@
 <html lang="en"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#254331">
-<meta name="description" content="Explore Combstruct® technology: a system handbook with 3D joints, the Combstruct BIM digital home model and Combstruct Flow tools for design, manufacturing and assembly.">
-<title>Combstruct® technology — system, BIM &amp; Flow</title>
+<meta name="description" content="Explore Combstruct® technologies: the 3D construction handbook, the Combstruct BIM digital home, Combstruct Flow and our concept for automated manufacturing and robotic assembly.">
+<title>Combstruct® technologies — system, BIM, Flow and Robotics</title>
 <link rel="stylesheet" href="../styles.css"><link rel="stylesheet" href="../technologie.css">
 <link rel="stylesheet" href="../parts.css">
-<script defer src="assets/technologie.js?v=81d5f78f"></script>
+<script defer src="assets/technologie.js?v=f7b5a250"></script>
 <!-- Share metadata: generated from the page title and description. -->
 <link rel="canonical" href="https://www.combstruct.com/en/technology.html">
 <link rel="icon" type="image/x-icon" href="../favicon.ico">
@@ -17,8 +17,8 @@
 <meta property="og:site_name" content="Combstruct">
 <meta property="og:locale" content="en_GB">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Combstruct® technology — system, BIM &amp; Flow">
-<meta property="og:description" content="Explore Combstruct® technology: a system handbook with 3D joints, the Combstruct BIM digital home model and Combstruct Flow tools for design, manufacturing and assembly.">
+<meta property="og:title" content="Combstruct® technologies — system, BIM, Flow and Robotics">
+<meta property="og:description" content="Explore Combstruct® technologies: the 3D construction handbook, the Combstruct BIM digital home, Combstruct Flow and our concept for automated manufacturing and robotic assembly.">
 <meta property="og:url" content="https://www.combstruct.com/en/technology.html">
 <meta property="og:image" content="https://www.combstruct.com/assets/share/combstruct-30.jpg">
 <meta property="og:image:secure_url" content="https://www.combstruct.com/assets/share/combstruct-30.jpg">
@@ -27,8 +27,8 @@
 <meta property="og:image:height" content="751">
 <meta property="og:image:alt" content="Combstruct 30 — finished house visualisation domu">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Combstruct® technology — system, BIM &amp; Flow">
-<meta name="twitter:description" content="Explore Combstruct® technology: a system handbook with 3D joints, the Combstruct BIM digital home model and Combstruct Flow tools for design, manufacturing and assembly.">
+<meta name="twitter:title" content="Combstruct® technologies — system, BIM, Flow and Robotics">
+<meta name="twitter:description" content="Explore Combstruct® technologies: the 3D construction handbook, the Combstruct BIM digital home, Combstruct Flow and our concept for automated manufacturing and robotic assembly.">
 <meta name="twitter:image" content="https://www.combstruct.com/assets/share/combstruct-30.jpg">
 <meta name="twitter:image:alt" content="Combstruct 30 — finished house visualisation domu">
 <!-- End share metadata -->
@@ -58,6 +58,7 @@
     <button id="tab-combstruct" role="tab" aria-selected="true" aria-controls="panel-combstruct" data-technology="combstruct"><strong>Combstruct®</strong><span>System &amp; 3D handbook</span></button>
     <button id="tab-bim" role="tab" aria-selected="false" aria-controls="panel-bim" tabindex="-1" data-technology="bim"><strong>Combstruct BIM</strong><span>A digital model of your home</span></button>
     <button id="tab-flow" role="tab" aria-selected="false" aria-controls="panel-flow" tabindex="-1" data-technology="flow"><strong>Combstruct Flow</strong><span>From design to assembly</span></button>
+    <button id="tab-robotics" role="tab" aria-selected="false" aria-controls="panel-robotics" tabindex="-1" data-technology="robotics"><strong>Combstruct Robotics</strong><span>Automated production and construction</span></button>
   </div>
   <section id="panel-combstruct" role="tabpanel" aria-labelledby="tab-combstruct">
     <div class="panel-heading"><h2>How to assemble Combstruct.</h2><p>Explore the components, slot directions and panel connections. Rotate the model to inspect each joint from every side.</p></div>
@@ -100,6 +101,16 @@
     <div class="flow-automation"><h3>Floor plans in.<br>Production order out.</h3><div><p>We are developing the Combstruct AI model to turn building designs into comb-board structures. Automatic adaptation to the system grid, component schedules and precise production orders — in one process.</p><p>Less manual redrawing and data entry. A shorter route from design to cut components and assembly.</p></div></div>
     <div class="flow-partners"><h3>One system.<br>Partners at every stage.</h3><div class="flow-partner-grid"><article><h4>Developers and investors</h4><p>Adapt your own designs, plan materials and use the same standard across multiple sites. Make orders easier to plan and repeat projects easier to deliver.</p></article><article><h4>Sheet and component manufacturers</h4><p>OSB, MFP and plywood become identified parts of a specific building. Model data defines what to cut, how many parts to make and how to prepare them for delivery.</p></article><article><h4>Designers and contractors</h4><p>A shared model with component IDs and clear connections. From adapting the design to preparing site packages and the assembly sequence.</p></article></div></div>
     <div class="flow-contact"><div><h3>Do you design, manufacture or build?</h3><p>Talk to us about using Combstruct in your business. We also welcome enquiries about individual house projects.</p></div><a class="button button-green" href="contact.html">Discuss a partnership</a></div>
+  </section>
+  <section id="panel-robotics" role="tabpanel" aria-labelledby="tab-robotics" hidden>
+    <div class="panel-heading robotics-heading"><h2>From panel to home.<br>Move by move.</h2><div><span class="robotics-concept">Automation concept</span><p>A repeatable component, precise joints and a digital model open the way to robotics. Explore our concept for automated kit production and structural assembly.</p></div></div>
+    <div class="robotics-processes" role="group" aria-label="Combstruct Robotics processes"><button type="button" data-robotics-process="factory" aria-pressed="true"><strong>Lights-off factory</strong><span>Panels in. Assembly kits out.</span></button><button type="button" data-robotics-process="site" aria-pressed="false"><strong>Robotic assembly</strong><span>Model-led. Robot-built.</span></button></div>
+    <div class="robotics-stage"><div id="robotics-mount" class="viewer-mount"></div><div class="robotics-transport"><button type="button" id="robotics-play">Play</button><label class="robotics-seek-label">Process timeline<input id="robotics-seek" aria-label="Process timeline" type="range" min="0" max="1" step=".0001" value="0"></label><output id="robotics-time" for="robotics-seek">0:00</output><button type="button" id="robotics-detail" aria-pressed="false">Operation close-up</button><button type="button" id="robotics-replay">Restart</button><button type="button" data-reset-view>Centre view</button></div></div>
+    <div id="robotics-steps" class="robotics-steps" role="group" aria-label="Process stages"></div>
+    <div class="robotics-explanation" aria-live="polite"><h3 id="robotics-title"></h3><p id="robotics-text"></p></div>
+    <p id="robotics-note" class="robotics-note">Concept animation of the production line.</p>
+    <div class="robotics-summary"><article><h3>Production continues.<br>The lights can stay off.</h3><p>Material feed, cutting, edge positioning, milling, inspection and packing. One flow, driven by the data for a specific building.</p></article><article><h3>Digital instructions.<br>Physical construction.</h3><p>An XYZ gantry with a rotating gripper moves above the structure. It picks up identified parts and places them at the positions recorded in the Combstruct model.</p></article></div>
+    <div class="flow-contact"><div><h3>Do you build machines or automate production?</h3><p>Let us explore Combstruct Robotics together, from production lines for panel manufacturers to robotic structural assembly.</p></div><a class="button button-green" href="contact.html">Discuss robotics with us</a></div>
   </section>
   <div class="technology-cta"><div><h2>Explore the technology<br>in your future home.</h2><p>Choose a design and look inside its structure.</p></div><a class="button button-green" href="projects.html">Explore DIY and assembled home kits</a></div>
   <noscript><p>Enable JavaScript to open the 3D handbook and switch between technologies.</p></noscript>

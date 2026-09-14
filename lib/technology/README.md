@@ -1,6 +1,6 @@
 # Technology page
 
-`site/technologie.html` presents three tabs: a 17-topic construction handbook, an interactive BIM demonstration, and Combstruct Flow for digital design, production and assembly. Navigation links are present in the existing desktop/mobile navigation and footers. Each handbook topic and technology has a URL hash and supports browser history.
+`site/technologie.html` presents four tabs: a 17-topic construction handbook, an interactive BIM demonstration, Combstruct Flow for digital design/production/assembly, and Combstruct Robotics. Navigation links are present in the existing desktop/mobile navigation and footers. Each handbook topic and technology has a URL hash and supports browser history.
 
 `content.js` contains Polish handbook copy and four end-profile choices: ordinary,
 240 mm ending, full 36 mm end slot, and 258 mm ending. `geometry.js` uses the
@@ -54,3 +54,39 @@ use the same profiles, counts and selection controls.
 The generator finds triangle-surface contacts with a 0.05 mm tolerance, using a spatial hash and BVHs. Each added board must touch the ground or an already installed board; wall verticals and horizontal rows advance from lower to higher levels. Every prefix is audited, disconnected models fail generation, and the output retains each board's earlier contact as a witness. The regenerated model passes all 1,398 assembly prefixes with an earlier contact recorded for each added piece. The test proves geometric connectivity, not load-bearing stability, fastening, collision-free insertion paths or an engineered erection plan. Coplanar BVH edge warnings are counted: the algorithm uses distance only, not the unavailable contact-edge coordinates. Slider updates reveal whole source boards and work in both directions.
 
 The page distinguishes the existing model/identification/presentation tooling from the developing automatic adaptation of arbitrary client floor plans and production-order generation. No arbitrary-plan upload/conversion service, validated CAM export, or external manufacturing-order API is implemented by this website change. The collaboration CTA uses the existing contact route. The old material tab and its scene/styles are removed; old `#mycelium` and `#manufacturing` links resolve to `#flow`.
+
+## Combstruct Robotics
+
+`robotics.js` adds two concept animations, with Polish and English copy from the
+same locale pipeline. `#robotics` opens a lights-off production line;
+`#robotics-montaz` opens the gantry assembly example. Pause, restart, a timeline,
+stage buttons and an overview/operation close-up control are available. Automatic
+motion stops offscreen, in background tabs and under reduced-motion preferences.
+
+The factory follows the requested order: feed one 2500 × 1250 × 18 mm sheet,
+cut five straight blanks, stand them on their long edges, mill from above,
+inspect/identify, then package. Partial machining uses the shared H/T/P geometry;
+the completed part uses `beamGeometry(6)` directly. Fixtures, conveyors, tooling,
+scanner and packing equipment are illustrative, not designed machine assemblies.
+Lengths/variants and project kits remain governed by Flow and the existing stock
+catalogue. This is a representative five-board cycle, not an entire house order.
+
+The assembly example uses the actual Combstruct 30 geometry and the existing
+1,398-piece contact-ordered sequence. It shows four consecutive pick/place cycles
+at each of four construction stages, then the completed model. Stage transitions
+skip repeated operations and say so in the UI. The selected part remains attached
+to the gripper in transit, then joins the installed prefix at release. The gantry
+returns to its feed position before the next cycle. IDs and predecessor contacts
+are exposed in `getRoboticsState()` for QA. This demonstrates geometric sequence
+and material handling, not a collision-checked path, rated machine, stability
+assessment, robot controller program or operational lights-off factory.
+
+An XYZ gantry with rotating gripper was selected for this visual concept. The
+industrial precedent consulted was Güdel WoodFlex automatic wood machining and
+assembly: https://uk.gudel.com/news/The%20future%20of%20modular%20construction%20today_n7831
+No third-party robot or company is presented as a Combstruct partner.
+
+Local QA: `outputs/combstruct-robotics/check.cjs` checks both processes at their
+main milestones in PL/EN, rejects renderer errors, checks motion/pause, switches
+back to BIM/Flow, and captures desktop and 390 px layouts. Existing locale tests
+also verify quantity/coordinate preservation and deterministic English builds.
