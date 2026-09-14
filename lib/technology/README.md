@@ -88,10 +88,21 @@ opening/skew fragments and verifies the actual geometry against its uncut stock
 dimensions. It does not substitute longer geometry for a short installed piece.
 The house retains its existing geometry and sequence; omitted operations are
 represented by the preceding installed prefix and identified as skips in the UI.
-Both profile axes are aligned for flat pickup on the table, then transformed
-back to the exact installed pose. The selected part remains attached
-to the gripper in transit, then joins the installed prefix at release. The gantry
-returns to its feed position before the next cycle. IDs and predecessor contacts
+Native profiles and lengths are grouped into nine persistent stockpiles on low
+dunnage. Mirrored endings share a pile: their source pose is canonicalized with
+a rigid flip, preserving the exact final geometry. These piles are representative
+supply for the 16 shown picks, not a full-house bill of materials. The robot selects
+the matching pile from the required model part, grips its top board and removes
+exactly one layer. The next pickup is 18 mm lower when that pile is used again.
+Counts and visible layers are derived from progress, so seeking and replay restore
+stock deterministically. No operator feeds boards in sequence or changes the
+source shape between operations.
+
+Both profile axes are aligned for flat pickup, then transformed back to the exact
+installed pose. The selected part remains attached to the gripper in transit,
+then joins the installed prefix at release. The gantry returns directly to the
+next required pile, with a continuous pose across cycle and stage boundaries.
+IDs, predecessor contacts, selected pile, remaining stock and tool positions
 are exposed in `getRoboticsState()` for QA. This demonstrates geometric sequence
 and material handling, not a collision-checked path, rated machine, stability
 assessment, robot controller program or operational lights-off factory.
@@ -110,3 +121,7 @@ continuous tracking, stationary overview, manual orbit/zoom, pause and restart.
 Bundle `scripts/robotics-assembly.test.js` with the same Three.js and run with Node
 to check native selection, rejection of the 24 cm fragments, reconstruction of
 every carried vertex in its installed position, grip contacts and predecessors.
+It also compares stock/pick silhouettes despite differing triangulations, checks
+shared mirrored stock and deterministic depletion. `check-assembly.cjs` exercises
+all 16 operations in PL/EN, stock counts, the 18 mm pickup-height change, backwards
+seeking and continuity between every cycle, including the final parking pose.

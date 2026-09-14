@@ -697,8 +697,6 @@
   "Gotowe do kolejnego etapu.": "Ready for the next step.",
   "Deski trafiają do oznaczonego pakietu. Zestawy są porządkowane według projektu i kolejności montażu.": "Boards enter a labelled package. Kits are organised by project and assembly sequence.",
   "Robotyczny montaż": "Robotic assembly",
-  "Pobierz. Obróć. Osadź.": "Pick. Rotate. Place.",
-  "Chwytak pobiera deskę ze stanowiska podawczego, przenosi ją nad płytę i opuszcza w miejscu wskazanym przez model.": "The gripper picks up a board from the feed station, carries it over the floor and lowers it into the position defined by the model.",
   "Ściany": "Walls",
   "Ten sam element. Kolejny kierunek.": "Same component. New orientation.",
   "Obrotowy chwytak ustawia deskę pionowo. Suwnica dociera nad kolejne żebra, zachowując dostęp do wnętrza budynku.": "The rotating gripper turns the board upright. The gantry reaches successive ribs while keeping access to the building interior.",
@@ -728,7 +726,6 @@
   "Podanie materiału, rozkrój, ustawienie desek na sztorc, frezowanie, kontrola i pakowanie. Jeden przepływ, sterowany danymi konkretnego budynku.": "Material feed, cutting, edge positioning, milling, inspection and packing. One flow, driven by the data for a specific building.",
   "Dane wychodzą": "Digital instructions.",
   "na plac budowy.": "Physical construction.",
-  "Suwnica XYZ z obrotowym chwytakiem porusza się nad konstrukcją. Pobiera oznaczone części i ustawia je w pozycjach zapisanych w modelu Combstruct.": "An XYZ gantry with a rotating gripper moves above the structure. It picks up identified parts and places them at the positions recorded in the Combstruct model.",
   "Budujesz maszyny lub automatyzujesz produkcję?": "Do you build machines or automate production?",
   "Porozmawiajmy o rozwoju Combstruct Robotics — od linii dla producentów płyt po robotyczny montaż konstrukcji.": "Let us explore Combstruct Robotics together, from production lines for panel manufacturers to robotic structural assembly.",
   "Porozmawiajmy o robotyzacji": "Discuss robotics with us",
@@ -740,5 +737,10 @@
   "Poznaj technologie Combstruct®: podręcznik systemu z połączeniami 3D, cyfrowy model domu Combstruct BIM oraz narzędzia Combstruct Flow oraz koncepcję automatycznej fabryki i robotycznego montażu Combstruct Robotics.": "Explore Combstruct® technologies: the 3D construction handbook, the Combstruct BIM digital home, Combstruct Flow and our concept for automated manufacturing and robotic assembly.",
   "Zbliżenie operacji": "Operation close-up",
   "Widok całej linii": "Full line view",
-  "Pauza": "Pause"
+  "Pauza": "Pause",
+  "Wybierz. Pobierz. Osadź.": "Select. Pick. Place.",
+  "Model wskazuje potrzebny profil i długość. Robot sam wybiera właściwy stos, pobiera z niego deskę i montuje ją w konstrukcji. Bez ręcznego podawania części w kolejności.": "The model specifies the profile and length. The robot selects the right stack, picks up a board and installs it in the structure. No manual feeding of parts in sequence.",
+  "Deski czekają w stosach według profilu i długości. Suwnica samodzielnie wybiera potrzebny element, pobiera go z magazynu i montuje w miejscu wskazanym przez model Combstruct.": "Boards wait in stacks sorted by profile and length. The gantry selects the required part, picks it from stock and installs it at the position defined by the Combstruct model.",
+  "Deski zwykłe": "Standard boards",
+  "Deski zakończeniowe": "End boards"
 }
