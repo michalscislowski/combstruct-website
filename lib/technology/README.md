@@ -65,8 +65,13 @@ motion stops offscreen, in background tabs and under reduced-motion preferences.
 
 The factory follows the requested order: feed one 2500 × 1250 × 18 mm sheet,
 cut five straight blanks, stand them on their long edges, mill from above,
-inspect/identify, then package. Partial machining uses the shared H/T/P geometry;
-the completed part uses `beamGeometry(6)` directly. Fixtures, conveyors, tooling,
+inspect/identify, then package. Seven stationary spindles form a row along the
+board's long Z axis, at the native profile's five full slots and two end half-slots.
+Upright boards move across that row along X at a constant speed, continuing to
+inspection without batch stops. There is no plunging or tool-head indexing. All
+seven slots appear together as each board passes through the row. The completed
+part uses `beamGeometry(6)` directly; moving saddles remain below the slot roots.
+Boards then tip onto the kit individually. Fixtures, conveyors, tooling,
 scanner and packing equipment are illustrative, not designed machine assemblies.
 Lengths/variants and project kits remain governed by Flow and the existing stock
 catalogue. This is a representative five-board cycle, not an entire house order.
