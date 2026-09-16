@@ -1,0 +1,39 @@
+{
+  "baseline": "380fc5b",
+  "reports": [
+    {
+      "project": "30",
+      "before": 1424,
+      "after": 1424,
+      "wallsAndSlabsUnchanged": true,
+      "roofCrossRibsUnchanged": true,
+      "fullModelUnchanged": false,
+      "ridgeNodes": 16,
+      "minFaceLapMm2": 54036,
+      "sweptWallSlotChecks": 560
+    },
+    {
+      "project": "90",
+      "before": 3618,
+      "after": 3618,
+      "wallsAndSlabsUnchanged": true,
+      "roofCrossRibsUnchanged": true,
+      "fullModelUnchanged": false,
+      "ridgeNodes": 26,
+      "minFaceLapMm2": 48960,
+      "sweptWallSlotChecks": 980
+    },
+    {
+      "project": "125",
+      "before": 2806,
+      "after": 2806,
+      "wallsAndSlabsUnchanged": true,
+      "roofCrossRibsUnchanged": true,
+      "fullModelUnchanged": true,
+      "ridgeNodes": 0,
+      "minFaceLapMm2": null,
+      "sweptWallSlotChecks": 0
+    }
+  ],
+  "strengthValidated": false
+}

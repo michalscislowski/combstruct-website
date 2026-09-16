@@ -164,7 +164,7 @@ layout while the filled cavities remain the same.
 Browser verification covers the model views, 17 handbook scenes, all delivered
 part variants, mobile layout, Flow assembly and project/order price consistency.
 
-## Roof–wall lap between slots — current release
+## Roof–wall lap between slots
 
 `roof-wall-lap.js` sets a common slot phase for each entire roof plane while
 preserving all wall and slab axes. The short upright in physical ply A supports
@@ -177,12 +177,12 @@ Combstruct 30 uses this at 35°, without a knee wall; the short-ply filler above
 the unchanged slab follows the roof underside. Its roof is lowered by 18 mm ×
 tan(35°) to meet the actual outer wall face. Combstruct 90 uses the same rule at
 45° on its knee walls. The 125 flat-roof model is geometrically unchanged.
-Ridge mitres are unchanged; this release implements the accepted wall–roof joint.
+The ridge now uses the alternating-ply lap described below.
 
 | Model | Delivered native boards | Installed pieces | Sheets | Insulation pieces |
 | --- | ---: | ---: | ---: | ---: |
 | 30 | 1,363 | 1,424 | 195 | 1,358 |
-| 90 | 3,447 | 3,618 | 490 | 2,411 |
+| 90 | 3,447 | 3,618 | 486 | 2,411 |
 | 125 | 2,720 | 2,806 | 430 | 2,279 |
 
 The catalogue continues to count full delivered profiles before on-site cuts,
@@ -202,3 +202,39 @@ audit checks each installed vertex against its delivered native board.
 
 Contact connectivity and geometric fit are not structural strength, fastening,
 construction-stage stability or fabrication certification.
+
+## Alternating-ply ridge lap
+
+`roof-ridge-lap.js` is shared by the handbook and the pitched 30/90 models.
+Left slope ply A reaches the opposite roof top; right slope ply A stops at its
+underside. Ply B reverses that arrangement. This retains the largest geometric
+intersection of the two roof strips available within their existing slots and
+the unchanged outer envelope. No new stock profile, filled slot, removed cross
+rib or thickness rebate is introduced. Existing native stock is lengthened by
+whole modules where needed at the head, and cut to the roof end planes.
+
+If a long end enters the insertion path of an existing transverse pair, only
+that end is relieved. Slot pitch and the roof phase established at the wall stay
+unchanged. This means the actual 30/90 lap silhouettes can differ from the
+centred-slot tutorial example. The model-specific handbook presets use the
+actual house phases; purple highlights only the shared material remaining in
+both long plies. The tutorial preset reproduces the approved full diamond lap
+at 45 degrees. All displayed profiles come from the existing native engine.
+
+`qa/audit-ridge.js` checks 123 combinations (three slot layouts, 20–60 degrees),
+actual face overlap, no same-ply intersections, the roof envelope, and 984 swept
+slot checks. The centred 45-degree example retains the full 240 × 240 mm face.
+`qa/audit-ridge-models.js` compares against release 380fc5b: all 42 house ridge
+nodes match their handbook presets; wall/slab geometry and every transverse roof
+rib are identical to that release. All 125 geometry remains identical. It also
+checks 1,540 wall-joint slot insertion envelopes. Bundle `baseline-30/90/125`
+from 380fc5b to rerun this regression. Results are in `ridge-laps.json` and
+`ridge-model-regression.json`.
+
+Both pitched models pass the sampled collision, ground-contact and opening-frame
+checks. Flow assembly and all stock assignments are regenerated from these
+meshes. The 90 rafter schedule ends at the actual eave envelope rather than an
+extra padded module; its delivered count remains 3,447, with an estimated 486
+sheets under the existing five-boards-per-sheet convention. Stock/price rates
+are unchanged. These are geometry and material-accounting checks, not a
+structural capacity or fastening approval.

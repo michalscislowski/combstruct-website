@@ -1,10 +1,10 @@
 {
   "project": "30",
-  "geometrySha256": "63a2f4d625d55a5da0671fabb9385c81b4285f09409d69d0257a753d0fed89e1",
+  "geometrySha256": "8e03105a7b941f5381a960ce2271d630247b213b73659c4d41fa97ed3dc36ad6",
   "physicalBoards": 1424,
-  "actualLengthM": 2145.889638127869,
-  "fullBoardEquivalents": 858.3558552511477,
-  "displayFullBoards": 859,
+  "actualLengthM": 2147.9671780261037,
+  "fullBoardEquivalents": 859.1868712104415,
+  "displayFullBoards": 860,
   "sheets": 172,
   "connectorBoards": 0,
   "dimensions": {
@@ -33,6 +33,13 @@
     "referenceDepth": 6.1,
     "roofGableOverhang": 0.4166666666666667,
     "constructionOnly": true,
+    "ridgeJoint": {
+      "strategy": "alternating-ply-lap",
+      "pitch": 35,
+      "headModules": 1,
+      "nearSlots": [],
+      "roofEnvelopePreserved": true
+    },
     "usableConceptArea": 26.248102666666668,
     "roofWallJoint": {
       "strategy": "between-slots",

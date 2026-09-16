@@ -1,9 +1,9 @@
 {
   "boards": 1424,
   "connectorBoards": 0,
-  "testedPairs": 5780,
-  "angledPairs": 1804,
-  "pointTests": 23533,
+  "testedPairs": 5872,
+  "angledPairs": 1896,
+  "pointTests": 23901,
   "resolved": [],
   "unresolved": [],
   "validation": {
@@ -96,6 +96,13 @@
     "referenceDepth": 6.1,
     "roofGableOverhang": 0.4166666666666667,
     "constructionOnly": true,
+    "ridgeJoint": {
+      "strategy": "alternating-ply-lap",
+      "pitch": 35,
+      "headModules": 1,
+      "nearSlots": [],
+      "roofEnvelopePreserved": true
+    },
     "usableConceptArea": 26.248102666666668,
     "roofWallJoint": {
       "strategy": "between-slots",

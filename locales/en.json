@@ -753,5 +753,11 @@
   "Strop + dach · bez okapu": "Floor + roof · flush edge",
   "Kąt dachu": "Roof pitch",
   "Unieś żebra poprzeczne": "Lift the transverse ribs",
-  "Pion między wpustami · strop bez skosu · zakładka dwóch warstw": "Upright between slots · unbevelled floor · two-layer lap"
+  "Pion między wpustami · strop bez skosu · zakładka dwóch warstw": "Upright between slots · unbevelled floor · two-layer lap",
+  "Długie zakończenia obu połaci zachodzą na siebie w dwóch warstwach.": "The long ends of both roof slopes overlap across two layers.",
+  "Pełna grubość każdej deski. Zakładka dwóch warstw zamiast wspólnej linii styku.": "Each board keeps its full thickness. The two layers overlap across the ridge.",
+  "W pierwszej warstwie dłuższa deska lewej połaci przechodzi przez kalenicę, a prawa dochodzi do jej boku. W drugiej warstwie układ jest odwrócony. Wykorzystujemy istniejące profile: końce sięgają do obrysu przeciwnej połaci, aby uzyskać możliwie dużą zakładkę. Przy mniejszym kącie lub innym położeniu wpustów docinamy tylko końcówki zasłaniające czynny wpust. Żebra poprzeczne i ich osie zostają na miejscu. Porównaj zasadę połączenia z układem wpustów w modelach 30 i 90, zmień kąt i rozsuń warstwy.": "In the first ply, the longer board from the left slope crosses the ridge, while the right board ends against its side. The second ply reverses this arrangement. Existing board profiles extend to the outline of the opposite slope for the largest available lap. At lower pitches or with a different slot position, only ends obstructing a working slot are trimmed. Transverse ribs and their axes stay in place. Compare the joint principle with the slot layouts in models 30 and 90, change the pitch and separate the plies.",
+  "Układ wpustów": "Slot layout",
+  "Zakładka między wpustami": "Lap between slots",
+  "Kalenica · fiolet oznacza powierzchnię zakładki A/B": "Ridge · purple marks the shared lap area of plies A/B"
 }

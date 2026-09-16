@@ -1,0 +1,94 @@
+{
+  "cases": 123,
+  "slotChecks": 984,
+  "noSamePlyIntersections": true,
+  "minFaceLapMm2": 48960,
+  "roofEnvelopePreserved": true,
+  "samples": [
+    {
+      "house": "principle",
+      "pitch": 20,
+      "lapAreaMm2": 82277,
+      "headModules": 1,
+      "relievedCrossRibs": 1
+    },
+    {
+      "house": "principle",
+      "pitch": 35,
+      "lapAreaMm2": 61297,
+      "headModules": 0,
+      "relievedCrossRibs": 0
+    },
+    {
+      "house": "principle",
+      "pitch": 45,
+      "lapAreaMm2": 57600,
+      "headModules": 0,
+      "relievedCrossRibs": 0
+    },
+    {
+      "house": "principle",
+      "pitch": 60,
+      "lapAreaMm2": 66157,
+      "headModules": 1,
+      "relievedCrossRibs": 1
+    },
+    {
+      "house": "30",
+      "pitch": 20,
+      "lapAreaMm2": 81425,
+      "headModules": 0,
+      "relievedCrossRibs": 1
+    },
+    {
+      "house": "30",
+      "pitch": 35,
+      "lapAreaMm2": 54036,
+      "headModules": 1,
+      "relievedCrossRibs": 0
+    },
+    {
+      "house": "30",
+      "pitch": 45,
+      "lapAreaMm2": 48960,
+      "headModules": 0,
+      "relievedCrossRibs": 1
+    },
+    {
+      "house": "30",
+      "pitch": 60,
+      "lapAreaMm2": 63304,
+      "headModules": 1,
+      "relievedCrossRibs": 0
+    },
+    {
+      "house": "90",
+      "pitch": 20,
+      "lapAreaMm2": 83585,
+      "headModules": 1,
+      "relievedCrossRibs": 1
+    },
+    {
+      "house": "90",
+      "pitch": 35,
+      "lapAreaMm2": 55756,
+      "headModules": 1,
+      "relievedCrossRibs": 0
+    },
+    {
+      "house": "90",
+      "pitch": 45,
+      "lapAreaMm2": 48960,
+      "headModules": 0,
+      "relievedCrossRibs": 1
+    },
+    {
+      "house": "90",
+      "pitch": 60,
+      "lapAreaMm2": 63304,
+      "headModules": 1,
+      "relievedCrossRibs": 0
+    }
+  ],
+  "strengthValidated": false
+}

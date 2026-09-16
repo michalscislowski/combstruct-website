@@ -8,9 +8,9 @@
   },
   "projects": {
     "30": {
-      "geometrySha256": "63a2f4d625d55a5da0671fabb9385c81b4285f09409d69d0257a753d0fed89e1",
+      "geometrySha256": "8e03105a7b941f5381a960ce2271d630247b213b73659c4d41fa97ed3dc36ad6",
       "physicalBoards": 1424,
-      "actualLengthM": 2145.889638127869,
+      "actualLengthM": 2147.9671780261037,
       "displayFullBoards": 973,
       "sheets": 195,
       "insulationBlocks": 1358,
@@ -33,29 +33,29 @@
       "deliveryLengthM": 2430.19333333
     },
     "90": {
-      "geometrySha256": "f8e5935d8b7b6340959b016719709b10b73fee3e84419ca6d01a91cdb53ab3ca",
+      "geometrySha256": "7bcec2969d02cf43078bd069ff0e7b62cfc93c3e243550d9163bbef8471758d1",
       "physicalBoards": 3618,
-      "actualLengthM": 5242.026191478472,
-      "displayFullBoards": 2446,
-      "sheets": 490,
+      "actualLengthM": 5229.546188475412,
+      "displayFullBoards": 2429,
+      "sheets": 486,
       "insulationBlocks": 2411,
       "variants": [
         {
           "material": "osb3",
           "label": "OSB3",
           "materials": 110000,
-          "assembly": 169000
+          "assembly": 168000
         },
         {
           "material": "plywood",
           "label": "Sklejka",
-          "materials": 184000,
-          "assembly": 242000
+          "materials": 182000,
+          "assembly": 241000
         }
       ],
       "materialBasis": "delivery-before-cutting",
       "deliveryBoards": 3447,
-      "deliveryLengthM": 6114.186
+      "deliveryLengthM": 6070.85266667
     },
     "125": {
       "geometrySha256": "6da32528fb23ebe4addccda7908c56dc73d6301dddb5b269a4ca617931fd2e96",

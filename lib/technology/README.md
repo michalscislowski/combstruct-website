@@ -144,3 +144,18 @@ visualisation, not a validated manufacturing tolerance.
 mesh triangles against the swept slot volumes, verifies slab invariance and
 exercises separation/insertion controls. `qa/roof-wall-laps.json` records results.
 These checks do not validate load capacity or fastening.
+
+## Ridge lap
+
+`ridge-joint.js` uses the shared `construction/roof-ridge-lap.js` and existing
+native profiles. The default 45-degree example shows the accepted full lap
+between slots. The 30/90 presets retain each house's actual roof slot phase.
+Long ends are trimmed only where they obstruct a transverse rib's insertion
+path; no slot or transverse row is removed. The angle control covers 20–60°.
+
+Purple is the exact projected overlap of the two rendered long plies, not an
+additional board. It disappears when the layers are separated. Cross ribs are
+hidden initially in this topic, can be enabled, and can be lifted through their
+working slots. Scene controls and copy are translated through the PL/EN pipeline.
+`audit-ridge.js` validates all three layouts throughout the angle range, and
+`audit-ridge-models.js` verifies the same lap areas in all 42 house ridge nodes.

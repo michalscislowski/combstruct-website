@@ -1,9 +1,9 @@
 {
   "boards": 3618,
   "connectorBoards": 0,
-  "testedPairs": 14973,
-  "angledPairs": 4979,
-  "pointTests": 61092,
+  "testedPairs": 14902,
+  "angledPairs": 4908,
+  "pointTests": 60808,
   "resolved": [],
   "unresolved": [],
   "validation": {
@@ -138,6 +138,15 @@
       "slotOuter": 4.6672170696361635,
       "slabBeveled": false,
       "knee": true
+    },
+    "ridgeJoint": {
+      "strategy": "alternating-ply-lap",
+      "pitch": 45,
+      "headModules": 0,
+      "nearSlots": [
+        0.08388373630283047
+      ],
+      "roofEnvelopePreserved": true
     },
     "stair": {
       "id": "stair",
