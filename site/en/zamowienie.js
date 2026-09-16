@@ -27,7 +27,7 @@
     const rows = ['Hello,', '', 'I am interested in ordering:',
       `House: ${project.name}`, `Material: ${variant.label}`,
       'Structure with insulation', `Scope: ${scope}`, `Price: ${price} PLN incl. VAT`, ''];
-    if (data.get('name').trim()) rows.push(`First name: ${data.get('name').trim()}`);
+    if (data.get('name').trim()) rows.push(`Name: ${data.get('name').trim()}`);
     if (data.get('location').trim()) rows.push(`Build location: ${data.get('location').trim()}`);
     rows.push(`Preferred timing: ${data.get('timing')}`);
     if (data.get('message').trim()) rows.push('', data.get('message').trim());

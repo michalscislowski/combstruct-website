@@ -29,3 +29,7 @@ html[lang="en"] .hero-copy{max-width:790px}
 html[lang="en"] .hero-copy p{max-width:580px}
 @media(max-width:540px){html[lang="en"] .hero h1{font-size:clamp(40px,9.7vw,55px)}}
 @media(max-width:360px){.site-header>.button:not(.header-cta){display:none}}
+
+/* Company identity and privacy access on every public page. */
+.site-footer nav{flex-wrap:wrap;row-gap:15px}.footer-legal{flex-basis:100%;max-width:850px;color:var(--muted);font-size:11px;line-height:1.8}.inquiry-privacy{font-size:13px;line-height:1.6}.inquiry-privacy a{text-decoration:underline;text-underline-offset:3px}
+@media(min-width:1001px) and (max-width:1400px){.site-header .header-cta{display:none}.desktop-nav{gap:23px;margin-right:0}}

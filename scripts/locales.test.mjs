@@ -69,7 +69,7 @@ test('English plans and model labels contain no untranslated Polish text; script
       new Script(text,{filename:f});
       text=text.replace(/\\u([\da-f]{4})|\\x([\da-f]{2})/gi,(_,u,x)=>String.fromCodePoint(parseInt(u||x,16)));
     } else if(f.endsWith('.html')||f.endsWith('.svg')) {
-      text=text.replace(/<!--[^]*?-->|<(script|style|metadata)\b[^>]*>[^]*?<\/\1>|<[^>]+>/g,'');
+      text=text.replace(/<span lang="pl">[^]*?<\/span>/g,'').replace(/<!--[^]*?-->|<(script|style|metadata)\b[^>]*>[^]*?<\/\1>|<[^>]+>/g,'');
     } else continue;
     assert(!/[ąćęłńóśźż]/i.test(text),path.relative(root,f));
   }

@@ -6,7 +6,7 @@ import {Script} from 'node:vm';
 export const pageNames = {
   'index.html':'index.html', 'projekty.html':'projects.html',
   'technologie.html':'technology.html', 'kontakt.html':'contact.html',
-  'zamowienie.html':'enquiry.html',
+  'zamowienie.html':'enquiry.html', 'realizacje.html':'builds.html', 'prywatnosc.html':'privacy.html',
   'combstruct-30.html':'combstruct-30.html', 'combstruct-90.html':'combstruct-90.html',
   'combstruct-125.html':'combstruct-125.html', 'system-viewer.html':'system-viewer.html',
   'project-model.html':'project-model.html', 'project-model-90.html':'project-model-90.html',
