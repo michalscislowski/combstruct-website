@@ -1,9 +1,9 @@
 {
-  "boards": 1398,
+  "boards": 1424,
   "connectorBoards": 0,
-  "testedPairs": 6075,
-  "angledPairs": 2095,
-  "pointTests": 25034,
+  "testedPairs": 5780,
+  "angledPairs": 1804,
+  "pointTests": 23533,
   "resolved": [],
   "unresolved": [],
   "validation": {
@@ -85,9 +85,9 @@
     "ceilingTop": 3.591333333333333,
     "clearHeight": 3.1113333333333335,
     "roofAngle": 35,
-    "roofEaveY": 3.591333333333333,
-    "roofUnderRidgeY": 5.487728749317964,
-    "roofRidgeY": 5.780714650620713,
+    "roofEaveY": 3.5787295976455584,
+    "roofUnderRidgeY": 5.475125013630189,
+    "roofRidgeY": 5.768110914932938,
     "roofOverhang": 0.4166666666666667,
     "module": 0.4166666666666667,
     "boardDepth": 0.24,
@@ -97,6 +97,16 @@
     "roofGableOverhang": 0.4166666666666667,
     "constructionOnly": true,
     "usableConceptArea": 26.248102666666668,
+    "roofWallJoint": {
+      "strategy": "between-slots",
+      "clearance": 0.001,
+      "phaseOrigin": -0.029214834312720206,
+      "wallCenter": 2.5703333333333336,
+      "slotInner": 2.8874518323539466,
+      "slotOuter": 3.3041184990206136,
+      "slabBeveled": false,
+      "knee": false
+    },
     "structuralFootprintArea": 33.85416666666667,
     "terraceArea": 15.798611111111114
   }

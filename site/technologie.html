@@ -4,9 +4,9 @@
 <meta name="theme-color" content="#254331">
 <meta name="description" content="Poznaj technologie Combstruct®: podręcznik systemu z połączeniami 3D, cyfrowy model domu Combstruct BIM oraz narzędzia Combstruct Flow oraz koncepcję automatycznej fabryki i robotycznego montażu Combstruct Robotics.">
 <title>Technologie Combstruct® — system, BIM, Flow i Robotics</title>
-<link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="technologie.css">
+<link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="technologie.css?v=8b672cb2">
 <link rel="stylesheet" href="parts.css">
-<script defer src="assets/technologie.js?v=44038c63"></script>
+<script defer src="assets/technologie.js?v=8d5f55b8"></script>
 <!-- Share metadata: generated from the page title and description. -->
 <link rel="canonical" href="https://www.combstruct.com/technologie.html">
 <link rel="icon" type="image/x-icon" href="favicon.ico">
@@ -73,6 +73,11 @@
           <label id="crossing-control" hidden><input id="crossing" type="checkbox">Żebro we wpuście</label>
           <label id="arrows-control"><input id="arrows" type="checkbox" checked>Kierunek wpustów</label>
           <button type="button" data-reset-view>Wycentruj</button>
+        </div>
+        <div id="roof-joint-controls" class="roof-joint-controls" hidden>
+          <label for="roof-joint-variant">Wariant połączenia<select id="roof-joint-variant"><option value="1-1">Ścianka kolankowa · z okapem</option><option value="0-1">Ścianka kolankowa · bez okapu</option><option value="1-0">Strop + dach · z okapem</option><option value="0-0">Strop + dach · bez okapu</option></select></label>
+          <label for="roof-joint-pitch">Kąt dachu <output id="roof-joint-pitch-value">35°</output><input id="roof-joint-pitch" type="range" min="20" max="60" step="1" value="35"></label>
+          <label for="roof-joint-insert">Unieś żebra poprzeczne <output id="roof-joint-insert-value">0 mm</output><input id="roof-joint-insert" type="range" min="0" max="300" step="5" value="0"></label>
         </div>
         <div id="variant-control" hidden><label>Rodzaj deski<select id="variant-select"></select></label><p id="variant-description"></p></div>
         <div class="topic-copy" aria-live="polite"><p class="topic-lead" id="topic-lead"></p><p id="topic-text"></p><div class="topic-rule"><span aria-hidden="true">↗</span><strong id="topic-rule"></strong></div></div>

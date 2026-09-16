@@ -1,5 +1,5 @@
 {
-  "count": 2438,
+  "count": 2411,
   "method": "generated-cavity-blocks",
   "layers": [
     {
@@ -59,13 +59,13 @@
     {
       "id": "roof--1",
       "label": "Dach",
-      "count": 492,
+      "count": 479,
       "filledCells": 366
     },
     {
       "id": "roof-1",
       "label": "Dach",
-      "count": 497,
+      "count": 483,
       "filledCells": 378
     }
   ]

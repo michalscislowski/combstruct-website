@@ -1,0 +1,30 @@
+{
+  "baseline": "e434af1",
+  "reports": [
+    {
+      "project": "30",
+      "before": 1398,
+      "after": 1424,
+      "slabsUnchanged": true,
+      "fullModelUnchanged": false,
+      "sweptSlotChecks": 560
+    },
+    {
+      "project": "90",
+      "before": 3530,
+      "after": 3618,
+      "slabsUnchanged": true,
+      "fullModelUnchanged": false,
+      "sweptSlotChecks": 980
+    },
+    {
+      "project": "125",
+      "before": 2806,
+      "after": 2806,
+      "slabsUnchanged": true,
+      "fullModelUnchanged": true,
+      "sweptSlotChecks": 0
+    }
+  ],
+  "strengthValidated": false
+}

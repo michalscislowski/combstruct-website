@@ -163,3 +163,42 @@ layout while the filled cavities remain the same.
 
 Browser verification covers the model views, 17 handbook scenes, all delivered
 part variants, mobile layout, Flow assembly and project/order price consistency.
+
+## Roof–wall lap between slots — current release
+
+`roof-wall-lap.js` sets a common slot phase for each entire roof plane while
+preserving all wall and slab axes. The short upright in physical ply A supports
+the underside of a continuous roof board. Physical ply B extends alongside that
+roof board; B roof pieces end at either side of the upright. Only upper corners
+beside neighbouring slots are relieved, keeping the lower lap intact. The 1 mm
+clearance is a model allowance pending fabrication/connection engineering.
+
+Combstruct 30 uses this at 35°, without a knee wall; the short-ply filler above
+the unchanged slab follows the roof underside. Its roof is lowered by 18 mm ×
+tan(35°) to meet the actual outer wall face. Combstruct 90 uses the same rule at
+45° on its knee walls. The 125 flat-roof model is geometrically unchanged.
+Ridge mitres are unchanged; this release implements the accepted wall–roof joint.
+
+| Model | Delivered native boards | Installed pieces | Sheets | Insulation pieces |
+| --- | ---: | ---: | ---: | ---: |
+| 30 | 1,363 | 1,424 | 195 | 1,358 |
+| 90 | 3,447 | 3,618 | 490 | 2,411 |
+| 125 | 2,720 | 2,806 | 430 | 2,279 |
+
+The catalogue continues to count full delivered profiles before on-site cuts,
+combining descendants of each stock board. Flow/Robotics/BIM and the house
+viewers use the regenerated model and contact sequence.
+
+Validation: `roof-model-regression.json` compares actual mesh coordinates with
+release e434af1. All floor/slab/ceiling meshes are unchanged in 30 and 90; all
+125 meshes are unchanged. It checks 1,540 swept roof-slot volumes against the
+rendered post/roof meshes. To rerun `audit-roof-models.js`, bundle the three
+`baseline-30/90/125` aliases from that release alongside the current structures.
+`check-connections.js` reports no sampled intersections, and
+`audit-length-joints.js` no exact orthogonal profile-cell intersections. Both
+houses are connected to their ground contact graphs. The opening audit verifies
+20 wall openings, three rooflights and 2,442 continuous frame sections. The stock
+audit checks each installed vertex against its delivered native board.
+
+Contact connectivity and geometric fit are not structural strength, fastening,
+construction-stage stability or fabrication certification.

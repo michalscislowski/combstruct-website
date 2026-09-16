@@ -1,0 +1,109 @@
+{
+  "cases": 164,
+  "slotChecks": 615,
+  "unbevelledSlabInvariant": true,
+  "finiteGeometry": true,
+  "range": [
+    20,
+    60
+  ],
+  "strengthValidated": false,
+  "samples": [
+    {
+      "pitch": 20,
+      "knee": true,
+      "eave": true,
+      "boards": 11
+    },
+    {
+      "pitch": 35,
+      "knee": true,
+      "eave": true,
+      "boards": 11
+    },
+    {
+      "pitch": 45,
+      "knee": true,
+      "eave": true,
+      "boards": 11
+    },
+    {
+      "pitch": 60,
+      "knee": true,
+      "eave": true,
+      "boards": 11
+    },
+    {
+      "pitch": 20,
+      "knee": true,
+      "eave": false,
+      "boards": 8
+    },
+    {
+      "pitch": 35,
+      "knee": true,
+      "eave": false,
+      "boards": 8
+    },
+    {
+      "pitch": 45,
+      "knee": true,
+      "eave": false,
+      "boards": 8
+    },
+    {
+      "pitch": 60,
+      "knee": true,
+      "eave": false,
+      "boards": 8
+    },
+    {
+      "pitch": 20,
+      "knee": false,
+      "eave": true,
+      "boards": 14
+    },
+    {
+      "pitch": 35,
+      "knee": false,
+      "eave": true,
+      "boards": 14
+    },
+    {
+      "pitch": 45,
+      "knee": false,
+      "eave": true,
+      "boards": 14
+    },
+    {
+      "pitch": 60,
+      "knee": false,
+      "eave": true,
+      "boards": 14
+    },
+    {
+      "pitch": 20,
+      "knee": false,
+      "eave": false,
+      "boards": 11
+    },
+    {
+      "pitch": 35,
+      "knee": false,
+      "eave": false,
+      "boards": 11
+    },
+    {
+      "pitch": 45,
+      "knee": false,
+      "eave": false,
+      "boards": 11
+    },
+    {
+      "pitch": 60,
+      "knee": false,
+      "eave": false,
+      "boards": 11
+    }
+  ]
+}

@@ -1,8 +1,8 @@
 {
   "project": "90",
   "strategy": "full-end-slot",
-  "boards": 3530,
-  "orthogonal": 2947,
+  "boards": 3618,
+  "orthogonal": 2991,
   "connectorBoards": 0,
   "overlength": [],
   "collidingPairs": 0,
@@ -57,6 +57,16 @@
     "boardDepth": 0.24,
     "boardThickness": 0.018,
     "constructionOnly": true,
+    "roofWallJoint": {
+      "strategy": "between-slots",
+      "clearance": 0.001,
+      "phaseOrigin": -0.3327829303638362,
+      "wallCenter": 3.1953333333333336,
+      "slotInner": 4.250550402969497,
+      "slotOuter": 4.6672170696361635,
+      "slabBeveled": false,
+      "knee": true
+    },
     "stair": {
       "id": "stair",
       "x0": -1.041666666666667,

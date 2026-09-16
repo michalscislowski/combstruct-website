@@ -5,7 +5,7 @@
 `content.js` contains Polish handbook copy and four end-profile choices: ordinary,
 240 mm ending, full 36 mm end slot, and 258 mm ending. `geometry.js` uses the
 shared construction engine for these profiles and selects actual house records
-for joint details. The transverse rib is visible initially in joint scenes;
+for joint details. The roof–wall topic uses a compact parametric sample from the same shared `roof-wall-lap.js` rules as the houses. The transverse rib is visible initially in joint scenes;
 users can hide it or spread the plies to inspect the slot.
 
 `structure.js` re-exports `lib/construction/30/structure.js`. The handbook, Flow,
@@ -51,7 +51,7 @@ use the same profiles, counts and selection controls.
 
 `manufacturing-data.json` is generated offline by `scripts/build-flow-data.js`, using the same Three.js build and `three-mesh-bvh` 0.9.9. Regenerate after changing `lib/construction/30/structure.js`, its `connectors.json` or geometry. Bundle the generator with those dependencies for Node and execute it from the repository root before rebuilding the browser viewer. The browser consumes the committed data and does not need the BVH dependency.
 
-The generator finds triangle-surface contacts with a 0.05 mm tolerance, using a spatial hash and BVHs. Each added board must touch the ground or an already installed board; wall verticals and horizontal rows advance from lower to higher levels. Every prefix is audited, disconnected models fail generation, and the output retains each board's earlier contact as a witness. The regenerated model passes all 1,398 assembly prefixes with an earlier contact recorded for each added piece. The test proves geometric connectivity, not load-bearing stability, fastening, collision-free insertion paths or an engineered erection plan. Coplanar BVH edge warnings are counted: the algorithm uses distance only, not the unavailable contact-edge coordinates. Slider updates reveal whole source boards and work in both directions.
+The generator finds triangle-surface contacts with a 0.05 mm tolerance, using a spatial hash and BVHs. Each added board must touch the ground or an already installed board; wall verticals and horizontal rows advance from lower to higher levels. Every prefix is audited, disconnected models fail generation, and the output retains each board's earlier contact as a witness. The regenerated model passes all 1,424 assembly prefixes with an earlier contact recorded for each added piece. The test proves geometric connectivity, not load-bearing stability, fastening, collision-free insertion paths or an engineered erection plan. Coplanar BVH edge warnings are counted: the algorithm uses distance only, not the unavailable contact-edge coordinates. Slider updates reveal whole source boards and work in both directions.
 
 The page distinguishes the existing model/identification/presentation tooling from the developing automatic adaptation of arbitrary client floor plans and production-order generation. No arbitrary-plan upload/conversion service, validated CAM export, or external manufacturing-order API is implemented by this website change. The collaboration CTA uses the existing contact route. The old material tab and its scene/styles are removed; old `#mycelium` and `#manufacturing` links resolve to `#flow`.
 
@@ -82,13 +82,13 @@ Lengths/variants and project kits remain governed by Flow and the existing stock
 catalogue. This is a representative five-board cycle, not an entire house order.
 
 The assembly example uses the actual Combstruct 30 geometry and the existing
-1,398-piece contact-ordered sequence. It shows four complete native boards at
+1,424-piece contact-ordered sequence. It shows four complete native boards at
 each of four construction stages, then the completed model. Selection rejects
 opening/skew fragments and verifies the actual geometry against its uncut stock
 dimensions. It does not substitute longer geometry for a short installed piece.
 The house retains its existing geometry and sequence; omitted operations are
 represented by the preceding installed prefix and identified as skips in the UI.
-Native profiles and lengths are grouped into nine persistent stockpiles on low
+Native profiles and lengths are grouped into seven persistent stockpiles on low
 dunnage. Mirrored endings share a pile: their source pose is canonicalized with
 a rigid flip, preserving the exact final geometry. These piles are representative
 supply for the 16 shown picks, not a full-house bill of materials. The robot selects
@@ -125,3 +125,22 @@ It also compares stock/pick silhouettes despite differing triangulations, checks
 shared mirrored stock and deterministic depletion. `check-assembly.cjs` exercises
 all 16 operations in PL/EN, stock counts, the 18 mm pickup-height change, backwards
 seeking and continuity between every cycle, including the final parking pose.
+
+## Between-slot roof–wall lap
+
+The roof–wall topic offers knee wall / floor-and-roof variants, each with or
+without an eave. Pitch ranges from 20° to 60°. Layer separation exposes the short
+bearing ply, continuous roof ply and long overlapping upright ply. A separate
+control lifts the transverse roof pairs along the insertion direction.
+
+`roof-joint.js` uses the native stock engine and `construction/roof-wall-lap.js`.
+The slab always keeps its native, unbevelled profile and original rib planes.
+Without a knee wall, the short-ply filler is above the slab. Upper upright corners
+are relieved only where they approach neighbouring roof slots; the lower lap
+remains continuous. The 1 mm slot clearance is a geometric allowance in the
+visualisation, not a validated manufacturing tolerance.
+
+`qa/audit-roof-detail.js` checks all 164 pitch/variant combinations, clips actual
+mesh triangles against the swept slot volumes, verifies slab invariance and
+exercises separation/insertion controls. `qa/roof-wall-laps.json` records results.
+These checks do not validate load capacity or fastening.

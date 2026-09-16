@@ -742,5 +742,16 @@
   "Model wskazuje potrzebny profil i długość. Robot sam wybiera właściwy stos, pobiera z niego deskę i montuje ją w konstrukcji. Bez ręcznego podawania części w kolejności.": "The model specifies the profile and length. The robot selects the right stack, picks up a board and installs it in the structure. No manual feeding of parts in sequence.",
   "Deski czekają w stosach według profilu i długości. Suwnica samodzielnie wybiera potrzebny element, pobiera go z magazynu i montuje w miejscu wskazanym przez model Combstruct.": "Boards wait in stacks sorted by profile and length. The gantry selects the required part, picks it from stock and installs it at the position defined by the Combstruct model.",
   "Deski zwykłe": "Standard boards",
-  "Deski zakończeniowe": "End boards"
+  "Deski zakończeniowe": "End boards",
+  "Dłuższy pion tworzy zakładkę między wpustami dachu.": "The extended upright forms a lap between the roof slots.",
+  "W jednej warstwie deska dachowa przechodzi przez węzeł, a krótszy pion podpiera ją skosem. W drugiej dłuższy pion zachodzi na jej bok, a deski połaci dochodzą do niego z obu stron. Przy większym nachyleniu dopasowujemy tylko górne naroża pionu, aby sąsiednie wpusty pozostały wolne. Bez ścianki kolankowej klin wypełnia przestrzeń nad stropem. Deska stropowa pozostaje bez skosu, na swoich osiach. Wybierz wariant z okapem lub bez niego, zmień kąt i rozsuń warstwy.": "In one layer, the roof board runs continuously across the joint and the shorter upright supports its underside. In the other layer, the longer upright overlaps its side, with roof boards meeting the upright on either side. At steeper pitches, only the upper corners of the upright are relieved to keep adjacent slots open. Without a knee wall, a filler closes the space above the floor. The floor board keeps its profile and rib alignment, with no bevel. Choose an eave or flush edge, change the pitch and separate the layers.",
+  "Dach i strop nad poziomym żebrem ściany. Wpusty dachu pozostają dostępne.": "Roof and floor above the horizontal wall rib. Roof slots remain accessible.",
+  "Wariant połączenia": "Joint configuration",
+  "Ścianka kolankowa · z okapem": "Knee wall · with eave",
+  "Ścianka kolankowa · bez okapu": "Knee wall · flush edge",
+  "Strop + dach · z okapem": "Floor + roof · with eave",
+  "Strop + dach · bez okapu": "Floor + roof · flush edge",
+  "Kąt dachu": "Roof pitch",
+  "Unieś żebra poprzeczne": "Lift the transverse ribs",
+  "Pion między wpustami · strop bez skosu · zakładka dwóch warstw": "Upright between slots · unbevelled floor · two-layer lap"
 }
