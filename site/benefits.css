@@ -1,0 +1,76 @@
+/* Real assembly footage anchors the construction benefits. */
+.build-benefits{padding:0 0 100px}
+.benefits-heading{display:grid;grid-template-columns:1.25fr 1fr;align-items:end;gap:80px;margin-bottom:44px}
+.benefits-heading h2{font-size:clamp(44px,5.2vw,76px);line-height:1.04;letter-spacing:-.052em}
+.benefits-heading>p{max-width:470px;font-size:18px;line-height:1.65;padding-bottom:3px}
+.assembly-story{display:grid;grid-template-columns:minmax(0,1.8fr) minmax(0,1fr);overflow:hidden;background:var(--green);border-radius:24px;color:white}
+.assembly-film{margin:0;min-width:0;background:var(--fog);display:flex;flex-direction:column;position:relative}
+.assembly-screen{position:relative;isolation:isolate;flex:1;min-height:385px;background:#17271c}
+.assembly-screen video{display:block;width:100%;height:100%;aspect-ratio:1280/728;object-fit:contain;position:absolute;inset:0}
+.assembly-screen:not(.is-playing) video{object-fit:cover}
+.assembly-play{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;gap:18px;border:0;background:linear-gradient(0deg,#15251c73,#15251c0d);color:white;text-align:left;padding:25px}
+.assembly-play>span:last-child{font-size:20px;font-weight:500;line-height:1.35;text-shadow:0 1px 8px #0008}
+.assembly-play small{display:block;font-size:13px;font-weight:400;margin-top:6px}
+.assembly-play-icon{height:74px;width:74px;flex:none;display:grid;place-items:center;border-radius:50%;background:white;color:var(--green);transition:transform .18s}
+.assembly-play-icon svg{width:25px;height:25px;fill:currentColor;margin-left:-3px}
+.assembly-play:hover .assembly-play-icon{transform:scale(1.07)}
+.assembly-play:focus-visible{outline-offset:-6px}
+.assembly-film>figcaption{padding:18px 24px;font-size:14px;color:var(--green)}
+.assembly-film.has-chapters>figcaption{position:absolute;clip-path:inset(50%);width:1px;height:1px;padding:0;overflow:hidden}
+.assembly-chapters{display:grid;grid-template-columns:1fr 1fr;min-height:74px;background:#f0f3ec;flex:none}
+.assembly-chapter{display:flex;align-items:center;gap:12px;position:relative;border:0;background:transparent;padding:17px 22px;text-align:left;font-size:14px;color:var(--muted);line-height:1.3}
+.assembly-chapter+.assembly-chapter{border-left:1px solid #dce2d9}
+.assembly-chapter:before{content:'';position:absolute;left:0;right:0;top:0;height:3px;background:transparent}
+.assembly-chapter[aria-pressed=true]{color:var(--green);background:#e5ecdf}
+.assembly-chapter[aria-pressed=true]:before{background:var(--green)}
+.assembly-chapter:hover{background:#e5ecdf}
+.chapter-index{font-size:13px;display:grid;place-items:center;flex:none;width:28px;height:28px;border:1px solid currentColor;border-radius:50%}
+.assembly-chapter svg{width:15px;height:15px;fill:currentColor;margin-left:auto;flex:none}
+.assembly-explainer{display:flex;flex-direction:column;justify-content:space-between;gap:38px;padding:40px 36px}
+.assembly-explainer h3{font-size:30px;line-height:1.12;letter-spacing:-.035em;margin-bottom:17px}
+.assembly-explainer p{color:#dbe5d9;font-size:16px;line-height:1.65}
+.assembly-explainer .assembly-duration{display:flex;align-items:baseline;gap:15px;color:white;line-height:1;flex-wrap:wrap}
+.assembly-duration>span:first-child{font-size:clamp(58px,6vw,82px);font-weight:500;letter-spacing:-.065em}
+.assembly-duration>span:last-child{font-size:19px;letter-spacing:-.02em}
+.assembly-explainer .assembly-estimate-note{font-size:12px;line-height:1.6;max-width:240px;margin-top:16px}
+.benefits-detail-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:54px;margin-top:24px}
+.insulation-story{display:flex;flex-direction:column;justify-content:space-between;gap:34px;border-radius:24px;background:#e8efdf;padding:39px 40px}
+.insulation-copy h3,.diy-story h3{font-size:33px;line-height:1.12;letter-spacing:-.04em}
+.insulation-copy>p,.diy-story>p{font-size:16px;line-height:1.65;margin-top:18px;max-width:440px}
+.insulation-copy>p{color:#50624c}
+.insulation-performance{display:flex;align-items:end;justify-content:space-between;gap:28px;border-top:1px solid #c9d5c1;padding-top:28px}
+.insulation-performance .insulation-value{font-size:clamp(38px,4vw,55px);line-height:1;letter-spacing:-.05em;color:var(--green);white-space:nowrap}
+.insulation-unit{display:block;margin-top:10px;font-size:15px;color:var(--green)}
+.insulation-performance>p{font-size:12px;line-height:1.5;max-width:155px;padding-bottom:2px;color:#50624c}
+.diy-story{padding:14px 0 7px}
+.build-mode{display:inline-flex;gap:4px;max-width:100%;border:1px solid var(--line);border-radius:100px;background:var(--fog);padding:4px;margin:23px 0 0;min-width:0}
+.build-mode label{position:relative;cursor:pointer}
+.build-mode input{position:absolute;opacity:0;width:1px;height:1px;margin:0}
+.build-mode label>span{display:block;padding:11px 19px;border-radius:100px;font-size:14px;line-height:1.3;white-space:nowrap;color:var(--muted)}
+.build-mode input:checked+span{background:var(--green);color:white}
+.build-mode input:focus-visible+span{outline:3px solid #81a34f;outline-offset:3px}
+.diy-price-block{margin-top:22px}
+.diy-price-block .diy-price{font-size:43px;letter-spacing:-.045em;line-height:1.15;color:var(--ink);white-space:nowrap}
+.diy-price>span:last-child{font-size:15px;letter-spacing:0;margin-left:4px}
+.diy-price-block>p:last-child{font-size:12px;line-height:1.5;margin-top:8px}
+.diy-story>.text-button{margin-top:20px;font-size:14px}
+.benefits-sr-only{position:absolute;clip-path:inset(50%);width:1px;height:1px;overflow:hidden;white-space:nowrap;padding:0;border:0}
+@media(max-width:1100px){
+ .benefits-heading{gap:45px}.assembly-story{grid-template-columns:minmax(0,1.55fr) minmax(0,1fr)}
+ .assembly-explainer{padding:30px 26px}.assembly-explainer h3{font-size:27px}.assembly-screen{min-height:350px}
+ .assembly-chapter{padding:16px 15px;gap:9px;font-size:13px}.benefits-detail-grid{gap:30px}.insulation-story{padding:33px 28px}
+ .insulation-performance{display:block}.insulation-performance>p{max-width:none;margin-top:15px}.insulation-copy h3,.diy-story h3{font-size:30px}
+}
+@media(max-width:760px){
+ .build-benefits{padding-bottom:65px}.benefits-heading{grid-template-columns:1fr;gap:22px;margin-bottom:29px}.benefits-heading h2{font-size:clamp(43px,8vw,60px)}.benefits-heading>p{font-size:16px;max-width:540px}
+ .assembly-story{display:flex;flex-direction:column;border-radius:18px}.assembly-screen{min-height:0;aspect-ratio:1280/728}.assembly-play{gap:12px;padding:20px}.assembly-play-icon{width:56px;height:56px}.assembly-play-icon svg{width:22px;height:22px}.assembly-play>span:last-child{font-size:16px}.assembly-play small{font-size:12px}
+ .assembly-chapters{min-height:70px}.assembly-chapter{padding:15px 12px;gap:8px;font-size:12px}.chapter-index{width:23px;height:23px;font-size:11px}.assembly-chapter svg{width:11px;height:11px}
+ .assembly-explainer{padding:27px;display:grid;grid-template-columns:1.15fr 1fr;gap:25px;align-items:start}.assembly-explainer h3{font-size:26px}.assembly-explainer p{font-size:14px}.assembly-duration>span:first-child{font-size:62px}.assembly-duration>span:last-child{font-size:16px}.assembly-explainer .assembly-duration{gap:8px}.assembly-explainer .assembly-estimate-note{font-size:11px;margin-top:13px}
+ .benefits-detail-grid{grid-template-columns:1fr;gap:33px;margin-top:18px}.insulation-story{padding:29px 27px;border-radius:18px;gap:26px}.insulation-copy h3,.diy-story h3{font-size:30px}.insulation-copy>p,.diy-story>p{font-size:15px;margin-top:16px}.insulation-performance{display:flex;gap:24px;padding-top:24px}.insulation-performance .insulation-value{font-size:43px}.insulation-performance>p{font-size:11px;max-width:140px;margin:0}.insulation-unit{font-size:13px}
+ .diy-story{padding:0 7px}.diy-price-block .diy-price{font-size:46px}.build-mode{margin-top:20px}
+}
+@media(max-width:440px){
+ .assembly-explainer{display:flex;flex-direction:column;gap:27px}.assembly-explainer .assembly-duration{gap:16px}.assembly-duration>span:last-child{font-size:19px}.assembly-explainer .assembly-estimate-note{max-width:250px;font-size:12px}.assembly-explainer p{font-size:15px}
+ .assembly-chapter svg{display:none}.assembly-play>span:last-child{max-width:175px}.insulation-performance{display:block}.insulation-performance>p{max-width:none;margin-top:14px}.benefits-heading h2{font-size:43px}
+ .build-mode label>span{padding:11px 16px}.diy-price-block .diy-price{font-size:43px}
+}

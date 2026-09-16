@@ -7,7 +7,10 @@
 <meta name="description" content="Własny dom prościej, szybciej i taniej. Sprawdź projekty Combstruct® w wariancie DIY lub z montażem.">
 <title>Combstruct® — dom składany jak puzzle.</title>
 <link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="trust.css">
+<link rel="stylesheet" href="benefits.css">
 <script defer src="app.js"></script>
+<script defer src="assets/project-offers.js"></script>
+<script defer src="benefits.js"></script>
 <!-- Share metadata: generated from the page title and description. -->
 <link rel="canonical" href="https://www.combstruct.com/">
 <link rel="icon" type="image/x-icon" href="favicon.ico">
@@ -88,19 +91,47 @@
     </div>
   </section>
 
-  <section id="praktyka" class="comfort-section section-wrap" aria-labelledby="comfort-title">
-    <div class="comfort-heading"><h2 id="comfort-title">Montaż i ocieplenie.<br>Co to daje w praktyce?</h2><p>Gotowe połączenia ograniczają pracę przy przygotowaniu elementów na budowie. Komory konstrukcji służą jednocześnie do umieszczenia izolacji.</p></div>
-    <div class="comfort-facts">
-      <article class="comfort-fact"><div class="fact-symbol" aria-hidden="true"><svg viewBox="0 0 40 40"><path d="M11 31V18m9 13V9m9 22V18M7 35h26"/><path d="m7 12 13-8 13 8"/></svg></div><h3>Pasywny w standardzie.</h3><p>Kostki izolacji wypełniają komory podłogi, ścian zewnętrznych i dachu. Niskie U oznacza, że przez ocieploną przegrodę przenika mniej ciepła.</p><div class="fact-value">U &lt; 0,10 <span>W/(m²·K)</span></div><small>Współczynnik przenikania ciepła</small></article>
-      <article class="comfort-fact"><div class="fact-symbol" aria-hidden="true"><svg viewBox="0 0 40 40"><circle cx="20" cy="21" r="13"/><path d="M20 13v9l6 3M15 3h10"/></svg></div><h3>Deski przyjeżdżają gotowe do łączenia.</h3><p>Wpusty wycinamy przed dostawą. Na budowie składamy przygotowane deski według projektu, powtarzając ten sam sposób łączenia.</p><div class="fact-value">1–2 <span>tygodnie montażu</span></div><small>Orientacyjny czas montażu konstrukcji domu 120 m².</small></article>
+  <section id="praktyka" class="build-benefits section-wrap" aria-labelledby="comfort-title">
+    <div class="benefits-heading">
+      <h2 id="comfort-title">Szybki montaż.<br>Ciepły dom.</h2>
+      <p>Przygotowane deski łączysz według projektu. Dopasowane kostki izolacji wypełniają konstrukcję. Każdy element ma swoje miejsce.</p>
     </div>
-    <figure class="build-film">
-      <video id="construction-film" controls playsinline preload="none" width="1280" height="728" poster="assets/featured-project-poster.jpg" aria-labelledby="construction-film-label">
-        <source src="assets/featured-project.mp4?v=trim-end-2s" type="video/mp4">
-        <a href="assets/featured-project.mp4?v=trim-end-2s">Obejrzyj film z montażu domu Combstruct®</a>.
-      </video>
-      <figcaption><span id="construction-film-label">Tak budujemy Combstruct®.</span><span>Montaż domu · 40 s</span></figcaption>
-    </figure>
+    <div class="assembly-story">
+      <figure class="assembly-film">
+        <div class="assembly-screen">
+          <video id="construction-film" controls playsinline preload="none" width="1280" height="728" poster="assets/build/grid.jpg" aria-labelledby="construction-film-label">
+            <source src="assets/featured-project.mp4?v=trim-end-2s" type="video/mp4">
+            <a href="assets/featured-project.mp4?v=trim-end-2s">Obejrzyj film z montażu domu Combstruct®</a>.
+          </video>
+          <button class="assembly-play" id="construction-play" hidden aria-label="Odtwórz film z montażu — 40 sekund">
+            <span class="assembly-play-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m9 5 11 7-11 7Z"/></svg></span>
+            <span>Zobacz, jak składamy dom<small>Film z budowy · 40 s</small></span>
+          </button>
+        </div>
+        <figcaption id="construction-film-label">Tak budujemy Combstruct®.</figcaption>
+        <div class="assembly-chapters" id="construction-chapters" role="group" aria-label="Wybierz fragment filmu" hidden>
+          <button type="button" class="assembly-chapter" data-construction-time="0" aria-pressed="true" aria-controls="construction-film"><span class="chapter-index" aria-hidden="true">1</span><span>Składanie konstrukcji</span><svg viewBox="0 0 20 20" aria-hidden="true"><path d="m7 4 8 6-8 6Z"/></svg></button>
+          <button type="button" class="assembly-chapter" data-construction-time="19" aria-pressed="false" aria-controls="construction-film"><span class="chapter-index" aria-hidden="true">2</span><span>Wkładanie izolacji</span><svg viewBox="0 0 20 20" aria-hidden="true"><path d="m7 4 8 6-8 6Z"/></svg></button>
+        </div>
+      </figure>
+      <div class="assembly-explainer">
+        <div><h3>Gotowe do łączenia.</h3><p>Deski przyjeżdżają z wyciętymi wpustami. Na budowie składasz je w podłogę, ściany i dach według jednej, powtarzalnej zasady.</p></div>
+        <div class="assembly-estimate"><p class="assembly-duration"><span>1–2</span> <span>tygodnie</span></p><p class="assembly-estimate-note">Orientacyjny czas montażu konstrukcji domu 120 m².</p></div>
+      </div>
+    </div>
+    <div class="benefits-detail-grid">
+      <div class="insulation-story">
+        <div class="insulation-copy"><h3>Ciepło zaczyna się<br>w konstrukcji.</h3><p>Dopasowana izolacja w podłodze, ścianach zewnętrznych i dachu ogranicza ucieczkę ciepła. Komory od razu wyznaczają jej miejsce.</p></div>
+        <div class="insulation-performance"><div><p class="insulation-value">U &lt; 0,10</p><span class="insulation-unit">W/(m²·K)</span></div><p>Współczynnik przenikania ciepła przegrody</p></div>
+      </div>
+      <div class="diy-story">
+        <h3>Własny montaż.<br>Mniejszy wydatek.</h3>
+        <p>Wybierz gotowy zestaw i składaj dom we własnym tempie. Jeśli wolisz powierzyć pracę ekipie, wybierz wariant z montażem.</p>
+        <fieldset class="build-mode" id="benefit-build-mode" hidden><legend class="benefits-sr-only">Porównaj cenę zestawu i wariantu z montażem</legend><label><input type="radio" name="benefit-mode" value="materials" checked><span>Zestaw DIY</span></label><label><input type="radio" name="benefit-mode" value="assembly"><span>Z montażem</span></label></fieldset>
+        <div class="diy-price-block" aria-live="polite" aria-atomic="true"><p class="diy-price"><span id="benefit-price">50 000</span> <span>zł brutto</span></p><p id="benefit-price-scope">Combstruct 30 · OSB3 · materiały bez montażu</p></div>
+        <a class="text-button" id="benefit-price-link" href="combstruct-30.html?mode=materials">Zobacz, co jest w cenie <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 6h10v10M18 6 6 18"/></svg></a>
+      </div>
+    </div>
   </section>
 
 <section class="built-section section-wrap" id="realizacje" aria-labelledby="built-title"><div class="section-intro"><div><p class="section-label">Combstruct w praktyce</p><h2 id="built-title">Od konstrukcji<br>do Twojego domu.</h2></div><div><p>Jedna konstrukcja, wiele możliwości wykończenia. Zobacz, jak powstaje dom w systemie Combstruct — krok po kroku.</p><a class="text-button" href="realizacje.html">Zobacz zdjęcia z budowy <span aria-hidden="true">↗</span></a></div></div><div class="built-pair"><figure><img class="" src="assets/build/house-timber-visualisation.jpg" width="1448" height="1086" alt="Dom Combstruct z drewnianą elewacją i dużymi przeszkleniami" loading="lazy" decoding="async"></figure><figure><img class="" src="assets/build/insulation.jpg" width="1600" height="1200" alt="Rzeczywisty montaż konstrukcji i izolacji domu Combstruct" loading="lazy" decoding="async"><figcaption>Rzeczywisty montaż konstrukcji i izolacji</figcaption></figure></div></section>
