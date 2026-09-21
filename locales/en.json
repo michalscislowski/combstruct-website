@@ -956,5 +956,9 @@
   "Przekrój T": "T-section",
   "Łata": "Batten",
   "· długość wyjściowa": "· stock length",
-  "· z tej samej płyty co żebra": "· cut from the same panel material as the ribs"
+  "· z tej samej płyty co żebra": "· cut from the same panel material as the ribs",
+  "Łaty spinają ściany i stropodach": "Battens tie the walls and roof together",
+  "Do komór podłogi, ścian zewnętrznych i dachu wkładamy dopasowane kostki izolacji. Kolejny krok to stelażowanie ścian i stropodachu: zamknięcie żeber łatami z tej samej płyty.": "Fitted insulation blocks fill the cells in the floor, external walls and roof. Next, strips cut from the same panel material cap the wall and roof ribs.",
+  "Po wypełnieniu izolacją przykręcamy łaty 60 × 18 mm po stronie otwartych wpustów. Na ścianach biegną pionowo od zewnątrz i poziomo od środka. Na stropodachu zamykają żebra od góry i od spodu, w dwóch prostopadłych kierunkach. Tworzą przekrój T z parą desek. Odcinki 2500 mm docinamy przy połączeniach i przeszkodach.": "After fitting the insulation, we screw 60 × 18 mm battens across the open-slot edges. On the walls they run vertically outside and horizontally inside. On the roof slab they cap the ribs from above and below, in two perpendicular directions. Each batten forms a T-section with a board pair. The 2500 mm stock is cut at joints and obstructions.",
+  "Podłoga, ściany i dach powstają z jednego powtarzalnego elementu — deski grzebieniowej — podstawy systemu Combstruct®. Wybierz etap i obróć model, żeby zobaczyć, jak łączymy elementy, wypełniamy komory izolacją i spinamy ściany i stropodach łatami.": "The floor, walls and roof use one repeating element: the comb board at the heart of Combstruct®. Choose a stage and rotate the model to see the joints, insulation and battens on the walls and roof."
 }

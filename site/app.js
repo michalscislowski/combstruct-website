@@ -12,8 +12,8 @@
     ['Jak przedłużamy belkę', 'Belkę składamy z dwóch warstw desek. Przesuwamy jedną warstwę wzdłuż drugiej: koniec deski wypada wtedy obok pełnego odcinka sąsiedniej. Dokładając kolejne deski, przedłużamy belkę.', 'Połącz belki na krzyż'],
     ['Belki łączą się na krzyż', 'Wsuwamy belki w siebie pod kątem 90°. Wpusty sięgają do połowy wysokości belek, więc skrzyżowanie zachowuje wysokość jednej belki. Powstaje plaster — siatka żeber i otwartych komór.', 'Zobacz konstrukcję domu'],
     ['Ta sama siatka tworzy dom', 'Plastry układamy poziomo jako podłogę i strop oraz pionowo jako ściany. Z tej samej siatki powstaje dach. Sąsiednie plastry łączymy wpustami i stopniowanymi zakończeniami desek.', 'Wypełnij komory izolacją'],
-    ['Izolacja trafia między deski', 'Do komór podłogi, ścian zewnętrznych i dachu wkładamy dopasowane kostki izolacji. Kolejny krok to stelażowanie ścian: zamknięcie żeber łatami z tej samej płyty.', 'Zamknij żebra łatami'],
-    ['Łaty spinają ściany', 'Po wypełnieniu izolacją przykręcamy łaty 60 × 18 mm: na zewnątrz pionowo, od środka poziomo. Leżą płasko na krawędziach par desek i tworzą z żebrami przekrój T. Odcinki 2500 mm docinamy do potrzebnej długości.', 'Wróć do pojedynczej deski'],
+    ['Izolacja trafia między deski', 'Do komór podłogi, ścian zewnętrznych i dachu wkładamy dopasowane kostki izolacji. Kolejny krok to stelażowanie ścian i stropodachu: zamknięcie żeber łatami z tej samej płyty.', 'Zamknij żebra łatami'],
+    ['Łaty spinają ściany i stropodach', 'Po wypełnieniu izolacją przykręcamy łaty 60 × 18 mm po stronie otwartych wpustów. Na ścianach biegną pionowo od zewnątrz i poziomo od środka. Na stropodachu zamykają żebra od góry i od spodu, w dwóch prostopadłych kierunkach. Tworzą przekrój T z parą desek. Odcinki 2500 mm docinamy przy połączeniach i przeszkodach.', 'Wróć do pojedynczej deski'],
   ];
 
   function showStage(next, focus = false) {

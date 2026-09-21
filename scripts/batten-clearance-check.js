@@ -36,6 +36,26 @@ near(atShoulder[1].v0,BATTEN_END_CLEARANCE);
 near(atShoulder[1].v1,.24);
 
 const {house,battenParts}=buildSystemModel(),axes=['x','y','z'];
+const wallParts=battenParts.filter(p=>p.surface==='wall'),roofParts=battenParts.filter(p=>p.surface==='roof');
+assert.equal(wallParts.length,698);
+const roofBoards=house.boards.filter(b=>b.kind==='ceiling');
+for(const side of ['upper','lower']) {
+ const parts=roofParts.filter(p=>p.side===side),up=side==='upper';
+ assert(parts.length>0);
+ const expectedRibs=new Set(roofBoards.filter(b=>up?b.normal[1]>0:b.normal[1]<0).map(b=>b.index));
+ assert.deepEqual(new Set(parts.map(p=>p.rib)),expectedRibs);
+ for(const p of parts) {
+  const board=roofBoards.find(b=>b.index===p.rib&&(up?b.normal[1]>0:b.normal[1]<0));
+  const run=p.runAxis==='x'?0:2,cross=run===0?2:0;
+  near(Math.abs(board.along[run]),1);
+  near(p.center[cross],board.frameOrigin[cross]);
+  near(p.center[1],(up?house.dimensions.ceilingTop:house.dimensions.ceilingBottom)+(up?.009:-.009));
+  near(p.size[1],.018);near(p.size[cross],.06);
+  assert(p.size[run]>0&&p.size[run]<=2.500001);
+  near(p.center[0],(p.u0+p.u1)/2);near(p.center[2],(p.v0+p.v1)/2);
+  if(!up){assert(p.u0>=-5.974001);assert(p.u1<=5.974001);}
+ }
+}
 // The left wall's roof tongue occupies only the top 120 mm of the slab depth.
 // The outside strip below it must reach the tongue, not stop at the slab base.
 const roofEnd=house.dimensions.ceilingBottom+.12-BATTEN_END_CLEARANCE;
@@ -57,7 +77,7 @@ for(const p of battenParts) {
   const {geometry,matrixWorld}=s.mesh,pos=geometry.attributes.position,index=geometry.index;
   for(let i=0;i<(index?.count??pos.count);i+=3) {
    [triangle.a,triangle.b,triangle.c].forEach((v,j)=>v.fromBufferAttribute(pos,index?index.getX(i+j):i+j).applyMatrix4(matrixWorld));
-   examined++;assert(!box.intersectsTriangle(triangle),`${p.wallId} ${p.side} rib ${p.rib} intersects ${s.id}`);
+   examined++;assert(!box.intersectsTriangle(triangle),`${p.wallId||p.surface} ${p.side} rib ${p.rib} intersects ${s.id}`);
   }
  }
  if(p.side==='interior') {
@@ -67,4 +87,9 @@ for(const p of battenParts) {
   assert(p.center[run]+p.size[run]/2<=limit+1e-6);
  }
 }
-console.log(JSON.stringify({battens:battenParts.length,independentTriangleChecks:examined,clearance:BATTEN_END_CLEARANCE,collisions:0,cornerProtrusions:0}));
+// Roof strips must not overlap the wall-cap battens or one another either.
+const boxes=battenParts.map(p=>new THREE.Box3().setFromCenterAndSize(new THREE.Vector3(...p.center),new THREE.Vector3(...p.size)));
+for(let i=0;i<battenParts.length;i++)if(battenParts[i].surface==='roof')for(let j=0;j<i;j++) {
+ assert(axes.some(a=>Math.min(boxes[i].max[a],boxes[j].max[a])-Math.max(boxes[i].min[a],boxes[j].min[a])<1e-6),`battens overlap: ${i}, ${j}`);
+}
+console.log(JSON.stringify({battens:battenParts.length,wallBattens:wallParts.length,roofUpper:roofParts.filter(p=>p.side==='upper').length,roofLower:roofParts.filter(p=>p.side==='lower').length,independentTriangleChecks:examined,clearance:BATTEN_END_CLEARANCE,collisions:0,cornerProtrusions:0}));

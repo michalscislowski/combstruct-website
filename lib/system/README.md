@@ -11,11 +11,19 @@ postMessage contract is unchanged. `window.combstructViewer.getState()` exposes
 the source, counts and dimensions; `getBattens()` returns closing-strip geometry.
 
 Batten strips derive their axes and extents from the actual board records and wall
-panels. Outside strips are vertical; inside strips are horizontal. Their inner
+panels. Outside wall strips are vertical; inside strips are horizontal. Their inner
 face is tangent to the 240 mm core. Slots are bridged, stock spans do not exceed
 2500 mm, and openings trim the full 60 mm width. The teal colour highlights this
 layer; it is cut from the same panel material. Battens are presentation geometry,
 not part of the catalogue board or fastener schedule.
+
+The roof slab is battened on both faces. Each roof board's `normal` identifies its
+open-slot face: +Y ribs receive upper battens, -Y ribs receive lower battens. The
+two strip families run along their respective ribs, perpendicular to each other.
+Roof strips use the same 60 × 18 × 2500 mm stock and actual clipped board extents.
+Lower strips stop at the inside wall-cap battens. `getState().battenCounts` reports
+wall, upper-roof and lower-roof fragments separately. `getBattens()` identifies
+each fragment with `surface`, `side`, local face coordinates and world geometry.
 
 `construction/batten-clearance.js` clips strips against the actual board profiles
 at the strip's width and depth. Each obstruction splits the full strip width,
@@ -35,4 +43,6 @@ opening clearances and staggered sample seams. These are geometry checks.
 `scripts/batten-clearance-check.js` also checks native half-slots, resumed strips,
 tangent supporting faces, interior corner limits and independent triangle/box
 collision checks on the final house battens. Bundle and run it the same way.
+The same check covers both roof faces, every roof rib, stock limits, slot-normal
+orientation, wall/roof strip intersections and the existing wall end regressions.
 Run `node --test scripts/battens.test.mjs scripts/locales.test.mjs` as well.
