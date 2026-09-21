@@ -12,16 +12,18 @@
     ['Jak przedłużamy belkę', 'Belkę składamy z dwóch warstw desek. Przesuwamy jedną warstwę wzdłuż drugiej: koniec deski wypada wtedy obok pełnego odcinka sąsiedniej. Dokładając kolejne deski, przedłużamy belkę.', 'Połącz belki na krzyż'],
     ['Belki łączą się na krzyż', 'Wsuwamy belki w siebie pod kątem 90°. Wpusty sięgają do połowy wysokości belek, więc skrzyżowanie zachowuje wysokość jednej belki. Powstaje plaster — siatka żeber i otwartych komór.', 'Zobacz konstrukcję domu'],
     ['Ta sama siatka tworzy dom', 'Plastry układamy poziomo jako podłogę i strop oraz pionowo jako ściany. Z tej samej siatki powstaje dach. Sąsiednie plastry łączymy wpustami i stopniowanymi zakończeniami desek.', 'Wypełnij komory izolacją'],
-    ['Izolacja trafia między deski', 'Do komór podłogi, ścian zewnętrznych i dachu wkładamy dopasowane kostki izolacji. Potem dodajemy membrany, okładziny i wykończenie. Elewacja przykrywa konstrukcję widoczną w tym modelu.', 'Wróć do pojedynczej deski'],
+    ['Izolacja trafia między deski', 'Do komór podłogi, ścian zewnętrznych i dachu wkładamy dopasowane kostki izolacji. Kolejny krok to stelażowanie ścian: zamknięcie żeber łatami z tej samej płyty.', 'Zamknij żebra łatami'],
+    ['Łaty spinają ściany', 'Po wypełnieniu izolacją przykręcamy łaty 60 × 18 mm: na zewnątrz pionowo, od środka poziomo. Leżą płasko na krawędziach par desek i tworzą z żebrami przekrój T. Odcinki 2500 mm docinamy do potrzebnej długości.', 'Wróć do pojedynczej deski'],
   ];
 
   function showStage(next, focus = false) {
-    stage = Math.max(0, Math.min(4, next));
+    stage = Math.max(0, Math.min(stages.length - 1, next));
     $$('.stage-tab').forEach((tab, index) => {
       tab.classList.toggle('is-active', index === stage);
       tab.setAttribute('aria-selected', String(index === stage));
       tab.tabIndex = index === stage ? 0 : -1;
     });
+    $('#batten-detail-link').hidden = stage !== 5;
     $('#stage-title').textContent = stages[stage][0];
     $('#stage-description').textContent = stages[stage][1];
     $('#next-stage').firstChild.textContent = `${stages[stage][2]} `;
@@ -40,10 +42,10 @@
     const previousKey = horizontal ? 'ArrowLeft' : 'ArrowUp';
     const nextKey = horizontal ? 'ArrowRight' : 'ArrowDown';
     let next;
-    if (event.key === previousKey) next = (stage + 4) % 5;
-    if (event.key === nextKey) next = (stage + 1) % 5;
+    if (event.key === previousKey) next = (stage + stages.length - 1) % stages.length;
+    if (event.key === nextKey) next = (stage + 1) % stages.length;
     if (event.key === 'Home') next = 0;
-    if (event.key === 'End') next = 4;
+    if (event.key === 'End') next = stages.length - 1;
     if (next !== undefined) { event.preventDefault(); showStage(next, true); }
   });
   function updateOrientation() {

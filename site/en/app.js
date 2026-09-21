@@ -12,16 +12,18 @@
     ['Extending a beam', 'A beam is made from two layers of boards. One layer is offset along the other, so the end of one board sits beside an unbroken section of its neighbour. Add more boards to extend the beam.', 'Cross the beams'],
     ['Beams interlock at right angles', 'Slide the beams together at 90°. Each slot reaches halfway through the beam height, so the joint stays within the height of one beam. This creates a grid panel of ribs and open cells.', 'See the house structure'],
     ['The same grid forms the house', 'Grid panels form floors and ceilings when laid horizontally, and walls when placed vertically. The roof uses the same grid. Adjacent panels connect through slots and stepped board ends.', 'Fill the cells with insulation'],
-    ['Insulation fits between the boards', 'Fitted insulation blocks go into the cells of the floor, external walls and roof. Membranes, linings and finishes follow. The facade covers the structure shown in this model.', 'Back to a single board'],
+    ['Insulation fits between the boards', 'Fitted insulation blocks fill the cells in the floor, external walls and roof. Next, strips cut from the same panel material cap the wall ribs.', 'Cap the ribs with battens'],
+    ['Battens close the ribs', 'After fitting the insulation, we screw 60 × 18 mm battens to the ribs: vertically outside and horizontally inside. The strips lie flat across the edges of each board pair, forming a T-section. The 2500 mm stock is cut to length.', 'Back to a single board'],
   ];
 
   function showStage(next, focus = false) {
-    stage = Math.max(0, Math.min(4, next));
+    stage = Math.max(0, Math.min(stages.length - 1, next));
     $$('.stage-tab').forEach((tab, index) => {
       tab.classList.toggle('is-active', index === stage);
       tab.setAttribute('aria-selected', String(index === stage));
       tab.tabIndex = index === stage ? 0 : -1;
     });
+    $('#batten-detail-link').hidden = stage !== 5;
     $('#stage-title').textContent = stages[stage][0];
     $('#stage-description').textContent = stages[stage][1];
     $('#next-stage').firstChild.textContent = `${stages[stage][2]} `;
@@ -40,10 +42,10 @@
     const previousKey = horizontal ? 'ArrowLeft' : 'ArrowUp';
     const nextKey = horizontal ? 'ArrowRight' : 'ArrowDown';
     let next;
-    if (event.key === previousKey) next = (stage + 4) % 5;
-    if (event.key === nextKey) next = (stage + 1) % 5;
+    if (event.key === previousKey) next = (stage + stages.length - 1) % stages.length;
+    if (event.key === nextKey) next = (stage + 1) % stages.length;
     if (event.key === 'Home') next = 0;
-    if (event.key === 'End') next = 4;
+    if (event.key === 'End') next = stages.length - 1;
     if (next !== undefined) { event.preventDefault(); showStage(next, true); }
   });
   function updateOrientation() {

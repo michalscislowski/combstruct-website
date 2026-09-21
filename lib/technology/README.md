@@ -1,6 +1,6 @@
 # Technology page
 
-`site/technologie.html` presents four tabs: a 17-topic construction handbook, an interactive BIM demonstration, Combstruct Flow for digital design/production/assembly, and Combstruct Robotics. Navigation links are present in the existing desktop/mobile navigation and footers. Each handbook topic and technology has a URL hash and supports browser history.
+`site/technologie.html` presents four tabs: an 18-topic construction handbook, an interactive BIM demonstration, Combstruct Flow for digital design/production/assembly, and Combstruct Robotics. Navigation links are present in the existing desktop/mobile navigation and footers. Each handbook topic and technology has a URL hash and supports browser history.
 
 `content.js` contains Polish handbook copy and four end-profile choices: ordinary,
 240 mm ending, full 36 mm end slot, and 258 mm ending. `geometry.js` uses the
@@ -159,3 +159,29 @@ hidden initially in this topic, can be enabled, and can be lifted through their
 working slots. Scene controls and copy are translated through the PL/EN pipeline.
 `audit-ridge.js` validates all three layouts throughout the angle range, and
 `audit-ridge-models.js` verifies the same lap areas in all 42 house ridge nodes.
+
+## Wall battening
+
+`#stelazowanie` adds a wall-face detail after the exterior-wall rules. The 60 × 18 mm
+strips are cut from the same panel material, stock length 2500 mm. They cap the
+36 mm paired-rib edges: vertical on the exterior/open-slot face of uprights and
+horizontal on the interior/open-slot face of horizontal ribs. The teal colour
+identifies the new strips, not a different material. The centre of the strip
+aligns with the rib centre, leaving 12 mm on either side.
+
+Outside/inside views share one insulated sample (one cell is intentionally open);
+the T-section view is a short cut between slots. The existing separation slider
+moves only the strips away from the wall faces. The homepage has the same layer
+as stage 6 after insulation. `lib/construction/battens.js` handles stock lengths
+and subtracts apertures from the full 60 mm width, including jamb-edge overhangs.
+
+This addition visualises the proposed wall layer. It does not define screw type,
+spacing, composite-action design values, fastening at splices, or a production
+cutting schedule. Existing catalogue board quantities and prices are unchanged;
+rendered strip fragments are not a procurement count. Catalogue roof geometry
+and joints are unchanged.
+
+Validation: `node --test scripts/battens.test.mjs scripts/locales.test.mjs`; local
+responsive PL/EN browser checks in `outputs/combstruct-battens/check.cjs` exercise
+all six stages, directions, dimensions, detail views, separation, keyboard
+navigation, and switching back to the existing ridge joint.

@@ -74,6 +74,10 @@
           <label id="arrows-control"><input id="arrows" type="checkbox" checked>Slot direction</label>
           <button type="button" data-reset-view>Centre view</button>
         </div>
+        <div id="batten-controls" class="batten-controls" hidden>
+          <div class="segmented" role="group" aria-label="Battening view"><button type="button" data-batten-view="outside" aria-pressed="true">Outside</button><button type="button" data-batten-view="inside" aria-pressed="false">Inside</button><button type="button" data-batten-view="section" aria-pressed="false">T-section</button></div>
+          <p>Batten <strong>60 × 18 mm</strong> · stock length <strong>2500 mm</strong> · cut from the same panel material as the ribs</p>
+        </div>
         <div id="roof-joint-controls" class="roof-joint-controls" hidden>
           <label id="roof-joint-variant-control" for="roof-joint-variant">Joint configuration<select id="roof-joint-variant"><option value="1-1">Knee wall · with eave</option><option value="0-1">Knee wall · flush edge</option><option value="1-0">Floor + roof · with eave</option><option value="0-0">Floor + roof · flush edge</option></select></label>
           <label id="ridge-house-control" for="ridge-house" hidden>Slot layout<select id="ridge-house"><option value="principle">Lap between slots</option><option value="30">Combstruct 30</option><option value="90">Combstruct 90</option></select></label>
