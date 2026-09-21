@@ -36,8 +36,23 @@ existing user rates. Then rebundle `lib/parts/viewer.js` and
 Bundle/run `scripts/audit-kit-stock.js` with the same Three.js. It independently
 checks provenance against the original construction schedule and tests all
 2.5 million model vertices against their delivered stock boundaries and merged
-connector cuts. Current model counts are 1364 / 3528 / 2738; delivery counts are
-1331 / 3401 / 2652. Full ordinary 2.5 m delivery quantities: 202 / 471 / 466.
+connector cuts. Current model counts are 1424 / 3618 / 2806; delivery counts are
+1363 / 3447 / 2720.
 
 Browser QA covers native variants, absence of fitted previews, identical Flow
 and project data, tabs, assembly, mobile widths and all 12 price/order variants.
+
+## Battens
+
+`families` and `totalBoards` retain structural-board semantics. `additionalFamilies`
+adds a flat 2500 × 60 × 18 mm batten with its full-stock quantity and 3D preview.
+Both project parts and Flow production use the shared catalogue controls; the
+Flow assembly sequence continues to describe the structural core.
+
+`battens.lengthM` is installed length, `stockStrips` is the feasible number of
+2500 mm blanks after reusing offcuts, and `sheets` rounds those blanks up at twenty
+per sheet, without kerf. `material.sheets` remains structural stock only;
+`material.battenSheets` adds batten stock and `material.totalSheets` is the kit
+total used by offers. The public page shows all three batten quantities and the
+structural/batten sheet breakdown. Full cutting plans are stored in construction
+QA reports; the public JSON carries the summary.

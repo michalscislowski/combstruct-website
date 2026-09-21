@@ -41,9 +41,10 @@ for (const id of ['30','90','125']) {
   if (parts.families.reduce((sum,f) => sum+f.count,0) !== parts.totalBoards) {
     throw new Error(`Incomplete parts catalogue for Combstruct ${id}`);
   }
-  if(parts.totalBoards!==quantityAudit[id].deliveryBoards || parts.material.sheets!==quantityAudit[id].sheets) {
+  if(parts.totalBoards!==quantityAudit[id].deliveryBoards || (parts.material.totalSheets??parts.material.sheets)!==quantityAudit[id].sheets) {
     throw new Error(`Regenerate kit quantities and offers for Combstruct ${id}`);
   }
+  if(parts.battens && (parts.battens.sheets!==Math.ceil(parts.battens.stockStrips/20) || parts.material.totalSheets!==parts.material.sheets+parts.battens.sheets || parts.additionalFamilies?.[0]?.count!==parts.battens.stockStrips))throw new Error(`Invalid batten bill for ${id}`);
   const variants = [...html.matchAll(/data-price-material="([^"]+)"><dt>([^<]+)<\/dt><dd><strong data-price-amount data-materials="(\d+)" data-assembly="(\d+)"/g)]
     .map(([,material,label,materials,assembly]) => ({material,label,materials:Number(materials),assembly:Number(assembly)}));
   if (variants.length !== 2) throw new Error(`Missing price variants in Combstruct ${id}`);

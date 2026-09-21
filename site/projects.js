@@ -54,7 +54,7 @@
       if(started)return;
       started=true;
       const script=document.createElement('script');
-      script.src='assets/parts-viewer.js?v=kit-1';
+      script.src='assets/parts-viewer.js?v=d07ac363';
       script.onerror=()=>{
         started=false;
         const message=panel.querySelector('.parts-loading');
@@ -158,5 +158,6 @@
     }
   });
   matchMedia('(max-width:760px)').addEventListener('change', closeMenu);
-  document.querySelector('#copyright-year').textContent = new Date().getFullYear();
+  const copyrightYear = document.querySelector('#copyright-year');
+  if (copyrightYear) copyrightYear.textContent = new Date().getFullYear();
 })();

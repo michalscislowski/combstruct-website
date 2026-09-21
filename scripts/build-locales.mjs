@@ -34,6 +34,7 @@ const escapeText=s=>s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&
 const escapeAttr=s=>escapeText(s).replace(/"/g,'&quot;');
 function words(value) {
   const s=decode(value),key=s.trim();
+  if(key==='mb')return s.replace(key,'linear m');
   // Convert Polish decimal separators before translation, never English
   // thousands separators in approved copy (e.g. 50,000 PLN).
   const en=(dictionary[key]??translate(key.replace(/(\d),(\d)/g,'$1.$2'))).replace(/\b\d{1,3}(?:[ \u00a0\u202f]\d{3})+\b/g,n=>Number(n.replace(/\s/g,'')).toLocaleString('en-GB'));

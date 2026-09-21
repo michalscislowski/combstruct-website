@@ -238,3 +238,42 @@ extra padded module; its delivered count remains 3,447, with an estimated 486
 sheets under the existing five-boards-per-sheet convention. Stock/price rates
 are unchanged. These are geometry and material-accounting checks, not a
 structural capacity or fastening approval.
+
+## Battening and batten stock
+
+`batten-geometry.js` is shared with the homepage. Catalogue mode adds 60 × 18 mm
+closing strips to exterior walls, partitions, floors, intermediate slabs, ceilings
+and pitched roofs. The strip follows the rib whose slots open towards that face:
+vertical outside walls, horizontal inside; perpendicular families on opposite
+slab and roof faces. Floor terraces and slab balconies follow their actual ribs.
+Openings, projecting board ends, neighbouring strips and sloped roof boundaries
+trim the strips. Native core board positions and profiles are unchanged.
+
+`batten-layer.js` batches these strips under their source surface groups, so
+existing floor/roof/interior views hide the matching strips with the core. The
+viewer checkbox independently shows/hides battening. Teal marks the added layer,
+which is cut from the same sheet material as the structural boards.
+
+`batten-quantities.js` packs the generated fragments into 2500 mm stock strips
+with deterministic best-fit decreasing reuse of offcuts. This is a feasible
+cutting schedule, not a proof of optimal nesting. Per the owner's instruction,
+one 2500 × 1250 × 18 mm sheet supplies twenty 60 mm strips, without kerf.
+Round the stock-strip count up to complete sheets. Installed metres, full stock
+strips and extra sheets are separate quantities. Kit prices include the extra
+sheets using the existing material and assembly rates.
+
+| Model | Installed battens, m | Full 2500 mm strips | Extra sheets | Total kit sheets |
+| --- | ---: | ---: | ---: | ---: |
+| 30 | 1,019.7 | 415 | 21 | 216 |
+| 90 | 2,386.0 | 984 | 50 | 536 |
+| 125 | 2,254.0 | 935 | 47 | 477 |
+
+`scripts/build-parts-data.js` writes `qa/{id}-battens.json`, including the cutting
+plan and fragment coordinates. Bundle/run `scripts/catalogue-battens-check.js`
+to verify stock assignments, source groups, unchanged core geometry fingerprints
+and independent oriented-box/triangle clearance checks. Results live in
+`qa/{id}-batten-validation.json`. Run `node --test scripts/batten-quantities.test.mjs`
+for cutting-stock boundary cases. These checks cover geometry and quantities;
+fastener schedules and structural performance are outside this model.
+
+Shared-workspace rebuild: `python3 outputs/combstruct-catalogue-battens/build.py`.

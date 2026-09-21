@@ -960,5 +960,16 @@
   "Łaty spinają ściany i stropodach": "Battens tie the walls and roof together",
   "Do komór podłogi, ścian zewnętrznych i dachu wkładamy dopasowane kostki izolacji. Kolejny krok to stelażowanie ścian i stropodachu: zamknięcie żeber łatami z tej samej płyty.": "Fitted insulation blocks fill the cells in the floor, external walls and roof. Next, strips cut from the same panel material cap the wall and roof ribs.",
   "Po wypełnieniu izolacją przykręcamy łaty 60 × 18 mm po stronie otwartych wpustów. Na ścianach biegną pionowo od zewnątrz i poziomo od środka. Na stropodachu zamykają żebra od góry i od spodu, w dwóch prostopadłych kierunkach. Tworzą przekrój T z parą desek. Odcinki 2500 mm docinamy przy połączeniach i przeszkodach.": "After fitting the insulation, we screw 60 × 18 mm battens across the open-slot edges. On the walls they run vertically outside and horizontally inside. On the roof slab they cap the ribs from above and below, in two perpendicular directions. Each batten forms a T-section with a board pair. The 2500 mm stock is cut at joints and obstructions.",
-  "Podłoga, ściany i dach powstają z jednego powtarzalnego elementu — deski grzebieniowej — podstawy systemu Combstruct®. Wybierz etap i obróć model, żeby zobaczyć, jak łączymy elementy, wypełniamy komory izolacją i spinamy ściany i stropodach łatami.": "The floor, walls and roof use one repeating element: the comb board at the heart of Combstruct®. Choose a stage and rotate the model to see the joints, insulation and battens on the walls and roof."
+  "Podłoga, ściany i dach powstają z jednego powtarzalnego elementu — deski grzebieniowej — podstawy systemu Combstruct®. Wybierz etap i obróć model, żeby zobaczyć, jak łączymy elementy, wypełniamy komory izolacją i spinamy ściany i stropodach łatami.": "The floor, walls and roof use one repeating element: the comb board at the heart of Combstruct®. Choose a stage and rotate the model to see the joints, insulation and battens on the walls and roof.",
+  "Elementy zestawu": "Kit components",
+  "Deski i łaty w Twoim zestawie. Wybierz rodzaj i długość.": "Comb boards and battens in your kit. Choose a type and length.",
+  "Łata 60 × 18 mm": "Batten 60 × 18 mm",
+  "Stelażowanie · łaty 60 × 18 mm": "Battening · 60 × 18 mm strips",
+  "Łaty w modelu": "Installed battens",
+  "Łaty 2500 × 60 × 18 mm": "Battens 2500 × 60 × 18 mm",
+  "Płyty na łaty": "Sheets for battens",
+  "Płyty łącznie:": "Total sheets:",
+  " na deski + ": " for comb boards + ",
+  " na łaty.": " for battens.",
+  "Łaty z tej samej płyty: 20 odcinków po 2.5 m, bez rzazu. Krótsze odcinki wykorzystujemy ponownie według rozkroju; liczba pełnych łat uwzględnia pozostałe ścinki.": "Battens use the same sheet material: twenty 2.5 m strips per sheet, with no allowance for cutting width. Shorter offcuts are reused in the cutting plan; the stock count includes the remaining waste."
 }

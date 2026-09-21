@@ -37,3 +37,6 @@
 .project-parts .parts-totals{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;border-bottom:1px solid var(--line);padding:25px 0;margin-top:4px}
 @media(max-width:1100px){.parts-explorer{grid-template-columns:1fr;gap:24px}.parts-model{position:static}.parts-viewport{height:300px}}
 @media(max-width:760px){.parts-catalogue-heading h4{font-size:19px}.parts-catalogue-total{font-size:18px}.parts-family{min-height:65px;padding:11px 12px;gap:8px}.parts-family-name{font-size:12px}.parts-family-count strong{font-size:14px}.parts-family-list{grid-template-columns:1fr}.parts-viewport{height:245px}.parts-annotation{font-size:11px;top:12px;left:12px;right:12px;max-width:calc(100% - 24px)}.parts-hint{font-size:10px;left:12px;right:12px;bottom:12px}.project-parts .parts-totals{gap:20px 12px}.project-parts .parts-totals dt{font-size:10px;min-height:30px}.project-parts .parts-totals dd{font-size:24px}.project-parts .parts-totals dd span{font-size:11px}.parts-variant-heading{align-items:start}.parts-variant-heading>span{padding-top:4px}.parts-variant{font-size:12px;padding:11px}}
+
+.batten-material-note{font-size:13px;line-height:1.65;color:var(--muted);max-width:850px;margin:16px 0 0}
+@media(max-width:760px){.project-parts .parts-totals{grid-template-columns:repeat(2,minmax(0,1fr))}}

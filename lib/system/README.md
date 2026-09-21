@@ -14,8 +14,10 @@ Batten strips derive their axes and extents from the actual board records and wa
 panels. Outside wall strips are vertical; inside strips are horizontal. Their inner
 face is tangent to the 240 mm core. Slots are bridged, stock spans do not exceed
 2500 mm, and openings trim the full 60 mm width. The teal colour highlights this
-layer; it is cut from the same panel material. Battens are presentation geometry,
-not part of the catalogue board or fastener schedule.
+layer; it is cut from the same panel material. The shared `construction/batten-geometry.js` also supplies all three catalogue
+viewers and their batten material schedules. The homepage shows exterior-wall
+and roof-slab battens; catalogue mode additionally includes partitions and floors.
+The geometry does not specify fasteners or establish structural performance.
 
 The roof slab is battened on both faces. Each roof board's `normal` identifies its
 open-slot face: +Y ribs receive upper battens, -Y ribs receive lower battens. The

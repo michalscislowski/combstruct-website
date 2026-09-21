@@ -7,6 +7,8 @@ import {buildStructure as build125} from '../lib/construction/125/structure.js';
 import {createConstruction} from '../lib/construction/core.js';
 import {familyDefinitions} from '../lib/parts/families.js';
 import {deliveryStock} from '../lib/parts/stock.js';
+import {battenPartsForHouse} from '../lib/construction/batten-geometry.js';
+import {battenQuantities} from '../lib/construction/batten-quantities.js';
 import {createHash} from 'node:crypto';
 import fs from 'node:fs';
 import assert from 'node:assert/strict';
@@ -67,10 +69,17 @@ for(const [id,build] of [['30',build30],['90',build90],['125',build125]]){
   assert.equal(families.reduce((sum,f)=>sum+f.count,0),stocks.length);
   const lengthM=Number(stocks.reduce((sum,s)=>sum+s.lengthM,0).toFixed(8));
   const material={lengthM,fullBoardEquivalents:lengthM/2.5,fullBoards:Math.ceil(lengthM/2.5),sheets:Math.ceil(lengthM/12.5)};
-  const data={project:id,name:`Combstruct ${id}`,basis:'delivery-before-cutting',geometrySha256,totalBoards:stocks.length,installedPieces:model.boards.length,material,families};
+  const battenParts=battenPartsForHouse(model,{catalogue:true,partitions:true,floor:true});
+  const {cuttingPlan,...battens}=battenQuantities(battenParts);
+  const box=new THREE.BoxGeometry(2.5,.06,.018);
+  const battenPreview={stockId:'batten-2500',positions:Array.from(box.attributes.position.array),indices:Array.from(box.index.array),lengthM:2.5};box.dispose();
+  const additionalFamilies=[{id:'battens',name:'Łata 60 × 18 mm',count:battens.stockStrips,variants:[{id:'batten-2500',count:battens.stockStrips,lengthM:2.5,preview:battenPreview}]}];
+  material.battenSheets=battens.sheets;material.totalSheets=material.sheets+battens.sheets;
+  const data={project:id,name:`Combstruct ${id}`,basis:'delivery-before-cutting',geometrySha256,totalBoards:stocks.length,installedPieces:model.boards.length,material,families,battens,additionalFamilies};
+  fs.writeFileSync(`lib/construction/qa/${id}-battens.json`,JSON.stringify({project:id,quantities:{...battens,cuttingPlan},parts:battenParts})+'\n');
   fs.writeFileSync(`site/assets/parts/${id}.json`,JSON.stringify(data)+'\n');
   const evidence={basis:data.basis,geometrySha256,stockBoards:stocks.length,installedPieces:model.boards.length,assignments:Object.fromEntries(membership)};
   const records=stocks.map(({id,key,members,stock,trim,connectorCuts,family})=>({id,key,members,modules:stock.pixels,trim,connectorCuts,family,...stock}));
   fs.writeFileSync(`lib/parts/qa/${id}.json`,JSON.stringify(evidence,null,2).slice(0,-2)+',\n  "stocks": [\n'+records.map(r=>'    '+JSON.stringify(r)).join(',\n')+'\n  ]\n}\n');
-  console.log(JSON.stringify({project:id,delivery:stocks.length,installed:model.boards.length,shared:stocks.filter(s=>s.members.length>1).length,fullOrdinary:families[0].variants.find(v=>v.modules===6)?.count,material}));
+  console.log(JSON.stringify({project:id,delivery:stocks.length,installed:model.boards.length,battenMetres:battens.lengthM,battenStrips:battens.stockStrips,material}));
 }
