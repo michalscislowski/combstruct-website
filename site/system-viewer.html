@@ -19,7 +19,7 @@
       if(location.protocol!=='file:'&&location.origin!=='null'&&event.origin!==location.origin)return;
       if(event.data?.type==='combstruct:stage'){
         var stage=Number(event.data.stage);
-        if(Number.isInteger(stage)&&stage>=0&&stage<=4)window.__combstructPendingStage=stage;
+        if(Number.isInteger(stage)&&stage>=0&&stage<=5)window.__combstructPendingStage=stage;
       }
     });
     addEventListener('error',function(){
