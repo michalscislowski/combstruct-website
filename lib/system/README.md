@@ -16,7 +16,8 @@ face is tangent to the 240 mm core. Slots are bridged, stock spans do not exceed
 2500 mm, and openings trim the full 60 mm width. The teal colour highlights this
 layer; it is cut from the same panel material. The shared `construction/batten-geometry.js` also supplies all three catalogue
 viewers and their batten material schedules. The homepage shows exterior-wall
-and roof-slab battens; catalogue mode additionally includes partitions and floors.
+and roof-slab battens; catalogue mode covers intermediate slabs and pitched roofs
+as well. Floor plates and internal partitions have no battens.
 The geometry does not specify fasteners or establish structural performance.
 
 The roof slab is battened on both faces. Each roof board's `normal` identifies its

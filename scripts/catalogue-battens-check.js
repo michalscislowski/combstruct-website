@@ -14,7 +14,11 @@ for(const [id,build] of [['30',b30],['90',b90],['125',b125]]){
  const model=build({}, {insulation:false}),hash=createHash('sha256');
  for(const b of model.boards){const g=b.mesh.geometry.clone().translate(...b.mesh.position.toArray());hash.update(b.id);hash.update(new Uint8Array(g.attributes.position.array.buffer));g.dispose();}
  assert.equal(hash.digest('hex'),audit[id].geometrySha256);
- const parts=battenPartsForHouse(model,{catalogue:true,partitions:true,floor:true}),q=battenQuantities(parts);
+ const parts=battenPartsForHouse(model,{catalogue:true}),q=battenQuantities(parts);
+ assert(parts.every(p=>p.kind!=='floor'&&p.kind!=='partition'),'No battens on the floor plate or partitions');
+ assert(parts.some(p=>p.kind==='wall')&&parts.some(p=>p.kind==='ceiling'));
+ if(id==='90')assert(parts.some(p=>p.kind==='slab'),'Retain intermediate slab battens');
+ if(id!=='125')assert(parts.some(p=>p.kind==='roof'),'Retain pitched roof battens');
  const data=JSON.parse(fs.readFileSync(`site/assets/parts/${id}.json`));
  near(q.lengthM,data.battens.lengthM);assert.equal(q.stockStrips,data.battens.stockStrips);assert.equal(q.sheets,data.battens.sheets);
  const assignment=q.cuttingPlan.flat();assert.equal(new Set(assignment).size,parts.length);assert.equal(assignment.length,parts.length);

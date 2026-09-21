@@ -242,10 +242,12 @@ structural capacity or fastening approval.
 ## Battening and batten stock
 
 `batten-geometry.js` is shared with the homepage. Catalogue mode adds 60 × 18 mm
-closing strips to exterior walls, partitions, floors, intermediate slabs, ceilings
-and pitched roofs. The strip follows the rib whose slots open towards that face:
+closing strips to exterior walls, intermediate slabs, ceilings and pitched roofs.
+Floor plates and internal partition walls have no battens. The strip follows
+the rib whose slots open towards that face:
 vertical outside walls, horizontal inside; perpendicular families on opposite
-slab and roof faces. Floor terraces and slab balconies follow their actual ribs.
+slab and roof faces. Slab balconies follow their actual ribs; floor terraces
+are excluded with the floor plate.
 Openings, projecting board ends, neighbouring strips and sloped roof boundaries
 trim the strips. Native core board positions and profiles are unchanged.
 
@@ -264,9 +266,9 @@ sheets using the existing material and assembly rates.
 
 | Model | Installed battens, m | Full 2500 mm strips | Extra sheets | Total kit sheets |
 | --- | ---: | ---: | ---: | ---: |
-| 30 | 1,019.7 | 415 | 21 | 216 |
-| 90 | 2,386.0 | 984 | 50 | 536 |
-| 125 | 2,254.0 | 935 | 47 | 477 |
+| 30 | 720.7 | 295 | 15 | 210 |
+| 90 | 1,633.0 | 675 | 34 | 520 |
+| 125 | 1,150.5 | 477 | 24 | 454 |
 
 `scripts/build-parts-data.js` writes `qa/{id}-battens.json`, including the cutting
 plan and fragment coordinates. Bundle/run `scripts/catalogue-battens-check.js`

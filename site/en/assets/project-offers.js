@@ -8,14 +8,14 @@ window.COMBSTRUCT_OFFERS = [
       {
         "material": "osb3",
         "label": "OSB3",
-        "materials": 53000,
-        "assembly": 79000
+        "materials": 52000,
+        "assembly": 78000
       },
       {
         "material": "plywood",
         "label": "Plywood",
-        "materials": 86000,
-        "assembly": 112000
+        "materials": 84000,
+        "assembly": 109000
       }
     ]
   },
@@ -28,14 +28,14 @@ window.COMBSTRUCT_OFFERS = [
       {
         "material": "osb3",
         "label": "OSB3",
-        "materials": 117000,
-        "assembly": 181000
+        "materials": 115000,
+        "assembly": 177000
       },
       {
         "material": "plywood",
         "label": "Plywood",
-        "materials": 197000,
-        "assembly": 262000
+        "materials": 193000,
+        "assembly": 255000
       }
     ]
   },
@@ -48,14 +48,14 @@ window.COMBSTRUCT_OFFERS = [
       {
         "material": "osb3",
         "label": "OSB3",
-        "materials": 106000,
-        "assembly": 163000
+        "materials": 103000,
+        "assembly": 157000
       },
       {
         "material": "plywood",
         "label": "Plywood",
-        "materials": 178000,
-        "assembly": 235000
+        "materials": 171000,
+        "assembly": 225000
       }
     ]
   }

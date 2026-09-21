@@ -69,7 +69,7 @@ for(const [id,build] of [['30',build30],['90',build90],['125',build125]]){
   assert.equal(families.reduce((sum,f)=>sum+f.count,0),stocks.length);
   const lengthM=Number(stocks.reduce((sum,s)=>sum+s.lengthM,0).toFixed(8));
   const material={lengthM,fullBoardEquivalents:lengthM/2.5,fullBoards:Math.ceil(lengthM/2.5),sheets:Math.ceil(lengthM/12.5)};
-  const battenParts=battenPartsForHouse(model,{catalogue:true,partitions:true,floor:true});
+  const battenParts=battenPartsForHouse(model,{catalogue:true});
   const {cuttingPlan,...battens}=battenQuantities(battenParts);
   const box=new THREE.BoxGeometry(2.5,.06,.018);
   const battenPreview={stockId:'batten-2500',positions:Array.from(box.attributes.position.array),indices:Array.from(box.index.array),lengthM:2.5};box.dispose();
