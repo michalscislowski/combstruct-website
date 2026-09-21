@@ -26,8 +26,27 @@ const edge={axis:1,wallAxis:0,u0:.001,u1:.017,v0:-.24,v1:.24,center:[.009,0,-.00
 const relieved=clearBatten(edge,boardObstacles(engine.boards));
 assert.equal(relieved.length,2);near(relieved[0].v1,-.12-BATTEN_END_CLEARANCE);
 near(relieved[1].v0,BATTEN_END_CLEARANCE);near(relieved[1].v1,.24);
+// The real strip reaches exactly to the 18 mm half-slot shoulder. Its back
+// face touches the full-depth web; that tangency must not remove another 120 mm.
+const touching={...edge,u0:0,u1:.018,center:[.009,0,-.009],size:[.018,.48,.018]};
+const atShoulder=clearBatten(touching,boardObstacles(engine.boards));
+assert.equal(atShoulder.length,2);
+near(atShoulder[0].v1,-.12-BATTEN_END_CLEARANCE);
+near(atShoulder[1].v0,BATTEN_END_CLEARANCE);
+near(atShoulder[1].v1,.24);
 
 const {house,battenParts}=buildSystemModel(),axes=['x','y','z'];
+// The left wall's roof tongue occupies only the top 120 mm of the slab depth.
+// The outside strip below it must reach the tongue, not stop at the slab base.
+const roofEnd=house.dimensions.ceilingBottom+.12-BATTEN_END_CLEARANCE;
+for(const id of ['left','right']) {
+ const strips=battenParts.filter(p=>p.wallId===id&&p.axis===1&&p.rib===1);
+ assert(strips.some(p=>Math.abs(p.v1-roofEnd)<1e-6),`${id}: strip stops short of roof tongue`);
+}
+// At the rear floor edge the lower tongue stops at 120 mm. The long strip
+// must start immediately above that, without leaving another 120 mm gap.
+const rear=battenParts.filter(p=>p.wallId==='rear'&&p.axis===1&&p.rib===1);
+near(Math.min(...rear.map(p=>p.v0)),.12+BATTEN_END_CLEARANCE);
 const solids=boardObstacles(house.boards);
 const triangle=new THREE.Triangle();let examined=0;
 for(const p of battenParts) {
